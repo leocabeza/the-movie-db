@@ -10,8 +10,8 @@
     "axios-mock-adapter": "^1.15.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "core-js": "^2.5.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -25,12 +25,16 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build": "webpack",
-    "build:watch": "npm run build -- --watch",
+    "dev": "webpack --mode development",
+    "dev:watch": "npm run build -- --watch",
+    "build": "webpack --mode production",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.js": ["prettier --single-quote --trailing-comma es5 --write", "git add"]
+    "src/**/*.js": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": {

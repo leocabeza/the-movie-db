@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import * as parsers from './parsers';
+import parser from './parser';
 import * as urls from './urls';
-import { buildNonEmptyParams } from './utils';
+import { buildDefinedParams } from './utils';
 
 const latestStableVersion = 3;
 const host = 'https://api.themoviedb.org/';
@@ -20,6 +20,11 @@ export default class TheMovieDbClient {
         api_key: apiKey,
       },
     });
+
+    this.httpInstance.interceptors.response.use(
+      response => parser(response),
+      error => Promise.reject(error)
+    );
   }
 
   /**
@@ -30,7 +35,7 @@ export default class TheMovieDbClient {
     return new Promise((resolve, reject) =>
       this.httpInstance
         .get(urls.getConfiguration)
-        .then(response => resolve(parsers.getConfiguration(response.data)))
+        .then(response => resolve(response.data))
         .catch(error => reject(error))
     );
   }
@@ -47,9 +52,9 @@ export default class TheMovieDbClient {
     return new Promise((resolve, reject) =>
       this.httpInstance
         .get(urls.getPopularMovies, {
-          params: buildNonEmptyParams({ language, page, region }),
+          params: buildDefinedParams({ language, page, region }),
         })
-        .then(response => resolve(parsers.getPopularMovies(response.data)))
+        .then(response => resolve(response.data))
         .catch(error => reject(error))
     );
   }

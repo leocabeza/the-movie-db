@@ -2,7 +2,7 @@ const path = require('path');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 
 const webConfig = {
-  entry: ['core-js/fn/promise', './src/index.js'],
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'the-movie-db.js',
@@ -13,9 +13,9 @@ const webConfig = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules)|(dist)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader?cacheDirectory',
         },
       },
     ],

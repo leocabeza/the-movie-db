@@ -6,10 +6,10 @@ export const snakeToCamelCase = word =>
   word.toLowerCase().replace(/_(.)/g, (match, group1) => group1.toUpperCase());
 
 /**
- * Returns a object with defined keys in paramsObject
+ * Returns a object with non undefined keys in paramsObject
  * @param {object} paramsObject
  */
-export const buildNonEmptyParams = paramsObject => {
+export const buildDefinedParams = paramsObject => {
   const finalParams = {};
 
   Object.keys(paramsObject).forEach(paramKey => {

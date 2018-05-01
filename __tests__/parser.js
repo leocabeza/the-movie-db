@@ -1,10 +1,10 @@
-import * as parsers from '../src/parsers';
+import parser from '../src/parser';
 import getConfigurationJson from '../__mocks__/get-configuration.json';
 import getPopularMoviesJson from '../__mocks__/get-popular-movies.json';
 
-describe('Client API parsers', () => {
-  it('must parse response from getConfiguration method', () => {
-    const parsedResponse = parsers.getConfiguration(getConfigurationJson);
+describe('Client API parser', () => {
+  it('must parse response from getConfiguration JSON', () => {
+    const parsedResponse = parser({ data: getConfigurationJson }).data;
 
     expect(Array.isArray(parsedResponse.changeKeys)).toBeTruthy();
     const allchangeKeysAreString =
@@ -19,13 +19,12 @@ describe('Client API parsers', () => {
     expect(Array.isArray(parsedResponse.images.stillSizes)).toBeTruthy();
   });
 
-  it('must parse response from getPopularMovies method', () => {
-    const parsedResponse = parsers.getPopularMovies(getPopularMoviesJson);
+  it('must parse response from getPopularMovies JSON', () => {
+    const parsedResponse = parser({ data: getPopularMoviesJson }).data;
 
-    expect(parsedResponse.paging).toBeDefined();
-    expect(typeof parsedResponse.paging.page === 'number').toBeTruthy();
-    expect(typeof parsedResponse.paging.totalPages === 'number').toBeTruthy();
-    expect(typeof parsedResponse.paging.totalResults === 'number').toBeTruthy();
+    expect(typeof parsedResponse.page === 'number').toBeTruthy();
+    expect(typeof parsedResponse.totalPages === 'number').toBeTruthy();
+    expect(typeof parsedResponse.totalResults === 'number').toBeTruthy();
 
     expect(Array.isArray(parsedResponse.results)).toBeTruthy();
     const firstResult = parsedResponse.results[0];
@@ -44,6 +43,6 @@ describe('Client API parsers', () => {
     expect(typeof firstResult.backdropPath === 'string').toBeTruthy();
     expect(typeof firstResult.adult === 'boolean').toBeTruthy();
     expect(typeof firstResult.overview === 'string').toBeTruthy();
-    expect(firstResult.releaseDate).toBeDefined();
+    expect(firstResult.releaseDate instanceof Date).toBeTruthy();
   });
 });

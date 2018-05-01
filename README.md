@@ -1,8 +1,17 @@
-# Disclaimer
+# the-movie-db
+
+Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://www.themoviedb.org/) that works in the browser and node.js.
+
+## Disclaimer
 
 This is a work in progress, DO NOT USE in production just yet.
 
-# About
+## Promises
+
+the-movie-db depends on a native ES6 Promise implementation to be [supported](http://caniuse.com/promises).
+If your environment doesn't support ES6 Promises, you can [polyfill](https://github.com/jakearchibald/es6-promise).
+
+## About
 
 This product uses the TMDb API but is not endorsed or certified by TMDb.
 

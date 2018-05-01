@@ -24,8 +24,32 @@ describe('Client API responses', () => {
 
     return client.getPopularMovies()
       .then((response) => {
-        expect(response.paging).toBeDefined();
+        expect(response.page).toBeDefined();
+        expect(response.totalResults).toBeDefined();
+        expect(response.totalPages).toBeDefined();
         expect(response.results).toBeDefined();
       });
+  });
+
+  it('should return an error object when calling with invalid api key', () => {
+    mock.reset();
+    mock.onAny().reply(401, {});
+
+    return expect(client.getConfiguration())
+      .rejects.toHaveProperty(
+        'message',
+        'Request failed with status code 401',
+      );
+  });
+
+  it('should return an error object when calling a non-existent resource', () => {
+    mock.reset();
+    mock.onAny().reply(404, {});
+
+    return expect(client.getConfiguration())
+      .rejects.toHaveProperty(
+        'message',
+        'Request failed with status code 404',
+      );
   });
 });
