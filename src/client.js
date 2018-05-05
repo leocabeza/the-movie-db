@@ -22,8 +22,10 @@ export default class TheMovieDbClient {
     });
 
     this.httpInstance.interceptors.response.use(
-      response => parser(response),
-      error => Promise.reject(error)
+      async config => await parser(config),
+      error => {
+        throw error;
+      }
     );
   }
 
