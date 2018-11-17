@@ -8,6 +8,9 @@ const webConfig = {
     filename: 'the-movie-db.js',
     library: 'theMovieDb',
     libraryTarget: 'umd',
+    libraryExport: 'default',
+    // https://github.com/webpack/webpack/issues/6522
+    globalObject: "typeof self !== 'undefined' ? self : this",
   },
   module: {
     rules: [

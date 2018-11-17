@@ -7,36 +7,71 @@
     "axios": "^0.18.0"
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.15.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/runtime": "^7.1.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "codecov": "^3.1.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.3",
-    "lint-staged": "^7.0.5",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
     "nodemon-webpack-plugin": "^4.0.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "prettier": "1.15.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   },
   "scripts": {
     "test": "jest",
     "test:watch": "npm run test -- --watch",
+    "test:watch:coverage": "npm run test -- --watch --coverage",
     "dev": "webpack --mode development",
     "dev:watch": "npm run build -- --watch",
     "build": "webpack --mode production",
-    "precommit": "lint-staged"
+    "coverage": "npm run test -- --coverage && codecov"
   },
   "lint-staged": {
     "src/**/*.js": [
-      "prettier --single-quote --trailing-comma es5 --write",
+      "prettier --write",
       "git add"
     ]
   },
-  "keywords": [],
+  "jest": {
+    "testURL": "http://localhost",
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/*.json",
+      "!**webpack.config.js**",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!**/coverage/**",
+      "!**src/dev.js**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 96,
+        "branches": 100,
+        "functions": 88,
+        "lines": 96
+      }
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "keywords": ["javascript api wrapper", "tmdb", "the-movie-db"],
   "author": {
     "name": "Leonardo Cabeza",
-    "email": "cabeza.leo@gmail.com",
+    "email": "github@leonardocabeza.com",
     "url": "https://github.com/leocabeza"
   },
   "license": "MIT"

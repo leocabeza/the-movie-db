@@ -1,29 +1,54 @@
 import { snakeToCamelCase } from '../utils';
+import { parse } from 'path';
 
-const formatDateIfApplicable = (keyName, data) => {
+/**
+ * Format date keys as dates, otherwise return string
+ * @param {object} data 
+ * @param {string} key 
+ */
+export const formatDateIfApplicable = (data, key) => {
   const allegedlyNewDate = new Date(data);
-  const isDate =
-    keyName.endsWith('_date') &&
+  const isValidStringDate = 
+    key.endsWith('_date') &&
     typeof data === 'string' &&
-    allegedlyNewDate.toString !== 'Invalid Date';
+    allegedlyNewDate.toString() !== 'Invalid Date';
 
-  return isDate ? allegedlyNewDate : data;
+  return isValidStringDate ? allegedlyNewDate : data;
 };
 
-const parseData = data => {
-  let newData = {};
+/**
+ * Return same type of data with formatted keys
+ * @param {object} data 
+ * @param {string} key 
+ */
+export const setDataAccordingToValueType = (data, key) => {
+  if (Array.isArray(data[key])) {
+    return data[key].map(elem => parseData(elem));
+  } else if (data[key] instanceof Object) {
+    return parseData(data[key]);
+  }
+
+  return formatDateIfApplicable(data[key], key);
+};
+
+/**
+ * Convert to camelCase with the iso_3166_1 exception
+ * @param {string} keyName 
+ */
+export const camelCaseIfApplicable = keyName =>
+  keyName === 'iso_3166_1' ? 'iso-3166-1' : snakeToCamelCase(keyName);
+
+//TODO: May be there is a better functional way to do this?
+/**
+ * Parse data keys to camelCase and format dates
+ * @param {object} data 
+ */
+export const parseData = data => {
+  let newData = Array.isArray(data) ? [] : {};
 
   if (data instanceof Object) {
     Object.keys(data).forEach(key => {
-      if (Array.isArray(data[key])) {
-        newData[snakeToCamelCase(key)] = data[key].map(arrayElem =>
-          parseData(arrayElem)
-        );
-      } else if (data[key] instanceof Object) {
-        newData[snakeToCamelCase(key)] = parseData(data[key]);
-      } else {
-        newData[snakeToCamelCase(key)] = formatDateIfApplicable(key, data[key]);
-      }
+      newData[camelCaseIfApplicable(key)] = setDataAccordingToValueType(data, key);
     });
   } else {
     newData = data;
@@ -32,7 +57,4 @@ const parseData = data => {
   return newData;
 };
 
-export default data => ({
-  ...data,
-  data: parseData(data.data),
-});
+export default parseData;

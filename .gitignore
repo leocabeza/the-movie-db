@@ -60,8 +60,11 @@ typings/
 # next.js build output
 .next
 
-#vscode
+# vscode
 .vscode
 
-#dist folder
+# dist folder
 dist
+
+# dev file for debugging
+src/dev.js

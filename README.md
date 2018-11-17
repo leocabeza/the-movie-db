@@ -1,3 +1,8 @@
+
+[![GitHub license](https://img.shields.io/github/license/leocabeza/the-movie-db.svg?style=popout)](https://github.com/leocabeza/the-movie-db/blob/master/LICENSE)
+![Travis (.org)](https://img.shields.io/travis/leocabeza/the-movie-db.svg?style=popout)
+![Codecov](https://img.shields.io/codecov/c/github/leocabeza/the-movie-db.svg?style=popout)
+
 # the-movie-db
 
 Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://www.themoviedb.org/) that works in the browser and node.js.

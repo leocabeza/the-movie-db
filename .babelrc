@@ -1,11 +1,11 @@
 {
-    "presets": [
-        ["env", {
-            "targets": {
-              "node": "9.4.0",
-              "browsers": ["last 2 versions"]
-            }
-        }]
-    ],
-    "plugins": ["transform-object-rest-spread"]
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": "10.13",
+        "browsers": ">= 1%, not dead"
+      }
+    }]
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
