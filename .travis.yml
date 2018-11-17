@@ -4,8 +4,18 @@ cache:
     - node_modules
 node_js:
   - "10"
+script:
+  - npm run check-coverage
+  - npm run build
 after_success:
-  - npm run coverage
+  - npm run report-coverage
+  - npm run publish
 branches:
   only:
     - master
+deploy:
+  provider: npm
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
+    tags: true

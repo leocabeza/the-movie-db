@@ -1,7 +1,7 @@
 {
-  "name": "themoviedb",
+  "name": "@leonardocabeza/the-movie-db",
   "version": "1.0.0",
-  "description": "",
+  "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
   "main": "dist/the-movie-db.js",
   "dependencies": {
     "axios": "^0.18.0"
@@ -18,6 +18,7 @@
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "nodemon-webpack-plugin": "^4.0.3",
+    "npm-run-all": "^4.1.3",
     "prettier": "1.15.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
@@ -29,7 +30,12 @@
     "dev": "webpack --mode development",
     "dev:watch": "npm run build -- --watch",
     "build": "webpack --mode production",
-    "coverage": "npm run test -- --coverage && codecov"
+    "codecov": "codecov",
+    "lint-staged": "lint-staged",
+    "check-coverage": "npm run test -- --coverage",
+    "report-coverage": "npm-run-all -s check-coverage codecov",
+    "pre-commit": "npm-run-all -s check-coverage lint-staged",
+    "publish": "npm publish --access=public"
   },
   "lint-staged": {
     "src/**/*.js": [
@@ -60,15 +66,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && lint-staged",
-      "pre-push": "npm test"
+      "pre-commit": "npm run pre-commit",
+      "pre-push": "npm run test"
     }
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "keywords": ["javascript api wrapper", "tmdb", "the-movie-db"],
+  "keywords": [
+    "javascript api wrapper",
+    "tmdb",
+    "the-movie-db"
+  ],
   "author": {
     "name": "Leonardo Cabeza",
     "email": "github@leonardocabeza.com",
