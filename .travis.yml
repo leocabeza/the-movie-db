@@ -10,9 +10,6 @@ script:
 after_success:
   - npm run report-coverage
   - npm run publish
-branches:
-  only:
-    - master
 deploy:
   provider: npm
   api_key: $NPM_TOKEN
