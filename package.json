@@ -1,6 +1,6 @@
 {
   "name": "@leonardocabeza/the-movie-db",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
   "main": "dist/the-movie-db.js",
   "dependencies": {
@@ -36,43 +36,6 @@
     "report-coverage": "npm-run-all -s check-coverage codecov",
     "pre-commit": "npm-run-all -s check-coverage lint-staged",
     "publish": "npm publish --access=public"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "jest": {
-    "testURL": "http://localhost",
-    "coverageDirectory": "./coverage/",
-    "collectCoverageFrom": [
-      "**/*.js",
-      "!**/*.json",
-      "!**webpack.config.js**",
-      "!**/node_modules/**",
-      "!**/dist/**",
-      "!**/coverage/**",
-      "!**src/dev.js**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 96,
-        "branches": 100,
-        "functions": 88,
-        "lines": 96
-      }
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit",
-      "pre-push": "npm run test"
-    }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "keywords": [
     "javascript api wrapper",
