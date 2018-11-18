@@ -34,7 +34,7 @@ client.movies.popular()
 ```
 ## To use it in a web browser
 
-`<script crossorigin src="https://unpkg.com/the-movie-db@latest/dist/the-movie-db.js"></script>`
+`<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.js"></script>`
 
 ## Disclaimer
 
