@@ -37,6 +37,11 @@
     "pre-commit": "npm-run-all -s check-coverage lint-staged",
     "publish": "npm publish --access=public"
   },
+  "unpkg": "dist/the-movie-db.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": ["dist"],
   "keywords": [
     "javascript api wrapper",
     "tmdb",
