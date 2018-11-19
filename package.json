@@ -34,14 +34,16 @@
     "lint-staged": "lint-staged",
     "check-coverage": "npm run test -- --coverage",
     "report-coverage": "npm-run-all -s check-coverage codecov",
-    "pre-commit": "npm-run-all -s check-coverage lint-staged",
-    "publish": "npm publish --access=public"
+    "pre-commit": "npm-run-all -s check-coverage lint-staged"
   },
   "unpkg": "dist/the-movie-db.js",
   "engines": {
     "node": ">=10"
   },
   "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "javascript api wrapper",
     "tmdb",
@@ -51,6 +53,10 @@
     "name": "Leonardo Cabeza",
     "email": "github@leonardocabeza.com",
     "url": "https://github.com/leocabeza"
+  },
+  "homepage": "https://github.com/leocabeza/the-movie-db",
+  "bugs": {
+    "url": "https://github.com/leocabeza/the-movie-db/issues"
   },
   "license": "MIT"
 }

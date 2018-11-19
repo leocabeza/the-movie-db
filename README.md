@@ -7,6 +7,8 @@
 
 Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://www.themoviedb.org/) that works in the browser and node.js.
 
+For now, it only works with the version 3 of the api.
+
 ## Installation
 
 This package is distributed via npm:
@@ -20,9 +22,9 @@ npm install @leonardocabeza/the-movie-db
 First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.themoviedb.org/faq/api)
 
 ```javascript
-var TheMovieDb = require('@leonardocabeza/the-movie-db');
+const TheMovieDb = require('@leonardocabeza/the-movie-db');
 
-var client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
+const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
 
 client.movies.popular()
   .then((data) => {
@@ -32,6 +34,24 @@ client.movies.popular()
     // handle error
   });
 ```
+
+or if you prefer async/await
+
+```javascript
+const TheMovieDb = require('@leonardocabeza/the-movie-db');
+
+const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
+
+cont fetchData = async() => {
+  try {
+    const data = await client.movies.popular();
+    // handle data
+  } catch(error) {
+    // handle error
+  }
+}
+```
+
 ## To use it in a web browser
 
 `<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.js"></script>`

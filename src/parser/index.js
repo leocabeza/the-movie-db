@@ -3,13 +3,13 @@ import { parse } from 'path';
 
 /**
  * Format date keys as dates, otherwise return string
- * @param {object} data 
- * @param {string} key 
+ * @param {object} data
+ * @param {string} key
  */
 export const formatDateIfApplicable = (data, key) => {
   const allegedlyNewDate = new Date(data);
-  const isValidStringDate = 
-    key.endsWith('_date') &&
+  const isValidStringDate =
+    (key.endsWith('_date') || key === 'expires_at') &&
     typeof data === 'string' &&
     allegedlyNewDate.toString() !== 'Invalid Date';
 
@@ -18,8 +18,8 @@ export const formatDateIfApplicable = (data, key) => {
 
 /**
  * Return same type of data with formatted keys
- * @param {object} data 
- * @param {string} key 
+ * @param {object} data
+ * @param {string} key
  */
 export const setDataAccordingToValueType = (data, key) => {
   if (Array.isArray(data[key])) {
@@ -33,22 +33,27 @@ export const setDataAccordingToValueType = (data, key) => {
 
 /**
  * Convert to camelCase with the iso_3166_1 exception
- * @param {string} keyName 
+ * @param {string} keyName
  */
 export const camelCaseIfApplicable = keyName =>
-  keyName === 'iso_3166_1' ? 'iso-3166-1' : snakeToCamelCase(keyName);
+  keyName.startsWith('iso')
+    ? keyName.replace(/_/g, '-')
+    : snakeToCamelCase(keyName);
 
 //TODO: May be there is a better functional way to do this?
 /**
  * Parse data keys to camelCase and format dates
- * @param {object} data 
+ * @param {object} data
  */
-export const parseData = data => {
+const parseData = data => {
   let newData = Array.isArray(data) ? [] : {};
 
   if (data instanceof Object) {
     Object.keys(data).forEach(key => {
-      newData[camelCaseIfApplicable(key)] = setDataAccordingToValueType(data, key);
+      newData[camelCaseIfApplicable(key)] = setDataAccordingToValueType(
+        data,
+        key
+      );
     });
   } else {
     newData = data;

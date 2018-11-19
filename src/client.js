@@ -16,8 +16,8 @@ const TheMovieDbClient = apiKey => {
   //TODO: Need help to be able to test this
   // https://github.com/axios/axios/issues/511 ?
   axios.interceptors.response.use(
-    async({ data }) => await parser(data),
-    async({ response }) => await Promise.reject(response),
+    async ({ data }) => await parser(data),
+    async ({ response }) => await Promise.reject(response.data.status_message)
   );
 
   return entities;

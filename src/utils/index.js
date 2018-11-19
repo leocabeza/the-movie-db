@@ -6,15 +6,15 @@ import axios from 'axios';
  * @param {string} method
  */
 export const buildDataForMethod = (data, method = 'get') => {
-  if (method.toLowerCase() === 'get') {
+  const builtData = buildDefinedParams(data);
+
+  if (['get', 'delete'].includes(method.toLowerCase())) {
     return {
-      params: buildDefinedParams(data),
+      params: builtData,
     };
   }
 
-  return {
-    data,
-  };
+  return builtData;
 };
 
 //TODO: May be there is a better functional way to do this?
@@ -27,7 +27,8 @@ export const buildDefinedParams = paramsObject => {
 
   Object.keys(paramsObject).forEach(paramKey => {
     if (typeof paramsObject[paramKey] !== 'undefined') {
-      finalParams[paramKey] = paramsObject[paramKey];
+      const snakeCaseKey = camelToSnakeCase(paramKey);
+      finalParams[snakeCaseKey] = paramsObject[paramKey];
     }
   });
 
@@ -36,13 +37,14 @@ export const buildDefinedParams = paramsObject => {
 
 /**
  * Build request for axios
- * @param {string} url 
- * @param {object} data 
- * @param {string} method 
+ * @param {string} url
+ * @param {object} data
+ * @param {string} method
  */
-export const makeRequest = async(url, data = {}, method = 'get') => {
+export const makeRequest = async (url, data = {}, method = 'get') => {
   try {
-    return await axios[method.toLowerCase()](url, buildDataForMethod(data, method.toLowerCase()));
+    const builtData = buildDataForMethod(data, method.toLowerCase());
+    return await axios[method.toLowerCase()](url, builtData);
   } catch (error) {
     return Promise.reject(error);
   }
@@ -54,3 +56,10 @@ export const makeRequest = async(url, data = {}, method = 'get') => {
  */
 export const snakeToCamelCase = word =>
   word.toLowerCase().replace(/_(.)/g, (match, group1) => group1.toUpperCase());
+
+/**
+ * Returns a snakecase word from a camelcase
+ * @param {string} word
+ */
+export const camelToSnakeCase = word =>
+  word.replace(/([A-Z])/g, '_$1').toLowerCase();

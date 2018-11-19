@@ -12,6 +12,7 @@ const webConfig = {
     // https://github.com/webpack/webpack/issues/6522
     globalObject: "typeof self !== 'undefined' ? self : this",
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
