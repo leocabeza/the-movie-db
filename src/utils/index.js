@@ -2,7 +2,7 @@ import axios from 'axios';
 
 /**
  * Returns an object to pass to an axios request body/params
- * @param {object} data
+ * @param {Object} data
  * @param {string} method
  */
 export const buildDataForMethod = (data, method = 'get') => {
@@ -20,7 +20,7 @@ export const buildDataForMethod = (data, method = 'get') => {
 //TODO: May be there is a better functional way to do this?
 /**
  * Returns a object with non undefined keys in paramsObject
- * @param {object} paramsObject
+ * @param {Object} paramsObject
  */
 export const buildDefinedParams = paramsObject => {
   const finalParams = {};
@@ -38,7 +38,7 @@ export const buildDefinedParams = paramsObject => {
 /**
  * Build request for axios
  * @param {string} url
- * @param {object} data
+ * @param {Object} data
  * @param {string} method
  */
 export const makeRequest = async (url, data = {}, method = 'get') => {

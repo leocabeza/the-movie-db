@@ -62,8 +62,13 @@ export const sessionConvert = async v4AccessToken => {
 };
 
 /**
- *
- * @param {object} - userName, password, requestToken
+ * This method allows an application to validate a request token by entering a username and password.
+ * Not all applications have access to a web view so this can be used as a substitute.
+ * If you decide to use this method please use HTTPS.
+ * @param {Object} options
+ * @param {string} options.username
+ * @param {string} options.password
+ * @param {string} options.requestToken
  */
 export const validateWithLogin = async (options = {}) => {
   const { username, password, requestToken } = options;

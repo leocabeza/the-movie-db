@@ -1,4 +1,4 @@
-module.exports = {
+module.export = {
   testURL: "http://localhost",
   coverageDirectory: "./coverage/",
   collectCoverageFrom: [
@@ -9,14 +9,15 @@ module.exports = {
     "!**/node_modules/**",
     "!**/dist/**",
     "!**/coverage/**",
-    "!**src/dev.js**"
+    "!**src/dev.js**",
+    "!**mocks.js**",
   ],
   coverageThreshold: {
     global: {
       statements: 98,
       branches: 100,
-      functions: 93,
-      lines: 97
+      functions: 95,
+      lines: 98
     }
   }
 };

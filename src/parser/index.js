@@ -3,7 +3,7 @@ import { parse } from 'path';
 
 /**
  * Format date keys as dates, otherwise return string
- * @param {object} data
+ * @param {Object} data
  * @param {string} key
  */
 export const formatDateIfApplicable = (data, key) => {
@@ -18,7 +18,7 @@ export const formatDateIfApplicable = (data, key) => {
 
 /**
  * Return same type of data with formatted keys
- * @param {object} data
+ * @param {Object} data
  * @param {string} key
  */
 export const setDataAccordingToValueType = (data, key) => {
@@ -43,7 +43,7 @@ export const camelCaseIfApplicable = keyName =>
 //TODO: May be there is a better functional way to do this?
 /**
  * Parse data keys to camelCase and format dates
- * @param {object} data
+ * @param {Object} data
  */
 const parseData = data => {
   let newData = Array.isArray(data) ? [] : {};

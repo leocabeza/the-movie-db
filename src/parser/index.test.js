@@ -3,7 +3,7 @@ import parseData, {
   camelCaseIfApplicable,
   setDataAccordingToValueType,
 } from './';
-import popularMoviesMockResponse from './movies-popular.json';
+import popularMoviesMockResponse from './mock.json';
 
 describe('parser', () => {
   it('must parse correctly a mocked response', () => {
