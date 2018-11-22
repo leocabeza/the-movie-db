@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as movies from './';
 import mocks from './mocks';
-import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
 
 jest.mock('axios');
 
@@ -11,13 +10,22 @@ describe('movies entity', () => {
     expect(typeof movies.alternativeTitles).toEqual('function');
     expect(typeof movies.changes).toEqual('function');
     expect(typeof movies.credits).toEqual('function');
+    expect(typeof movies.deleteRating).toEqual('function');
     expect(typeof movies.details).toEqual('function');
     expect(typeof movies.externalIds).toEqual('function');
     expect(typeof movies.images).toEqual('function');
     expect(typeof movies.keywords).toEqual('function');
+    expect(typeof movies.lists).toEqual('function');
+    expect(typeof movies.nowPlaying).toEqual('function');
     expect(typeof movies.popular).toEqual('function');
+    expect(typeof movies.rating).toEqual('function');
+    expect(typeof movies.recommendations).toEqual('function');
     expect(typeof movies.releaseDates).toEqual('function');
+    expect(typeof movies.reviews).toEqual('function');
+    expect(typeof movies.similar).toEqual('function');
+    expect(typeof movies.topRated).toEqual('function');
     expect(typeof movies.translations).toEqual('function');
+    expect(typeof movies.upcoming).toEqual('function');
     expect(typeof movies.videos).toEqual('function');
   });
 
@@ -107,6 +115,32 @@ describe('movies entity', () => {
     await expect(movies.credits()).rejects.toBe('A movieId has to be provided');
   });
 
+  it('must return a valid response from movies.deleteRating call with movieId and sessionId option', async () => {
+    axios.delete.mockResolvedValue(mocks.deleteRating);
+    const response = await movies.deleteRating(123, { sessionId: 'XXX' });
+
+    expect(response).toBe(mocks.deleteRating);
+  });
+
+  it('must return a valid response from movies.deleteRating call with movieId and guestSessionId option', async () => {
+    axios.delete.mockResolvedValue(mocks.deleteRating);
+    const response = await movies.deleteRating(123, { guestSessionId: 'XXX' });
+
+    expect(response).toBe(mocks.deleteRating);
+  });
+
+  it('must reject when movies.deleteRating is called without movieId', async () => {
+    await expect(movies.deleteRating()).rejects.toBe(
+      'A movieId has to be provided'
+    );
+  });
+
+  it('must reject when movies.deleteRating is called without options', async () => {
+    await expect(movies.deleteRating(123)).rejects.toBe(
+      'A sessionId or a guestSessionId has to be provided'
+    );
+  });
+
   it('must reject when movies.details is called without movieId', async () => {
     await expect(movies.details()).rejects.toBe('A movieId has to be provided');
   });
@@ -182,6 +216,124 @@ describe('movies entity', () => {
     );
   });
 
+  it('must return a valid response from movies.latest call without options', async () => {
+    axios.get.mockResolvedValue(mocks.latest);
+    const response = await movies.latest();
+
+    expect(response).toBe(mocks.latest);
+  });
+
+  it('must return a valid response from movies.latest call with options', async () => {
+    axios.get.mockResolvedValue(mocks.latest);
+    const response = await movies.latest({ language: 'es' });
+
+    expect(response).toBe(mocks.latest);
+  });
+
+  it('must return a valid response from movies.lists with movieId', async () => {
+    axios.get.mockResolvedValue(mocks.lists);
+    const response = await movies.lists(1);
+
+    expect(response).toBe(mocks.lists);
+  });
+
+  it('must return a valid response from movies.lists with movieId and options', async () => {
+    axios.get.mockResolvedValue(mocks.lists);
+    const response = await movies.lists(1, {
+      language: 'es',
+      page: 1,
+    });
+
+    expect(response).toBe(mocks.lists);
+  });
+
+  it('must reject when movies.lists is called without movieId', async () => {
+    await expect(movies.lists()).rejects.toBe('A movieId has to be provided');
+  });
+
+  it('must return a valid response from movies.nowPlaying call with options', async () => {
+    axios.get.mockResolvedValue(mocks.nowPlaying);
+    const response = await movies.nowPlaying({
+      language: 'en',
+      page: 1,
+      region: 'CO',
+    });
+
+    expect(response).toBe(mocks.nowPlaying);
+  });
+
+  it('must return a valid response from movies.nowPlaying call with no options', async () => {
+    axios.get.mockResolvedValue(mocks.nowPlaying);
+    const response = await movies.nowPlaying();
+
+    expect(response).toBe(mocks.nowPlaying);
+  });
+
+  it('must return a valid response from movies.popular call with no options', async () => {
+    axios.get.mockResolvedValue(mocks.popular);
+    const response = await movies.popular();
+
+    expect(response).toBe(mocks.popular);
+  });
+
+  it('must return a valid response from movies.popular call with options', async () => {
+    axios.get.mockResolvedValue(mocks.popular);
+    const response = await movies.popular({ language: 'es', page: 1 });
+
+    expect(response).toBe(mocks.popular);
+  });
+
+  it('must return a valid response from movies.rating call with movieId, rating, and sessionId option', async () => {
+    axios.post.mockResolvedValue(mocks.rating);
+    const response = await movies.rating(123, 2, { sessionId: 'XXX' });
+
+    expect(response).toBe(mocks.rating);
+  });
+
+  it('must return a valid response from movies.rating call with movieId, rating and guestSessionId option', async () => {
+    axios.post.mockResolvedValue(mocks.rating);
+    const response = await movies.rating(123, 4.4, { guestSessionId: 'XXX' });
+
+    expect(response).toBe(mocks.rating);
+  });
+
+  it('must reject when movies.rating is called without movieId', async () => {
+    await expect(movies.rating()).rejects.toBe('A movieId has to be provided');
+  });
+
+  it('must reject when movies.rating is called with movieId and without rating', async () => {
+    await expect(movies.rating(1)).rejects.toBe('A rating has to be provided');
+  });
+
+  it('must reject when movies.rating is called without session options', async () => {
+    await expect(movies.rating(123, 1)).rejects.toBe(
+      'A sessionId or a guestSessionId has to be provided'
+    );
+  });
+
+  it('must return a valid response from movies.recommendations with movieId', async () => {
+    axios.get.mockResolvedValue(mocks.recommendations);
+    const response = await movies.recommendations(1);
+
+    expect(response).toBe(mocks.recommendations);
+  });
+
+  it('must return a valid response from movies.recommendations with movieId and options', async () => {
+    axios.get.mockResolvedValue(mocks.recommendations);
+    const response = await movies.recommendations(1, {
+      language: 'es',
+      page: 1,
+    });
+
+    expect(response).toBe(mocks.recommendations);
+  });
+
+  it('must reject when movies.recommendations is called without movieId', async () => {
+    await expect(movies.recommendations()).rejects.toBe(
+      'A movieId has to be provided'
+    );
+  });
+
   it('must return a valid response from movies.releaseDates with movieId', async () => {
     axios.get.mockResolvedValue(mocks.releaseDates);
     const response = await movies.releaseDates(1);
@@ -193,6 +345,66 @@ describe('movies entity', () => {
     await expect(movies.releaseDates()).rejects.toBe(
       'A movieId has to be provided'
     );
+  });
+
+  it('must return a valid response from movies.reviews with movieId', async () => {
+    axios.get.mockResolvedValue(mocks.reviews);
+    const response = await movies.reviews(1);
+
+    expect(response).toBe(mocks.reviews);
+  });
+
+  it('must return a valid response from movies.reviews with movieId and options', async () => {
+    axios.get.mockResolvedValue(mocks.reviews);
+    const response = await movies.reviews(1, {
+      language: 'es',
+      page: 1,
+    });
+
+    expect(response).toBe(mocks.reviews);
+  });
+
+  it('must reject when movies.reviews is called without movieId', async () => {
+    await expect(movies.reviews()).rejects.toBe('A movieId has to be provided');
+  });
+
+  it('must return a valid response from movies.similar with movieId', async () => {
+    axios.get.mockResolvedValue(mocks.similar);
+    const response = await movies.similar(1);
+
+    expect(response).toBe(mocks.similar);
+  });
+
+  it('must return a valid response from movies.similar with movieId and options', async () => {
+    axios.get.mockResolvedValue(mocks.similar);
+    const response = await movies.similar(1, {
+      language: 'es',
+      page: 1,
+    });
+
+    expect(response).toBe(mocks.similar);
+  });
+
+  it('must reject when movies.similar is called without movieId', async () => {
+    await expect(movies.similar()).rejects.toBe('A movieId has to be provided');
+  });
+
+  it('must return a valid response from movies.topRated call with options', async () => {
+    axios.get.mockResolvedValue(mocks.topRated);
+    const response = await movies.topRated({
+      language: 'en',
+      page: 1,
+      region: 'CO',
+    });
+
+    expect(response).toBe(mocks.topRated);
+  });
+
+  it('must return a valid response from movies.topRated call with no options', async () => {
+    axios.get.mockResolvedValue(mocks.topRated);
+    const response = await movies.topRated();
+
+    expect(response).toBe(mocks.topRated);
   });
 
   it('must return a valid response from movies.translations with movieId', async () => {
@@ -208,6 +420,24 @@ describe('movies entity', () => {
     );
   });
 
+  it('must return a valid response from movies.upcoming call with options', async () => {
+    axios.get.mockResolvedValue(mocks.upcoming);
+    const response = await movies.upcoming({
+      language: 'en',
+      page: 1,
+      region: 'CO',
+    });
+
+    expect(response).toBe(mocks.upcoming);
+  });
+
+  it('must return a valid response from movies.upcoming call with no options', async () => {
+    axios.get.mockResolvedValue(mocks.upcoming);
+    const response = await movies.upcoming();
+
+    expect(response).toBe(mocks.upcoming);
+  });
+
   it('must return a valid response from movies.videos with movieId', async () => {
     axios.get.mockResolvedValue(mocks.videos);
     const response = await movies.videos(1);
@@ -217,12 +447,5 @@ describe('movies entity', () => {
 
   it('must reject when movies.videos is called without movieId', async () => {
     await expect(movies.videos()).rejects.toBe('A movieId has to be provided');
-  });
-
-  it('must return a valid response from movies.popular call', async () => {
-    axios.get.mockResolvedValue(mocks.popular);
-    const response = await movies.popular();
-
-    expect(response).toBe(mocks.popular);
   });
 });
