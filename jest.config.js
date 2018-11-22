@@ -9,8 +9,7 @@ module.export = {
     "!**/node_modules/**",
     "!**/dist/**",
     "!**/coverage/**",
-    "!**src/dev.js**",
-    "!**mocks.js**",
+    "!**src/dev.js**"
   ],
   coverageThreshold: {
     global: {
