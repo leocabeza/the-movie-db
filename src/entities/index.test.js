@@ -1,9 +1,7 @@
 import entities from './';
 
-describe('entities', () => {
-  it('must have all entities exposed', () => {
-    expect(entities).toHaveProperty('authentication');
-    expect(entities).toHaveProperty('configuration');
-    expect(entities).toHaveProperty('movies');
+describe('entities entry point', () => {
+  it('must have all versions exposed', () => {
+    expect(entities).toHaveProperty('v3');
   });
 });

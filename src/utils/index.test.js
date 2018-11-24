@@ -8,15 +8,15 @@ describe('utils', () => {
   it('must build a data object depending on method', () => {
     const data = { quote: "I hope this doesn't awaken anything in me" };
 
-    expect(utils.buildDataForMethod(data)).toEqual({ params: data });
-    expect(utils.buildDataForMethod(data, 'DELETE')).toEqual({ params: data });
-    expect(utils.buildDataForMethod(data, 'POST')).toEqual(data);
-    expect(utils.buildDataForMethod(data, 'PUT')).toEqual(data);
+    expect(utils.buildBodyOrParams(data)).toEqual({ params: data });
+    expect(utils.buildBodyOrParams(data, 'DELETE')).toEqual({ params: data });
+    expect(utils.buildBodyOrParams(data, 'POST')).toEqual(data);
+    expect(utils.buildBodyOrParams(data, 'PUT')).toEqual(data);
   });
 
   it('must resolve a get request', async () => {
     axios.get.mockResolvedValue(GAS_LEAK);
-    const response = await utils.makeRequest('/url', GAS_LEAK, 'get');
+    const response = await utils.makeHttpRequest('/url', GAS_LEAK, 'get');
 
     expect(response).toBe(GAS_LEAK);
   });
@@ -24,7 +24,7 @@ describe('utils', () => {
   it('must resolve a post request', async () => {
     const successfulResponse = { status: 201, data: {} };
     axios.post.mockResolvedValue(successfulResponse);
-    const response = await utils.makeRequest('/url', GAS_LEAK, 'post');
+    const response = await utils.makeHttpRequest('/url', GAS_LEAK, 'post');
 
     expect(response).toBe(successfulResponse);
   });
@@ -32,7 +32,7 @@ describe('utils', () => {
   it('must resolve a put request', async () => {
     const successfulResponse = { status: 200, data: GAS_LEAK };
     axios.put.mockResolvedValue(successfulResponse);
-    const response = await utils.makeRequest('/url', GAS_LEAK, 'put');
+    const response = await utils.makeHttpRequest('/url', GAS_LEAK, 'put');
 
     expect(response).toBe(successfulResponse);
   });
@@ -42,7 +42,7 @@ describe('utils', () => {
     axios.get.mockImplementationOnce(() => Promise.reject(failingMessage));
 
     try {
-      await utils.makeRequest('/url');
+      await utils.makeHttpRequest('/url');
     } catch (error) {
       expect(error).toBe(failingMessage);
     }
@@ -83,15 +83,15 @@ describe('utils', () => {
       javascript: [],
     };
 
-    expect(utils.buildDefinedParams(emptyObject)).toEqual(emptyObject);
-    expect(utils.buildDefinedParams(objectWithNullValues)).toEqual(
+    expect(utils.removeUndefinedValues(emptyObject)).toEqual(emptyObject);
+    expect(utils.removeUndefinedValues(objectWithNullValues)).toEqual(
       objectWithNullValues
     );
-    expect(utils.buildDefinedParams(mixedObject)).toEqual({
+    expect(utils.removeUndefinedValues(mixedObject)).toEqual({
       foo: null,
       bar: false,
     });
-    expect(utils.buildDefinedParams(objectWithValidValues)).toEqual(
+    expect(utils.removeUndefinedValues(objectWithValidValues)).toEqual(
       objectWithValidValues
     );
   });

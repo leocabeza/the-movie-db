@@ -9,6 +9,10 @@ Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://
 
 For now, it only works with the version 3 of the api.
 
+## Compatibility
+
+It works out of the box for modern browsers and node versions greater than 10.
+
 ## Installation
 
 This package is distributed via npm:
@@ -35,26 +39,17 @@ client.movies.popular()
   });
 ```
 
-or if you prefer async/await
+## Api
 
-```javascript
-const TheMovieDb = require('@leonardocabeza/the-movie-db');
+For more methods exposed by TheMovieDbClient, you could refer to the api docs for a full list: [api docs](docs/v3-api.md)
 
-const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
-
-cont fetchData = async() => {
-  try {
-    const data = await client.movies.popular();
-    // handle data
-  } catch(error) {
-    // handle error
-  }
-}
-```
-
-## To use it in a web browser
+## CDN
 
 `<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.js"></script>`
+
+## Contributing Guide
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Disclaimer
 

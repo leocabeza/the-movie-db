@@ -1,0 +1,538 @@
+## Modules
+
+<dl>
+<dt><a href="#module_authentication">authentication</a></dt>
+<dd></dd>
+<dt><a href="#module_configuration">configuration</a></dt>
+<dd></dd>
+<dt><a href="#module_movies">movies</a></dt>
+<dd></dd>
+</dl>
+
+<a name="module_authentication"></a>
+
+## authentication
+
+* [authentication](#module_authentication)
+    * [.logout](#module_authentication.logout) ⇒
+    * [.newGuestSession](#module_authentication.newGuestSession) ⇒
+    * [.newSession](#module_authentication.newSession) ⇒
+    * [.newToken](#module_authentication.newToken) ⇒
+    * [.sessionConvert](#module_authentication.sessionConvert) ⇒
+    * [.validateWithLogin](#module_authentication.validateWithLogin) ⇒
+
+<a name="module_authentication.logout"></a>
+
+### authentication.logout ⇒
+If you would like to delete (or "logout") from a session, call this method with a valid session ID.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/delete-session  
+
+| Param | Type |
+| --- | --- |
+| sessionId | <code>string</code> | 
+
+<a name="module_authentication.newGuestSession"></a>
+
+### authentication.newGuestSession ⇒
+This method will let you create a new guest session. Guest sessions are a type of session that will let a user rate movies and TV shows but not require them to have a TMDb user account.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/create-guest-session  
+<a name="module_authentication.newSession"></a>
+
+### authentication.newSession ⇒
+You can use this method to create a fully valid session ID once a user has validated the request token.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/create-session  
+
+| Param | Type |
+| --- | --- |
+| requestToken | <code>string</code> | 
+
+<a name="module_authentication.newToken"></a>
+
+### authentication.newToken ⇒
+Create a temporary request token that can be used to validate a TMDb user login.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/create-request-token  
+<a name="module_authentication.sessionConvert"></a>
+
+### authentication.sessionConvert ⇒
+Use this method to create a v3 session ID if you already have a valid v4 access token.
+The v4 token needs to be authenticated by the user. Your standard "read token" will not validate to create a session ID.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/create-session-from-v4-access-token  
+
+| Param | Type |
+| --- | --- |
+| v4AccessToken | <code>string</code> | 
+
+<a name="module_authentication.validateWithLogin"></a>
+
+### authentication.validateWithLogin ⇒
+This method allows an application to validate a request token by entering a username and password.
+Not all applications have access to a web view so this can be used as a substitute.
+If you decide to use this method please use HTTPS.
+
+**Kind**: static constant of [<code>authentication</code>](#module_authentication)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/authentication/validate-request-token  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.username | <code>string</code> | 
+| options.password | <code>string</code> | 
+| options.requestToken | <code>string</code> | 
+
+<a name="module_configuration"></a>
+
+## configuration
+
+* [configuration](#module_configuration)
+    * [.api](#module_configuration.api) ⇒
+    * [.countries](#module_configuration.countries) ⇒
+    * [.jobs](#module_configuration.jobs) ⇒
+    * [.languages](#module_configuration.languages) ⇒
+    * [.primaryTranslations](#module_configuration.primaryTranslations) ⇒
+    * [.timezones](#module_configuration.timezones) ⇒
+
+<a name="module_configuration.api"></a>
+
+### configuration.api ⇒
+Get the system wide configuration information.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-api-configuration  
+<a name="module_configuration.countries"></a>
+
+### configuration.countries ⇒
+Get the list of countries (ISO 3166-1 tags) used throughout TMDb.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-countries  
+<a name="module_configuration.jobs"></a>
+
+### configuration.jobs ⇒
+Get a list of the jobs and departments we use on TMDb.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-jobs  
+<a name="module_configuration.languages"></a>
+
+### configuration.languages ⇒
+Get the list of languages (ISO 639-1 tags) used throughout TMDb.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-languages  
+<a name="module_configuration.primaryTranslations"></a>
+
+### configuration.primaryTranslations ⇒
+Get a list of the officially supported translations on TMDb.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-primary-translations  
+<a name="module_configuration.timezones"></a>
+
+### configuration.timezones ⇒
+Get the list of timezones used throughout TMDb.
+
+**Kind**: static constant of [<code>configuration</code>](#module_configuration)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/configuration/get-timezones  
+<a name="module_movies"></a>
+
+## movies
+
+* [movies](#module_movies)
+    * [.accountStates](#module_movies.accountStates) ⇒
+    * [.alternativeTitles](#module_movies.alternativeTitles) ⇒
+    * [.changes](#module_movies.changes) ⇒
+    * [.credits](#module_movies.credits) ⇒
+    * [.deleteRating](#module_movies.deleteRating) ⇒
+    * [.details](#module_movies.details) ⇒
+    * [.externalIds](#module_movies.externalIds) ⇒
+    * [.images](#module_movies.images) ⇒
+    * [.keywords](#module_movies.keywords) ⇒
+    * [.latest](#module_movies.latest) ⇒
+    * [.lists](#module_movies.lists) ⇒
+    * [.nowPlaying](#module_movies.nowPlaying)
+    * [.popular](#module_movies.popular) ⇒
+    * [.rating](#module_movies.rating) ⇒
+    * [.recommendations](#module_movies.recommendations) ⇒
+    * [.releaseDates](#module_movies.releaseDates) ⇒
+    * [.reviews](#module_movies.reviews) ⇒
+    * [.similar](#module_movies.similar) ⇒
+    * [.topRated](#module_movies.topRated) ⇒
+    * [.translations](#module_movies.translations) ⇒
+    * [.upcoming](#module_movies.upcoming) ⇒
+    * [.videos](#module_movies.videos) ⇒
+
+<a name="module_movies.accountStates"></a>
+
+### movies.accountStates ⇒
+Grab the following account states for a session:
+- Movie rating
+- If it belongs to your watchlist
+- If it belongs to your favourite list
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-account-states  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.sessionId | <code>string</code> | 
+| options.guestSessionId | <code>string</code> | 
+
+<a name="module_movies.alternativeTitles"></a>
+
+### movies.alternativeTitles ⇒
+Get all of the alternative titles for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-alternative-titles  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.country | <code>string</code> | 
+
+<a name="module_movies.changes"></a>
+
+### movies.changes ⇒
+Get the changes for a movie. By default only the last 24 hours are returned.
+You can query up to 14 days in a single query by using the startDate and endDate query parameters.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-changes  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.startDate | <code>string</code> | 
+| options.endDate | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_movies.credits"></a>
+
+### movies.credits ⇒
+Get the cast and crew for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-credits  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+
+<a name="module_movies.deleteRating"></a>
+
+### movies.deleteRating ⇒
+Remove your rating for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/delete-movie-rating  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>\*</code> | 
+
+<a name="module_movies.details"></a>
+
+### movies.details ⇒
+Get the primary information about a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-details  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.appendToResponse | <code>string</code> | 
+
+<a name="module_movies.externalIds"></a>
+
+### movies.externalIds ⇒
+Get the external ids for a movie.
+We currently support the following external sources: IMDB ID, Facebook, Instagram, Twitter.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-external-ids  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+
+<a name="module_movies.images"></a>
+
+### movies.images ⇒
+Get the images that belong to a movie.
+Querying images with a language parameter will filter the results.
+If you want to include a fallback language (especially useful for backdrops) you can use the includeImageLanguage parameter.
+This should be a comma separated value like so: { includeImageLanguage: 'en,null' }.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-images  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.includeImageLanguage | <code>string</code> | 
+
+<a name="module_movies.keywords"></a>
+
+### movies.keywords ⇒
+Get the keywords that have been added to a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-keywords  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+
+<a name="module_movies.latest"></a>
+
+### movies.latest ⇒
+Get the most newly created movie. This is a live response and will continuously change.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-latest-movie  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_movies.lists"></a>
+
+### movies.lists ⇒
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-lists  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_movies.nowPlaying"></a>
+
+### movies.nowPlaying
+Get a list of movies in theatres.
+This is a release type query that looks for all movies that have a release type
+of 2 or 3 within the specified date range.
+You can optionally specify a region prameter which will narrow the search
+to only look for theatrical release dates within the specified country.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**See**: https://developers.themoviedb.org/3/movies/get-now-playing  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.region | <code>string</code> | 
+
+<a name="module_movies.popular"></a>
+
+### movies.popular ⇒
+Get a list of the current popular movies on TMDb.
+This list updates daily.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-popular-movies  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.region | <code>string</code> | 
+
+<a name="module_movies.rating"></a>
+
+### movies.rating ⇒
+Rate a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/rate-movie  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| movieId | <code>number</code> |  |
+| rating | <code>rating</code> | between 0.5 and 10.0 |
+| options | <code>Object</code> |  |
+| guestSessionId | <code>string</code> |  |
+| sessionId | <code>string</code> |  |
+
+<a name="module_movies.recommendations"></a>
+
+### movies.recommendations ⇒
+Get a list of recommended movies for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-recommendations  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_movies.releaseDates"></a>
+
+### movies.releaseDates ⇒
+Get the release date along with the certification for a movie.
+Release dates support different types:
+- Premiere
+- Theatrical (limited)
+- Theatrical
+- Digital
+- Physical
+- TV
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-release-dates  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+
+<a name="module_movies.reviews"></a>
+
+### movies.reviews ⇒
+Get the user reviews for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-reviews  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_movies.similar"></a>
+
+### movies.similar ⇒
+Get a list of similar movies. This is not the same as the "Recommendation" system you see on the website.
+These items are assembled by looking at keywords and genres.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-similar-movies  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_movies.topRated"></a>
+
+### movies.topRated ⇒
+Get the top rated movies on TMDb.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-top-rated-movies  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.region | <code>string</code> | 
+
+<a name="module_movies.translations"></a>
+
+### movies.translations ⇒
+Get a list of translations that have been created for a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-translations  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+
+<a name="module_movies.upcoming"></a>
+
+### movies.upcoming ⇒
+Get a list of upcoming movies in theatres.
+This is a release type query that looks for all movies that
+have a release type of 2 or 3 within the specified date range.
+You can optionally specify a region parameter which will narrow the search to only look
+for theatrical release dates within the specified country.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-upcoming  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.region | <code>string</code> | 
+
+<a name="module_movies.videos"></a>
+
+### movies.videos ⇒
+Get the videos that have been added to a movie.
+
+**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/movies/get-movie-videos  
+
+| Param | Type |
+| --- | --- |
+| movieId | <code>number</code> | 
+

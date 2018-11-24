@@ -1,5 +1,9 @@
-import { makeRequest } from '../../utils';
-import * as urls from '../../urls';
+import { makeHttpRequest } from '../../../utils';
+import urls from '../../../urls';
+
+/**
+ * @module authentication
+ */
 
 /**
  * If you would like to delete (or "logout") from a session, call this method with a valid session ID.
@@ -12,7 +16,11 @@ export const logout = async sessionId => {
     return Promise.reject('A session id has to be provided');
   }
 
-  return makeRequest(urls.AUTHENTICATION_LOGOUT, { sessionId }, 'delete');
+  return makeHttpRequest(
+    urls.v3.AUTHENTICATION_LOGOUT,
+    { sessionId },
+    'delete'
+  );
 };
 
 /**
@@ -21,7 +29,7 @@ export const logout = async sessionId => {
  * @see https://developers.themoviedb.org/3/authentication/create-guest-session
  */
 export const newGuestSession = async () =>
-  await makeRequest(urls.AUTHENTICATION_NEW_GUEST_SESSION);
+  await makeHttpRequest(urls.v3.AUTHENTICATION_NEW_GUEST_SESSION);
 
 /**
  * You can use this method to create a fully valid session ID once a user has validated the request token.
@@ -34,8 +42,8 @@ export const newSession = async requestToken => {
     return Promise.reject('A request token has to be provided');
   }
 
-  return await makeRequest(
-    urls.AUTHENTICATION_NEW_SESSION,
+  return await makeHttpRequest(
+    urls.v3.AUTHENTICATION_NEW_SESSION,
     { requestToken },
     'post'
   );
@@ -47,7 +55,7 @@ export const newSession = async requestToken => {
  * @see https://developers.themoviedb.org/3/authentication/create-request-token
  */
 export const newToken = async () =>
-  await makeRequest(urls.AUTHENTICATION_NEW_TOKEN);
+  await makeHttpRequest(urls.v3.AUTHENTICATION_NEW_TOKEN);
 
 /**
  * Use this method to create a v3 session ID if you already have a valid v4 access token.
@@ -61,8 +69,8 @@ export const sessionConvert = async v4AccessToken => {
     return Promise.reject('A v4 access token has to be provided');
   }
 
-  return await makeRequest(
-    urls.AUTHENTICATION_SESSION_CONVERT,
+  return await makeHttpRequest(
+    urls.v3.AUTHENTICATION_SESSION_CONVERT,
     { accessToken: v4AccessToken },
     'post'
   );
@@ -88,8 +96,8 @@ export const validateWithLogin = async (options = {}) => {
     );
   }
 
-  return await makeRequest(
-    urls.AUTHENTICATION_TOKEN_VALIDATE_LOGIN,
+  return await makeHttpRequest(
+    urls.v3.AUTHENTICATION_TOKEN_VALIDATE_LOGIN,
     { username, password, requestToken },
     'post'
   );

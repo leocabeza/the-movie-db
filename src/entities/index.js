@@ -1,9 +1,5 @@
-import * as authentication from './authentication';
-import * as configuration from './configuration';
-import * as movies from './movies';
+import v3 from './v3';
 
 export default {
-  authentication,
-  configuration,
-  movies,
+  v3,
 };

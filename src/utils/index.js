@@ -1,28 +1,19 @@
 import axios from 'axios';
 
-/**
- * Returns an object to pass to an axios request body/params
- * @param {Object} data
- * @param {string} method
- */
-export const buildDataForMethod = (data, method = 'get') => {
-  const builtData = buildDefinedParams(data);
+export const buildBodyOrParams = (data, method = 'get') => {
+  const valuesWithData = removeUndefinedValues(data);
 
   if (['get', 'delete'].includes(method.toLowerCase())) {
     return {
-      params: builtData,
+      params: valuesWithData,
     };
   }
 
-  return builtData;
+  return valuesWithData;
 };
 
-//TODO: May be there is a better functional way to do this?
-/**
- * Returns a object with non undefined keys in paramsObject
- * @param {Object} paramsObject
- */
-export const buildDefinedParams = paramsObject => {
+//TODO: May be there is a better declarative way to do this?
+export const removeUndefinedValues = paramsObject => {
   const finalParams = {};
 
   Object.keys(paramsObject).forEach(paramKey => {
@@ -35,31 +26,18 @@ export const buildDefinedParams = paramsObject => {
   return finalParams;
 };
 
-/**
- * Build request for axios
- * @param {string} url
- * @param {Object} data
- * @param {string} method
- */
-export const makeRequest = async (url, data = {}, method = 'get') => {
+export const makeHttpRequest = async (url, data = {}, method = 'get') => {
   try {
-    const builtData = buildDataForMethod(data, method.toLowerCase());
-    return await axios[method.toLowerCase()](url, builtData);
+    const finalData = buildBodyOrParams(data, method.toLowerCase());
+    const finalMethod = method.toLowerCase();
+    return await axios[finalMethod](url, finalData);
   } catch (error) {
     return Promise.reject(error);
   }
 };
 
-/**
- * Returns a camelcase word from a snakecase
- * @param {string} word
- */
 export const snakeToCamelCase = word =>
   word.toLowerCase().replace(/_(.)/g, (match, group1) => group1.toUpperCase());
 
-/**
- * Returns a snakecase word from a camelcase
- * @param {string} word
- */
 export const camelToSnakeCase = word =>
   word.replace(/([A-Z])/g, '_$1').toLowerCase();
