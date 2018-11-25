@@ -30,7 +30,7 @@ const TheMovieDb = require('@leonardocabeza/the-movie-db');
 
 const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
 
-client.movies.popular()
+client.movie.popular()
   .then((data) => {
     // handle data
     // data keys are camelCased
@@ -40,7 +40,7 @@ client.movies.popular()
   });
 ```
 
-## Api
+## API
 
 For more methods exposed by TheMovieDbClient, you could refer to the api docs for a full list: [api docs](docs/v3-api.md)
 
@@ -55,6 +55,35 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## Disclaimer
 
 This is a work in progress, DO NOT USE in production just yet.
+
+# Entities missing so far:
+
+## V3
+* Account
+* Certifications
+* Changes
+* Collections
+* Companies
+* Credits
+* Discover
+* Find
+* Genres
+* Guest sessions
+* Keywords
+* Lists
+* Trending
+* People
+* Reviews
+* Search
+* TV
+* TV episodes
+* TV episode groups
+* TV seasons
+
+## V4
+* Account
+* Auth
+* List
 
 ## Promises
 

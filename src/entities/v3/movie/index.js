@@ -25,7 +25,7 @@ export const accountStates = async (movieId, options = {}) => {
 
   if (sessionId || guestSessionId) {
     return await makeHttpRequest(
-      urls.v3.MOVIES_ACCOUNT_STATES.replace(':id', movieId),
+      urls.v3.MOVIE_ACCOUNT_STATES.replace(':id', movieId),
       { sessionId, guestSessionId }
     );
   }
@@ -48,7 +48,7 @@ export const alternativeTitles = async (movieId, options = {}) => {
   }
 
   return await makeHttpRequest(
-    urls.v3.MOVIES_ALTERNATIVE_TITLES.replace(':id', movieId),
+    urls.v3.MOVIE_ALTERNATIVE_TITLES.replace(':id', movieId),
     { country }
   );
 };
@@ -70,7 +70,7 @@ export const changes = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return await makeHttpRequest(urls.v3.MOVIES_CHANGES.replace(':id', movieId), {
+  return await makeHttpRequest(urls.v3.MOVIE_CHANGES.replace(':id', movieId), {
     startDate,
     endDate,
   });
@@ -87,7 +87,7 @@ export const credits = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return await makeHttpRequest(urls.v3.MOVIES_CREDITS.replace(':id', movieId));
+  return await makeHttpRequest(urls.v3.MOVIE_CREDITS.replace(':id', movieId));
 };
 
 /**
@@ -105,7 +105,7 @@ export const deleteRating = async (movieId, options = {}) => {
 
   if (sessionId || guestSessionId) {
     return await makeHttpRequest(
-      urls.v3.MOVIES_DELETE_RATING.replace(':id', movieId),
+      urls.v3.MOVIE_DELETE_RATING.replace(':id', movieId),
       { sessionId, guestSessionId },
       'delete'
     );
@@ -129,7 +129,7 @@ export const details = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return await makeHttpRequest(urls.v3.MOVIES_DETAILS.replace(':id', movieId), {
+  return await makeHttpRequest(urls.v3.MOVIE_DETAILS.replace(':id', movieId), {
     language,
     appendToResponse,
   });
@@ -147,7 +147,7 @@ export const externalIds = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_EXTERNAL_IDS.replace(':id', movieId));
+  return makeHttpRequest(urls.v3.MOVIE_EXTERNAL_IDS.replace(':id', movieId));
 };
 
 /**
@@ -168,7 +168,7 @@ export const images = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_IMAGES.replace(':id', movieId), {
+  return makeHttpRequest(urls.v3.MOVIE_IMAGES.replace(':id', movieId), {
     language,
     includeImageLanguage,
   });
@@ -185,7 +185,7 @@ export const keywords = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_KEYWORDS.replace(':id', movieId));
+  return makeHttpRequest(urls.v3.MOVIE_KEYWORDS.replace(':id', movieId));
 };
 
 /**
@@ -198,7 +198,7 @@ export const keywords = async movieId => {
 export const latest = async (options = {}) => {
   const { language } = options;
 
-  return await makeHttpRequest(urls.v3.MOVIES_LATEST, { language });
+  return await makeHttpRequest(urls.v3.MOVIE_LATEST, { language });
 };
 
 /**
@@ -215,7 +215,7 @@ export const lists = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_LISTS.replace(':id', movieId), {
+  return makeHttpRequest(urls.v3.MOVIE_LISTS.replace(':id', movieId), {
     language,
     page,
   });
@@ -235,7 +235,7 @@ export const lists = async (movieId, options = {}) => {
  */
 export const nowPlaying = async (options = {}) => {
   const { language, page, region } = options;
-  return await makeHttpRequest(urls.v3.MOVIES_NOW_PLAYING, {
+  return await makeHttpRequest(urls.v3.MOVIE_NOW_PLAYING, {
     language,
     page,
     region,
@@ -255,7 +255,7 @@ export const nowPlaying = async (options = {}) => {
 export const popular = async (options = {}) => {
   const { language, page, region } = options;
 
-  return await makeHttpRequest(urls.v3.MOVIES_POPULAR, {
+  return await makeHttpRequest(urls.v3.MOVIE_POPULAR, {
     language,
     page,
     region,
@@ -287,7 +287,7 @@ export const rating = async (movieId, rating, options = {}) => {
       ? `?session_id=${sessionId}`
       : `?guest_session_id=${guestSessionId}`;
     return await makeHttpRequest(
-      urls.v3.MOVIES_RATING.replace(':id', movieId).concat(queryParam),
+      urls.v3.MOVIE_RATING.replace(':id', movieId).concat(queryParam),
       { value: rating },
       'post'
     );
@@ -312,7 +312,7 @@ export const recommendations = async (movieId, options = {}) => {
   }
 
   return makeHttpRequest(
-    urls.v3.MOVIES_RECOMMENDATIONS.replace(':id', movieId),
+    urls.v3.MOVIE_RECOMMENDATIONS.replace(':id', movieId),
     {
       language,
       page,
@@ -338,7 +338,7 @@ export const releaseDates = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_RELEASE_DATES.replace(':id', movieId));
+  return makeHttpRequest(urls.v3.MOVIE_RELEASE_DATES.replace(':id', movieId));
 };
 
 /**
@@ -356,7 +356,7 @@ export const reviews = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_REVIEWS.replace(':id', movieId), {
+  return makeHttpRequest(urls.v3.MOVIE_REVIEWS.replace(':id', movieId), {
     language,
     page,
   });
@@ -378,7 +378,7 @@ export const similar = async (movieId, options = {}) => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_SIMILAR.replace(':id', movieId), {
+  return makeHttpRequest(urls.v3.MOVIE_SIMILAR.replace(':id', movieId), {
     language,
     page,
   });
@@ -396,7 +396,7 @@ export const similar = async (movieId, options = {}) => {
 export const topRated = async (options = {}) => {
   const { language, page, region } = options;
 
-  return makeHttpRequest(urls.v3.MOVIES_TOP_RATED, { language, page, region });
+  return makeHttpRequest(urls.v3.MOVIE_TOP_RATED, { language, page, region });
 };
 
 /**
@@ -410,7 +410,7 @@ export const translations = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_TRANSLATIONS.replace(':id', movieId));
+  return makeHttpRequest(urls.v3.MOVIE_TRANSLATIONS.replace(':id', movieId));
 };
 
 /**
@@ -429,7 +429,7 @@ export const translations = async movieId => {
 export const upcoming = async (options = {}) => {
   const { language, page, region } = options;
 
-  return makeHttpRequest(urls.v3.MOVIES_UPCOMING, { language, page, region });
+  return makeHttpRequest(urls.v3.MOVIE_UPCOMING, { language, page, region });
 };
 
 /**
@@ -443,5 +443,5 @@ export const videos = async movieId => {
     return Promise.reject('A movieId has to be provided');
   }
 
-  return makeHttpRequest(urls.v3.MOVIES_VIDEOS.replace(':id', movieId));
+  return makeHttpRequest(urls.v3.MOVIE_VIDEOS.replace(':id', movieId));
 };

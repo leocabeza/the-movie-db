@@ -7,6 +7,8 @@
 <dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
+<dt><a href="#module_network">network</a></dt>
+<dd></dd>
 </dl>
 
 <a name="module_authentication"></a>
@@ -535,4 +537,57 @@ Get the videos that have been added to a movie.
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
+
+<a name="module_network"></a>
+
+## network
+
+* [network](#module_network)
+    * [.details](#module_network.details) ⇒
+    * [.alternativeNames](#module_network.alternativeNames) ⇒
+    * [.images](#module_network.images) ⇒
+
+<a name="module_network.details"></a>
+
+### network.details ⇒
+Get the details of a network.
+
+**Kind**: static constant of [<code>network</code>](#module_network)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/networks/get-network-details  
+
+| Param | Type |
+| --- | --- |
+| networkId | <code>number</code> | 
+
+<a name="module_network.alternativeNames"></a>
+
+### network.alternativeNames ⇒
+Get the alternative names of a network.
+
+**Kind**: static constant of [<code>network</code>](#module_network)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/networks/get-network-alternative-names  
+
+| Param | Type |
+| --- | --- |
+| networkId | <code>number</code> | 
+
+<a name="module_network.images"></a>
+
+### network.images ⇒
+Get the TV network logos by id.
+There are two image formats that are supported for networks, PNG's and SVG's.
+You can see which type the original file is by looking at the fileType field.
+We prefer SVG's as they are resolution independent and as such, the width and height are only
+there to reflect the original asset that was uploaded.
+An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
+
+**Kind**: static constant of [<code>network</code>](#module_network)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/networks/get-network-images  
+
+| Param | Type |
+| --- | --- |
+| networkId | <code>\*</code> | 
 
