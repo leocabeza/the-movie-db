@@ -41,4 +41,5 @@ export const NETWORK_DETAILS = '/network/:id';
 export const NETWORK_ALTERNATIVE_NAMES = '/network/:id/alternative_names';
 export const NETWORK_IMAGES = '/network/:id/images';
 export const REVIEW_DETAILS = '/review/:id';
+export const SEARCH_TV = '/search/tv';
 export const TRENDING_ITEMS = '/trending/:mediaType/:timeWindow';

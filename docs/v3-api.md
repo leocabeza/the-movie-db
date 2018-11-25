@@ -13,6 +13,8 @@
 <dd></dd>
 <dt><a href="#module_review">review</a></dt>
 <dd></dd>
+<dt><a href="#module_search">search</a></dt>
+<dd></dd>
 <dt><a href="#module_trending">trending</a></dt>
 <dd></dd>
 </dl>
@@ -632,6 +634,26 @@ Get details of a review.
 | Param | Type |
 | --- | --- |
 | reviewId | <code>string</code> | 
+
+<a name="module_search"></a>
+
+## search
+<a name="module_search.tv"></a>
+
+### search.tv ⇒
+Search for a TV show.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-tv-shows  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.query | <code>string</code> | This value should be URI encoded. |
+| options.page | <code>number</code> |  |
+| options.firstAirDateYear | <code>number</code> |  |
 
 <a name="module_trending"></a>
 

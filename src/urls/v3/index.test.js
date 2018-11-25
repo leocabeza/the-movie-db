@@ -72,6 +72,10 @@ describe('urls', () => {
     expect(urls.REVIEW_DETAILS).toEqual('/review/:id');
   });
 
+  it('must list search constants correctly', () => {
+    expect(urls.SEARCH_TV).toEqual('/search/tv');
+  });
+
   it('must list trending constants correctly', () => {
     expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
   });
