@@ -1,7 +1,4 @@
-import axios from 'axios';
-import Client, { parse } from './client';
-
-jest.mock('axios');
+import Client from './client';
 
 describe('client', () => {
   it('must throw if an api key is not passed in', () => {

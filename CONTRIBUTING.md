@@ -8,6 +8,10 @@
 6. Push to the branch (`git push origin my-new-feature`)
 7. [Create new Pull Request](https://help.github.com/articles/creating-a-pull-request/)
 
+## Requirements
+
+You need to use node 10.13 version.
+
 ## Testing
 
 We use [Jest](https://jestjs.io/en/) to write tests. Run our test suite with this command:

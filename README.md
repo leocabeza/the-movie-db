@@ -33,6 +33,7 @@ const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
 client.movies.popular()
   .then((data) => {
     // handle data
+    // data keys are camelCased
   })
   .catch((error) => {
     // handle error

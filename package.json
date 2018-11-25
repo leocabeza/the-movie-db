@@ -41,7 +41,7 @@
   },
   "unpkg": "dist/the-movie-db.js",
   "engines": {
-    "node": ">=10"
+    "node": "=10.13"
   },
   "files": [
     "dist"
