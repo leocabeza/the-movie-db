@@ -14,7 +14,7 @@ describe('authentication entity', () => {
     const mockedResponse = {
       success: true,
       guestSession_id: 'XXX',
-      expiresAt: new Date('2018-11-19 19:32:40 UTC'),
+      expiresAt: '2018-11-19 19:32:40 UTC',
     };
     axios.get.mockResolvedValue(mockedResponse);
     const response = await authentication.newGuestSession();

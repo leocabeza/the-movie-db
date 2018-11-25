@@ -33,25 +33,7 @@ describe('parser', () => {
     expect(typeof firstResult.backdropPath === 'string').toBeTruthy();
     expect(typeof firstResult.adult === 'boolean').toBeTruthy();
     expect(typeof firstResult.overview === 'string').toBeTruthy();
-    expect(firstResult.releaseDate instanceof Date).toBeTruthy();
-  });
-
-  it('must format date when applicable', () => {
-    const date = new Date('2018-10-03');
-
-    expect(formatDateIfApplicable(date, 'release_date')).toBeInstanceOf(Date);
-    expect(formatDateIfApplicable(date, 'expires_at')).toBeInstanceOf(Date);
-  });
-
-  it('must not format wrong date passed', () => {
-    const badStringDate = 'foo-bar';
-
-    expect(formatDateIfApplicable(badStringDate, 'release_date')).toEqual(
-      badStringDate
-    );
-    expect(formatDateIfApplicable(badStringDate, 'expires_at')).toEqual(
-      badStringDate
-    );
+    expect(typeof firstResult.releaseDate === 'string').toBeTruthy();
   });
 
   it('must apply camelcase if applicable', () => {

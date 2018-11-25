@@ -383,8 +383,8 @@ describe('movies entity', () => {
       page: 1,
       results: [],
       dates: {
-        maximum: new Date('2016-09-01'),
-        minimum: new Date('2016-07-21'),
+        maximum: '2016-09-01',
+        minimum: '2016-07-21',
       },
       totalPages: 1,
       totalResults: 1,
@@ -404,8 +404,8 @@ describe('movies entity', () => {
       page: 1,
       results: [],
       dates: {
-        maximum: new Date('2016-09-01'),
-        minimum: new Date('2016-07-21'),
+        maximum: '2016-09-01',
+        minimum: '2016-07-21',
       },
       totalPages: 1,
       totalResults: 1,
@@ -650,8 +650,8 @@ describe('movies entity', () => {
       page: 1,
       results: [],
       dates: {
-        maximum: new Date('2016-09-22'),
-        minimum: new Date('2016-09-01'),
+        maximum: '2016-09-22',
+        minimum: '2016-09-01',
       },
       totalPages: 1,
       totalResults: 0,
@@ -671,8 +671,8 @@ describe('movies entity', () => {
       page: 1,
       results: [],
       dates: {
-        maximum: new Date('2016-09-22'),
-        minimum: new Date('2016-09-01'),
+        maximum: '2016-09-22',
+        minimum: '2016-09-01',
       },
       totalPages: 1,
       totalResults: 0,

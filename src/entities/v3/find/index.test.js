@@ -20,7 +20,7 @@ describe('find entity', () => {
           originalTitle: 'Finding Nemo',
           overview:
             "A tale which follows the comedic and eventful journeys of two fish, the fretful Marlin and his young son Nemo, who are separated from each other in the Great Barrier Reef when Nemo is unexpectedly taken from his home and thrust into a fish tank in a dentist's office overlooking Sydney Harbor. Buoyed by the companionship of a friendly but forgetful fish named Dory, the overly cautious Marlin embarks on a dangerous trek and finds himself the unlikely hero of an epic journey to rescue his son.",
-          releaseDate: new Date('2003-05-30'),
+          releaseDate: '2003-05-30',
           posterPath: null,
           popularity: 1.256412,
           title: 'Finding Nemo',

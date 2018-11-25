@@ -1,15 +1,5 @@
 import { snakeToCamelCase } from '../utils';
 
-export const formatDateIfApplicable = (data, key) => {
-  const allegedlyNewDate = new Date(data);
-  const isValidStringDate =
-    (key.endsWith('_date') || key === 'expires_at') &&
-    typeof data === 'string' &&
-    allegedlyNewDate.toString() !== 'Invalid Date';
-
-  return isValidStringDate ? allegedlyNewDate : data;
-};
-
 export const setDataAccordingToValueType = (data, key) => {
   if (Array.isArray(data[key])) {
     return data[key].map(elem => parseData(elem));
@@ -17,7 +7,7 @@ export const setDataAccordingToValueType = (data, key) => {
     return parseData(data[key]);
   }
 
-  return formatDateIfApplicable(data[key], key);
+  return data[key];
 };
 
 export const camelCaseIfApplicable = keyName =>
