@@ -11,7 +11,6 @@ script:
   - npm run build
 after_success:
   - npm run report-coverage
-  - npm run publish
 deploy:
   provider: npm
   email: $NPM_EMAIL
