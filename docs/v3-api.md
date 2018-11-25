@@ -11,6 +11,8 @@
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
 <dd></dd>
+<dt><a href="#module_trending">trending</a></dt>
+<dd></dd>
 </dl>
 
 <a name="module_authentication"></a>
@@ -612,4 +614,22 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 | Param | Type |
 | --- | --- |
 | networkId | <code>\*</code> | 
+
+<a name="module_trending"></a>
+
+## trending
+<a name="module_trending.items"></a>
+
+### trending.items ⇒
+Get the daily or weekly trending items. The daily trending list tracks items over the period of a day while items have a 24 hour half life. The weekly list tracks items over a 7 day period, with a 7 day half life.
+
+**Kind**: static constant of [<code>trending</code>](#module_trending)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/trending/get-trending  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> |  |
+| options.mediaType | <code>string</code> | Allowed values: all, movie, tv, person |
+| options.timeWindow | <code>string</code> | Allowed values: day, week |
 

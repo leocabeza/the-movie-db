@@ -70,7 +70,6 @@ This is a work in progress, DO NOT USE in production just yet.
 * Guest sessions
 * Keywords
 * Lists
-* Trending
 * People
 * Reviews
 * Search

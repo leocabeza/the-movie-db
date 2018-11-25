@@ -67,4 +67,8 @@ describe('urls', () => {
     expect(urls.NETWORK_DETAILS).toEqual('/network/:id');
     expect(urls.NETWORK_IMAGES).toEqual('/network/:id/images');
   });
+
+  it('must list trending constants correctly', () => {
+    expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
+  });
 });

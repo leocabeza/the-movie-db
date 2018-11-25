@@ -3,6 +3,7 @@ import * as configuration from './configuration';
 import * as find from './find';
 import * as movie from './movie';
 import * as network from './network';
+import * as trending from './trending';
 
 export default {
   authentication,
@@ -10,4 +11,5 @@ export default {
   find,
   movie,
   network,
+  trending,
 };
