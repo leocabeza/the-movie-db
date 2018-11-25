@@ -40,4 +40,5 @@ export const MOVIE_VIDEOS = '/movie/:id/videos';
 export const NETWORK_DETAILS = '/network/:id';
 export const NETWORK_ALTERNATIVE_NAMES = '/network/:id/alternative_names';
 export const NETWORK_IMAGES = '/network/:id/images';
+export const REVIEW_DETAILS = '/review/:id';
 export const TRENDING_ITEMS = '/trending/:mediaType/:timeWindow';

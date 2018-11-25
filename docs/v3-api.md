@@ -11,6 +11,8 @@
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
 <dd></dd>
+<dt><a href="#module_review">review</a></dt>
+<dd></dd>
 <dt><a href="#module_trending">trending</a></dt>
 <dd></dd>
 </dl>
@@ -614,6 +616,22 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 | Param | Type |
 | --- | --- |
 | networkId | <code>\*</code> | 
+
+<a name="module_review"></a>
+
+## review
+<a name="module_review.details"></a>
+
+### review.details ⇒
+Get details of a review.
+
+**Kind**: static constant of [<code>review</code>](#module_review)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/reviews/get-review-details  
+
+| Param | Type |
+| --- | --- |
+| reviewId | <code>string</code> | 
 
 <a name="module_trending"></a>
 

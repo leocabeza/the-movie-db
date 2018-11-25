@@ -68,6 +68,10 @@ describe('urls', () => {
     expect(urls.NETWORK_IMAGES).toEqual('/network/:id/images');
   });
 
+  it('must list review constants correctly', () => {
+    expect(urls.REVIEW_DETAILS).toEqual('/review/:id');
+  });
+
   it('must list trending constants correctly', () => {
     expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
   });
