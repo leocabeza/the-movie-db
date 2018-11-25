@@ -66,7 +66,6 @@ This is a work in progress, DO NOT USE in production just yet.
 * Companies
 * Credits
 * Discover
-* Find
 * Genres
 * Guest sessions
 * Keywords

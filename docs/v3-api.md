@@ -5,6 +5,8 @@
 <dd></dd>
 <dt><a href="#module_configuration">configuration</a></dt>
 <dd></dd>
+<dt><a href="#module_find">find</a></dt>
+<dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
@@ -157,6 +159,26 @@ Get the list of timezones used throughout TMDb.
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-timezones  
+<a name="module_find"></a>
+
+## find
+<a name="module_find.byId"></a>
+
+### find.byId ⇒
+The find method makes it easy to search for objects in our database by an external id. For example, an IMDB ID.
+This method will search all objects (movies, TV shows and people) and return the results in a single response.
+
+**Kind**: static constant of [<code>find</code>](#module_find)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/find/find-by-id  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> |  |
+| options.externalId | <code>string</code> |  |
+| options.externalSource | <code>string</code> | Possible values: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id |
+| options.language | <code>string</code> |  |
+
 <a name="module_movies"></a>
 
 ## movies

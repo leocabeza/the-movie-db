@@ -29,6 +29,10 @@ describe('urls', () => {
     expect(urls.CONFIGURATION_TIMEZONES).toEqual('/configuration/timezones');
   });
 
+  it('must list find constants correctly', () => {
+    expect(urls.FIND_EXTERNAL_ID).toEqual('/find/:externalId');
+  });
+
   it('must list movies constants correctly', () => {
     expect(urls.MOVIE_ACCOUNT_STATES).toEqual('/movie/:id/account_states');
     expect(urls.MOVIE_ALTERNATIVE_TITLES).toEqual(
