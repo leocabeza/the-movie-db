@@ -73,6 +73,12 @@ describe('urls', () => {
   });
 
   it('must list search constants correctly', () => {
+    expect(urls.SEARCH_COLLECTION).toEqual('/search/collection');
+    expect(urls.SEARCH_COMPANY).toEqual('/search/company');
+    expect(urls.SEARCH_KEYWORD).toEqual('/search/keyword');
+    expect(urls.SEARCH_MOVIE).toEqual('/search/movie');
+    expect(urls.SEARCH_MULTI).toEqual('/search/multi');
+    expect(urls.SEARCH_PEOPLE).toEqual('/search/person');
     expect(urls.SEARCH_TV).toEqual('/search/tv');
   });
 

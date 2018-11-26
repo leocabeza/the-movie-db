@@ -638,6 +638,118 @@ Get details of a review.
 <a name="module_search"></a>
 
 ## search
+
+* [search](#module_search)
+    * [.collections](#module_search.collections) ⇒
+    * [.companies](#module_search.companies) ⇒
+    * [.keywords](#module_search.keywords) ⇒
+    * [.movies](#module_search.movies) ⇒
+    * [.multi](#module_search.multi) ⇒
+    * [.people](#module_search.people) ⇒
+    * [.tv](#module_search.tv) ⇒
+
+<a name="module_search.collections"></a>
+
+### search.collections ⇒
+Search for collections.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-collections  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_search.companies"></a>
+
+### search.companies ⇒
+Search for companies.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-companies  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_search.keywords"></a>
+
+### search.keywords ⇒
+Search for keywords.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-keywords  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_search.movies"></a>
+
+### search.movies ⇒
+Search for movies.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-movies  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.includeAdult | <code>boolean</code> | 
+| options.region | <code>string</code> | 
+| option.year | <code>number</code> | 
+| option.primaryReleaseYear | <code>number</code> | 
+
+<a name="module_search.multi"></a>
+
+### search.multi ⇒
+Search multiple models in a single request. Multi search currently supports searching for movies, tv shows and people in a single request.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/multi-search  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.includeAdult | <code>boolean</code> | 
+| options.region | <code>string</code> | 
+
+<a name="module_search.people"></a>
+
+### search.people ⇒
+Search for people.
+
+**Kind**: static constant of [<code>search</code>](#module_search)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/search/search-people  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.includeAdult | <code>boolean</code> | 
+| options.region | <code>string</code> | 
+
 <a name="module_search.tv"></a>
 
 ### search.tv ⇒
@@ -647,13 +759,13 @@ Search for a TV show.
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-tv-shows  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| options | <code>Object</code> |  |
-| options.language | <code>string</code> |  |
-| options.query | <code>string</code> | This value should be URI encoded. |
-| options.page | <code>number</code> |  |
-| options.firstAirDateYear | <code>number</code> |  |
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.query | <code>string</code> | 
+| options.page | <code>number</code> | 
+| options.firstAirDateYear | <code>number</code> | 
 
 <a name="module_trending"></a>
 

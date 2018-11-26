@@ -71,7 +71,6 @@ This is a work in progress, DO NOT USE in production just yet.
 * Keywords
 * Lists
 * People
-* Search
 * TV
 * TV episodes
 * TV episode groups
