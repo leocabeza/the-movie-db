@@ -18,6 +18,10 @@ const TheMovieDbClient = apiKey => {
 
   axios.defaults.baseURL = `${HOST}${versionToUse}`;
   axios.defaults.params = { api_key: apiKey };
+  axios.defaults.headers = {
+    'content-type': 'application/json;charset=utf-8',
+  };
+
   //TODO: Need help to be able to test this
   // https://github.com/axios/axios/issues/511 ?
   axios.interceptors.response.use(

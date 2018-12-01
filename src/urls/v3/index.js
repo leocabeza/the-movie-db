@@ -1,3 +1,14 @@
+export const ACCOUNT_ADD_TO_WATCHLIST = '/account/:id/watchlist';
+export const ACCOUNT_DETAILS = '/account';
+export const ACCOUNT_FAVORITE_MOVIES = '/account/:id/favorite/movies';
+export const ACCOUNT_FAVORITE_TV_SHOWS = '/account/:id/favorite/tv';
+export const ACCOUNT_LISTS = '/account/:id/lists';
+export const ACCOUNT_MARK_AS_FAVORITE = '/account/:id/favorite';
+export const ACCOUNT_MOVIE_WATCHLIST = '/account/:id/watchlist/movies';
+export const ACCOUNT_RATED_MOVIES = '/account/:id/rated/movies';
+export const ACCOUNT_RATED_TV_SHOWS = '/account/:id/rated/tv';
+export const ACCOUNT_RATED_TV_SHOWS_EPISODES = '/account/:id/rated/tv/episodes';
+export const ACCOUNT_TV_SHOW_WATCHLIST = '/account/:id/watchlist/tv';
 export const AUTHENTICATION_LOGOUT = '/authentication/session';
 export const AUTHENTICATION_NEW_GUEST_SESSION =
   '/authentication/guest_session/new';

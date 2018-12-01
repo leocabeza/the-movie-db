@@ -1,3 +1,4 @@
+import * as account from './account';
 import * as authentication from './authentication';
 import * as configuration from './configuration';
 import * as find from './find';
@@ -8,6 +9,7 @@ import * as search from './search';
 import * as trending from './trending';
 
 export default {
+  account,
   authentication,
   configuration,
   find,

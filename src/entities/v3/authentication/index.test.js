@@ -13,7 +13,7 @@ describe('authentication entity', () => {
   it('must return a valid response from authentication.newGuestSession call', async () => {
     const mockedResponse = {
       success: true,
-      guestSession_id: 'XXX',
+      guestSessionId: 'XXX',
       expiresAt: '2018-11-19 19:32:40 UTC',
     };
     axios.get.mockResolvedValue(mockedResponse);
@@ -25,7 +25,7 @@ describe('authentication entity', () => {
   it('must return a valid response from authentication.newSession call', async () => {
     const mockedResponse = {
       success: true,
-      session_id: 'XXX',
+      sessionId: 'XXX',
     };
     axios.post.mockResolvedValue(mockedResponse);
     const response = await authentication.newSession('REQUEST_TOKEN');
@@ -77,7 +77,7 @@ describe('authentication entity', () => {
   it('must convert session from v4 to v3', async () => {
     const mockedResponse = {
       success: true,
-      session_id: 'XXX',
+      sessionId: 'XXX',
     };
 
     axios.post.mockResolvedValue(mockedResponse);

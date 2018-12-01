@@ -1,6 +1,26 @@
 import * as urls from './';
 
 describe('urls', () => {
+  it('must list account constants correctly', () => {
+    expect(urls.ACCOUNT_ADD_TO_WATCHLIST).toEqual('/account/:id/watchlist');
+    expect(urls.ACCOUNT_DETAILS).toEqual('/account');
+    expect(urls.ACCOUNT_FAVORITE_MOVIES).toEqual(
+      '/account/:id/favorite/movies'
+    );
+    expect(urls.ACCOUNT_FAVORITE_TV_SHOWS).toEqual('/account/:id/favorite/tv');
+    expect(urls.ACCOUNT_LISTS).toEqual('/account/:id/lists');
+    expect(urls.ACCOUNT_MARK_AS_FAVORITE).toEqual('/account/:id/favorite');
+    expect(urls.ACCOUNT_MOVIE_WATCHLIST).toEqual(
+      '/account/:id/watchlist/movies'
+    );
+    expect(urls.ACCOUNT_RATED_MOVIES).toEqual('/account/:id/rated/movies');
+    expect(urls.ACCOUNT_RATED_TV_SHOWS).toEqual('/account/:id/rated/tv');
+    expect(urls.ACCOUNT_RATED_TV_SHOWS_EPISODES).toEqual(
+      '/account/:id/rated/tv/episodes'
+    );
+    expect(urls.ACCOUNT_TV_SHOW_WATCHLIST).toEqual('/account/:id/watchlist/tv');
+  });
+
   it('must list authentication constants correctly', () => {
     expect(urls.AUTHENTICATION_LOGOUT).toEqual('/authentication/session');
     expect(urls.AUTHENTICATION_NEW_GUEST_SESSION).toEqual(
