@@ -1,7 +1,8 @@
-import axios from 'axios';
 import * as configuration from './';
 
-jest.mock('axios');
+jest.mock('../../../utils', () => ({
+  makeHttpRequest: jest.fn(() => Promise.resolve({})),
+}));
 
 describe('configuration entity', () => {
   it('must have all methods exposed', () => {
@@ -13,53 +14,39 @@ describe('configuration entity', () => {
     expect(typeof configuration.timezones).toEqual('function');
   });
 
-  it('must return a valid response from configuration.api call', async () => {
-    const mockedResponse = { changeKeys: ['adult', 'airDate'] };
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.api();
+  it('must resolve configuration.api call', async () => {
+    const promise = configuration.api();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from configuration.countries call', async () => {
-    const mockedResponse = [{ 'iso-3166-1': 'AF', englishName: 'Afghanistan' }];
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.countries();
+  it('must resolve configuration.countries call', async () => {
+    const promise = configuration.countries();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from configuration.jobs call', async () => {
-    const mockedResponse = [{ deparment: 'Crew', jobs: ['Special Effects'] }];
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.jobs();
+  it('must resolve configuration.jobs call', async () => {
+    const promise = configuration.jobs();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from configuration.languages call', async () => {
-    const mockedResponse = [
-      { 'iso-639-1': 'xx', englishName: 'No Language', name: 'No Language' },
-    ];
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.languages();
+  it('must resolve configuration.languages call', async () => {
+    const promise = configuration.languages();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from configuration.primaryTranslations call', async () => {
-    const mockedResponse = ['ar-AE', 'ar-SA'];
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.primaryTranslations();
+  it('must resolve configuration.primaryTranslations call', async () => {
+    const promise = configuration.primaryTranslations();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from configuration.timezones call', async () => {
-    const mockedResponse = [{ 'iso-3166-1': 'AD', zones: ['Europe/Andorra'] }];
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await configuration.timezones();
+  it('must resolve configuration.timezones call', async () => {
+    const promise = configuration.timezones();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 });

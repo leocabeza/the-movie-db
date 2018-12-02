@@ -25,6 +25,7 @@ describe('account entity', () => {
       mediaType: 'movie',
       favorite: true,
     });
+
     await expect(promise).resolves.toEqual({});
   });
 
@@ -135,7 +136,7 @@ describe('account entity', () => {
       favorite: true,
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.markAsFavorite is called without accountId', async () => {
@@ -164,7 +165,7 @@ describe('account entity', () => {
       sortBy: 'created_at.asc',
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.movieWatchlist is called without accountId option', async () => {
@@ -187,7 +188,7 @@ describe('account entity', () => {
       sortBy: 'created_at.asc',
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.ratedMovies is called without accountId option', async () => {
@@ -210,7 +211,7 @@ describe('account entity', () => {
       sortBy: 'created_at.asc',
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.ratedTvShows is called without accountId option', async () => {
@@ -233,7 +234,7 @@ describe('account entity', () => {
       sortBy: 'created_at.asc',
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.ratedTvEpisodes is called without accountId option', async () => {
@@ -256,7 +257,7 @@ describe('account entity', () => {
       sortBy: 'created_at.asc',
     });
 
-    expect(promise).resolves.toEqual({});
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when account.tvShowWatchlist is called without accountId option', async () => {

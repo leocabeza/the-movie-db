@@ -1,7 +1,8 @@
-import axios from 'axios';
 import * as authentication from './';
 
-jest.mock('axios');
+jest.mock('../../../utils', () => ({
+  makeHttpRequest: jest.fn(() => Promise.resolve({})),
+}));
 
 describe('authentication entity', () => {
   it('must have all methods exposed', () => {
@@ -10,27 +11,16 @@ describe('authentication entity', () => {
     expect(typeof authentication.newToken).toEqual('function');
   });
 
-  it('must return a valid response from authentication.newGuestSession call', async () => {
-    const mockedResponse = {
-      success: true,
-      guestSessionId: 'XXX',
-      expiresAt: '2018-11-19 19:32:40 UTC',
-    };
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await authentication.newGuestSession();
+  it('must resolve authentication.newGuestSession call', async () => {
+    const promise = authentication.newGuestSession();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
-  it('must return a valid response from authentication.newSession call', async () => {
-    const mockedResponse = {
-      success: true,
-      sessionId: 'XXX',
-    };
-    axios.post.mockResolvedValue(mockedResponse);
-    const response = await authentication.newSession('REQUEST_TOKEN');
+  it('must resolve authentication.newSession call', async () => {
+    const promise = authentication.newSession('REQUEST_TOKEN');
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when authentication.newSession is called without requestToken', async () => {
@@ -39,33 +29,20 @@ describe('authentication entity', () => {
     );
   });
 
-  it('must return a valid response from authentication.newToken call', async () => {
-    const mockedResponse = {
-      success: true,
-      expiresAt: '2018-11-19T02:41:58.000Z',
-      requestToken: 'XXX',
-    };
-    axios.get.mockResolvedValue(mockedResponse);
-    const response = await authentication.newToken();
+  it('must resolve authentication.newToken call', async () => {
+    const promise = authentication.newToken();
 
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must validate token with login', async () => {
-    const mockedResponse = {
-      success: true,
-      expiresAt: '2018-11-19T02:41:58.000Z',
-      requestToken: 'XXX',
-    };
-
-    axios.post.mockResolvedValue(mockedResponse);
-    const response = await authentication.validateWithLogin({
+    const promise = authentication.validateWithLogin({
       username: 'Th34sscr4ckb4nd1t',
       password: 'annie',
       requestToken: 'XXX',
     });
 
-    expect(response).toBe(mockedResponse);
+    expect(promise).resolves.toEqual({});
   });
 
   it('must reject when authentication.validateWithLogin is called without options', async () => {
@@ -75,15 +52,9 @@ describe('authentication entity', () => {
   });
 
   it('must convert session from v4 to v3', async () => {
-    const mockedResponse = {
-      success: true,
-      sessionId: 'XXX',
-    };
+    const promise = authentication.sessionConvert('V4_ACCESS_TOKEN');
 
-    axios.post.mockResolvedValue(mockedResponse);
-    const response = await authentication.sessionConvert('V4_ACCESS_TOKEN');
-
-    expect(response).toBe(mockedResponse);
+    await expect(promise).resolves.toEqual({});
   });
 
   it('must reject when authentication.sessionConvert is called without a v4 access token', async () => {
@@ -92,14 +63,10 @@ describe('authentication entity', () => {
     );
   });
 
-  it('must return a valid response from authentication.logout call', async () => {
-    const mockedResponse = {
-      success: true,
-    };
-    axios.delete.mockResolvedValue(mockedResponse);
-    const response = await authentication.logout('SESSION_ID');
+  it('must resolve authentication.logout call', async () => {
+    const response = authentication.logout('SESSION_ID');
 
-    expect(response).toBe(mockedResponse);
+    await expect(response).resolves.toEqual({});
   });
 
   it('must reject when authentication.logout is called without session id', async () => {
