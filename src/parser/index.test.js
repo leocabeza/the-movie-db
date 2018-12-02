@@ -1,5 +1,4 @@
 import parseData, {
-  formatDateIfApplicable,
   camelCaseIfApplicable,
   setDataAccordingToValueType,
 } from './';
