@@ -5,6 +5,8 @@
 <dd></dd>
 <dt><a href="#module_authentication">authentication</a></dt>
 <dd></dd>
+<dt><a href="#module_changes">changes</a></dt>
+<dd></dd>
 <dt><a href="#module_configuration">configuration</a></dt>
 <dd></dd>
 <dt><a href="#module_find">find</a></dt>
@@ -441,6 +443,66 @@ If you decide to use this method please use HTTPS.
 | options.username | <code>string</code> | 
 | options.password | <code>string</code> | 
 | options.requestToken | <code>string</code> | 
+
+<a name="module_changes"></a>
+
+## changes
+
+* [changes](#module_changes)
+    * [.movies](#module_changes.movies) ⇒
+    * [.people](#module_changes.people) ⇒
+    * [.tvShows](#module_changes.tvShows) ⇒
+
+<a name="module_changes.movies"></a>
+
+### changes.movies ⇒
+Get a list of all of the movie ids that have been changed in the past 24 hours.
+You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+
+**Kind**: static constant of [<code>changes</code>](#module_changes)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/changes/get-movie-change-list  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.startDate | <code>string</code> | 
+| options.endDate | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_changes.people"></a>
+
+### changes.people ⇒
+Get a list of all of the person ids that have been changed in the past 24 hours.
+You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+
+**Kind**: static constant of [<code>changes</code>](#module_changes)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/changes/get-person-change-list  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.startDate | <code>string</code> | 
+| options.endDate | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_changes.tvShows"></a>
+
+### changes.tvShows ⇒
+Get a list of all of the TV show ids that have been changed in the past 24 hours.
+You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+
+**Kind**: static constant of [<code>changes</code>](#module_changes)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/changes/get-tv-change-list  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.startDate | <code>string</code> | 
+| options.endDate | <code>string</code> | 
+| options.page | <code>number</code> | 
 
 <a name="module_configuration"></a>
 

@@ -38,6 +38,12 @@ describe('urls', () => {
     );
   });
 
+  it('must list changes constants correctly', () => {
+    expect(urls.CHANGE_MOVIES).toEqual('/movie/changes');
+    expect(urls.CHANGE_PERSON).toEqual('/person/changes');
+    expect(urls.CHANGE_TV_SHOWS).toEqual('/tv/changes');
+  });
+
   it('must list configuration constants correcty', () => {
     expect(urls.CONFIGURATION_API).toEqual('/configuration');
     expect(urls.CONFIGURATION_COUNTRIES).toEqual('/configuration/countries');
