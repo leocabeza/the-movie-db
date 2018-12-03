@@ -38,10 +38,18 @@ describe('urls', () => {
     );
   });
 
-  it('must list changes constants correctly', () => {
+  it('must list change constants correctly', () => {
     expect(urls.CHANGE_MOVIES).toEqual('/movie/changes');
     expect(urls.CHANGE_PERSON).toEqual('/person/changes');
     expect(urls.CHANGE_TV_SHOWS).toEqual('/tv/changes');
+  });
+
+  it('must list collection constants correctly', () => {
+    expect(urls.COLLECTION_DETAILS).toEqual('/collection/:id');
+    expect(urls.COLLECTION_IMAGES).toEqual('/collection/:id/images');
+    expect(urls.COLLECTION_TRANSLATIONS).toEqual(
+      '/collection/:id/translations'
+    );
   });
 
   it('must list configuration constants correcty', () => {

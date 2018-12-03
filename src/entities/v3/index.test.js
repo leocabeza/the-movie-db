@@ -4,7 +4,8 @@ describe('v3', () => {
   it('must have all v3 objects exposed', () => {
     expect(v3).toHaveProperty('account');
     expect(v3).toHaveProperty('authentication');
-    expect(v3).toHaveProperty('changes');
+    expect(v3).toHaveProperty('change');
+    expect(v3).toHaveProperty('collection');
     expect(v3).toHaveProperty('configuration');
     expect(v3).toHaveProperty('find');
     expect(v3).toHaveProperty('movie');

@@ -1,6 +1,7 @@
 import * as account from './account';
 import * as authentication from './authentication';
-import * as changes from './changes';
+import * as change from './change';
+import * as collection from './collection';
 import * as configuration from './configuration';
 import * as find from './find';
 import * as movie from './movie';
@@ -12,7 +13,8 @@ import * as trending from './trending';
 export default {
   account,
   authentication,
-  changes,
+  change,
+  collection,
   configuration,
   find,
   movie,

@@ -7,6 +7,8 @@
 <dd></dd>
 <dt><a href="#module_changes">changes</a></dt>
 <dd></dd>
+<dt><a href="#module_collection">collection</a></dt>
+<dd></dd>
 <dt><a href="#module_configuration">configuration</a></dt>
 <dd></dd>
 <dt><a href="#module_find">find</a></dt>
@@ -503,6 +505,60 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 | options.startDate | <code>string</code> | 
 | options.endDate | <code>string</code> | 
 | options.page | <code>number</code> | 
+
+<a name="module_collection"></a>
+
+## collection
+
+* [collection](#module_collection)
+    * [.details](#module_collection.details) ⇒
+    * [.images](#module_collection.images) ⇒
+    * [.translations](#module_collection.translations) ⇒
+
+<a name="module_collection.details"></a>
+
+### collection.details ⇒
+Get collection details by id.
+
+**Kind**: static constant of [<code>collection</code>](#module_collection)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/collections/get-collection-details  
+
+| Param | Type |
+| --- | --- |
+| collectionId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_collection.images"></a>
+
+### collection.images ⇒
+Get the images for a collection by id.
+
+**Kind**: static constant of [<code>collection</code>](#module_collection)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/collections/get-collection-images  
+
+| Param | Type |
+| --- | --- |
+| collectionId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_collection.translations"></a>
+
+### collection.translations ⇒
+Get the list translations for a collection by id.
+
+**Kind**: static constant of [<code>collection</code>](#module_collection)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/collections/get-collection-translations  
+
+| Param | Type |
+| --- | --- |
+| collectionId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
 
 <a name="module_configuration"></a>
 
