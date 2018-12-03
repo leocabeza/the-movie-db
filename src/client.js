@@ -1,5 +1,5 @@
 import axios from 'axios';
-import parser from './parser';
+import { success, error } from './interceptors/parser';
 import v3Entities from './entities/v3';
 
 const HOST = 'https://api.themoviedb.org/';
@@ -12,18 +12,13 @@ const TheMovieDbClient = apiKey => {
   //NOTE: In the future we will ask if you want to use this default or v4
   const versionToUse = 3;
   if (!apiKey) {
-    throw new Error(`An api key is required. 
+    throw new Error(`An api key is required.
     You can get one at: https://www.themoviedb.org/faq/api`);
   }
 
   axios.defaults.baseURL = `${HOST}${versionToUse}`;
   axios.defaults.params = { api_key: apiKey };
-  //TODO: Need help to be able to test this
-  // https://github.com/axios/axios/issues/511 ?
-  axios.interceptors.response.use(
-    async ({ data }) => await parser(data),
-    async ({ response }) => await Promise.reject(response.data.status_message)
-  );
+  axios.interceptors.response.use(success, error);
 
   return v3Entities;
 };
