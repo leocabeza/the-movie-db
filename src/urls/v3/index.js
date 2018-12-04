@@ -18,6 +18,8 @@ export const AUTHENTICATION_SESSION_CONVERT =
   '/authentication/session/convert/4';
 export const AUTHENTICATION_TOKEN_VALIDATE_LOGIN =
   '/authentication/token/validate_with_login';
+export const CERTIFICATION_MOVIES = '/certification/movie/list';
+export const CERTIFICATION_TV_SHOWS = '/certification/tv/list';
 export const CHANGE_MOVIES = '/movie/changes';
 export const CHANGE_PERSON = '/person/changes';
 export const CHANGE_TV_SHOWS = '/tv/changes';

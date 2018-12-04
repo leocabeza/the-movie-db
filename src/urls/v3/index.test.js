@@ -39,6 +39,11 @@ describe('urls', () => {
   });
 
   it('must list change constants correctly', () => {
+    expect(urls.CERTIFICATION_MOVIES).toEqual('/certification/movie/list');
+    expect(urls.CERTIFICATION_TV_SHOWS).toEqual('/certification/tv/list');
+  });
+
+  it('must list change constants correctly', () => {
     expect(urls.CHANGE_MOVIES).toEqual('/movie/changes');
     expect(urls.CHANGE_PERSON).toEqual('/person/changes');
     expect(urls.CHANGE_TV_SHOWS).toEqual('/tv/changes');

@@ -5,6 +5,8 @@
 <dd></dd>
 <dt><a href="#module_authentication">authentication</a></dt>
 <dd></dd>
+<dt><a href="#module_certification">certification</a></dt>
+<dd></dd>
 <dt><a href="#module_changes">changes</a></dt>
 <dd></dd>
 <dt><a href="#module_collection">collection</a></dt>
@@ -448,6 +450,30 @@ If you decide to use this method please use HTTPS.
 | options.password | <code>string</code> | 
 | options.requestToken | <code>string</code> | 
 
+<a name="module_certification"></a>
+
+## certification
+
+* [certification](#module_certification)
+    * [.movies](#module_certification.movies) ⇒
+    * [.tvShows](#module_certification.tvShows) ⇒
+
+<a name="module_certification.movies"></a>
+
+### certification.movies ⇒
+Get an up to date list of the officially supported movie certifications on TMDb.
+
+**Kind**: static constant of [<code>certification</code>](#module_certification)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/certifications/get-movie-certifications  
+<a name="module_certification.tvShows"></a>
+
+### certification.tvShows ⇒
+Get an up to date list of the officially supported TV show certifications on TMDb.
+
+**Kind**: static constant of [<code>certification</code>](#module_certification)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/certifications/get-tv-certifications  
 <a name="module_changes"></a>
 
 ## changes
