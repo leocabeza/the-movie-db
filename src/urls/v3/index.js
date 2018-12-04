@@ -37,6 +37,8 @@ export const CONFIGURATION_PRIMARY_TRANSLATIONS =
   '/configuration/primary_translations';
 export const CONFIGURATION_TIMEZONES = '/configuration/timezones';
 export const CREDIT_DETAILS = '/credit/:id';
+export const DISCOVER_MOVIE = '/discover/movie';
+export const DISCOVER_TV_SHOW = '/discover/tv';
 export const FIND_EXTERNAL_ID = '/find/:externalId';
 export const MOVIE_ACCOUNT_STATES = '/movie/:id/account_states';
 export const MOVIE_ALTERNATIVE_TITLES = '/movie/:id/alternative_titles';

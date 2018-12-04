@@ -80,6 +80,11 @@ describe('urls', () => {
     expect(urls.CREDIT_DETAILS).toEqual('/credit/:id');
   });
 
+  it('must list discover constants correctly', () => {
+    expect(urls.DISCOVER_MOVIE).toEqual('/discover/movie');
+    expect(urls.DISCOVER_TV_SHOW).toEqual('/discover/tv');
+  });
+
   it('must list find constants correctly', () => {
     expect(urls.FIND_EXTERNAL_ID).toEqual('/find/:externalId');
   });

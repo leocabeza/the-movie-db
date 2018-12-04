@@ -17,6 +17,8 @@
 <dd></dd>
 <dt><a href="#module_credit">credit</a></dt>
 <dd></dd>
+<dt><a href="#module_discover">discover</a></dt>
+<dd></dd>
 <dt><a href="#module_find">find</a></dt>
 <dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
@@ -714,6 +716,45 @@ Get a movie or TV credit details by id.
 **Kind**: static constant of [<code>credit</code>](#module_credit)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/credits/get-credit-details  
+<a name="module_discover"></a>
+
+## discover
+
+* [discover](#module_discover)
+    * [.movie](#module_discover.movie) ⇒
+    * [.tvShows](#module_discover.tvShows) ⇒
+
+<a name="module_discover.movie"></a>
+
+### discover.movie ⇒
+Discover movies by different types of data like average rating,
+number of votes, genres and certifications.
+For a full list of options, see https://developers.themoviedb.org/3/discover/movie-discover
+Options should still be camelcased, eg, { language: 'en-US', includeAdult: true, 'primaryReleaseDate.lte' : '2018-12-12' }
+
+**Kind**: static constant of [<code>discover</code>](#module_discover)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/discover/movie-discover  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+
+<a name="module_discover.tvShows"></a>
+
+### discover.tvShows ⇒
+Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates.
+For a full list of options, see https://developers.themoviedb.org/3/discover/tv-discover
+Options should still be camelcased, eg, { language: 'en-US', includeAdult: true, 'primaryReleaseDate.lte' : '2018-12-12' }
+
+**Kind**: static constant of [<code>discover</code>](#module_discover)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/discover/tv-discover  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+
 <a name="module_find"></a>
 
 ## find
