@@ -2,6 +2,7 @@ import * as account from './account';
 import * as authentication from './authentication';
 import * as change from './change';
 import * as collection from './collection';
+import * as company from './company';
 import * as configuration from './configuration';
 import * as find from './find';
 import * as movie from './movie';
@@ -15,6 +16,7 @@ export default {
   authentication,
   change,
   collection,
+  company,
   configuration,
   find,
   movie,

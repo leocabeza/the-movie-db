@@ -9,6 +9,8 @@
 <dd></dd>
 <dt><a href="#module_collection">collection</a></dt>
 <dd></dd>
+<dt><a href="#module_company">company</a></dt>
+<dd></dd>
 <dt><a href="#module_configuration">configuration</a></dt>
 <dd></dd>
 <dt><a href="#module_find">find</a></dt>
@@ -560,6 +562,59 @@ Get the list translations for a collection by id.
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
 
+<a name="module_company"></a>
+
+## company
+
+* [company](#module_company)
+    * [.alternativeNames](#module_company.alternativeNames) ⇒
+    * [.details](#module_company.details) ⇒
+    * [.images](#module_company.images) ⇒
+
+<a name="module_company.alternativeNames"></a>
+
+### company.alternativeNames ⇒
+Get the alternative names of a company.
+
+**Kind**: static constant of [<code>company</code>](#module_company)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/companies/get-company-alternative-names  
+
+| Param | Type |
+| --- | --- |
+| companyId | <code>number</code> | 
+
+<a name="module_company.details"></a>
+
+### company.details ⇒
+Get a companies details by id.
+
+**Kind**: static constant of [<code>company</code>](#module_company)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/companies/get-company-details  
+
+| Param | Type |
+| --- | --- |
+| companyId | <code>number</code> | 
+
+<a name="module_company.images"></a>
+
+### company.images ⇒
+Get a companies logos by id.
+There are two image formats that are supported for companies, PNG's and SVG's.
+You can see which type the original file is by looking at the file_type field.
+We prefer SVG's as they are resolution independent and as such, the width and height are only
+there to reflect the original asset that was uploaded.
+An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
+
+**Kind**: static constant of [<code>company</code>](#module_company)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/companies/get-company-images  
+
+| Param | Type |
+| --- | --- |
+| companyId | <code>number</code> | 
+
 <a name="module_configuration"></a>
 
 ## configuration
@@ -1072,7 +1127,7 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 
 | Param | Type |
 | --- | --- |
-| networkId | <code>\*</code> | 
+| networkId | <code>number</code> | 
 
 <a name="module_review"></a>
 

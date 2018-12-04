@@ -44,12 +44,12 @@ export const alternativeNames = async networkId => {
  * We prefer SVG's as they are resolution independent and as such, the width and height are only
  * there to reflect the original asset that was uploaded.
  * An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
- * @param {*} networkId
+ * @param {number} networkId
  * @returns Promise
  * @see https://developers.themoviedb.org/3/networks/get-network-images
  */
 export const images = async networkId => {
-  if (!networkId) {
+  if (!networkId && networkId !== 0) {
     return Promise.reject('A networkId has to be provided');
   }
 

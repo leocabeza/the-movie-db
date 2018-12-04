@@ -60,7 +60,6 @@ This is a work in progress, DO NOT USE in production just yet.
 
 ## V3
 * Certifications
-* Companies
 * Credits
 * Discover
 * Genres

@@ -52,6 +52,14 @@ describe('urls', () => {
     );
   });
 
+  it('must list compnay constants correctly', () => {
+    expect(urls.COMPANY_ALTERNATIVE_NAMES).toEqual(
+      '/company/:id/alternative_names'
+    );
+    expect(urls.COMPANY_DETAILS).toEqual('/company/:id');
+    expect(urls.COMPANY_IMAGES).toEqual('/company/:id/images');
+  });
+
   it('must list configuration constants correcty', () => {
     expect(urls.CONFIGURATION_API).toEqual('/configuration');
     expect(urls.CONFIGURATION_COUNTRIES).toEqual('/configuration/countries');

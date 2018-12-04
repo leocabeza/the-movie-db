@@ -11,7 +11,8 @@ describe('client', () => {
 
   it('must not throw when an api key is passed', () => {
     expect(() => {
-      new Client('API_KEY');
+      const client = new Client('API_KEY');
+      expect(client).toBeInstanceOf(Object);
     }).not.toThrow();
   });
 
