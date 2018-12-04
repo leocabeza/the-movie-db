@@ -15,6 +15,8 @@
 <dd></dd>
 <dt><a href="#module_configuration">configuration</a></dt>
 <dd></dd>
+<dt><a href="#module_credit">credit</a></dt>
+<dd></dd>
 <dt><a href="#module_find">find</a></dt>
 <dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
@@ -701,6 +703,17 @@ Get the list of timezones used throughout TMDb.
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-timezones  
+<a name="module_credit"></a>
+
+## credit
+<a name="module_credit.details"></a>
+
+### credit.details ⇒
+Get a movie or TV credit details by id.
+
+**Kind**: static constant of [<code>credit</code>](#module_credit)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/credits/get-credit-details  
 <a name="module_find"></a>
 
 ## find

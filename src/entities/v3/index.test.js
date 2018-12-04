@@ -9,6 +9,7 @@ describe('v3', () => {
     expect(v3).toHaveProperty('collection');
     expect(v3).toHaveProperty('company');
     expect(v3).toHaveProperty('configuration');
+    expect(v3).toHaveProperty('credit');
     expect(v3).toHaveProperty('find');
     expect(v3).toHaveProperty('movie');
     expect(v3).toHaveProperty('network');

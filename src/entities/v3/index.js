@@ -5,6 +5,7 @@ import * as change from './change';
 import * as collection from './collection';
 import * as company from './company';
 import * as configuration from './configuration';
+import * as credit from './credit';
 import * as find from './find';
 import * as movie from './movie';
 import * as network from './network';
@@ -20,6 +21,7 @@ export default {
   collection,
   company,
   configuration,
+  credit,
   find,
   movie,
   network,

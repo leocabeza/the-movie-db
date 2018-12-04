@@ -38,7 +38,7 @@ describe('urls', () => {
     );
   });
 
-  it('must list change constants correctly', () => {
+  it('must list certification constants correctly', () => {
     expect(urls.CERTIFICATION_MOVIES).toEqual('/certification/movie/list');
     expect(urls.CERTIFICATION_TV_SHOWS).toEqual('/certification/tv/list');
   });
@@ -57,7 +57,7 @@ describe('urls', () => {
     );
   });
 
-  it('must list compnay constants correctly', () => {
+  it('must list company constants correctly', () => {
     expect(urls.COMPANY_ALTERNATIVE_NAMES).toEqual(
       '/company/:id/alternative_names'
     );
@@ -74,6 +74,10 @@ describe('urls', () => {
       '/configuration/primary_translations'
     );
     expect(urls.CONFIGURATION_TIMEZONES).toEqual('/configuration/timezones');
+  });
+
+  it('must list credit constants correctly', () => {
+    expect(urls.CREDIT_DETAILS).toEqual('/credit/:id');
   });
 
   it('must list find constants correctly', () => {
