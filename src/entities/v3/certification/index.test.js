@@ -10,7 +10,13 @@ describe('certification entity', () => {
   });
 
   it('must resolve certification.movies', async () => {
-    const promise = certification.movies(1);
+    const promise = certification.movies();
+
+    await expect(promise).resolves.toEqual({});
+  });
+
+  it('must resolve certification.tvShows', async () => {
+    const promise = certification.tvShows();
 
     await expect(promise).resolves.toEqual({});
   });
