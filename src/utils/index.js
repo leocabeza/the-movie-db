@@ -18,8 +18,7 @@ export const removeUndefinedValues = paramsObject => {
 
   Object.keys(paramsObject).forEach(paramKey => {
     if (typeof paramsObject[paramKey] !== 'undefined') {
-      const snakeCaseKey = camelToSnakeCase(paramKey);
-      finalParams[snakeCaseKey] = paramsObject[paramKey];
+      finalParams[paramKey] = paramsObject[paramKey];
     }
   });
 
@@ -35,9 +34,3 @@ export const makeHttpRequest = async (url, data = {}, method = 'get') => {
     return Promise.reject(error);
   }
 };
-
-export const snakeToCamelCase = word =>
-  word.toLowerCase().replace(/_(.)/g, (match, group1) => group1.toUpperCase());
-
-export const camelToSnakeCase = word =>
-  word.replace(/([A-Z])/g, '_$1').toLowerCase();

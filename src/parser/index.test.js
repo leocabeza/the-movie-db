@@ -1,7 +1,4 @@
-import parseData, {
-  camelCaseIfApplicable,
-  setDataAccordingToValueType,
-} from './';
+import parseData, { setDataAccordingToValueType } from './';
 import popularMoviesMockResponse from './mock.json';
 
 describe('parser', () => {
@@ -10,34 +7,29 @@ describe('parser', () => {
     const parsedResponseData = parsedResponse;
 
     expect(typeof parsedResponseData.page === 'number').toBeTruthy();
-    expect(typeof parsedResponseData.totalPages === 'number').toBeTruthy();
-    expect(typeof parsedResponseData.totalResults === 'number').toBeTruthy();
+    expect(typeof parsedResponseData.total_pages === 'number').toBeTruthy();
+    expect(typeof parsedResponseData.total_results === 'number').toBeTruthy();
 
     expect(Array.isArray(parsedResponseData.results)).toBeTruthy();
     const firstResult = parsedResponseData.results[0];
 
-    expect(typeof firstResult.voteCount === 'number').toBeTruthy();
+    expect(typeof firstResult.vote_count === 'number').toBeTruthy();
     expect(typeof firstResult.id === 'number').toBeTruthy();
     expect(typeof firstResult.video === 'boolean').toBeTruthy();
-    expect(typeof firstResult.voteAverage === 'number').toBeTruthy();
+    expect(typeof firstResult.vote_average === 'number').toBeTruthy();
     expect(typeof firstResult.title === 'string').toBeTruthy();
     expect(typeof firstResult.popularity === 'number').toBeTruthy();
-    expect(typeof firstResult.posterPath === 'string').toBeTruthy();
-    expect(typeof firstResult.originalLanguage === 'string').toBeTruthy();
-    expect(typeof firstResult.originalTitle === 'string').toBeTruthy();
-    expect(Array.isArray(firstResult.genreIds)).toBeTruthy();
+    expect(typeof firstResult.poster_path === 'string').toBeTruthy();
+    expect(typeof firstResult.original_language === 'string').toBeTruthy();
+    expect(typeof firstResult.original_title === 'string').toBeTruthy();
+    expect(Array.isArray(firstResult.genre_ids)).toBeTruthy();
     expect(
-      firstResult.genreIds.every(genreId => typeof genreId === 'number')
+      firstResult.genre_ids.every(genreId => typeof genreId === 'number')
     ).toBeTruthy();
-    expect(typeof firstResult.backdropPath === 'string').toBeTruthy();
+    expect(typeof firstResult.backdrop_path === 'string').toBeTruthy();
     expect(typeof firstResult.adult === 'boolean').toBeTruthy();
     expect(typeof firstResult.overview === 'string').toBeTruthy();
-    expect(typeof firstResult.releaseDate === 'string').toBeTruthy();
-  });
-
-  it('must apply camelcase if applicable', () => {
-    expect(camelCaseIfApplicable('release_date')).toEqual('releaseDate');
-    expect(camelCaseIfApplicable('iso_3166_1')).toEqual('iso-3166-1');
+    expect(typeof firstResult.release_date === 'string').toBeTruthy();
   });
 
   it('must set the same data type that it was passed in key', () => {
@@ -58,9 +50,12 @@ describe('parser', () => {
 
   it('must parse data correcty', () => {
     const emptyData = [];
-    const dataWithKey = { writer_producer: 'Dan Harmon' };
+    const dataWithKey = {
+      writer_producer: 'Dan Harmon',
+      seasons: [{ name: 'Season 1' }],
+    };
 
     expect(parseData(emptyData)).toEqual([]);
-    expect(parseData(dataWithKey)).toEqual({ writerProducer: 'Dan Harmon' });
+    expect(parseData(dataWithKey)).toEqual(dataWithKey);
   });
 });

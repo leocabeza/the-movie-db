@@ -68,11 +68,11 @@ Add a movie or TV show to your watchlist.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.mediaType | <code>string</code> | Required - Allowed values: movie, tv |
-| body.mediaId | <code>number</code> | Required |
+| body.media_type | <code>string</code> | Required - Allowed values: movie, tv |
+| body.media_id | <code>number</code> | Required |
 | body.watchlist | <code>boolean</code> | Required |
 
 <a name="module_search.details"></a>
@@ -101,10 +101,10 @@ Get the list of your favorite movies.
 | --- | --- | --- |
 | accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.favoriteTvShows"></a>
 
@@ -119,10 +119,10 @@ Get the list of your favorite TV shows.
 | --- | --- | --- |
 | accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.lists"></a>
 
@@ -137,7 +137,7 @@ Get all of the lists created by an account. Will invlude private lists if you ar
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
 
@@ -155,8 +155,8 @@ This method allows you to mark a movie or TV show as a favorite item.
 | accountId | <code>integer</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.mediaType | <code>string</code> | Required |
-| body.mediaId | <code>number</code> | Required |
+| body.media_type | <code>string</code> | Required |
+| body.media_id | <code>number</code> | Required |
 | body.favorite | <code>boolean</code> | Required |
 
 <a name="module_search.movieWatchlist"></a>
@@ -172,10 +172,10 @@ Get a list of all the movies you have added to your watchlist.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedMovies"></a>
 
@@ -190,10 +190,10 @@ Get a list of all the movies you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedTvShows"></a>
 
@@ -208,10 +208,10 @@ Get a list of all the TV shows you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedTvEpisodes"></a>
 
@@ -226,10 +226,10 @@ Get a list of all the TV episodes you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.tvShowWatchlist"></a>
 
@@ -244,10 +244,10 @@ Get a list of all the TV shows you have added to your watchlist.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.collections"></a>
 
@@ -310,10 +310,10 @@ Search for movies.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 | option.year | <code>number</code> | 
-| option.primaryReleaseYear | <code>number</code> | 
+| option.primary_release_year | <code>number</code> | 
 
 <a name="module_search.multi"></a>
 
@@ -330,7 +330,7 @@ Search multiple models in a single request. Multi search currently supports sear
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 
 <a name="module_search.people"></a>
@@ -348,7 +348,7 @@ Search for people.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 
 <a name="module_search.tv"></a>
@@ -366,7 +366,7 @@ Search for a TV show.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.firstAirDateYear | <code>number</code> | 
+| options.first_air_date_year | <code>number</code> | 
 
 <a name="module_authentication"></a>
 
@@ -452,7 +452,7 @@ If you decide to use this method please use HTTPS.
 | options | <code>Object</code> | 
 | options.username | <code>string</code> | 
 | options.password | <code>string</code> | 
-| options.requestToken | <code>string</code> | 
+| options.request_token | <code>string</code> | 
 
 <a name="module_certification"></a>
 
@@ -491,7 +491,7 @@ Get an up to date list of the officially supported TV show certifications on TMD
 
 ### changes.movies ⇒
 Get a list of all of the movie ids that have been changed in the past 24 hours.
-You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
 **Returns**: Promise  
@@ -500,15 +500,15 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 | Param | Type |
 | --- | --- |
 | options | <code>Object</code> | 
-| options.startDate | <code>string</code> | 
-| options.endDate | <code>string</code> | 
+| options.start_date | <code>string</code> | 
+| options.end_date | <code>string</code> | 
 | options.page | <code>number</code> | 
 
 <a name="module_changes.people"></a>
 
 ### changes.people ⇒
 Get a list of all of the person ids that have been changed in the past 24 hours.
-You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
 **Returns**: Promise  
@@ -517,15 +517,15 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 | Param | Type |
 | --- | --- |
 | options | <code>Object</code> | 
-| options.startDate | <code>string</code> | 
-| options.endDate | <code>string</code> | 
+| options.start_date | <code>string</code> | 
+| options.end_date | <code>string</code> | 
 | options.page | <code>number</code> | 
 
 <a name="module_changes.tvShows"></a>
 
 ### changes.tvShows ⇒
 Get a list of all of the TV show ids that have been changed in the past 24 hours.
-You can query it for up to 14 days worth of changed IDs at a time with the startDate and endDate query parameters. 100 items are returned per page.
+You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
 **Returns**: Promise  
@@ -534,8 +534,8 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 | Param | Type |
 | --- | --- |
 | options | <code>Object</code> | 
-| options.startDate | <code>string</code> | 
-| options.endDate | <code>string</code> | 
+| options.start_date | <code>string</code> | 
+| options.end_date | <code>string</code> | 
 | options.page | <code>number</code> | 
 
 <a name="module_collection"></a>
@@ -730,7 +730,6 @@ Get a movie or TV credit details by id.
 Discover movies by different types of data like average rating,
 number of votes, genres and certifications.
 For a full list of options, see https://developers.themoviedb.org/3/discover/movie-discover
-Options should still be camelcased, eg, { language: 'en-US', includeAdult: true, 'primaryReleaseDate.lte' : '2018-12-12' }
 
 **Kind**: static constant of [<code>discover</code>](#module_discover)  
 **Returns**: Promise  
@@ -745,7 +744,6 @@ Options should still be camelcased, eg, { language: 'en-US', includeAdult: true,
 ### discover.tvShows ⇒
 Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates.
 For a full list of options, see https://developers.themoviedb.org/3/discover/tv-discover
-Options should still be camelcased, eg, { language: 'en-US', includeAdult: true, 'primaryReleaseDate.lte' : '2018-12-12' }
 
 **Kind**: static constant of [<code>discover</code>](#module_discover)  
 **Returns**: Promise  
@@ -771,8 +769,8 @@ This method will search all objects (movies, TV shows and people) and return the
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> |  |
-| options.externalId | <code>string</code> |  |
-| options.externalSource | <code>string</code> | Possible values: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id |
+| options.external_id | <code>string</code> |  |
+| options.external_source | <code>string</code> | Possible values: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id |
 | options.language | <code>string</code> |  |
 
 <a name="module_movies"></a>
@@ -819,8 +817,8 @@ Grab the following account states for a session:
 | --- | --- |
 | movieId | <code>number</code> | 
 | options | <code>Object</code> | 
-| options.sessionId | <code>string</code> | 
-| options.guestSessionId | <code>string</code> | 
+| options.session_id | <code>string</code> | 
+| options.guest_session_id | <code>string</code> | 
 
 <a name="module_movies.alternativeTitles"></a>
 
@@ -841,7 +839,7 @@ Get all of the alternative titles for a movie.
 
 ### movies.changes ⇒
 Get the changes for a movie. By default only the last 24 hours are returned.
-You can query up to 14 days in a single query by using the startDate and endDate query parameters.
+You can query up to 14 days in a single query by using the start_date and end_date query parameters.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
 **Returns**: Promise  
@@ -851,8 +849,8 @@ You can query up to 14 days in a single query by using the startDate and endDate
 | --- | --- |
 | movieId | <code>number</code> | 
 | options | <code>Object</code> | 
-| options.startDate | <code>string</code> | 
-| options.endDate | <code>string</code> | 
+| options.start_date | <code>string</code> | 
+| options.end_date | <code>string</code> | 
 | options.page | <code>number</code> | 
 
 <a name="module_movies.credits"></a>
@@ -880,7 +878,9 @@ Remove your rating for a movie.
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
-| options | <code>\*</code> | 
+| options | <code>Object</code> | 
+| options.session_id | <code>string</code> | 
+| options.guest_session_id | <code>string</code> | 
 
 <a name="module_movies.details"></a>
 
@@ -896,7 +896,7 @@ Get the primary information about a movie.
 | movieId | <code>number</code> | 
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
-| options.appendToResponse | <code>string</code> | 
+| options.append_to_response | <code>string</code> | 
 
 <a name="module_movies.externalIds"></a>
 
@@ -917,8 +917,8 @@ We currently support the following external sources: IMDB ID, Facebook, Instagra
 ### movies.images ⇒
 Get the images that belong to a movie.
 Querying images with a language parameter will filter the results.
-If you want to include a fallback language (especially useful for backdrops) you can use the includeImageLanguage parameter.
-This should be a comma separated value like so: { includeImageLanguage: 'en,null' }.
+If you want to include a fallback language (especially useful for backdrops) you can use the include_image_language parameter.
+This should be a comma separated value like so: { include_image_language: 'en,null' }.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
 **Returns**: Promise  
@@ -929,7 +929,7 @@ This should be a comma separated value like so: { includeImageLanguage: 'en,null
 | movieId | <code>number</code> | 
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
-| options.includeImageLanguage | <code>string</code> | 
+| options.include_image_language | <code>string</code> | 
 
 <a name="module_movies.keywords"></a>
 
@@ -1019,11 +1019,11 @@ Rate a movie.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| movieId | <code>number</code> |  |
+| movieId | <code>number</code> | Required |
 | rating | <code>rating</code> | between 0.5 and 10.0 |
 | options | <code>Object</code> |  |
-| guestSessionId | <code>string</code> |  |
-| sessionId | <code>string</code> |  |
+| options.guestSessionId | <code>string</code> |  |
+| options.sessionId | <code>string</code> |  |
 
 <a name="module_movies.recommendations"></a>
 
@@ -1260,11 +1260,11 @@ Add a movie or TV show to your watchlist.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.mediaType | <code>string</code> | Required - Allowed values: movie, tv |
-| body.mediaId | <code>number</code> | Required |
+| body.media_type | <code>string</code> | Required - Allowed values: movie, tv |
+| body.media_id | <code>number</code> | Required |
 | body.watchlist | <code>boolean</code> | Required |
 
 <a name="module_search.details"></a>
@@ -1293,10 +1293,10 @@ Get the list of your favorite movies.
 | --- | --- | --- |
 | accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.favoriteTvShows"></a>
 
@@ -1311,10 +1311,10 @@ Get the list of your favorite TV shows.
 | --- | --- | --- |
 | accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.lists"></a>
 
@@ -1329,7 +1329,7 @@ Get all of the lists created by an account. Will invlude private lists if you ar
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
 
@@ -1347,8 +1347,8 @@ This method allows you to mark a movie or TV show as a favorite item.
 | accountId | <code>integer</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.mediaType | <code>string</code> | Required |
-| body.mediaId | <code>number</code> | Required |
+| body.media_type | <code>string</code> | Required |
+| body.media_id | <code>number</code> | Required |
 | body.favorite | <code>boolean</code> | Required |
 
 <a name="module_search.movieWatchlist"></a>
@@ -1364,10 +1364,10 @@ Get a list of all the movies you have added to your watchlist.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedMovies"></a>
 
@@ -1382,10 +1382,10 @@ Get a list of all the movies you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedTvShows"></a>
 
@@ -1400,10 +1400,10 @@ Get a list of all the TV shows you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.ratedTvEpisodes"></a>
 
@@ -1418,10 +1418,10 @@ Get a list of all the TV episodes you have rated.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.tvShowWatchlist"></a>
 
@@ -1436,10 +1436,10 @@ Get a list of all the TV shows you have added to your watchlist.
 | --- | --- | --- |
 | accountId | <code>integer</code> | Required |
 | options | <code>Object</code> |  |
-| options.sessionId | <code>string</code> | Required |
+| options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sortBy | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.collections"></a>
 
@@ -1502,10 +1502,10 @@ Search for movies.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 | option.year | <code>number</code> | 
-| option.primaryReleaseYear | <code>number</code> | 
+| option.primary_release_year | <code>number</code> | 
 
 <a name="module_search.multi"></a>
 
@@ -1522,7 +1522,7 @@ Search multiple models in a single request. Multi search currently supports sear
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 
 <a name="module_search.people"></a>
@@ -1540,7 +1540,7 @@ Search for people.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.includeAdult | <code>boolean</code> | 
+| options.include_adult | <code>boolean</code> | 
 | options.region | <code>string</code> | 
 
 <a name="module_search.tv"></a>
@@ -1558,7 +1558,7 @@ Search for a TV show.
 | options.language | <code>string</code> | 
 | options.query | <code>string</code> | 
 | options.page | <code>number</code> | 
-| options.firstAirDateYear | <code>number</code> | 
+| options.first_air_date_year | <code>number</code> | 
 
 <a name="module_trending"></a>
 
@@ -1575,6 +1575,6 @@ Get the daily or weekly trending items. The daily trending list tracks items ove
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> |  |
-| options.mediaType | <code>string</code> | Allowed values: all, movie, tv, person |
-| options.timeWindow | <code>string</code> | Allowed values: day, week |
+| options.media_type | <code>string</code> | Allowed values: all, movie, tv, person |
+| options.time_window | <code>string</code> | Allowed values: day, week |
 

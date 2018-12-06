@@ -7,17 +7,17 @@ import urls from '../../../urls';
 
 /**
  * Add a movie or TV show to your watchlist.
- * @param {integer} accountId - Required
- * @param {string} sessionId - Required
- * @param {Object} body - Required
- * @param {string} body.mediaType - Required - Allowed values: movie, tv
- * @param {number} body.mediaId - Required
+ * @param {number}  accountId - Required
+ * @param {string}  sessionId - Required
+ * @param {Object}  body - Required
+ * @param {string}  body.media_type - Required - Allowed values: movie, tv
+ * @param {number}  body.media_id - Required
  * @param {boolean} body.watchlist - Required
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/add-to-watchlist
  */
 export const addToWatchlist = async (accountId, sessionId, body = {}) => {
-  const { mediaType, mediaId, watchlist } = body;
+  const { media_type, media_id, watchlist } = body;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
@@ -28,7 +28,7 @@ export const addToWatchlist = async (accountId, sessionId, body = {}) => {
 
   if (!body || !Object.keys(body).length) {
     return Promise.reject(
-      'A body must have a mediaType, mediaId and watchlist keys'
+      'A body must have a media_type, media_id and watchlist keys'
     );
   }
 
@@ -36,7 +36,7 @@ export const addToWatchlist = async (accountId, sessionId, body = {}) => {
     urls.v3.ACCOUNT_ADD_TO_WATCHLIST.replace(':id', accountId).concat(
       `?session_id=${sessionId}`
     ),
-    { mediaType, mediaId, watchlist },
+    { media_type, media_id, watchlist },
     'post'
   );
 };
@@ -52,33 +52,35 @@ export const details = async sessionId => {
     return Promise.reject('A sessionId has to be provided');
   }
 
-  return await makeHttpRequest(urls.v3.ACCOUNT_DETAILS, { sessionId });
+  return await makeHttpRequest(urls.v3.ACCOUNT_DETAILS, {
+    session_id: sessionId,
+  });
 };
 
 /**
  * Get the list of your favorite movies.
  * @param {number} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-favorite-movies
  */
 export const favoriteMovies = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_FAVORITE_MOVIES.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
@@ -86,26 +88,26 @@ export const favoriteMovies = async (accountId, options = {}) => {
  * Get the list of your favorite TV shows.
  * @param {number} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-favorite-tv-shows
  */
 export const favoriteTvShows = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_FAVORITE_TV_SHOWS.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
@@ -113,25 +115,25 @@ export const favoriteTvShows = async (accountId, options = {}) => {
  * Get all of the lists created by an account. Will invlude private lists if you are the owner.
  * @param {integer} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-created-lists
  */
 export const lists = async (accountId, options = {}) => {
-  const { sessionId, language, page } = options;
+  const { session_id, language, page } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_LISTS.replace(':id', accountId),
-    { sessionId, language, page }
+    { session_id, language, page }
   );
 };
 
@@ -140,14 +142,14 @@ export const lists = async (accountId, options = {}) => {
  * @param {integer} accountId - Required
  * @param {string} sessionId - Required
  * @param {Object} body - Required
- * @param {string} body.mediaType - Required
- * @param {number} body.mediaId - Required
+ * @param {string} body.media_type - Required
+ * @param {number} body.media_id - Required
  * @param {boolean} body.favorite - Required
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/mark-as-favorite
  */
 export const markAsFavorite = async (accountId, sessionId, body = {}) => {
-  const { mediaType, mediaId, favorite } = body;
+  const { media_type, media_id, favorite } = body;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
@@ -158,7 +160,7 @@ export const markAsFavorite = async (accountId, sessionId, body = {}) => {
 
   if (!body || !Object.keys(body).length) {
     return Promise.reject(
-      'A body must have a mediaType, mediaId and favorite keys'
+      'A body must have a media_type, media_id and favorite keys'
     );
   }
 
@@ -166,7 +168,7 @@ export const markAsFavorite = async (accountId, sessionId, body = {}) => {
     urls.v3.ACCOUNT_MARK_AS_FAVORITE.replace(':id', accountId).concat(
       `?session_id=${sessionId}`
     ),
-    { mediaType, mediaId, favorite },
+    { media_type, media_id, favorite },
     'post'
   );
 };
@@ -175,26 +177,26 @@ export const markAsFavorite = async (accountId, sessionId, body = {}) => {
  * Get a list of all the movies you have added to your watchlist.
  * @param {integer} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-movie-watchlist
  */
 export const movieWatchlist = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_MOVIE_WATCHLIST.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
@@ -202,26 +204,26 @@ export const movieWatchlist = async (accountId, options = {}) => {
  * Get a list of all the movies you have rated.
  * @param {integer} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-rated-movies
  */
 export const ratedMovies = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_RATED_MOVIES.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
@@ -229,53 +231,53 @@ export const ratedMovies = async (accountId, options = {}) => {
  * Get a list of all the TV shows you have rated.
  * @param {integer} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-rated-tv-shows
  */
 export const ratedTvShows = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_RATED_TV_SHOWS.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
 /**
  * Get a list of all the TV episodes you have rated.
  * @param {integer} accountId - Required
- * @param {Object} options
- * @param {string} options.sessionId - Required
- * @param {string} options.language
- * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {Object}  options
+ * @param {string}  options.session_id - Required
+ * @param {string}  options.language
+ * @param {number}  options.page
+ * @param {string}  options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-rated-tv-episodes
  */
 export const ratedTvEpisodes = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_RATED_TV_SHOWS_EPISODES.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };
 
@@ -283,25 +285,25 @@ export const ratedTvEpisodes = async (accountId, options = {}) => {
  * Get a list of all the TV shows you have added to your watchlist.
  * @param {integer} accountId - Required
  * @param {Object} options
- * @param {string} options.sessionId - Required
+ * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sortBy - Allowed values: created_at.asc, created_at.desc
+ * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns Promise
  * @see https://developers.themoviedb.org/3/account/get-tv-show-watchlist
  */
 export const tvShowWatchlist = async (accountId, options = {}) => {
-  const { sessionId, language, page, sortBy } = options;
+  const { session_id, language, page, sort_by } = options;
   if (!accountId && accountId !== 0) {
     return Promise.reject('An accountId has to be provided');
   }
 
-  if (!sessionId) {
-    return Promise.reject('A sessionId has to be provided');
+  if (!session_id) {
+    return Promise.reject('A session_id option has to be provided');
   }
 
   return await makeHttpRequest(
     urls.v3.ACCOUNT_MOVIE_WATCHLIST.replace(':id', accountId),
-    { sessionId, language, page, sortBy }
+    { session_id, language, page, sort_by }
   );
 };

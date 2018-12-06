@@ -14,8 +14,8 @@ describe('change entity', () => {
   it('must resolve change.movies with options', async () => {
     const promise = change.movies({
       page: 1,
-      startDate: '2018-11-29',
-      endDate: '2018-11-30',
+      start_date: '2018-11-29',
+      end_date: '2018-11-30',
     });
 
     await expect(promise).resolves.toEqual({});
@@ -30,8 +30,8 @@ describe('change entity', () => {
   it('must resolve change.tvShows with options', async () => {
     const promise = change.tvShows({
       page: 1,
-      startDate: '2018-11-29',
-      endDate: '2018-11-30',
+      start_date: '2018-11-29',
+      end_date: '2018-11-30',
     });
 
     await expect(promise).resolves.toEqual({});
@@ -46,8 +46,8 @@ describe('change entity', () => {
   it('must resolve change.people with options', async () => {
     const promise = change.people({
       page: 1,
-      startDate: '2018-11-29',
-      endDate: '2018-11-30',
+      start_date: '2018-11-29',
+      end_date: '2018-11-30',
     });
 
     await expect(promise).resolves.toEqual({});

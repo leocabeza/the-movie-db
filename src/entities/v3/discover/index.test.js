@@ -14,9 +14,9 @@ describe('movies entity', () => {
     const promise = discover.movie({
       language: 'en-US',
       page: 1,
-      includeAdult: false,
-      includeVideo: false,
-      sortBy: 'popularity.desc',
+      include_adult: false,
+      include_video: false,
+      sort_by: 'popularity.desc',
     });
 
     await expect(promise).resolves.toEqual({});
@@ -32,9 +32,9 @@ describe('movies entity', () => {
     const promise = discover.tvShows({
       language: 'en-US',
       page: 1,
-      includeAdult: false,
-      includeVideo: false,
-      sortBy: 'popularity.desc',
+      include_adult: false,
+      include_video: false,
+      sort_by: 'popularity.desc',
     });
 
     await expect(promise).resolves.toEqual({});

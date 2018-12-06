@@ -12,7 +12,7 @@ import urls from '../../../urls';
  * @see https://developers.themoviedb.org/3/networks/get-network-details
  */
 export const details = async networkId => {
-  if (!networkId) {
+  if (!networkId && networkId !== 0) {
     return Promise.reject('A networkId has to be provided');
   }
 
@@ -28,7 +28,7 @@ export const details = async networkId => {
  * @see https://developers.themoviedb.org/3/networks/get-network-alternative-names
  */
 export const alternativeNames = async networkId => {
-  if (!networkId) {
+  if (!networkId && networkId !== 0) {
     return Promise.reject('A networkId has to be provided');
   }
 

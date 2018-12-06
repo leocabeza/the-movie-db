@@ -12,25 +12,27 @@ import urls from '../../../urls';
  * - If it belongs to your favourite list
  * @param {number} movieId
  * @param {Object} options
- * @param {string} options.sessionId
- * @param {string} options.guestSessionId
+ * @param {string} options.session_id
+ * @param {string} options.guest_session_id
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/get-movie-account-states
  */
 export const accountStates = async (movieId, options = {}) => {
-  const { sessionId, guestSessionId } = options;
+  const { session_id, guest_session_id } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
-  if (sessionId || guestSessionId) {
+  if (session_id || guest_session_id) {
     return await makeHttpRequest(
       urls.v3.MOVIE_ACCOUNT_STATES.replace(':id', movieId),
-      { sessionId, guestSessionId }
+      { session_id, guest_session_id }
     );
   }
 
-  return Promise.reject('A sessionId or a guestSessionId has to be provided');
+  return Promise.reject(
+    'A session_id or a guest_session_id has to be provided'
+  );
 };
 
 /**
@@ -55,24 +57,24 @@ export const alternativeTitles = async (movieId, options = {}) => {
 
 /**
  * Get the changes for a movie. By default only the last 24 hours are returned.
- * You can query up to 14 days in a single query by using the startDate and endDate query parameters.
+ * You can query up to 14 days in a single query by using the start_date and end_date query parameters.
  * @param {number} movieId
  * @param {Object} options
- * @param {string} options.startDate
- * @param {string} options.endDate
+ * @param {string} options.start_date
+ * @param {string} options.end_date
  * @param {number} options.page
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/get-movie-changes
  */
 export const changes = async (movieId, options = {}) => {
-  const { startDate, endDate } = options;
+  const { start_date, end_date } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
   return await makeHttpRequest(urls.v3.MOVIE_CHANGES.replace(':id', movieId), {
-    startDate,
-    endDate,
+    start_date,
+    end_date,
   });
 };
 
@@ -93,25 +95,29 @@ export const credits = async movieId => {
 /**
  * Remove your rating for a movie.
  * @param {number} movieId
- * @param {*} options
+ * @param {Object} options
+ * @param {string} options.session_id
+ * @param {string} options.guest_session_id
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/delete-movie-rating
  */
 export const deleteRating = async (movieId, options = {}) => {
-  const { sessionId, guestSessionId } = options;
+  const { session_id, guest_session_id } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
-  if (sessionId || guestSessionId) {
+  if (session_id || guest_session_id) {
     return await makeHttpRequest(
       urls.v3.MOVIE_DELETE_RATING.replace(':id', movieId),
-      { sessionId, guestSessionId },
+      { session_id, guest_session_id },
       'delete'
     );
   }
 
-  return Promise.reject('A sessionId or a guestSessionId has to be provided');
+  return Promise.reject(
+    'A session_id or a guest_session_id has to be provided'
+  );
 };
 
 /**
@@ -119,19 +125,19 @@ export const deleteRating = async (movieId, options = {}) => {
  * @param {number} movieId
  * @param {Object} options
  * @param {string} options.language
- * @param {string} options.appendToResponse
+ * @param {string} options.append_to_response
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/get-movie-details
  */
 export const details = async (movieId, options = {}) => {
-  const { language, appendToResponse } = options;
+  const { language, append_to_response } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
   return await makeHttpRequest(urls.v3.MOVIE_DETAILS.replace(':id', movieId), {
     language,
-    appendToResponse,
+    append_to_response,
   });
 };
 
@@ -153,24 +159,24 @@ export const externalIds = async movieId => {
 /**
  * Get the images that belong to a movie.
  * Querying images with a language parameter will filter the results.
- * If you want to include a fallback language (especially useful for backdrops) you can use the includeImageLanguage parameter.
- * This should be a comma separated value like so: { includeImageLanguage: 'en,null' }.
+ * If you want to include a fallback language (especially useful for backdrops) you can use the include_image_language parameter.
+ * This should be a comma separated value like so: { include_image_language: 'en,null' }.
  * @param {number} movieId
  * @param {Object} options
  * @param {string} options.language
- * @param {string} options.includeImageLanguage
+ * @param {string} options.include_image_language
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/get-movie-images
  */
 export const images = async (movieId, options = {}) => {
-  const { language, includeImageLanguage } = options;
+  const { language, include_image_language } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
   return makeHttpRequest(urls.v3.MOVIE_IMAGES.replace(':id', movieId), {
     language,
-    includeImageLanguage,
+    include_image_language,
   });
 };
 
@@ -264,16 +270,16 @@ export const popular = async (options = {}) => {
 
 /**
  * Rate a movie.
- * @param {number} movieId
+ * @param {number} movieId - Required
  * @param {rating} rating - between 0.5 and 10.0
  * @param {Object} options
- * @param {string} guestSessionId
- * @param {string} sessionId
+ * @param {string} options.guestSessionId
+ * @param {string} options.sessionId
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/rate-movie
  */
 export const rating = async (movieId, rating, options = {}) => {
-  const { sessionId, guestSessionId } = options;
+  const { session_id, guest_session_id } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -282,10 +288,10 @@ export const rating = async (movieId, rating, options = {}) => {
     return Promise.reject('A rating has to be provided');
   }
 
-  if (sessionId || guestSessionId) {
-    const queryParam = sessionId
-      ? `?session_id=${sessionId}`
-      : `?guest_session_id=${guestSessionId}`;
+  if (session_id || guest_session_id) {
+    const queryParam = session_id
+      ? `?session_id=${session_id}`
+      : `?guest_session_id=${guest_session_id}`;
     return await makeHttpRequest(
       urls.v3.MOVIE_RATING.replace(':id', movieId).concat(queryParam),
       { value: rating },
@@ -293,7 +299,9 @@ export const rating = async (movieId, rating, options = {}) => {
     );
   }
 
-  return Promise.reject('A sessionId or a guestSessionId has to be provided');
+  return Promise.reject(
+    'A session_id or a guest_session_id has to be provided'
+  );
 };
 
 /**

@@ -48,30 +48,6 @@ describe('utils', () => {
     }
   });
 
-  it('must convert a snakecase string to camelcase', () => {
-    const createdAt = 'created_at';
-    const sixSeasonsAndAMovie = 'six_seasons_and_a_movie';
-    const id = 'id';
-
-    expect(utils.snakeToCamelCase(createdAt)).toBe('createdAt');
-    expect(utils.snakeToCamelCase(sixSeasonsAndAMovie)).toBe(
-      'sixSeasonsAndAMovie'
-    );
-    expect(utils.snakeToCamelCase(id)).toBe('id');
-  });
-
-  it('must convert a camelcase string to snakecase', () => {
-    const createdAt = 'createdAt';
-    const sixSeasonsAndAMovie = 'sixSeasonsAndAMovie';
-    const id = 'id';
-
-    expect(utils.camelToSnakeCase(createdAt)).toBe('created_at');
-    expect(utils.camelToSnakeCase(sixSeasonsAndAMovie)).toBe(
-      'six_seasons_and_a_movie'
-    );
-    expect(utils.camelToSnakeCase(id)).toBe('id');
-  });
-
   it('must build non undefined params', () => {
     const emptyObject = {};
     const objectWithNullValues = { foo: null, bar: null };

@@ -39,7 +39,7 @@ describe('authentication entity', () => {
     const promise = authentication.validateWithLogin({
       username: 'Th34sscr4ckb4nd1t',
       password: 'annie',
-      requestToken: 'XXX',
+      request_token: 'XXX',
     });
 
     expect(promise).resolves.toEqual({});
@@ -47,7 +47,7 @@ describe('authentication entity', () => {
 
   it('must reject when authentication.validateWithLogin is called without options', async () => {
     await expect(authentication.validateWithLogin()).rejects.toBe(
-      'An username, password and a requestToken has to be provided'
+      'An username, password and a request_token has to be provided'
     );
   });
 
@@ -64,7 +64,7 @@ describe('authentication entity', () => {
   });
 
   it('must resolve authentication.logout call', async () => {
-    const response = authentication.logout('SESSION_ID');
+    const response = authentication.logout('XXX');
 
     await expect(response).resolves.toEqual({});
   });

@@ -18,7 +18,7 @@ export const logout = async sessionId => {
 
   return makeHttpRequest(
     urls.v3.AUTHENTICATION_LOGOUT,
-    { sessionId },
+    { session_id: sessionId },
     'delete'
   );
 };
@@ -44,7 +44,7 @@ export const newSession = async requestToken => {
 
   return await makeHttpRequest(
     urls.v3.AUTHENTICATION_NEW_SESSION,
-    { requestToken },
+    { request_token: requestToken },
     'post'
   );
 };
@@ -71,7 +71,7 @@ export const sessionConvert = async v4AccessToken => {
 
   return await makeHttpRequest(
     urls.v3.AUTHENTICATION_SESSION_CONVERT,
-    { accessToken: v4AccessToken },
+    { access_token: v4AccessToken },
     'post'
   );
 };
@@ -83,22 +83,22 @@ export const sessionConvert = async v4AccessToken => {
  * @param {Object} options
  * @param {string} options.username
  * @param {string} options.password
- * @param {string} options.requestToken
+ * @param {string} options.request_token
  * @returns Promise
  * @see https://developers.themoviedb.org/3/authentication/validate-request-token
  */
 export const validateWithLogin = async (options = {}) => {
-  const { username, password, requestToken } = options;
+  const { username, password, request_token } = options;
 
-  if (!username || !password || !requestToken) {
+  if (!username || !password || !request_token) {
     return Promise.reject(
-      'An username, password and a requestToken has to be provided'
+      'An username, password and a request_token has to be provided'
     );
   }
 
   return await makeHttpRequest(
     urls.v3.AUTHENTICATION_TOKEN_VALIDATE_LOGIN,
-    { username, password, requestToken },
+    { username, password, request_token },
     'post'
   );
 };

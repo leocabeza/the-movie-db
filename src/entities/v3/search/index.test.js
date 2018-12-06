@@ -62,7 +62,7 @@ describe('search entity', () => {
       query: 'the avengers',
       language: 'en-US',
       page: 1,
-      includeAdult: true,
+      include_adult: true,
       year: 2012,
       primaryReleaseYear: 2012,
     });
@@ -79,7 +79,7 @@ describe('search entity', () => {
       query: 'jerry seinfeld',
       language: 'en-US',
       page: 1,
-      includeAdult: true,
+      include_adult: true,
     });
 
     expect(promise).resolves.toEqual({});
@@ -94,7 +94,7 @@ describe('search entity', () => {
       query: 'jerry seinfeld',
       language: 'en-US',
       page: 1,
-      includeAdult: true,
+      include_adult: true,
     });
 
     expect(promise).resolves.toEqual({});
@@ -109,7 +109,7 @@ describe('search entity', () => {
       query: 'game of thrones',
       language: 'en-US',
       page: 1,
-      firstAirDateYear: 2010,
+      first_air_date_year: 2010,
     });
 
     expect(promise).resolves.toEqual({});

@@ -11,21 +11,21 @@ describe('find entity', () => {
 
   it('must resolve find.byId with options', async () => {
     const promise = find.byId({
-      externalId: '1',
-      externalSource: 'imdb_id',
+      external_id: '1',
+      external_source: 'imdb_id',
       language: 'en',
     });
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must reject when find.byId is called without externalId', async () => {
-    await expect(find.byId()).rejects.toBe('An externalId has to be provided');
+  it('must reject when find.byId is called without external_id', async () => {
+    await expect(find.byId()).rejects.toBe('An external_id has to be provided');
   });
 
-  it('must reject when find.byId is called without externalSource', async () => {
-    await expect(find.byId({ externalId: '1' })).rejects.toBe(
-      'An externalSource has to be provided'
+  it('must reject when find.byId is called without external_source', async () => {
+    await expect(find.byId({ external_id: '1' })).rejects.toBe(
+      'An external_source has to be provided'
     );
   });
 });

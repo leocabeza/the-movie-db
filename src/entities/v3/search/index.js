@@ -70,10 +70,10 @@ export const keywords = async (options = {}) => {
  * @param {string}  options.language
  * @param {string}  options.query
  * @param {number}  options.page
- * @param {boolean} options.includeAdult
+ * @param {boolean} options.include_adult
  * @param {string}  options.region
  * @param {number}  option.year
- * @param {number}  option.primaryReleaseYear
+ * @param {number}  option.primary_release_year
  * @returns Promise
  * @see https://developers.themoviedb.org/3/search/search-movies
  */
@@ -82,10 +82,10 @@ export const movies = async (options = {}) => {
     language,
     query,
     page,
-    includeAdult,
+    include_adult,
     region,
     year,
-    primaryReleaseYear,
+    primary_release_year,
   } = options;
 
   if (!query) {
@@ -96,10 +96,10 @@ export const movies = async (options = {}) => {
     language,
     query,
     page,
-    includeAdult,
+    include_adult,
     region,
     year,
-    primaryReleaseYear,
+    primary_release_year,
   });
 };
 
@@ -109,13 +109,13 @@ export const movies = async (options = {}) => {
  * @param {string}  options.language
  * @param {string}  options.query
  * @param {number}  options.page
- * @param {boolean} options.includeAdult
+ * @param {boolean} options.include_adult
  * @param {string}  options.region
  * @returns Promise
  * @see https://developers.themoviedb.org/3/search/multi-search
  */
 export const multi = async (options = {}) => {
-  const { language, query, page, includeAdult, region } = options;
+  const { language, query, page, include_adult, region } = options;
 
   if (!query) {
     return Promise.reject('A query has to be provided');
@@ -125,7 +125,7 @@ export const multi = async (options = {}) => {
     language,
     query,
     page,
-    includeAdult,
+    include_adult,
     region,
   });
 };
@@ -136,13 +136,13 @@ export const multi = async (options = {}) => {
  * @param {string}  options.language
  * @param {string}  options.query
  * @param {number}  options.page
- * @param {boolean} options.includeAdult
+ * @param {boolean} options.include_adult
  * @param {string}  options.region
  * @returns Promise
  * @see https://developers.themoviedb.org/3/search/search-people
  */
 export const people = async (options = {}) => {
-  const { language, query, page, includeAdult, region } = options;
+  const { language, query, page, include_adult, region } = options;
 
   if (!query) {
     return Promise.reject('A query has to be provided');
@@ -152,7 +152,7 @@ export const people = async (options = {}) => {
     language,
     query,
     page,
-    includeAdult,
+    include_adult,
     region,
   });
 };
@@ -163,12 +163,12 @@ export const people = async (options = {}) => {
  * @param {string} options.language
  * @param {string} options.query
  * @param {number} options.page
- * @param {number} options.firstAirDateYear
+ * @param {number} options.first_air_date_year
  * @returns Promise
  * @see https://developers.themoviedb.org/3/search/search-tv-shows
  */
 export const tv = async (options = {}) => {
-  const { language, query, page, firstAirDateYear } = options;
+  const { language, query, page, first_air_date_year } = options;
 
   if (!query) {
     return Promise.reject('A query has to be provided');
@@ -178,6 +178,6 @@ export const tv = async (options = {}) => {
     language,
     query,
     page,
-    firstAirDateYear,
+    first_air_date_year,
   });
 };
