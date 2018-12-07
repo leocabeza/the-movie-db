@@ -58,7 +58,6 @@ This is a work in progress, DO NOT USE in production just yet.
 # Entities missing so far:
 
 ## V3
-* Guest sessions
 * Keywords
 * Lists
 * People

@@ -94,6 +94,18 @@ describe('urls', () => {
     expect(urls.GENRE_TV_LIST).toEqual('/genre/tv/list');
   });
 
+  it('must list guestSessions constants correctly', () => {
+    expect(urls.GUEST_SESSION_RATED_MOVIES).toEqual(
+      '/guest_session/:id/rated/movies'
+    );
+    expect(urls.GUEST_SESSION_RATED_TV_EPISODES).toEqual(
+      '/guest_session/:id/rated/tv/episodes'
+    );
+    expect(urls.GUEST_SESSION_RATED_TV_SHOWS).toEqual(
+      '/guest_session/:id/rated/tv'
+    );
+  });
+
   it('must list movies constants correctly', () => {
     expect(urls.MOVIE_ACCOUNT_STATES).toEqual('/movie/:id/account_states');
     expect(urls.MOVIE_ALTERNATIVE_TITLES).toEqual(

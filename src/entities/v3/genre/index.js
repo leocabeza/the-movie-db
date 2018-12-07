@@ -28,5 +28,5 @@ export const movieList = async (options = {}) => {
 export const tvList = async (options = {}) => {
   const { language } = options;
 
-  return await makeHttpRequest(urls.v3.GENRE_MOVIE_LIST, { language });
+  return await makeHttpRequest(urls.v3.GENRE_TV_LIST, { language });
 };

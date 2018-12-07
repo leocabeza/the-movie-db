@@ -42,6 +42,10 @@ export const DISCOVER_TV_SHOW = '/discover/tv';
 export const FIND_EXTERNAL_ID = '/find/:externalId';
 export const GENRE_MOVIE_LIST = '/genre/movie/list';
 export const GENRE_TV_LIST = '/genre/tv/list';
+export const GUEST_SESSION_RATED_MOVIES = '/guest_session/:id/rated/movies';
+export const GUEST_SESSION_RATED_TV_EPISODES =
+  '/guest_session/:id/rated/tv/episodes';
+export const GUEST_SESSION_RATED_TV_SHOWS = '/guest_session/:id/rated/tv';
 export const MOVIE_ACCOUNT_STATES = '/movie/:id/account_states';
 export const MOVIE_ALTERNATIVE_TITLES = '/movie/:id/alternative_titles';
 export const MOVIE_CHANGES = '/movie/:id/changes';

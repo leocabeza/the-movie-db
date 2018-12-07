@@ -23,6 +23,8 @@
 <dd></dd>
 <dt><a href="#module_genre">genre</a></dt>
 <dd></dd>
+<dt><a href="#module_guestSession">guestSession</a></dt>
+<dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
@@ -810,6 +812,63 @@ Get the list of official genres for TV shows.
 | --- | --- |
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
+
+<a name="module_guestSession"></a>
+
+## guestSession
+
+* [guestSession](#module_guestSession)
+    * [.ratedMovies](#module_guestSession.ratedMovies) ⇒
+    * [.ratedTvEpisodes](#module_guestSession.ratedTvEpisodes) ⇒
+    * [.ratedTvShows](#module_guestSession.ratedTvShows) ⇒
+
+<a name="module_guestSession.ratedMovies"></a>
+
+### guestSession.ratedMovies ⇒
+Get the rated movies for a guest session.
+
+**Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-movies  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| guestSessionId | <code>string</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+
+<a name="module_guestSession.ratedTvEpisodes"></a>
+
+### guestSession.ratedTvEpisodes ⇒
+Get the rated TV episodes for a guest session.
+
+**Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/guest-sessions/get-gest-session-rated-tv-episodes  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| guestSessionId | <code>string</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+
+<a name="module_guestSession.ratedTvShows"></a>
+
+### guestSession.ratedTvShows ⇒
+Get the rated TV shows for a guest session.
+
+**Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-tv-shows  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| guestSessionId | <code>string</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_movies"></a>
 

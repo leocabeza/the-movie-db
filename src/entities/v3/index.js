@@ -9,6 +9,7 @@ import * as credit from './credit';
 import * as discover from './discover';
 import * as find from './find';
 import * as genre from './genre';
+import * as guestSession from './guest-session';
 import * as movie from './movie';
 import * as network from './network';
 import * as review from './review';
@@ -27,6 +28,7 @@ export default {
   discover,
   find,
   genre,
+  guestSession,
   movie,
   network,
   review,
