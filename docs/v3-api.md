@@ -25,6 +25,8 @@
 <dd></dd>
 <dt><a href="#module_guestSession">guestSession</a></dt>
 <dd></dd>
+<dt><a href="#module_keyword">keyword</a></dt>
+<dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
@@ -869,6 +871,43 @@ Get the rated TV shows for a guest session.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+
+<a name="module_keyword"></a>
+
+## keyword
+
+* [keyword](#module_keyword)
+    * [.details](#module_keyword.details) ⇒
+    * [.movies](#module_keyword.movies) ⇒
+
+<a name="module_keyword.details"></a>
+
+### keyword.details ⇒
+Get details of keyword
+
+**Kind**: static constant of [<code>keyword</code>](#module_keyword)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/keywords/get-keyword-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| keywordId | <code>number</code> | Required |
+
+<a name="module_keyword.movies"></a>
+
+### keyword.movies ⇒
+Get the movies that belong to a keyword.
+
+**Kind**: static constant of [<code>keyword</code>](#module_keyword)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/keywords/get-movies-by-keyword  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| keywordId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.include_adult | <code>boolean</code> |  |
 
 <a name="module_movies"></a>
 

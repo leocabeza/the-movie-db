@@ -106,6 +106,11 @@ describe('urls', () => {
     );
   });
 
+  it('must list keyword constants', () => {
+    expect(urls.KEYWORD_DETAILS).toEqual('/keyword/:id');
+    expect(urls.KEYWORD_MOVIES).toEqual('/keyword/:id/movies');
+  });
+
   it('must list movies constants correctly', () => {
     expect(urls.MOVIE_ACCOUNT_STATES).toEqual('/movie/:id/account_states');
     expect(urls.MOVIE_ALTERNATIVE_TITLES).toEqual(

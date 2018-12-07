@@ -14,6 +14,7 @@ describe('v3', () => {
     expect(v3).toHaveProperty('find');
     expect(v3).toHaveProperty('genre');
     expect(v3).toHaveProperty('guestSession');
+    expect(v3).toHaveProperty('keyword');
     expect(v3).toHaveProperty('movie');
     expect(v3).toHaveProperty('network');
     expect(v3).toHaveProperty('review');

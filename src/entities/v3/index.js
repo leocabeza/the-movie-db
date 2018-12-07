@@ -10,6 +10,7 @@ import * as discover from './discover';
 import * as find from './find';
 import * as genre from './genre';
 import * as guestSession from './guest-session';
+import * as keyword from './keyword';
 import * as movie from './movie';
 import * as network from './network';
 import * as review from './review';
@@ -29,6 +30,7 @@ export default {
   find,
   genre,
   guestSession,
+  keyword,
   movie,
   network,
   review,

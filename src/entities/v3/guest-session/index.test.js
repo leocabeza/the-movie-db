@@ -11,13 +11,13 @@ describe('guestSession entity', () => {
     expect(typeof guestSession.ratedTvShows).toEqual('function');
   });
 
-  it('must resolve guestSession.ratedMovies with guestSessionId and no optons', async () => {
+  it('must resolve guestSession.ratedMovies with guestSessionId and no options', async () => {
     const promise = guestSession.ratedMovies('1');
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve guestSession.ratedMovies with guestSessionId and optons', async () => {
+  it('must resolve guestSession.ratedMovies with guestSessionId and options', async () => {
     const promise = guestSession.ratedMovies('1', {
       language: 'en-US',
       sort_by: 'created_at.asc',
@@ -32,13 +32,13 @@ describe('guestSession entity', () => {
     );
   });
 
-  it('must resolve guestSession.ratedTvEpisodes with guestSessionId and no optons', async () => {
+  it('must resolve guestSession.ratedTvEpisodes with guestSessionId and no options', async () => {
     const promise = guestSession.ratedTvEpisodes('1');
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve guestSession.ratedTvEpisodes with guestSessionId and optons', async () => {
+  it('must resolve guestSession.ratedTvEpisodes with guestSessionId and options', async () => {
     const promise = guestSession.ratedTvEpisodes('1', {
       language: 'en-US',
       sort_by: 'created_at.asc',
@@ -53,13 +53,13 @@ describe('guestSession entity', () => {
     );
   });
 
-  it('must resolve guestSession.ratedTvShows with guestSessionId and no optons', async () => {
+  it('must resolve guestSession.ratedTvShows with guestSessionId and no options', async () => {
     const promise = guestSession.ratedTvShows('1');
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve guestSession.ratedTvShows with guestSessionId and optons', async () => {
+  it('must resolve guestSession.ratedTvShows with guestSessionId and options', async () => {
     const promise = guestSession.ratedTvShows('1', {
       language: 'en-US',
       sort_by: 'created_at.asc',

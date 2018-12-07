@@ -46,6 +46,8 @@ export const GUEST_SESSION_RATED_MOVIES = '/guest_session/:id/rated/movies';
 export const GUEST_SESSION_RATED_TV_EPISODES =
   '/guest_session/:id/rated/tv/episodes';
 export const GUEST_SESSION_RATED_TV_SHOWS = '/guest_session/:id/rated/tv';
+export const KEYWORD_DETAILS = '/keyword/:id';
+export const KEYWORD_MOVIES = '/keyword/:id/movies';
 export const MOVIE_ACCOUNT_STATES = '/movie/:id/account_states';
 export const MOVIE_ALTERNATIVE_TITLES = '/movie/:id/alternative_titles';
 export const MOVIE_CHANGES = '/movie/:id/changes';
