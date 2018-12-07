@@ -89,6 +89,11 @@ describe('urls', () => {
     expect(urls.FIND_EXTERNAL_ID).toEqual('/find/:externalId');
   });
 
+  it('must list genre constants correctly', () => {
+    expect(urls.GENRE_MOVIE_LIST).toEqual('/genre/movie/list');
+    expect(urls.GENRE_TV_LIST).toEqual('/genre/tv/list');
+  });
+
   it('must list movies constants correctly', () => {
     expect(urls.MOVIE_ACCOUNT_STATES).toEqual('/movie/:id/account_states');
     expect(urls.MOVIE_ALTERNATIVE_TITLES).toEqual(

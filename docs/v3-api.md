@@ -21,6 +21,8 @@
 <dd></dd>
 <dt><a href="#module_find">find</a></dt>
 <dd></dd>
+<dt><a href="#module_genre">genre</a></dt>
+<dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
@@ -772,6 +774,42 @@ This method will search all objects (movies, TV shows and people) and return the
 | options.external_id | <code>string</code> |  |
 | options.external_source | <code>string</code> | Possible values: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id |
 | options.language | <code>string</code> |  |
+
+<a name="module_genre"></a>
+
+## genre
+
+* [genre](#module_genre)
+    * [.movieList](#module_genre.movieList) ⇒
+    * [.tvList](#module_genre.tvList) ⇒
+
+<a name="module_genre.movieList"></a>
+
+### genre.movieList ⇒
+Get the list of official genres for movies.
+
+**Kind**: static constant of [<code>genre</code>](#module_genre)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/genres/get-movie-list  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_genre.tvList"></a>
+
+### genre.tvList ⇒
+Get the list of official genres for TV shows.
+
+**Kind**: static constant of [<code>genre</code>](#module_genre)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/genres/get-tv-list  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
 
 <a name="module_movies"></a>
 
