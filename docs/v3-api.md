@@ -27,6 +27,8 @@
 <dd></dd>
 <dt><a href="#module_keyword">keyword</a></dt>
 <dd></dd>
+<dt><a href="#module_list">list</a></dt>
+<dd></dd>
 <dt><a href="#module_movies">movies</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
@@ -908,6 +910,129 @@ Get the movies that belong to a keyword.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.include_adult | <code>boolean</code> |  |
+
+<a name="module_list"></a>
+
+## list
+
+* [list](#module_list)
+    * [.addMovie](#module_list.addMovie) ⇒
+    * [.clear](#module_list.clear) ⇒
+    * [.create](#module_list.create) ⇒
+    * [.details](#module_list.details) ⇒
+    * [.itemStatus](#module_list.itemStatus) ⇒
+    * [.remove](#module_list.remove) ⇒
+    * [.removeMovie](#module_list.removeMovie) ⇒
+
+<a name="module_list.addMovie"></a>
+
+### list.addMovie ⇒
+Add a movie to a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/add-movie  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>string</code> \| <code>number</code> | Required |
+| sessionId | <code>string</code> | Required |
+| body | <code>Object</code> | Required |
+| body.media_id | <code>number</code> | Required |
+
+<a name="module_list.clear"></a>
+
+### list.clear ⇒
+Clear all of the items from a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/clear-list  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>string</code> | Required |
+| options | <code>Object</code> | Required |
+| options.session_id | <code>string</code> | Required |
+| options.confirm | <code>boolean</code> | Required |
+
+<a name="module_list.create"></a>
+
+### list.create ⇒
+Create a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/create-list  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| sessionId | <code>string</code> | Required |
+| body | <code>Object</code> |  |
+| body.name | <code>string</code> |  |
+| body.description | <code>string</code> |  |
+| body.language | <code>string</code> |  |
+
+<a name="module_list.details"></a>
+
+### list.details ⇒
+Get the details of a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/get-list-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>number</code> \| <code>string</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_list.itemStatus"></a>
+
+### list.itemStatus ⇒
+You can use this method to check if a movie has already been added to the list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/check-item-status  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>number</code> \| <code>string</code> | Required |
+| options | <code>Object</code> |  |
+| options.movieId | <code>string</code> | Required |
+
+<a name="module_list.remove"></a>
+
+### list.remove ⇒
+Delete a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/delete-list  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>string</code> | Required |
+| options | <code>Object</code> | Required |
+| options.session_id | <code>string</code> | Required |
+
+<a name="module_list.removeMovie"></a>
+
+### list.removeMovie ⇒
+Remove a movie from a list.
+
+**Kind**: static constant of [<code>list</code>](#module_list)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/lists/remove-movie  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| listId | <code>string</code> \| <code>number</code> | Required |
+| sessionId | <code>string</code> | Required |
+| body | <code>Object</code> | Required |
+| body.media_id | <code>number</code> | Required |
 
 <a name="module_movies"></a>
 

@@ -1,7 +1,7 @@
 import * as urls from './';
 
 describe('urls', () => {
-  it('must list account constants correctly', () => {
+  it('must list account constants', () => {
     expect(urls.ACCOUNT_ADD_TO_WATCHLIST).toEqual('/account/:id/watchlist');
     expect(urls.ACCOUNT_DETAILS).toEqual('/account');
     expect(urls.ACCOUNT_FAVORITE_MOVIES).toEqual(
@@ -21,7 +21,7 @@ describe('urls', () => {
     expect(urls.ACCOUNT_TV_SHOW_WATCHLIST).toEqual('/account/:id/watchlist/tv');
   });
 
-  it('must list authentication constants correctly', () => {
+  it('must list authentication constants', () => {
     expect(urls.AUTHENTICATION_LOGOUT).toEqual('/authentication/session');
     expect(urls.AUTHENTICATION_NEW_GUEST_SESSION).toEqual(
       '/authentication/guest_session/new'
@@ -38,18 +38,18 @@ describe('urls', () => {
     );
   });
 
-  it('must list certification constants correctly', () => {
+  it('must list certification constants', () => {
     expect(urls.CERTIFICATION_MOVIES).toEqual('/certification/movie/list');
     expect(urls.CERTIFICATION_TV_SHOWS).toEqual('/certification/tv/list');
   });
 
-  it('must list change constants correctly', () => {
+  it('must list change constants', () => {
     expect(urls.CHANGE_MOVIES).toEqual('/movie/changes');
     expect(urls.CHANGE_PERSON).toEqual('/person/changes');
     expect(urls.CHANGE_TV_SHOWS).toEqual('/tv/changes');
   });
 
-  it('must list collection constants correctly', () => {
+  it('must list collection constants', () => {
     expect(urls.COLLECTION_DETAILS).toEqual('/collection/:id');
     expect(urls.COLLECTION_IMAGES).toEqual('/collection/:id/images');
     expect(urls.COLLECTION_TRANSLATIONS).toEqual(
@@ -57,7 +57,7 @@ describe('urls', () => {
     );
   });
 
-  it('must list company constants correctly', () => {
+  it('must list company constants', () => {
     expect(urls.COMPANY_ALTERNATIVE_NAMES).toEqual(
       '/company/:id/alternative_names'
     );
@@ -76,25 +76,25 @@ describe('urls', () => {
     expect(urls.CONFIGURATION_TIMEZONES).toEqual('/configuration/timezones');
   });
 
-  it('must list credit constants correctly', () => {
+  it('must list credit constants', () => {
     expect(urls.CREDIT_DETAILS).toEqual('/credit/:id');
   });
 
-  it('must list discover constants correctly', () => {
+  it('must list discover constants', () => {
     expect(urls.DISCOVER_MOVIE).toEqual('/discover/movie');
     expect(urls.DISCOVER_TV_SHOW).toEqual('/discover/tv');
   });
 
-  it('must list find constants correctly', () => {
+  it('must list find constants', () => {
     expect(urls.FIND_EXTERNAL_ID).toEqual('/find/:externalId');
   });
 
-  it('must list genre constants correctly', () => {
+  it('must list genre constants', () => {
     expect(urls.GENRE_MOVIE_LIST).toEqual('/genre/movie/list');
     expect(urls.GENRE_TV_LIST).toEqual('/genre/tv/list');
   });
 
-  it('must list guestSessions constants correctly', () => {
+  it('must list guestSessions constants', () => {
     expect(urls.GUEST_SESSION_RATED_MOVIES).toEqual(
       '/guest_session/:id/rated/movies'
     );
@@ -111,7 +111,17 @@ describe('urls', () => {
     expect(urls.KEYWORD_MOVIES).toEqual('/keyword/:id/movies');
   });
 
-  it('must list movies constants correctly', () => {
+  it('must list "list" constants', () => {
+    expect(urls.LIST_ADD_MOVIE).toEqual('/list/:id/add_item');
+    expect(urls.LIST_CLEAR).toEqual('/list/:id/clear');
+    expect(urls.LIST_CREATE).toEqual('/list');
+    expect(urls.LIST_DELETE).toEqual('/list/:id');
+    expect(urls.LIST_DETAILS).toEqual('/list/:id');
+    expect(urls.LIST_ITEM_STATUS).toEqual('/list/:id/item_status');
+    expect(urls.LIST_REMOVE_MOVIE).toEqual('/list/:id/remove_item');
+  });
+
+  it('must list movies constants', () => {
     expect(urls.MOVIE_ACCOUNT_STATES).toEqual('/movie/:id/account_states');
     expect(urls.MOVIE_ALTERNATIVE_TITLES).toEqual(
       '/movie/:id/alternative_titles'
@@ -146,11 +156,11 @@ describe('urls', () => {
     expect(urls.NETWORK_IMAGES).toEqual('/network/:id/images');
   });
 
-  it('must list review constants correctly', () => {
+  it('must list review constants', () => {
     expect(urls.REVIEW_DETAILS).toEqual('/review/:id');
   });
 
-  it('must list search constants correctly', () => {
+  it('must list search constants', () => {
     expect(urls.SEARCH_COLLECTION).toEqual('/search/collection');
     expect(urls.SEARCH_COMPANY).toEqual('/search/company');
     expect(urls.SEARCH_KEYWORD).toEqual('/search/keyword');
@@ -160,7 +170,7 @@ describe('urls', () => {
     expect(urls.SEARCH_TV).toEqual('/search/tv');
   });
 
-  it('must list trending constants correctly', () => {
+  it('must list trending constants', () => {
     expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
   });
 });
