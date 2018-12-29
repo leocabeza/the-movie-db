@@ -39,6 +39,10 @@
 <dd></dd>
 <dt><a href="#module_trending">trending</a></dt>
 <dd></dd>
+<dt><a href="#module_tvEpisodeGroup">tvEpisodeGroup</a></dt>
+<dd></dd>
+<dt><a href="#module_tvEpisode">tvEpisode</a></dt>
+<dd></dd>
 </dl>
 
 <a name="module_search"></a>
@@ -1074,12 +1078,12 @@ Grab the following account states for a session:
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-account-states  
 
-| Param | Type |
-| --- | --- |
-| movieId | <code>number</code> | 
-| options | <code>Object</code> | 
-| options.session_id | <code>string</code> | 
-| options.guest_session_id | <code>string</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| movieId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
 
 <a name="module_movies.alternativeTitles"></a>
 
@@ -1838,4 +1842,212 @@ Get the daily or weekly trending items. The daily trending list tracks items ove
 | options | <code>Object</code> |  |
 | options.media_type | <code>string</code> | Allowed values: all, movie, tv, person |
 | options.time_window | <code>string</code> | Allowed values: day, week |
+
+<a name="module_tvEpisodeGroup"></a>
+
+## tvEpisodeGroup
+<a name="module_tvEpisodeGroup.details"></a>
+
+### tvEpisodeGroup.details ⇒
+Get the details of a TV episode group.
+Groups support 7 different types which are enumerated as the following:
+1 - Original air date, 2- Absolute, 3 - DVD, 4 - Digital, 5 - Story arc, 6 - Production, 7 - TV
+
+**Kind**: static constant of [<code>tvEpisodeGroup</code>](#module_tvEpisodeGroup)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episode-groups/get-tv-episode-group-details  
+
+| Param | Type |
+| --- | --- |
+| id | <code>string</code> | 
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_tvEpisode"></a>
+
+## tvEpisode
+
+* [tvEpisode](#module_tvEpisode)
+    * [.accountStates](#module_tvEpisode.accountStates) ⇒
+    * [.changes](#module_tvEpisode.changes) ⇒
+    * [.credits](#module_tvEpisode.credits) ⇒
+    * [.deleteRating](#module_tvEpisode.deleteRating) ⇒
+    * [.details](#module_tvEpisode.details) ⇒
+    * [.externalIds](#module_tvEpisode.externalIds) ⇒
+    * [.images](#module_tvEpisode.images) ⇒
+    * [.rating](#module_tvEpisode.rating) ⇒
+    * [.translations](#module_tvEpisode.translations) ⇒
+    * [.videos](#module_tvEpisode.videos) ⇒
+
+<a name="module_tvEpisode.accountStates"></a>
+
+### tvEpisode.accountStates ⇒
+Get your rating for a episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-account-states  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+
+<a name="module_tvEpisode.changes"></a>
+
+### tvEpisode.changes ⇒
+Get the changes for a TV episode. By default only the last 24 hours are returned.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-changes  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| episodeId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.start_date | <code>string</code> |  |
+| options.end_date | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tvEpisode.credits"></a>
+
+### tvEpisode.credits ⇒
+Get the credits (cast, crew and guest stars) for a TV episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+
+<a name="module_tvEpisode.deleteRating"></a>
+
+### tvEpisode.deleteRating ⇒
+Remove your rating for a TV episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/delete-tv-episode-rating  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+
+<a name="module_tvEpisode.details"></a>
+
+### tvEpisode.details ⇒
+Get the TV episode details by id.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.append_to_response | <code>string</code> |  |
+
+<a name="module_tvEpisode.externalIds"></a>
+
+### tvEpisode.externalIds ⇒
+Get the external ids for a TV episode. We currently support the following external sources:
+IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-external-ids  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+
+<a name="module_tvEpisode.images"></a>
+
+### tvEpisode.images ⇒
+Get the images that belong to a TV episode.
+Querying images with a language parameter will filter the results.
+If you want to include a fallback language (especially useful for backdrops)
+you can use the include_image_language parameter.
+This should be a comma seperated value like so: include_image_language=en,null.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-images  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+
+<a name="module_tvEpisode.rating"></a>
+
+### tvEpisode.rating ⇒
+Rate a TV episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/rate-tv-episode  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+| rating | <code>rating</code> | between 0.5 and 10.0 |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+
+<a name="module_tvEpisode.translations"></a>
+
+### tvEpisode.translations ⇒
+Get the translation data for an episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-translations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+
+<a name="module_tvEpisode.videos"></a>
+
+### tvEpisode.videos ⇒
+Get the videos that have been added to a TV episode.
+
+**Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-videos  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| episodeNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| language | <code>string</code> |  |
 

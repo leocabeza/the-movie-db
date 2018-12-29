@@ -89,3 +89,21 @@ export const SEARCH_MULTI = '/search/multi';
 export const SEARCH_PEOPLE = '/search/person';
 export const SEARCH_TV = '/search/tv';
 export const TRENDING_ITEMS = '/trending/:mediaType/:timeWindow';
+export const TV_EPISODE_ACCOUNT_STATES =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/account_states';
+export const TV_EPISODE_CHANGES = '/tv/episode/:episodeId/changes';
+export const TV_EPISODE_CREDITS =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/credits';
+export const TV_EPISODE_DETAILS =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber';
+export const TV_EPISODE_EXTERNAL_IDS =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/external_ids';
+export const TV_EPISODE_IMAGES =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/images';
+export const TV_EPISODE_RATING =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/rating';
+export const TV_EPISODE_TRANSLATIONS =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/translations';
+export const TV_EPISODE_VIDEOS =
+  '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/videos';
+export const TV_EPISODE_GROUP_DETAILS = '/tv/episode_group/:id';

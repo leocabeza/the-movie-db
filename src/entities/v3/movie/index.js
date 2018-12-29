@@ -10,7 +10,7 @@ import urls from '../../../urls';
  * - Movie rating
  * - If it belongs to your watchlist
  * - If it belongs to your favourite list
- * @param {number} movieId
+ * @param {number} movieId - Required
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id

@@ -173,4 +173,36 @@ describe('urls', () => {
   it('must list trending constants', () => {
     expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
   });
+
+  it('must list tv episode constants', () => {
+    expect(urls.TV_EPISODE_ACCOUNT_STATES).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/account_states'
+    );
+    expect(urls.TV_EPISODE_CHANGES).toEqual('/tv/episode/:episodeId/changes');
+    expect(urls.TV_EPISODE_CREDITS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/credits'
+    );
+    expect(urls.TV_EPISODE_DETAILS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber'
+    );
+    expect(urls.TV_EPISODE_EXTERNAL_IDS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/external_ids'
+    );
+    expect(urls.TV_EPISODE_IMAGES).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/images'
+    );
+    expect(urls.TV_EPISODE_RATING).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/rating'
+    );
+    expect(urls.TV_EPISODE_TRANSLATIONS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/translations'
+    );
+    expect(urls.TV_EPISODE_VIDEOS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/videos'
+    );
+  });
+
+  it('must list tv episode group constants', () => {
+    expect(urls.TV_EPISODE_GROUP_DETAILS).toEqual('/tv/episode_group/:id');
+  });
 });

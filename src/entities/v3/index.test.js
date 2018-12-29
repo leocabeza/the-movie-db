@@ -21,5 +21,7 @@ describe('v3', () => {
     expect(v3).toHaveProperty('review');
     expect(v3).toHaveProperty('search');
     expect(v3).toHaveProperty('trending');
+    expect(v3).toHaveProperty('tvEpisode');
+    expect(v3).toHaveProperty('tvEpisodeGroup');
   });
 });
