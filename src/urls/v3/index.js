@@ -107,3 +107,12 @@ export const TV_EPISODE_TRANSLATIONS =
 export const TV_EPISODE_VIDEOS =
   '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/videos';
 export const TV_EPISODE_GROUP_DETAILS = '/tv/episode_group/:id';
+export const TV_SEASON_ACCOUNT_STATES =
+  '/tv/:tvId/season/:seasonNumber/account_states';
+export const TV_SEASON_CHANGES = '/tv/season/:seasonId/changes';
+export const TV_SEASON_CREDITS = '/tv/:tvId/season/:seasonNumber/credits';
+export const TV_SEASON_DETAILS = '/tv/:tvId/season/:seasonNumber';
+export const TV_SEASON_EXTERNAL_IDS =
+  '/tv/:tvId/season/:seasonNumber/external_ids';
+export const TV_SEASON_IMAGES = '/tv/:tvId/season/:seasonNumber/images';
+export const TV_SEASON_VIDEOS = '/tv/:tvId/season/:seasonNumber/videos';

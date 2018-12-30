@@ -205,4 +205,24 @@ describe('urls', () => {
   it('must list tv episode group constants', () => {
     expect(urls.TV_EPISODE_GROUP_DETAILS).toEqual('/tv/episode_group/:id');
   });
+
+  it('must list tv seasons constants', () => {
+    expect(urls.TV_SEASON_ACCOUNT_STATES).toEqual(
+      '/tv/:tvId/season/:seasonNumber/account_states'
+    );
+    expect(urls.TV_SEASON_CHANGES).toEqual('/tv/season/:seasonId/changes');
+    expect(urls.TV_SEASON_CREDITS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/credits'
+    );
+    expect(urls.TV_SEASON_DETAILS).toEqual('/tv/:tvId/season/:seasonNumber');
+    expect(urls.TV_SEASON_EXTERNAL_IDS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/external_ids'
+    );
+    expect(urls.TV_SEASON_IMAGES).toEqual(
+      '/tv/:tvId/season/:seasonNumber/images'
+    );
+    expect(urls.TV_SEASON_VIDEOS).toEqual(
+      '/tv/:tvId/season/:seasonNumber/videos'
+    );
+  });
 });

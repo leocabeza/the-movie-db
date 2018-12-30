@@ -222,15 +222,24 @@ export const externalIds = async (tvId, seasonNumber, episodeNumber) => {
  * Get the images that belong to a TV episode.
  * Querying images with a language parameter will filter the results.
  * If you want to include a fallback language (especially useful for backdrops)
- * you can use the include_image_language parameter.
+ * you can use the include_image_language option.
  * This should be a comma seperated value like so: include_image_language=en,null.
  * @param {number} tvId - Required
  * @param {number} seasonNumber - Required
  * @param {number} episodeNumber - Required
+ * @param {Object} options
+ * @param {string} options.language
+ * @param {string} options.include_image_language
  * @returns Promise
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-images
  */
-export const images = async (tvId, seasonNumber, episodeNumber) => {
+export const images = async (
+  tvId,
+  seasonNumber,
+  episodeNumber,
+  options = {}
+) => {
+  const { language, include_image_language } = options;
   if (!tvId && tvId !== 0) {
     return Promise.reject('A tvId has to be provided');
   }
@@ -246,7 +255,8 @@ export const images = async (tvId, seasonNumber, episodeNumber) => {
   return await makeHttpRequest(
     urls.v3.TV_EPISODE_IMAGES.replace(':tvId', tvId)
       .replace(':seasonNumber', seasonNumber)
-      .replace(':episodeNumber', episodeNumber)
+      .replace(':episodeNumber', episodeNumber),
+    { language, include_image_language }
   );
 };
 

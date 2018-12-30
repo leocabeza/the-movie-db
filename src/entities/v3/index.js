@@ -19,6 +19,7 @@ import * as search from './search';
 import * as trending from './trending';
 import * as tvEpisode from './tv-episode';
 import * as tvEpisodeGroup from './tv-episode-group';
+import * as tvSeason from './tv-season';
 
 export default {
   account,
@@ -42,4 +43,5 @@ export default {
   trending,
   tvEpisode,
   tvEpisodeGroup,
+  tvSeason,
 };

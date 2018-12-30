@@ -92,9 +92,17 @@ describe('tvEpisode entity', () => {
     );
   });
 
-  it('must resolve tvEpisode.deleteRating with required params and options', async () => {
+  it('must resolve tvEpisode.deleteRating with required params, session_id and options', async () => {
     const promise = tvEpisode.deleteRating(1, 1, 1, {
       session_id: 'XXX',
+    });
+
+    await expect(promise).resolves.toEqual({});
+  });
+
+  it('must resolve tvEpisode.deleteRating with required params, guest_session_id and options', async () => {
+    const promise = tvEpisode.deleteRating(1, 1, 1, {
+      guest_session_id: 'XXX',
     });
 
     await expect(promise).resolves.toEqual({});
@@ -179,7 +187,13 @@ describe('tvEpisode entity', () => {
     );
   });
 
-  it('must resolve tvEpisode.images with required params', async () => {
+  it('must resolve tvEpisode.images with required params and options', async () => {
+    const promise = tvEpisode.images(1, 2, 3, { include_image_language: 'en' });
+
+    await expect(promise).resolves.toEqual({});
+  });
+
+  it('must resolve tvEpisode.images with required params and no options', async () => {
     const promise = tvEpisode.images(1, 2, 3);
 
     await expect(promise).resolves.toEqual({});
@@ -201,9 +215,17 @@ describe('tvEpisode entity', () => {
     );
   });
 
-  it('must resolve tvEpisode.rating with required params and options', async () => {
+  it('must resolve tvEpisode.rating with required params, session_id and options', async () => {
     const promise = tvEpisode.rating(1, 1, 1, 1, {
       session_id: 'XXX',
+    });
+
+    await expect(promise).resolves.toEqual({});
+  });
+
+  it('must resolve tvEpisode.rating with required params, guest_session_id and options', async () => {
+    const promise = tvEpisode.rating(1, 1, 1, 1, {
+      guest_session_id: 'XXX',
     });
 
     await expect(promise).resolves.toEqual({});

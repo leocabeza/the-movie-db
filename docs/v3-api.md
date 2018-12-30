@@ -43,6 +43,8 @@
 <dd></dd>
 <dt><a href="#module_tvEpisode">tvEpisode</a></dt>
 <dd></dd>
+<dt><a href="#module_tvSeason">tvSeason</a></dt>
+<dd></dd>
 </dl>
 
 <a name="module_search"></a>
@@ -1987,7 +1989,7 @@ IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
 Get the images that belong to a TV episode.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops)
-you can use the include_image_language parameter.
+you can use the include_image_language option.
 This should be a comma seperated value like so: include_image_language=en,null.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
@@ -1999,6 +2001,9 @@ This should be a comma seperated value like so: include_image_language=en,null.
 | tvId | <code>number</code> | Required |
 | seasonNumber | <code>number</code> | Required |
 | episodeNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
 
 <a name="module_tvEpisode.rating"></a>
 
@@ -2050,4 +2055,140 @@ Get the videos that have been added to a TV episode.
 | episodeNumber | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | language | <code>string</code> |  |
+
+<a name="module_tvSeason"></a>
+
+## tvSeason
+
+* [tvSeason](#module_tvSeason)
+    * [.accountStates](#module_tvSeason.accountStates) ⇒
+    * [.changes](#module_tvSeason.changes) ⇒
+    * [.credits](#module_tvSeason.credits) ⇒
+    * [.details](#module_tvSeason.details) ⇒
+    * [.externalIds](#module_tvSeason.externalIds) ⇒
+    * [.images](#module_tvSeason.images) ⇒
+    * [.videos](#module_tvSeason.videos) ⇒
+
+<a name="module_tvSeason.accountStates"></a>
+
+### tvSeason.accountStates ⇒
+Returns all of the user ratings for the season's episodes.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-account-states  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+
+<a name="module_tvSeason.changes"></a>
+
+### tvSeason.changes ⇒
+Get the changes for a TV season. By default only the last 24 hours are returned.
+You can query up to 14 days in a single query by using the start_date and end_date query options.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-changes  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| seasonId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.start_date | <code>string</code> |  |
+| options.end_date | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tvSeason.credits"></a>
+
+### tvSeason.credits ⇒
+Get the credits for TV season.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tvSeason.details"></a>
+
+### tvSeason.details ⇒
+Get the TV season details by id.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.append_to_response | <code>string</code> |  |
+
+<a name="module_tvSeason.externalIds"></a>
+
+### tvSeason.externalIds ⇒
+Get the external ids for a TV season. We currently support the following external sources.
+TVDB ID, Freebase MID, Freebase ID, TVRage ID
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-external-ids  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tvSeason.images"></a>
+
+### tvSeason.images ⇒
+Get the images that belong to a TV season.
+Querying images with a language parameter will filter the results.
+If you want to include a fallback language (especially useful for backdrops)
+you can use the include_image_language option.
+This should be a: include_image_language comma separated value like so: include_image_language: 'en,null'.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-images  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
+
+<a name="module_tvSeason.videos"></a>
+
+### tvSeason.videos ⇒
+Get the videos that have been added to a TV season.
+
+**Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-videos  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
 
