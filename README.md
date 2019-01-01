@@ -57,9 +57,6 @@ This is a work in progress, DO NOT USE in production just yet.
 
 # Entities missing so far:
 
-## V3
-* People
-
 ## V4
 * Account
 * Auth

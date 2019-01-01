@@ -156,6 +156,22 @@ describe('urls', () => {
     expect(urls.NETWORK_IMAGES).toEqual('/network/:id/images');
   });
 
+  it('must list people constants', () => {
+    expect(urls.PEOPLE_CHANGES).toEqual('/person/:id/changes');
+    expect(urls.PEOPLE_COMBINED_CREDITS).toEqual(
+      '/person/:id/combined_credits'
+    );
+    expect(urls.PEOPLE_DETAILS).toEqual('/person/:id');
+    expect(urls.PEOPLE_EXTERNAL_IDS).toEqual('/person/:id/external_ids');
+    expect(urls.PEOPLE_IMAGES).toEqual('/person/:id/images');
+    expect(urls.PEOPLE_LATEST).toEqual('/person/latest');
+    expect(urls.PEOPLE_MOVIE_CREDITS).toEqual('/person/:id/movie_credits');
+    expect(urls.PEOPLE_POPULAR).toEqual('/person/popular');
+    expect(urls.PEOPLE_TAGGED_IMAGES).toEqual('/person/:id/tagged_images');
+    expect(urls.PEOPLE_TRANSLATIONS).toEqual('/person/:id/translations');
+    expect(urls.PEOPLE_TV_CREDITS).toEqual('/person/:id/tv_credits');
+  });
+
   it('must list review constants', () => {
     expect(urls.REVIEW_DETAILS).toEqual('/review/:id');
   });

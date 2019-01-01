@@ -33,6 +33,8 @@
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
 <dd></dd>
+<dt><a href="#module_people">people</a></dt>
+<dd></dd>
 <dt><a href="#module_review">review</a></dt>
 <dd></dd>
 <dt><a href="#module_search">search</a></dt>
@@ -1477,6 +1479,193 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 | Param | Type |
 | --- | --- |
 | networkId | <code>number</code> | 
+
+<a name="module_people"></a>
+
+## people
+
+* [people](#module_people)
+    * [.changes](#module_people.changes) ⇒
+    * [.combinedCredits](#module_people.combinedCredits) ⇒
+    * [.details](#module_people.details) ⇒
+    * [.externalIds](#module_people.externalIds) ⇒
+    * [.images](#module_people.images) ⇒
+    * [.latest](#module_people.latest) ⇒
+    * [.movieCredits](#module_people.movieCredits) ⇒
+    * [.popular](#module_people.popular) ⇒
+    * [.taggedImages](#module_people.taggedImages) ⇒
+    * [.translations](#module_people.translations) ⇒
+    * [.tvCredits](#module_people.tvCredits) ⇒
+
+<a name="module_people.changes"></a>
+
+### people.changes ⇒
+Get the changes for a person. By default only the last 24 hours are returned.
+You can query up to 14 days in a single query by using the start_date and end_date options.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-changes  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.start_date | <code>string</code> |  |
+| options.end_date | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_people.combinedCredits"></a>
+
+### people.combinedCredits ⇒
+Get the movie and TV credits together in a single response.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-combined-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_people.details"></a>
+
+### people.details ⇒
+Get the primary person details by id.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.append_to_response | <code>string</code> |  |
+
+<a name="module_people.externalIds"></a>
+
+### people.externalIds ⇒
+Get the external ids for a person. We currently support the following external sources.
+IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID, Instagram, Facebook, Twitter
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-external-ids  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_people.images"></a>
+
+### people.images ⇒
+Get the images for a person.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-images  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+
+<a name="module_people.latest"></a>
+
+### people.latest ⇒
+Get the most newly created person. This is a live response and will continuously change.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-latest-person  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_people.movieCredits"></a>
+
+### people.movieCredits ⇒
+Get the movie credits for a person.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-movie-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_people.popular"></a>
+
+### people.popular ⇒
+Get the list of popular people on TMDb.
+This list updates daily.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-popular-people  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_people.taggedImages"></a>
+
+### people.taggedImages ⇒
+Get the images that this person has been tagged in.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-tagged-images  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_people.translations"></a>
+
+### people.translations ⇒
+Get a list of the translations that exist for a person.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-translations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_people.tvCredits"></a>
+
+### people.tvCredits ⇒
+Get the TV show credits for a person.
+You can query for some extra details about the credit with the credit.details method.
+
+**Kind**: static constant of [<code>people</code>](#module_people)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/people/get-person-tv-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| personId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
 
 <a name="module_review"></a>
 

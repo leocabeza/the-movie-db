@@ -14,6 +14,7 @@ import * as keyword from './keyword';
 import * as list from './list';
 import * as movie from './movie';
 import * as network from './network';
+import * as people from './people';
 import * as review from './review';
 import * as search from './search';
 import * as trending from './trending';
@@ -39,6 +40,7 @@ export default {
   list,
   movie,
   network,
+  people,
   review,
   search,
   trending,
