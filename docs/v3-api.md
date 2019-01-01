@@ -45,6 +45,8 @@
 <dd></dd>
 <dt><a href="#module_tvSeason">tvSeason</a></dt>
 <dd></dd>
+<dt><a href="#module_tv">tv</a></dt>
+<dd></dd>
 </dl>
 
 <a name="module_search"></a>
@@ -1058,7 +1060,7 @@ Remove a movie from a list.
     * [.lists](#module_movies.lists) ⇒
     * [.nowPlaying](#module_movies.nowPlaying)
     * [.popular](#module_movies.popular) ⇒
-    * [.rating](#module_movies.rating) ⇒
+    * [.rate](#module_movies.rate) ⇒
     * [.recommendations](#module_movies.recommendations) ⇒
     * [.releaseDates](#module_movies.releaseDates) ⇒
     * [.reviews](#module_movies.reviews) ⇒
@@ -1275,9 +1277,9 @@ This list updates daily.
 | options.page | <code>number</code> | 
 | options.region | <code>string</code> | 
 
-<a name="module_movies.rating"></a>
+<a name="module_movies.rate"></a>
 
-### movies.rating ⇒
+### movies.rate ⇒
 Rate a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
@@ -1877,7 +1879,7 @@ Groups support 7 different types which are enumerated as the following:
     * [.details](#module_tvEpisode.details) ⇒
     * [.externalIds](#module_tvEpisode.externalIds) ⇒
     * [.images](#module_tvEpisode.images) ⇒
-    * [.rating](#module_tvEpisode.rating) ⇒
+    * [.rate](#module_tvEpisode.rate) ⇒
     * [.translations](#module_tvEpisode.translations) ⇒
     * [.videos](#module_tvEpisode.videos) ⇒
 
@@ -1990,7 +1992,7 @@ Get the images that belong to a TV episode.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops)
 you can use the include_image_language option.
-This should be a comma seperated value like so: include_image_language=en,null.
+This should be a comma separated value like so: include_image_language=en,null.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
 **Returns**: Promise  
@@ -2005,9 +2007,9 @@ This should be a comma seperated value like so: include_image_language=en,null.
 | options.language | <code>string</code> |  |
 | options.include_image_language | <code>string</code> |  |
 
-<a name="module_tvEpisode.rating"></a>
+<a name="module_tvEpisode.rate"></a>
 
-### tvEpisode.rating ⇒
+### tvEpisode.rate ⇒
 Rate a TV episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
@@ -2189,6 +2191,398 @@ Get the videos that have been added to a TV season.
 | --- | --- | --- |
 | tvId | <code>number</code> | Required |
 | seasonNumber | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv"></a>
+
+## tv
+
+* [tv](#module_tv)
+    * [.accountStates](#module_tv.accountStates) ⇒
+    * [.airingToday](#module_tv.airingToday) ⇒
+    * [.alternativeTitles](#module_tv.alternativeTitles) ⇒
+    * [.changes](#module_tv.changes) ⇒
+    * [.contentRatings](#module_tv.contentRatings) ⇒
+    * [.credits](#module_tv.credits) ⇒
+    * [.deleteRating](#module_tv.deleteRating) ⇒
+    * [.details](#module_tv.details) ⇒
+    * [.episodeGroups](#module_tv.episodeGroups) ⇒
+    * [.externalIds](#module_tv.externalIds) ⇒
+    * [.images](#module_tv.images) ⇒
+    * [.keywords](#module_tv.keywords) ⇒
+    * [.latest](#module_tv.latest) ⇒
+    * [.onTheAir](#module_tv.onTheAir) ⇒
+    * [.popular](#module_tv.popular) ⇒
+    * [.rate](#module_tv.rate) ⇒
+    * [.recommendations](#module_tv.recommendations) ⇒
+    * [.reviews](#module_tv.reviews) ⇒
+    * [.screenedTheatrically](#module_tv.screenedTheatrically) ⇒
+    * [.similar](#module_tv.similar) ⇒
+    * [.topRated](#module_tv.topRated) ⇒
+    * [.translations](#module_tv.translations) ⇒
+    * [.videos](#module_tv.videos) ⇒
+
+<a name="module_tv.accountStates"></a>
+
+### tv.accountStates ⇒
+Grab the following account states for a session:
+TV show rating, If it belongs to your watchlist and If it belongs to your favourite list
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-account-states  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.airingToday"></a>
+
+### tv.airingToday ⇒
+Get a list of TV shows that are airing today. This query is purely day based as we do not currently support airing times.
+You can specify a timezone to offset the day calculation. Without a specified timezone, this query defaults to EST (Eastern Time UTC-05:00).
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-airing-today  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_tv.alternativeTitles"></a>
+
+### tv.alternativeTitles ⇒
+Returns all of the alternative titles for a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-alternative-titles  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.changes"></a>
+
+### tv.changes ⇒
+Get the changes for a TV show. By default only the last 24 hours are returned.
+You can query up to 14 days in a single query by using the start_date and end_date options.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-changes  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.start_date | <code>string</code> |  |
+| options.end_date | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tv.contentRatings"></a>
+
+### tv.contentRatings ⇒
+Get the list of content ratings (certifications) that have been added to a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-content-ratings  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.credits"></a>
+
+### tv.credits ⇒
+Get the credits (cast and crew) that have been added to a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.deleteRating"></a>
+
+### tv.deleteRating ⇒
+Remove your rating for a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/delete-tv-show-rating  
+
+| Param | Type |
+| --- | --- |
+| tvId | <code>number</code> | 
+| options | <code>Object</code> | 
+| options.session_id | <code>string</code> | 
+| options.guest_session_id | <code>string</code> | 
+
+<a name="module_tv.details"></a>
+
+### tv.details ⇒
+Get the primary TV show details by id.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-details  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.append_to_response | <code>string</code> |  |
+
+<a name="module_tv.episodeGroups"></a>
+
+### tv.episodeGroups ⇒
+Get all of the episode groups that have been created for a TV show.
+With a group ID you can call the tvEpisodeGroups.details method.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-credits  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.externalIds"></a>
+
+### tv.externalIds ⇒
+Get the external ids for a TV show. We currently support the following external sources.
+IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-external-ids  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.images"></a>
+
+### tv.images ⇒
+Get the images that belong to a TV show.
+Querying images with a language parameter will filter the results.
+If you want to include a fallback language (especially useful for backdrops)
+you can use the include_image_language option.
+This should be a comma separated value like so: include_image_language=en,null.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-images  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
+
+<a name="module_tv.keywords"></a>
+
+### tv.keywords ⇒
+Get the keywords that have been added to a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-keywords  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+
+<a name="module_tv.latest"></a>
+
+### tv.latest ⇒
+Get the most newly created TV show. This is a live response and will continuously change.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-latest-tv  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+
+<a name="module_tv.onTheAir"></a>
+
+### tv.onTheAir ⇒
+Get a list of shows that are currently on the air.
+This query looks for any TV show that has an episode with an air date in the next 7 days.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-on-the-air  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_tv.popular"></a>
+
+### tv.popular ⇒
+Get a list of the current popular TV shows on TMDb.
+This list updates daily.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-popular-tv-shows  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_tv.rate"></a>
+
+### tv.rate ⇒
+Rate a TV episode.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/rate-tv-show  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| rating | <code>rating</code> | between 0.5 and 10.0 |
+| options | <code>Object</code> |  |
+| options.session_id | <code>string</code> |  |
+| options.guest_session_id | <code>string</code> |  |
+
+<a name="module_tv.recommendations"></a>
+
+### tv.recommendations ⇒
+Get the list of TV show recommendations for this item.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-recommendations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tv.reviews"></a>
+
+### tv.reviews ⇒
+Get the reviews for a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-reviews  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tv.screenedTheatrically"></a>
+
+### tv.screenedTheatrically ⇒
+Get a list of seasons or episodes that have been screened in a film festival or theatre.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-screened-theatrically  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+
+<a name="module_tv.similar"></a>
+
+### tv.similar ⇒
+Get a list of similar TV shows. These items are assembled by looking at keywords and genres.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-similar-tv-shows  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+| options.page | <code>number</code> |  |
+
+<a name="module_tv.topRated"></a>
+
+### tv.topRated ⇒
+Get a list of the top rated TV shows on TMDb.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-top-rated-tv  
+
+| Param | Type |
+| --- | --- |
+| options | <code>Object</code> | 
+| options.language | <code>string</code> | 
+| options.page | <code>number</code> | 
+
+<a name="module_tv.translations"></a>
+
+### tv.translations ⇒
+Get a list of the translations that exist for a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-translations  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
+| options | <code>Object</code> |  |
+| options.language | <code>string</code> |  |
+
+<a name="module_tv.videos"></a>
+
+### tv.videos ⇒
+Get the videos that have been added to a TV show.
+
+**Kind**: static constant of [<code>tv</code>](#module_tv)  
+**Returns**: Promise  
+**See**: https://developers.themoviedb.org/3/tv/get-tv-videos  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| tvId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 

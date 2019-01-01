@@ -174,6 +174,33 @@ describe('urls', () => {
     expect(urls.TRENDING_ITEMS).toEqual('/trending/:mediaType/:timeWindow');
   });
 
+  it('must list tv constants', () => {
+    expect(urls.TV_ACCOUNT_STATES).toEqual('/tv/:id/account_states');
+    expect(urls.TV_AIRING_TODAY).toEqual('/tv/airing_today');
+    expect(urls.TV_ALTERNATIVE_TITLES).toEqual('/tv/:id/alternative_titles');
+    expect(urls.TV_CHANGES).toEqual('/tv/:id/changes');
+    expect(urls.TV_CONTENT_RATINGS).toEqual('/tv/:id/content_ratings');
+    expect(urls.TV_CREDITS).toEqual('/tv/:id/credits');
+    expect(urls.TV_DETAILS).toEqual('/tv/:id');
+    expect(urls.TV_EPISODE_GROUPS).toEqual('/tv/:id/episode_groups');
+    expect(urls.TV_EXTERNAL_IDS).toEqual('/tv/:id/external_ids');
+    expect(urls.TV_IMAGES).toEqual('/tv/:id/images');
+    expect(urls.TV_KEYWORDS).toEqual('/tv/:id/keywords');
+    expect(urls.TV_LATEST).toEqual('/tv/latest');
+    expect(urls.TV_ON_THE_AIR).toEqual('/tv/on_the_air');
+    expect(urls.TV_POPULAR).toEqual('/tv/popular');
+    expect(urls.TV_RATING).toEqual('/tv/:id/rating');
+    expect(urls.TV_RECOMMENDATIONS).toEqual('/tv/:id/recommendations');
+    expect(urls.TV_REVIEWS).toEqual('/tv/:id/reviews');
+    expect(urls.TV_SCREENED_THEATRICALLY).toEqual(
+      '/tv/:id/screened_theatrically'
+    );
+    expect(urls.TV_SIMILAR).toEqual('/tv/:id/similar');
+    expect(urls.TV_TOP_RATED).toEqual('/tv/top_rated');
+    expect(urls.TV_TRANSLATIONS).toEqual('/tv/:id/translations');
+    expect(urls.TV_VIDEOS).toEqual('/tv/:id/videos');
+  });
+
   it('must list tv episode constants', () => {
     expect(urls.TV_EPISODE_ACCOUNT_STATES).toEqual(
       '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/account_states'

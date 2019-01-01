@@ -278,7 +278,7 @@ export const popular = async (options = {}) => {
  * @returns Promise
  * @see https://developers.themoviedb.org/3/movies/rate-movie
  */
-export const rating = async (movieId, rating, options = {}) => {
+export const rate = async (movieId, rating, options = {}) => {
   const { session_id, guest_session_id } = options;
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');

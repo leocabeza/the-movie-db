@@ -18,7 +18,7 @@ describe('movie entity', () => {
     expect(typeof movie.lists).toEqual('function');
     expect(typeof movie.nowPlaying).toEqual('function');
     expect(typeof movie.popular).toEqual('function');
-    expect(typeof movie.rating).toEqual('function');
+    expect(typeof movie.rate).toEqual('function');
     expect(typeof movie.recommendations).toEqual('function');
     expect(typeof movie.releaseDates).toEqual('function');
     expect(typeof movie.reviews).toEqual('function');
@@ -244,28 +244,28 @@ describe('movie entity', () => {
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve movie.rating call with movieId, rating, and session_id option', async () => {
-    const promise = movie.rating(123, 2, { session_id: 'XXX' });
+  it('must resolve movie.rate call with movieId, rating, and session_id option', async () => {
+    const promise = movie.rate(123, 2, { session_id: 'XXX' });
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve movie.rating call with movieId, rating and guest_session_id option', async () => {
-    const promise = movie.rating(123, 4.4, { guest_session_id: 'XXX' });
+  it('must resolve movie.rate call with movieId, rating and guest_session_id option', async () => {
+    const promise = movie.rate(123, 4.4, { guest_session_id: 'XXX' });
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must reject when movie.rating is called without movieId', async () => {
-    await expect(movie.rating()).rejects.toBe('A movieId has to be provided');
+  it('must reject when movie.rate is called without movieId', async () => {
+    await expect(movie.rate()).rejects.toBe('A movieId has to be provided');
   });
 
-  it('must reject when movie.rating is called with movieId and without rating', async () => {
-    await expect(movie.rating(1)).rejects.toBe('A rating has to be provided');
+  it('must reject when movie.rate is called with movieId and without rating', async () => {
+    await expect(movie.rate(1)).rejects.toBe('A rating has to be provided');
   });
 
-  it('must reject when movie.rating is called without session options', async () => {
-    await expect(movie.rating(123, 1)).rejects.toBe(
+  it('must reject when movie.rate is called without session options', async () => {
+    await expect(movie.rate(123, 1)).rejects.toBe(
       'A session_id or a guest_session_id has to be provided'
     );
   });

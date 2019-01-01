@@ -13,7 +13,7 @@ describe('tvEpisode entity', () => {
     expect(typeof tvEpisode.details).toEqual('function');
     expect(typeof tvEpisode.externalIds).toEqual('function');
     expect(typeof tvEpisode.images).toEqual('function');
-    expect(typeof tvEpisode.rating).toEqual('function');
+    expect(typeof tvEpisode.rate).toEqual('function');
     expect(typeof tvEpisode.translations).toEqual('function');
     expect(typeof tvEpisode.videos).toEqual('function');
   });
@@ -215,46 +215,46 @@ describe('tvEpisode entity', () => {
     );
   });
 
-  it('must resolve tvEpisode.rating with required params, session_id and options', async () => {
-    const promise = tvEpisode.rating(1, 1, 1, 1, {
+  it('must resolve tvEpisode.rate with required params, session_id and options', async () => {
+    const promise = tvEpisode.rate(1, 1, 1, 1, {
       session_id: 'XXX',
     });
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must resolve tvEpisode.rating with required params, guest_session_id and options', async () => {
-    const promise = tvEpisode.rating(1, 1, 1, 1, {
+  it('must resolve tvEpisode.rate with required params, guest_session_id and options', async () => {
+    const promise = tvEpisode.rate(1, 1, 1, 1, {
       guest_session_id: 'XXX',
     });
 
     await expect(promise).resolves.toEqual({});
   });
 
-  it('must reject when tvEpisode.rating is called without tvId', async () => {
-    await expect(tvEpisode.rating()).rejects.toBe('A tvId has to be provided');
+  it('must reject when tvEpisode.rate is called without tvId', async () => {
+    await expect(tvEpisode.rate()).rejects.toBe('A tvId has to be provided');
   });
 
-  it('must reject when tvEpisode.rating is called without seasonNumber', async () => {
-    await expect(tvEpisode.rating(1)).rejects.toBe(
+  it('must reject when tvEpisode.rate is called without seasonNumber', async () => {
+    await expect(tvEpisode.rate(1)).rejects.toBe(
       'A seasonNumber has to be provided'
     );
   });
 
-  it('must reject when tvEpisode.rating is called without episodeNumber', async () => {
-    await expect(tvEpisode.rating(1, 2)).rejects.toBe(
+  it('must reject when tvEpisode.rate is called without episodeNumber', async () => {
+    await expect(tvEpisode.rate(1, 2)).rejects.toBe(
       'An episodeNumber has to be provided'
     );
   });
 
-  it('must reject when tvEpisode.rating is called without rating', async () => {
-    await expect(tvEpisode.rating(1, 2, 3)).rejects.toBe(
+  it('must reject when tvEpisode.rate is called without rating', async () => {
+    await expect(tvEpisode.rate(1, 2, 3)).rejects.toBe(
       'A rating has to be provided'
     );
   });
 
-  it('must reject when tvEpisode.rating is called with required params but no session option', async () => {
-    await expect(tvEpisode.rating(1, 2, 3, 4)).rejects.toBe(
+  it('must reject when tvEpisode.rate is called with required params but no session option', async () => {
+    await expect(tvEpisode.rate(1, 2, 3, 4)).rejects.toBe(
       'A session_id or a guest_session_id has to be provided'
     );
   });

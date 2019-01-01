@@ -17,6 +17,7 @@ import * as network from './network';
 import * as review from './review';
 import * as search from './search';
 import * as trending from './trending';
+import * as tv from './tv';
 import * as tvEpisode from './tv-episode';
 import * as tvEpisodeGroup from './tv-episode-group';
 import * as tvSeason from './tv-season';
@@ -41,6 +42,7 @@ export default {
   review,
   search,
   trending,
+  tv,
   tvEpisode,
   tvEpisodeGroup,
   tvSeason,

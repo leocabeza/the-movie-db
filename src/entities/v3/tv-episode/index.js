@@ -223,7 +223,7 @@ export const externalIds = async (tvId, seasonNumber, episodeNumber) => {
  * Querying images with a language parameter will filter the results.
  * If you want to include a fallback language (especially useful for backdrops)
  * you can use the include_image_language option.
- * This should be a comma seperated value like so: include_image_language=en,null.
+ * This should be a comma separated value like so: include_image_language=en,null.
  * @param {number} tvId - Required
  * @param {number} seasonNumber - Required
  * @param {number} episodeNumber - Required
@@ -272,7 +272,7 @@ export const images = async (
  * @returns Promise
  * @see https://developers.themoviedb.org/3/tv-episodes/rate-tv-episode
  */
-export const rating = async (
+export const rate = async (
   tvId,
   seasonNumber,
   episodeNumber,
