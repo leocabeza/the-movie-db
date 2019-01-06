@@ -7,7 +7,7 @@
 
 Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://www.themoviedb.org/) that works in the browser and node.js.
 
-For now, it only works with the version 3 of the api.
+It works for versions 3 and 4 of TMDB.
 
 ## Compatibility
 
