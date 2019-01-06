@@ -1,7 +1,7 @@
 ## Modules
 
 <dl>
-<dt><a href="#module_search">search</a></dt>
+<dt><a href="#module_account">account</a></dt>
 <dd></dd>
 <dt><a href="#module_authentication">authentication</a></dt>
 <dd></dd>
@@ -51,36 +51,29 @@
 <dd></dd>
 </dl>
 
-<a name="module_search"></a>
+<a name="module_account"></a>
 
-## search
+## account
 
-* [search](#module_search)
-    * [.addToWatchlist](#module_search.addToWatchlist) ⇒
-    * [.details](#module_search.details) ⇒
-    * [.favoriteMovies](#module_search.favoriteMovies) ⇒
-    * [.favoriteTvShows](#module_search.favoriteTvShows) ⇒
-    * [.lists](#module_search.lists) ⇒
-    * [.markAsFavorite](#module_search.markAsFavorite) ⇒
-    * [.movieWatchlist](#module_search.movieWatchlist) ⇒
-    * [.ratedMovies](#module_search.ratedMovies) ⇒
-    * [.ratedTvShows](#module_search.ratedTvShows) ⇒
-    * [.ratedTvEpisodes](#module_search.ratedTvEpisodes) ⇒
-    * [.tvShowWatchlist](#module_search.tvShowWatchlist) ⇒
-    * [.collections](#module_search.collections) ⇒
-    * [.companies](#module_search.companies) ⇒
-    * [.keywords](#module_search.keywords) ⇒
-    * [.movies](#module_search.movies) ⇒
-    * [.multi](#module_search.multi) ⇒
-    * [.people](#module_search.people) ⇒
-    * [.tv](#module_search.tv) ⇒
+* [account](#module_account)
+    * [.addToWatchlist](#module_account.addToWatchlist) ⇒
+    * [.details](#module_account.details) ⇒
+    * [.favoriteMovies](#module_account.favoriteMovies) ⇒
+    * [.favoriteTvShows](#module_account.favoriteTvShows) ⇒
+    * [.lists](#module_account.lists) ⇒
+    * [.markAsFavorite](#module_account.markAsFavorite) ⇒
+    * [.movieWatchlist](#module_account.movieWatchlist) ⇒
+    * [.ratedMovies](#module_account.ratedMovies) ⇒
+    * [.ratedTvShows](#module_account.ratedTvShows) ⇒
+    * [.ratedTvEpisodes](#module_account.ratedTvEpisodes) ⇒
+    * [.tvShowWatchlist](#module_account.tvShowWatchlist) ⇒
 
-<a name="module_search.addToWatchlist"></a>
+<a name="module_account.addToWatchlist"></a>
 
-### search.addToWatchlist ⇒
+### account.addToWatchlist ⇒
 Add a movie or TV show to your watchlist.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/add-to-watchlist  
 
@@ -93,12 +86,12 @@ Add a movie or TV show to your watchlist.
 | body.media_id | <code>number</code> | Required |
 | body.watchlist | <code>boolean</code> | Required |
 
-<a name="module_search.details"></a>
+<a name="module_account.details"></a>
 
-### search.details ⇒
+### account.details ⇒
 Get your account details.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-account-details  
 
@@ -106,12 +99,12 @@ Get your account details.
 | --- | --- |
 | sessionId | <code>string</code> | 
 
-<a name="module_search.favoriteMovies"></a>
+<a name="module_account.favoriteMovies"></a>
 
-### search.favoriteMovies ⇒
+### account.favoriteMovies ⇒
 Get the list of your favorite movies.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-favorite-movies  
 
@@ -124,12 +117,12 @@ Get the list of your favorite movies.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.favoriteTvShows"></a>
+<a name="module_account.favoriteTvShows"></a>
 
-### search.favoriteTvShows ⇒
+### account.favoriteTvShows ⇒
 Get the list of your favorite TV shows.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-favorite-tv-shows  
 
@@ -142,12 +135,12 @@ Get the list of your favorite TV shows.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.lists"></a>
+<a name="module_account.lists"></a>
 
-### search.lists ⇒
+### account.lists ⇒
 Get all of the lists created by an account. Will invlude private lists if you are the owner.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-created-lists  
 
@@ -159,12 +152,12 @@ Get all of the lists created by an account. Will invlude private lists if you ar
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
 
-<a name="module_search.markAsFavorite"></a>
+<a name="module_account.markAsFavorite"></a>
 
-### search.markAsFavorite ⇒
+### account.markAsFavorite ⇒
 This method allows you to mark a movie or TV show as a favorite item.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/mark-as-favorite  
 
@@ -177,12 +170,12 @@ This method allows you to mark a movie or TV show as a favorite item.
 | body.media_id | <code>number</code> | Required |
 | body.favorite | <code>boolean</code> | Required |
 
-<a name="module_search.movieWatchlist"></a>
+<a name="module_account.movieWatchlist"></a>
 
-### search.movieWatchlist ⇒
+### account.movieWatchlist ⇒
 Get a list of all the movies you have added to your watchlist.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-movie-watchlist  
 
@@ -195,12 +188,12 @@ Get a list of all the movies you have added to your watchlist.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.ratedMovies"></a>
+<a name="module_account.ratedMovies"></a>
 
-### search.ratedMovies ⇒
+### account.ratedMovies ⇒
 Get a list of all the movies you have rated.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-movies  
 
@@ -213,12 +206,12 @@ Get a list of all the movies you have rated.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.ratedTvShows"></a>
+<a name="module_account.ratedTvShows"></a>
 
-### search.ratedTvShows ⇒
+### account.ratedTvShows ⇒
 Get a list of all the TV shows you have rated.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-tv-shows  
 
@@ -231,12 +224,12 @@ Get a list of all the TV shows you have rated.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.ratedTvEpisodes"></a>
+<a name="module_account.ratedTvEpisodes"></a>
 
-### search.ratedTvEpisodes ⇒
+### account.ratedTvEpisodes ⇒
 Get a list of all the TV episodes you have rated.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-tv-episodes  
 
@@ -249,12 +242,12 @@ Get a list of all the TV episodes you have rated.
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
-<a name="module_search.tvShowWatchlist"></a>
+<a name="module_account.tvShowWatchlist"></a>
 
-### search.tvShowWatchlist ⇒
+### account.tvShowWatchlist ⇒
 Get a list of all the TV shows you have added to your watchlist.
 
-**Kind**: static constant of [<code>search</code>](#module_search)  
+**Kind**: static constant of [<code>account</code>](#module_account)  
 **Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-tv-show-watchlist  
 
@@ -266,125 +259,6 @@ Get a list of all the TV shows you have added to your watchlist.
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
 | options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.collections"></a>
-
-### search.collections ⇒
-Search for collections.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-collections  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.language | <code>string</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-
-<a name="module_search.companies"></a>
-
-### search.companies ⇒
-Search for companies.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-companies  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-
-<a name="module_search.keywords"></a>
-
-### search.keywords ⇒
-Search for keywords.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-keywords  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-
-<a name="module_search.movies"></a>
-
-### search.movies ⇒
-Search for movies.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-movies  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.language | <code>string</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-| options.include_adult | <code>boolean</code> | 
-| options.region | <code>string</code> | 
-| option.year | <code>number</code> | 
-| option.primary_release_year | <code>number</code> | 
-
-<a name="module_search.multi"></a>
-
-### search.multi ⇒
-Search multiple models in a single request. Multi search currently supports searching for movies, tv shows and people in a single request.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/multi-search  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.language | <code>string</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-| options.include_adult | <code>boolean</code> | 
-| options.region | <code>string</code> | 
-
-<a name="module_search.people"></a>
-
-### search.people ⇒
-Search for people.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-people  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.language | <code>string</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-| options.include_adult | <code>boolean</code> | 
-| options.region | <code>string</code> | 
-
-<a name="module_search.tv"></a>
-
-### search.tv ⇒
-Search for a TV show.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/search/search-tv-shows  
-
-| Param | Type |
-| --- | --- |
-| options | <code>Object</code> | 
-| options.language | <code>string</code> | 
-| options.query | <code>string</code> | 
-| options.page | <code>number</code> | 
-| options.first_air_date_year | <code>number</code> | 
 
 <a name="module_authentication"></a>
 
@@ -1688,17 +1562,6 @@ Get details of a review.
 ## search
 
 * [search](#module_search)
-    * [.addToWatchlist](#module_search.addToWatchlist) ⇒
-    * [.details](#module_search.details) ⇒
-    * [.favoriteMovies](#module_search.favoriteMovies) ⇒
-    * [.favoriteTvShows](#module_search.favoriteTvShows) ⇒
-    * [.lists](#module_search.lists) ⇒
-    * [.markAsFavorite](#module_search.markAsFavorite) ⇒
-    * [.movieWatchlist](#module_search.movieWatchlist) ⇒
-    * [.ratedMovies](#module_search.ratedMovies) ⇒
-    * [.ratedTvShows](#module_search.ratedTvShows) ⇒
-    * [.ratedTvEpisodes](#module_search.ratedTvEpisodes) ⇒
-    * [.tvShowWatchlist](#module_search.tvShowWatchlist) ⇒
     * [.collections](#module_search.collections) ⇒
     * [.companies](#module_search.companies) ⇒
     * [.keywords](#module_search.keywords) ⇒
@@ -1706,198 +1569,6 @@ Get details of a review.
     * [.multi](#module_search.multi) ⇒
     * [.people](#module_search.people) ⇒
     * [.tv](#module_search.tv) ⇒
-
-<a name="module_search.addToWatchlist"></a>
-
-### search.addToWatchlist ⇒
-Add a movie or TV show to your watchlist.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/add-to-watchlist  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>number</code> | Required |
-| sessionId | <code>string</code> | Required |
-| body | <code>Object</code> | Required |
-| body.media_type | <code>string</code> | Required - Allowed values: movie, tv |
-| body.media_id | <code>number</code> | Required |
-| body.watchlist | <code>boolean</code> | Required |
-
-<a name="module_search.details"></a>
-
-### search.details ⇒
-Get your account details.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-account-details  
-
-| Param | Type |
-| --- | --- |
-| sessionId | <code>string</code> | 
-
-<a name="module_search.favoriteMovies"></a>
-
-### search.favoriteMovies ⇒
-Get the list of your favorite movies.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-favorite-movies  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>number</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.favoriteTvShows"></a>
-
-### search.favoriteTvShows ⇒
-Get the list of your favorite TV shows.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-favorite-tv-shows  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>number</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.lists"></a>
-
-### search.lists ⇒
-Get all of the lists created by an account. Will invlude private lists if you are the owner.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-created-lists  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-
-<a name="module_search.markAsFavorite"></a>
-
-### search.markAsFavorite ⇒
-This method allows you to mark a movie or TV show as a favorite item.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/mark-as-favorite  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| sessionId | <code>string</code> | Required |
-| body | <code>Object</code> | Required |
-| body.media_type | <code>string</code> | Required |
-| body.media_id | <code>number</code> | Required |
-| body.favorite | <code>boolean</code> | Required |
-
-<a name="module_search.movieWatchlist"></a>
-
-### search.movieWatchlist ⇒
-Get a list of all the movies you have added to your watchlist.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-movie-watchlist  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.ratedMovies"></a>
-
-### search.ratedMovies ⇒
-Get a list of all the movies you have rated.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-rated-movies  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.ratedTvShows"></a>
-
-### search.ratedTvShows ⇒
-Get a list of all the TV shows you have rated.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-rated-tv-shows  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.ratedTvEpisodes"></a>
-
-### search.ratedTvEpisodes ⇒
-Get a list of all the TV episodes you have rated.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-rated-tv-episodes  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
-
-<a name="module_search.tvShowWatchlist"></a>
-
-### search.tvShowWatchlist ⇒
-Get a list of all the TV shows you have added to your watchlist.
-
-**Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
-**See**: https://developers.themoviedb.org/3/account/get-tv-show-watchlist  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>integer</code> | Required |
-| options | <code>Object</code> |  |
-| options.session_id | <code>string</code> | Required |
-| options.language | <code>string</code> |  |
-| options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_search.collections"></a>
 

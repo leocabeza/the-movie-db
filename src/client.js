@@ -1,30 +1,36 @@
 import axios from 'axios';
 import { success, error } from './interceptors/parser';
-import v3Entities from './entities/v3';
+import entities from './entities';
 
 const HOST = 'https://api.themoviedb.org/';
 
 /**
  * Initializes a client instance with an api key
  * @param {string} apiKey
+ * @param {boolean} useVersion3 - defaul true
  */
-const TheMovieDbClient = apiKey => {
-  //NOTE: In the future we will ask if you want to use this default or v4
-  const versionToUse = 3;
+const TheMovieDbClient = (apiKey, useVersion3 = true) => {
+  const versionToUse = useVersion3 ? 3 : 4;
   if (!apiKey) {
     throw new Error(`An api key is required. 
     You can get one at: https://www.themoviedb.org/faq/api`);
   }
 
   axios.defaults.baseURL = `${HOST}${versionToUse}`;
-  axios.defaults.params = { api_key: apiKey };
-  axios.defaults.headers = {
-    'content-type': 'application/json;charset=utf-8',
-  };
+  axios.defaults.params = versionToUse === 3 ? { api_key: apiKey } : {};
+  axios.defaults.headers =
+    versionToUse === 3
+      ? {
+          'content-type': 'application/json;charset=utf-8',
+        }
+      : {
+          'content-type': 'application/json;charset=utf-8',
+          authorization: `Bearer ${apiKey}`,
+        };
 
   axios.interceptors.response.use(success, error);
 
-  return v3Entities;
+  return versionToUse === 3 ? entities.v3 : entities.v4;
 };
 
 /**

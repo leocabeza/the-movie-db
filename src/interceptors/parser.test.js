@@ -18,4 +18,8 @@ describe('parser interceptors', () => {
       error({ response: { data: { status_message: 'error' } } })
     ).rejects.toEqual('error');
   });
+
+  it('must reject with response string', async () => {
+    await expect(error('error')).rejects.toEqual('error');
+  });
 });

@@ -41,7 +41,9 @@ client.movie.popular()
 
 ## API
 
-For more methods exposed by TheMovieDbClient, you could refer to the api docs for a full list: [api docs](docs/v3-api.md)
+For more methods exposed by TheMovieDbClient, you could refer to the api docs for a full list:
+* [v3 api docs](docs/v3-api.md)
+* [v4 api docs](docs/v4-api.md)
 
 ## CDN
 
@@ -58,8 +60,6 @@ This is a work in progress, DO NOT USE in production just yet.
 # Entities missing so far:
 
 ## V4
-* Account
-* Auth
 * List
 
 ## Promises

@@ -9,9 +9,16 @@ describe('client', () => {
     }).toThrow();
   });
 
-  it('must not throw when an api key is passed', () => {
+  it('must not throw when an api key is passed and v3 version is used', () => {
     expect(() => {
       const client = new Client('API_KEY');
+      expect(client).toBeInstanceOf(Object);
+    }).not.toThrow();
+  });
+
+  it('must not throw when an api key is passed and v4 version is used', () => {
+    expect(() => {
+      const client = new Client('API_KEY', false);
       expect(client).toBeInstanceOf(Object);
     }).not.toThrow();
   });

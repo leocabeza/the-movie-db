@@ -2,7 +2,7 @@ import { makeHttpRequest } from '../../../utils';
 import urls from '../../../urls';
 
 /**
- * @module search
+ * @module account
  */
 
 /**
