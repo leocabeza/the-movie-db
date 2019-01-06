@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Client from './client';
+import Client, { HOST } from './client';
 import { success, error } from './interceptors/parser';
 
 describe('client', () => {
@@ -31,5 +31,9 @@ describe('client', () => {
       success,
       error
     );
+  });
+
+  it('must have a valid HOST variable exposed', () => {
+    expect(HOST).toEqual('https://api.themoviedb.org/');
   });
 });

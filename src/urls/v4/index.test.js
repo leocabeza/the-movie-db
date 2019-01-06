@@ -21,8 +21,16 @@ describe('urls', () => {
     expect(urls.ACCOUNT_TV_SHOW_WATCHLIST).toEqual('/account/:id/tv/watchlist');
   });
 
-  it('must list auth constants', () => {
+  it('must list authentication constants', () => {
     expect(urls.AUTH_ACCESS_TOKEN).toEqual('/auth/access_token');
     expect(urls.AUTH_REQUEST_TOKEN).toEqual('/auth/request_token');
+  });
+
+  it('must list "list" constants', () => {
+    expect(urls.ACCOUNT_LIST_CLEAR_ITEMS).toEqual('/list/:id/clear');
+    expect(urls.ACCOUNT_LIST_CREATE).toEqual('/list');
+    expect(urls.ACCOUNT_LIST_DETAILS).toEqual('/list/:id');
+    expect(urls.ACCOUNT_LIST_ITEM_STATUS).toEqual('/list/:id/item_status');
+    expect(urls.ACCOUNT_LIST_ITEMS).toEqual('/list/:id/items');
   });
 });

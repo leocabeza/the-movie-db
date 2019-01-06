@@ -2,12 +2,12 @@ import axios from 'axios';
 import { success, error } from './interceptors/parser';
 import entities from './entities';
 
-const HOST = 'https://api.themoviedb.org/';
+export const HOST = 'https://api.themoviedb.org/';
 
 /**
  * Initializes a client instance with an api key
  * @param {string} apiKey
- * @param {boolean} useVersion3 - defaul true
+ * @param {boolean} [useVersion3=true]
  */
 const TheMovieDbClient = (apiKey, useVersion3 = true) => {
   const versionToUse = useVersion3 ? 3 : 4;

@@ -37,6 +37,35 @@ describe('utils', () => {
     expect(response).toBe(successfulResponse);
   });
 
+  it('must resolve a delete request', async () => {
+    const successfulResponse = { status: 200, data: GAS_LEAK };
+    axios.delete.mockResolvedValue(successfulResponse);
+    const response = await utils.makeHttpRequest('/url', GAS_LEAK, 'delete');
+
+    expect(response).toBe(successfulResponse);
+  });
+
+  it('must resolve a request with a different api key', async () => {
+    const successfulResponse = { status: 200, data: GAS_LEAK };
+    axios.create.mockImplementation(() => ({
+      interceptors: {
+        response: {
+          use: () => {},
+        },
+      },
+      get: () => successfulResponse,
+    }));
+    axios.get.mockResolvedValue(successfulResponse);
+    const response = await utils.makeHttpRequest(
+      '/url',
+      GAS_LEAK,
+      'get',
+      'XXX'
+    );
+
+    expect(response).toBe(successfulResponse);
+  });
+
   it('must reject when a request fails', async () => {
     const failingMessage = 'Network Error';
     axios.get.mockImplementationOnce(() => Promise.reject(failingMessage));

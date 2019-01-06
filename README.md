@@ -26,11 +26,27 @@ npm install @leonardocabeza/the-movie-db
 First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.themoviedb.org/faq/api)
 
 ```javascript
+// Version 3
 const TheMovieDb = require('@leonardocabeza/the-movie-db');
 
 const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
 
 client.movie.popular()
+  .then((data) => {
+    // handle data
+  })
+  .catch((error) => {
+    // handle error
+  });
+```
+
+```javascript
+// Version 4
+const TheMovieDb = require('@leonardocabeza/the-movie-db');
+
+const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY', false);
+
+client.list.details(210)
   .then((data) => {
     // handle data
   })
@@ -52,15 +68,6 @@ For more methods exposed by TheMovieDbClient, you could refer to the api docs fo
 ## Contributing Guide
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Disclaimer
-
-This is a work in progress, DO NOT USE in production just yet.
-
-# Entities missing so far:
-
-## V4
-* List
 
 ## Promises
 
