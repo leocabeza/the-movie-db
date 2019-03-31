@@ -3,7 +3,7 @@ cache:
   directories:
     - node_modules
 node_js:
-  - "10"
+  - "8"
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
 script:
