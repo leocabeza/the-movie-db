@@ -11,7 +11,7 @@ It works for versions 3 and 4 of TMDB.
 
 ## Compatibility
 
-It works out of the box for modern browsers and node versions greater than 10.
+It works out of the box for modern browsers and node versions greater or equal to v8.6.0 (`lint-staged`'s minimum node version support).
 
 ## Installation
 
