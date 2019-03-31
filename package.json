@@ -40,7 +40,7 @@
   },
   "unpkg": "dist/the-movie-db.js",
   "engines": {
-    "node": "=10.13"
+    "node": ">=7.10.1"
   },
   "files": [
     "dist"
@@ -55,7 +55,6 @@
   ],
   "author": {
     "name": "Leonardo Cabeza",
-    "email": "github@leonardocabeza.com",
     "url": "https://github.com/leocabeza"
   },
   "homepage": "https://github.com/leocabeza/the-movie-db",

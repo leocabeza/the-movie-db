@@ -33,7 +33,7 @@ const nodeConfig = Object.assign(
   {},
   webConfig, {
     target: 'node',
-  },
+  }
 );
 
 module.exports = [nodeConfig, webConfig];
