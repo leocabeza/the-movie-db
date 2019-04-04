@@ -1,6 +1,6 @@
 {
   "name": "@leonardocabeza/the-movie-db",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
   "main": "./dist/the-movie-db.js",
   "dependencies": {
