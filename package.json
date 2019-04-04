@@ -2,7 +2,7 @@
   "name": "@leonardocabeza/the-movie-db",
   "version": "2.1.5",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
-  "main": "dist/the-movie-db.js",
+  "main": "./dist/the-movie-db.js",
   "dependencies": {
     "axios": "^0.18.0"
   },
@@ -43,7 +43,7 @@
     "node": ">=8.6.0"
   },
   "files": [
-    "dist"
+    "/dist"
   ],
   "publishConfig": {
     "access": "public"
