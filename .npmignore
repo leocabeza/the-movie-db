@@ -63,5 +63,8 @@ typings/
 # vscode
 .vscode
 
+# dist folder
+!dist
+
 # dev file for debugging
 src/dev.js
