@@ -7,10 +7,7 @@ node_js:
 before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
 script:
-  - npm run check-coverage
   - npm run build
-after_success:
-  - npm run report-coverage
 deploy:
   skip_cleanup: true
   provider: npm
