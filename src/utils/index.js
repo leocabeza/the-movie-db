@@ -14,7 +14,6 @@ export const buildBodyOrParams = (data, method = 'get') => {
   return valuesWithData;
 };
 
-//TODO: May be there is a better declarative way to do this?
 export const removeUndefinedValues = paramsObject => {
   const finalParams = {};
 
@@ -50,6 +49,7 @@ export const makeHttpRequest = async (
 
       return await customAxiosInstance[finalMethod](url, finalData);
     }
+
     return await axios[finalMethod](url, finalData);
   } catch (error) {
     return Promise.reject(error);

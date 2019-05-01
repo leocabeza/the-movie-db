@@ -11,11 +11,6 @@ script:
   - npm run build
 after_success:
   - npm run report-coverage
-before_deploy:
-  - npm pack
-  - npm publish --dry-run
-  - git status
-  - ls -l
 deploy:
   skip_cleanup: true
   provider: npm

@@ -8,7 +8,7 @@ export const setDataAccordingToValueType = (data, key) => {
   return data[key];
 };
 
-//TODO: May be there is a better decl way to do this?
+//TODO: May be there is a better declarative way to do this?
 const parseData = data => {
   let newData = Array.isArray(data) ? [] : {};
 

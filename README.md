@@ -1,7 +1,6 @@
 
 [![GitHub license](https://img.shields.io/github/license/leocabeza/the-movie-db.svg?style=popout)](https://github.com/leocabeza/the-movie-db/blob/master/LICENSE)
 ![Travis (.org)](https://img.shields.io/travis/leocabeza/the-movie-db.svg?style=popout)
-![Codecov](https://img.shields.io/codecov/c/github/leocabeza/the-movie-db.svg?style=popout)
 
 # @leonardocabeza/the-movie-db
 
@@ -27,9 +26,9 @@ First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.the
 
 ```javascript
 // Version 3
-const TheMovieDb = require('@leonardocabeza/the-movie-db');
+const TheMovieDb = require("@leonardocabeza/the-movie-db");
 
-const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY');
+const client = new TheMovieDb("HERE_GOES_YOUR_API_KEY");
 
 client.movie.popular()
   .then((data) => {
@@ -42,9 +41,9 @@ client.movie.popular()
 
 ```javascript
 // Version 4
-const TheMovieDb = require('@leonardocabeza/the-movie-db');
+const TheMovieDb = require("@leonardocabeza/the-movie-db");
 
-const client = new TheMovieDb('HERE_GOES_YOUR_API_KEY', false);
+const client = new TheMovieDb("HERE_GOES_YOUR_API_KEY", false);
 
 client.list.details(210)
   .then((data) => {

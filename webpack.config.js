@@ -1,14 +1,14 @@
-const path = require('path');
-const NodemonPlugin = require('nodemon-webpack-plugin');
+const path = require("path");
+const NodemonPlugin = require("nodemon-webpack-plugin");
 
 const webConfig = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'the-movie-db.js',
-    library: 'theMovieDb',
-    libraryTarget: 'umd',
-    libraryExport: 'default',
+    path: path.resolve(__dirname, "dist"),
+    filename: "the-movie-db.js",
+    library: "theMovieDb",
+    libraryTarget: "umd",
+    libraryExport: "default",
     // https://github.com/webpack/webpack/issues/6522
     globalObject: "typeof self !== 'undefined' ? self : this",
   },
@@ -19,7 +19,7 @@ const webConfig = {
         test: /\.js$/,
         exclude: /(node_modules)|(dist)/,
         use: {
-          loader: 'babel-loader?cacheDirectory',
+          loader: "babel-loader?cacheDirectory",
         },
       },
     ],
@@ -32,7 +32,7 @@ const webConfig = {
 const nodeConfig = Object.assign(
   {},
   webConfig, {
-    target: 'node',
+    target: "node",
   }
 );
 

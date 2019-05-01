@@ -10,7 +10,7 @@
 
 ## Requirements
 
-You need to use node 10.13 version.
+You need to use node 8.6.0 version or higher.
 
 ## Testing
 
