@@ -8,6 +8,16 @@ Promised based Javascript API wrapper for [https://www.themoviedb.org/](https://
 
 It works for versions 3 and 4 of TMDB.
 
+## Table of Contents
+
+- [Compatibility](#compatibility)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+- [CDN](#cdn)
+- [Contributing](#contributing)
+- [Promises](#promises)
+
 ## Compatibility
 
 It works out of the box for modern browsers and node versions greater or equal to v8.6.0 (`lint-staged`'s minimum node version support).
@@ -23,36 +33,7 @@ npm install @leonardocabeza/the-movie-db
 ## Usage
 
 First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.themoviedb.org/faq/api)
-
-```javascript
-// Version 3
-const TheMovieDb = require("@leonardocabeza/the-movie-db");
-
-const client = new TheMovieDb("HERE_GOES_YOUR_API_KEY");
-
-client.movie.popular()
-  .then((data) => {
-    // handle data
-  })
-  .catch((error) => {
-    // handle error
-  });
-```
-
-```javascript
-// Version 4
-const TheMovieDb = require("@leonardocabeza/the-movie-db");
-
-const client = new TheMovieDb("HERE_GOES_YOUR_API_KEY", false);
-
-client.list.details(210)
-  .then((data) => {
-    // handle data
-  })
-  .catch((error) => {
-    // handle error
-  });
-```
+Then go [try it out in a REPL](https://repl.it/@leonardocabeza/TheMovieDb-usage)
 
 ## API
 
@@ -64,7 +45,7 @@ For more methods exposed by TheMovieDbClient, you could refer to the api docs fo
 
 `<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.js"></script>`
 
-## Contributing Guide
+## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
