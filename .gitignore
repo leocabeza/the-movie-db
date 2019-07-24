@@ -67,4 +67,4 @@ typings/
 dist
 
 # dev file for debugging
-src/dev.js
+dev.js
