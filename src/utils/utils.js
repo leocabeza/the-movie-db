@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import omitBy from 'lodash/omitBy';
+import omitBy from 'lodash.omitby';
 import qs from 'qs';
 
 const HOST = 'https://api.themoviedb.org/';

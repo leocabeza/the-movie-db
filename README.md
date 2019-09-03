@@ -34,12 +34,11 @@ npm install @leonardocabeza/the-movie-db
 
 First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.themoviedb.org/faq/api)
 
-You can read the [examples folder in this repo](examples)
-You can also [try it out in a REPL](https://repl.it/@leonardocabeza/TheMovieDb-usage)
+You can read the [examples folder in this repo](examples) or you can also [try it out in a REPL](https://repl.it/@leonardocabeza/TheMovieDb-usage)
 
 ## API
 
-For more methods exposed by TheMovieDbClient, you could refer to the api docs for a full list:
+For more methods exposed by v3 and v4 functions, you could refer to the api docs for a full list:
 * [v3 api docs](docs/v3-api.md)
 * [v4 api docs](docs/v4-api.md)
 

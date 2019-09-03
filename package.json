@@ -3,10 +3,11 @@
   "version": "3.0.0",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
   "main": "./dist/the-movie-db.browser.js",
+  "unpkg": "./dist/the-movie-db.browser.js",
   "module": "./dist/the-movie-db.node.js",
   "dependencies": {
     "cross-fetch": "^3.0.4",
-    "lodash": "^4.17.15",
+    "lodash.omitby": "^4.6.0",
     "qs": "^6.8.0"
   },
   "devDependencies": {
@@ -36,7 +37,6 @@
     "test": "cross-env NODE_PATH=src jest",
     "test:watch": "npm run test -- --watch"
   },
-  "unpkg": "dist/the-movie-db.js",
   "engines": {
     "node": ">=8.6.0"
   },
