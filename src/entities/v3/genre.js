@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module genre
@@ -9,7 +9,7 @@ import urls from '../../urls';
  * Get the list of official genres for movies.
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/genres/get-movie-list
  */
 export const movieList = async (options = {}) => {
@@ -22,7 +22,7 @@ export const movieList = async (options = {}) => {
  * Get the list of official genres for TV shows.
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/genres/get-tv-list
  */
 export const tvList = async (options = {}) => {

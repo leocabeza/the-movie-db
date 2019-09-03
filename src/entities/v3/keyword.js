@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module keyword
@@ -8,7 +8,7 @@ import urls from '../../urls';
 /**
  * Get details of keyword
  * @param {number} keywordId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/keywords/get-keyword-details
  */
 export const details = async keywordId => {
@@ -27,7 +27,7 @@ export const details = async keywordId => {
  * @param {Object}  options
  * @param {string}  options.language
  * @param {boolean} options.include_adult
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/keywords/get-movies-by-keyword
  */
 export const movies = async (keywordId, options = {}) => {

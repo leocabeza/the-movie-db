@@ -56,25 +56,24 @@
 ## account
 
 * [account](#module_account)
-    * [.addToWatchlist](#module_account.addToWatchlist) ⇒
-    * [.details](#module_account.details) ⇒
-    * [.favoriteMovies](#module_account.favoriteMovies) ⇒
-    * [.favoriteTvShows](#module_account.favoriteTvShows) ⇒
-    * [.lists](#module_account.lists) ⇒
-    * [.markAsFavorite](#module_account.markAsFavorite) ⇒
-    * [.movieWatchlist](#module_account.movieWatchlist) ⇒
-    * [.ratedMovies](#module_account.ratedMovies) ⇒
-    * [.ratedTvShows](#module_account.ratedTvShows) ⇒
-    * [.ratedTvEpisodes](#module_account.ratedTvEpisodes) ⇒
-    * [.tvShowWatchlist](#module_account.tvShowWatchlist) ⇒
+    * [.addToWatchlist](#module_account.addToWatchlist) ⇒ <code>Promise</code>
+    * [.details](#module_account.details) ⇒ <code>Promise</code>
+    * [.favoriteMovies](#module_account.favoriteMovies) ⇒ <code>Promise</code>
+    * [.favoriteTvShows](#module_account.favoriteTvShows) ⇒ <code>Promise</code>
+    * [.lists](#module_account.lists) ⇒ <code>Promise</code>
+    * [.markAsFavorite](#module_account.markAsFavorite) ⇒ <code>Promise</code>
+    * [.movieWatchlist](#module_account.movieWatchlist) ⇒ <code>Promise</code>
+    * [.ratedMovies](#module_account.ratedMovies) ⇒ <code>Promise</code>
+    * [.ratedTvShows](#module_account.ratedTvShows) ⇒ <code>Promise</code>
+    * [.ratedTvEpisodes](#module_account.ratedTvEpisodes) ⇒ <code>Promise</code>
+    * [.tvShowWatchlist](#module_account.tvShowWatchlist) ⇒ <code>Promise</code>
 
 <a name="module_account.addToWatchlist"></a>
 
-### account.addToWatchlist ⇒
+### account.addToWatchlist ⇒ <code>Promise</code>
 Add a movie or TV show to your watchlist.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/add-to-watchlist  
 
 | Param | Type | Description |
@@ -88,11 +87,10 @@ Add a movie or TV show to your watchlist.
 
 <a name="module_account.details"></a>
 
-### account.details ⇒
+### account.details ⇒ <code>Promise</code>
 Get your account details.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-account-details  
 
 | Param | Type |
@@ -101,11 +99,10 @@ Get your account details.
 
 <a name="module_account.favoriteMovies"></a>
 
-### account.favoriteMovies ⇒
+### account.favoriteMovies ⇒ <code>Promise</code>
 Get the list of your favorite movies.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-favorite-movies  
 
 | Param | Type | Description |
@@ -119,11 +116,10 @@ Get the list of your favorite movies.
 
 <a name="module_account.favoriteTvShows"></a>
 
-### account.favoriteTvShows ⇒
+### account.favoriteTvShows ⇒ <code>Promise</code>
 Get the list of your favorite TV shows.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-favorite-tv-shows  
 
 | Param | Type | Description |
@@ -137,11 +133,10 @@ Get the list of your favorite TV shows.
 
 <a name="module_account.lists"></a>
 
-### account.lists ⇒
+### account.lists ⇒ <code>Promise</code>
 Get all of the lists created by an account. Will invlude private lists if you are the owner.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-created-lists  
 
 | Param | Type | Description |
@@ -154,11 +149,10 @@ Get all of the lists created by an account. Will invlude private lists if you ar
 
 <a name="module_account.markAsFavorite"></a>
 
-### account.markAsFavorite ⇒
+### account.markAsFavorite ⇒ <code>Promise</code>
 This method allows you to mark a movie or TV show as a favorite item.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/mark-as-favorite  
 
 | Param | Type | Description |
@@ -172,11 +166,10 @@ This method allows you to mark a movie or TV show as a favorite item.
 
 <a name="module_account.movieWatchlist"></a>
 
-### account.movieWatchlist ⇒
+### account.movieWatchlist ⇒ <code>Promise</code>
 Get a list of all the movies you have added to your watchlist.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-movie-watchlist  
 
 | Param | Type | Description |
@@ -190,11 +183,10 @@ Get a list of all the movies you have added to your watchlist.
 
 <a name="module_account.ratedMovies"></a>
 
-### account.ratedMovies ⇒
+### account.ratedMovies ⇒ <code>Promise</code>
 Get a list of all the movies you have rated.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-movies  
 
 | Param | Type | Description |
@@ -208,11 +200,10 @@ Get a list of all the movies you have rated.
 
 <a name="module_account.ratedTvShows"></a>
 
-### account.ratedTvShows ⇒
+### account.ratedTvShows ⇒ <code>Promise</code>
 Get a list of all the TV shows you have rated.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-tv-shows  
 
 | Param | Type | Description |
@@ -226,11 +217,10 @@ Get a list of all the TV shows you have rated.
 
 <a name="module_account.ratedTvEpisodes"></a>
 
-### account.ratedTvEpisodes ⇒
+### account.ratedTvEpisodes ⇒ <code>Promise</code>
 Get a list of all the TV episodes you have rated.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-rated-tv-episodes  
 
 | Param | Type | Description |
@@ -244,11 +234,10 @@ Get a list of all the TV episodes you have rated.
 
 <a name="module_account.tvShowWatchlist"></a>
 
-### account.tvShowWatchlist ⇒
+### account.tvShowWatchlist ⇒ <code>Promise</code>
 Get a list of all the TV shows you have added to your watchlist.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/account/get-tv-show-watchlist  
 
 | Param | Type | Description |
@@ -265,20 +254,19 @@ Get a list of all the TV shows you have added to your watchlist.
 ## authentication
 
 * [authentication](#module_authentication)
-    * [.logout](#module_authentication.logout) ⇒
-    * [.newGuestSession](#module_authentication.newGuestSession) ⇒
-    * [.newSession](#module_authentication.newSession) ⇒
-    * [.newToken](#module_authentication.newToken) ⇒
-    * [.sessionConvert](#module_authentication.sessionConvert) ⇒
-    * [.validateWithLogin](#module_authentication.validateWithLogin) ⇒
+    * [.logout](#module_authentication.logout) ⇒ <code>Promise</code>
+    * [.newGuestSession](#module_authentication.newGuestSession) ⇒ <code>Promise</code>
+    * [.newSession](#module_authentication.newSession) ⇒ <code>Promise</code>
+    * [.newToken](#module_authentication.newToken) ⇒ <code>Promise</code>
+    * [.sessionConvert](#module_authentication.sessionConvert) ⇒ <code>Promise</code>
+    * [.validateWithLogin](#module_authentication.validateWithLogin) ⇒ <code>Promise</code>
 
 <a name="module_authentication.logout"></a>
 
-### authentication.logout ⇒
+### authentication.logout ⇒ <code>Promise</code>
 If you would like to delete (or "logout") from a session, call this method with a valid session ID.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/delete-session  
 
 | Param | Type |
@@ -287,19 +275,17 @@ If you would like to delete (or "logout") from a session, call this method with 
 
 <a name="module_authentication.newGuestSession"></a>
 
-### authentication.newGuestSession ⇒
+### authentication.newGuestSession ⇒ <code>Promise</code>
 This method will let you create a new guest session. Guest sessions are a type of session that will let a user rate movies and TV shows but not require them to have a TMDb user account.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/create-guest-session  
 <a name="module_authentication.newSession"></a>
 
-### authentication.newSession ⇒
+### authentication.newSession ⇒ <code>Promise</code>
 You can use this method to create a fully valid session ID once a user has validated the request token.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/create-session  
 
 | Param | Type |
@@ -308,20 +294,18 @@ You can use this method to create a fully valid session ID once a user has valid
 
 <a name="module_authentication.newToken"></a>
 
-### authentication.newToken ⇒
+### authentication.newToken ⇒ <code>Promise</code>
 Create a temporary request token that can be used to validate a TMDb user login.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/create-request-token  
 <a name="module_authentication.sessionConvert"></a>
 
-### authentication.sessionConvert ⇒
+### authentication.sessionConvert ⇒ <code>Promise</code>
 Use this method to create a v3 session ID if you already have a valid v4 access token.
 The v4 token needs to be authenticated by the user. Your standard "read token" will not validate to create a session ID.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/create-session-from-v4-access-token  
 
 | Param | Type |
@@ -330,13 +314,12 @@ The v4 token needs to be authenticated by the user. Your standard "read token" w
 
 <a name="module_authentication.validateWithLogin"></a>
 
-### authentication.validateWithLogin ⇒
+### authentication.validateWithLogin ⇒ <code>Promise</code>
 This method allows an application to validate a request token by entering a username and password.
 Not all applications have access to a web view so this can be used as a substitute.
 If you decide to use this method please use HTTPS.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/authentication/validate-request-token  
 
 | Param | Type |
@@ -351,42 +334,39 @@ If you decide to use this method please use HTTPS.
 ## certification
 
 * [certification](#module_certification)
-    * [.movies](#module_certification.movies) ⇒
-    * [.tvShows](#module_certification.tvShows) ⇒
+    * [.movies](#module_certification.movies) ⇒ <code>Promise</code>
+    * [.tvShows](#module_certification.tvShows) ⇒ <code>Promise</code>
 
 <a name="module_certification.movies"></a>
 
-### certification.movies ⇒
+### certification.movies ⇒ <code>Promise</code>
 Get an up to date list of the officially supported movie certifications on TMDb.
 
 **Kind**: static constant of [<code>certification</code>](#module_certification)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/certifications/get-movie-certifications  
 <a name="module_certification.tvShows"></a>
 
-### certification.tvShows ⇒
+### certification.tvShows ⇒ <code>Promise</code>
 Get an up to date list of the officially supported TV show certifications on TMDb.
 
 **Kind**: static constant of [<code>certification</code>](#module_certification)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/certifications/get-tv-certifications  
 <a name="module_changes"></a>
 
 ## changes
 
 * [changes](#module_changes)
-    * [.movies](#module_changes.movies) ⇒
-    * [.people](#module_changes.people) ⇒
-    * [.tvShows](#module_changes.tvShows) ⇒
+    * [.movies](#module_changes.movies) ⇒ <code>Promise</code>
+    * [.people](#module_changes.people) ⇒ <code>Promise</code>
+    * [.tvShows](#module_changes.tvShows) ⇒ <code>Promise</code>
 
 <a name="module_changes.movies"></a>
 
-### changes.movies ⇒
+### changes.movies ⇒ <code>Promise</code>
 Get a list of all of the movie ids that have been changed in the past 24 hours.
 You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/changes/get-movie-change-list  
 
 | Param | Type |
@@ -398,12 +378,11 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 
 <a name="module_changes.people"></a>
 
-### changes.people ⇒
+### changes.people ⇒ <code>Promise</code>
 Get a list of all of the person ids that have been changed in the past 24 hours.
 You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/changes/get-person-change-list  
 
 | Param | Type |
@@ -415,12 +394,11 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 
 <a name="module_changes.tvShows"></a>
 
-### changes.tvShows ⇒
+### changes.tvShows ⇒ <code>Promise</code>
 Get a list of all of the TV show ids that have been changed in the past 24 hours.
 You can query it for up to 14 days worth of changed IDs at a time with the start_date and end_date query parameters. 100 items are returned per page.
 
 **Kind**: static constant of [<code>changes</code>](#module_changes)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/changes/get-tv-change-list  
 
 | Param | Type |
@@ -435,17 +413,16 @@ You can query it for up to 14 days worth of changed IDs at a time with the start
 ## collection
 
 * [collection](#module_collection)
-    * [.details](#module_collection.details) ⇒
-    * [.images](#module_collection.images) ⇒
-    * [.translations](#module_collection.translations) ⇒
+    * [.details](#module_collection.details) ⇒ <code>Promise</code>
+    * [.images](#module_collection.images) ⇒ <code>Promise</code>
+    * [.translations](#module_collection.translations) ⇒ <code>Promise</code>
 
 <a name="module_collection.details"></a>
 
-### collection.details ⇒
+### collection.details ⇒ <code>Promise</code>
 Get collection details by id.
 
 **Kind**: static constant of [<code>collection</code>](#module_collection)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/collections/get-collection-details  
 
 | Param | Type |
@@ -456,11 +433,10 @@ Get collection details by id.
 
 <a name="module_collection.images"></a>
 
-### collection.images ⇒
+### collection.images ⇒ <code>Promise</code>
 Get the images for a collection by id.
 
 **Kind**: static constant of [<code>collection</code>](#module_collection)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/collections/get-collection-images  
 
 | Param | Type |
@@ -471,11 +447,10 @@ Get the images for a collection by id.
 
 <a name="module_collection.translations"></a>
 
-### collection.translations ⇒
+### collection.translations ⇒ <code>Promise</code>
 Get the list translations for a collection by id.
 
 **Kind**: static constant of [<code>collection</code>](#module_collection)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/collections/get-collection-translations  
 
 | Param | Type |
@@ -489,17 +464,16 @@ Get the list translations for a collection by id.
 ## company
 
 * [company](#module_company)
-    * [.alternativeNames](#module_company.alternativeNames) ⇒
-    * [.details](#module_company.details) ⇒
-    * [.images](#module_company.images) ⇒
+    * [.alternativeNames](#module_company.alternativeNames) ⇒ <code>Promise</code>
+    * [.details](#module_company.details) ⇒ <code>Promise</code>
+    * [.images](#module_company.images) ⇒ <code>Promise</code>
 
 <a name="module_company.alternativeNames"></a>
 
-### company.alternativeNames ⇒
+### company.alternativeNames ⇒ <code>Promise</code>
 Get the alternative names of a company.
 
 **Kind**: static constant of [<code>company</code>](#module_company)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/companies/get-company-alternative-names  
 
 | Param | Type |
@@ -508,11 +482,10 @@ Get the alternative names of a company.
 
 <a name="module_company.details"></a>
 
-### company.details ⇒
+### company.details ⇒ <code>Promise</code>
 Get a companies details by id.
 
 **Kind**: static constant of [<code>company</code>](#module_company)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/companies/get-company-details  
 
 | Param | Type |
@@ -521,16 +494,15 @@ Get a companies details by id.
 
 <a name="module_company.images"></a>
 
-### company.images ⇒
+### company.images ⇒ <code>Promise</code>
 Get a companies logos by id.
-There are two image formats that are supported for companies, PNG's and SVG's.
+There are two image formats that are supported for companies, PNG"s and SVG"s.
 You can see which type the original file is by looking at the file_type field.
-We prefer SVG's as they are resolution independent and as such, the width and height are only
+We prefer SVG"s as they are resolution independent and as such, the width and height are only
 there to reflect the original asset that was uploaded.
 An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 
 **Kind**: static constant of [<code>company</code>](#module_company)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/companies/get-company-images  
 
 | Param | Type |
@@ -542,89 +514,81 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 ## configuration
 
 * [configuration](#module_configuration)
-    * [.api](#module_configuration.api) ⇒
-    * [.countries](#module_configuration.countries) ⇒
-    * [.jobs](#module_configuration.jobs) ⇒
-    * [.languages](#module_configuration.languages) ⇒
-    * [.primaryTranslations](#module_configuration.primaryTranslations) ⇒
-    * [.timezones](#module_configuration.timezones) ⇒
+    * [.api](#module_configuration.api) ⇒ <code>Promise</code>
+    * [.countries](#module_configuration.countries) ⇒ <code>Promise</code>
+    * [.jobs](#module_configuration.jobs) ⇒ <code>Promise</code>
+    * [.languages](#module_configuration.languages) ⇒ <code>Promise</code>
+    * [.primaryTranslations](#module_configuration.primaryTranslations) ⇒ <code>Promise</code>
+    * [.timezones](#module_configuration.timezones) ⇒ <code>Promise</code>
 
 <a name="module_configuration.api"></a>
 
-### configuration.api ⇒
+### configuration.api ⇒ <code>Promise</code>
 Get the system wide configuration information.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-api-configuration  
 <a name="module_configuration.countries"></a>
 
-### configuration.countries ⇒
+### configuration.countries ⇒ <code>Promise</code>
 Get the list of countries (ISO 3166-1 tags) used throughout TMDb.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-countries  
 <a name="module_configuration.jobs"></a>
 
-### configuration.jobs ⇒
+### configuration.jobs ⇒ <code>Promise</code>
 Get a list of the jobs and departments we use on TMDb.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-jobs  
 <a name="module_configuration.languages"></a>
 
-### configuration.languages ⇒
+### configuration.languages ⇒ <code>Promise</code>
 Get the list of languages (ISO 639-1 tags) used throughout TMDb.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-languages  
 <a name="module_configuration.primaryTranslations"></a>
 
-### configuration.primaryTranslations ⇒
+### configuration.primaryTranslations ⇒ <code>Promise</code>
 Get a list of the officially supported translations on TMDb.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-primary-translations  
 <a name="module_configuration.timezones"></a>
 
-### configuration.timezones ⇒
+### configuration.timezones ⇒ <code>Promise</code>
 Get the list of timezones used throughout TMDb.
 
 **Kind**: static constant of [<code>configuration</code>](#module_configuration)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/configuration/get-timezones  
 <a name="module_credit"></a>
 
 ## credit
 <a name="module_credit.details"></a>
 
-### credit.details ⇒
+### credit.details ⇒ <code>Promise</code>
 Get a movie or TV credit details by id.
 
 **Kind**: static constant of [<code>credit</code>](#module_credit)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/credits/get-credit-details  
 <a name="module_discover"></a>
 
 ## discover
 
 * [discover](#module_discover)
-    * [.movie](#module_discover.movie) ⇒
-    * [.tvShows](#module_discover.tvShows) ⇒
+    * [.movie](#module_discover.movie) ⇒ <code>Promise</code>
+    * [.tvShows](#module_discover.tvShows) ⇒ <code>Promise</code>
 
 <a name="module_discover.movie"></a>
 
-### discover.movie ⇒
+### discover.movie ⇒ <code>Promise</code>
 Discover movies by different types of data like average rating,
 number of votes, genres and certifications.
 For a full list of options, see https://developers.themoviedb.org/3/discover/movie-discover
 
 **Kind**: static constant of [<code>discover</code>](#module_discover)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/discover/movie-discover  
 
 | Param | Type |
@@ -633,12 +597,11 @@ For a full list of options, see https://developers.themoviedb.org/3/discover/mov
 
 <a name="module_discover.tvShows"></a>
 
-### discover.tvShows ⇒
+### discover.tvShows ⇒ <code>Promise</code>
 Discover TV shows by different types of data like average rating, number of votes, genres, the network they aired on and air dates.
 For a full list of options, see https://developers.themoviedb.org/3/discover/tv-discover
 
 **Kind**: static constant of [<code>discover</code>](#module_discover)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/discover/tv-discover  
 
 | Param | Type |
@@ -650,12 +613,11 @@ For a full list of options, see https://developers.themoviedb.org/3/discover/tv-
 ## find
 <a name="module_find.byId"></a>
 
-### find.byId ⇒
+### find.byId ⇒ <code>Promise</code>
 The find method makes it easy to search for objects in our database by an external id. For example, an IMDB ID.
 This method will search all objects (movies, TV shows and people) and return the results in a single response.
 
 **Kind**: static constant of [<code>find</code>](#module_find)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/find/find-by-id  
 
 | Param | Type | Description |
@@ -670,16 +632,15 @@ This method will search all objects (movies, TV shows and people) and return the
 ## genre
 
 * [genre](#module_genre)
-    * [.movieList](#module_genre.movieList) ⇒
-    * [.tvList](#module_genre.tvList) ⇒
+    * [.movieList](#module_genre.movieList) ⇒ <code>Promise</code>
+    * [.tvList](#module_genre.tvList) ⇒ <code>Promise</code>
 
 <a name="module_genre.movieList"></a>
 
-### genre.movieList ⇒
+### genre.movieList ⇒ <code>Promise</code>
 Get the list of official genres for movies.
 
 **Kind**: static constant of [<code>genre</code>](#module_genre)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/genres/get-movie-list  
 
 | Param | Type |
@@ -689,11 +650,10 @@ Get the list of official genres for movies.
 
 <a name="module_genre.tvList"></a>
 
-### genre.tvList ⇒
+### genre.tvList ⇒ <code>Promise</code>
 Get the list of official genres for TV shows.
 
 **Kind**: static constant of [<code>genre</code>](#module_genre)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/genres/get-tv-list  
 
 | Param | Type |
@@ -706,17 +666,16 @@ Get the list of official genres for TV shows.
 ## guestSession
 
 * [guestSession](#module_guestSession)
-    * [.ratedMovies](#module_guestSession.ratedMovies) ⇒
-    * [.ratedTvEpisodes](#module_guestSession.ratedTvEpisodes) ⇒
-    * [.ratedTvShows](#module_guestSession.ratedTvShows) ⇒
+    * [.ratedMovies](#module_guestSession.ratedMovies) ⇒ <code>Promise</code>
+    * [.ratedTvEpisodes](#module_guestSession.ratedTvEpisodes) ⇒ <code>Promise</code>
+    * [.ratedTvShows](#module_guestSession.ratedTvShows) ⇒ <code>Promise</code>
 
 <a name="module_guestSession.ratedMovies"></a>
 
-### guestSession.ratedMovies ⇒
+### guestSession.ratedMovies ⇒ <code>Promise</code>
 Get the rated movies for a guest session.
 
 **Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-movies  
 
 | Param | Type | Description |
@@ -728,11 +687,10 @@ Get the rated movies for a guest session.
 
 <a name="module_guestSession.ratedTvEpisodes"></a>
 
-### guestSession.ratedTvEpisodes ⇒
+### guestSession.ratedTvEpisodes ⇒ <code>Promise</code>
 Get the rated TV episodes for a guest session.
 
 **Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/guest-sessions/get-gest-session-rated-tv-episodes  
 
 | Param | Type | Description |
@@ -744,11 +702,10 @@ Get the rated TV episodes for a guest session.
 
 <a name="module_guestSession.ratedTvShows"></a>
 
-### guestSession.ratedTvShows ⇒
+### guestSession.ratedTvShows ⇒ <code>Promise</code>
 Get the rated TV shows for a guest session.
 
 **Kind**: static constant of [<code>guestSession</code>](#module_guestSession)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-tv-shows  
 
 | Param | Type | Description |
@@ -763,16 +720,15 @@ Get the rated TV shows for a guest session.
 ## keyword
 
 * [keyword](#module_keyword)
-    * [.details](#module_keyword.details) ⇒
-    * [.movies](#module_keyword.movies) ⇒
+    * [.details](#module_keyword.details) ⇒ <code>Promise</code>
+    * [.movies](#module_keyword.movies) ⇒ <code>Promise</code>
 
 <a name="module_keyword.details"></a>
 
-### keyword.details ⇒
+### keyword.details ⇒ <code>Promise</code>
 Get details of keyword
 
 **Kind**: static constant of [<code>keyword</code>](#module_keyword)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/keywords/get-keyword-details  
 
 | Param | Type | Description |
@@ -781,11 +737,10 @@ Get details of keyword
 
 <a name="module_keyword.movies"></a>
 
-### keyword.movies ⇒
+### keyword.movies ⇒ <code>Promise</code>
 Get the movies that belong to a keyword.
 
 **Kind**: static constant of [<code>keyword</code>](#module_keyword)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/keywords/get-movies-by-keyword  
 
 | Param | Type | Description |
@@ -800,21 +755,20 @@ Get the movies that belong to a keyword.
 ## list
 
 * [list](#module_list)
-    * [.addMovie](#module_list.addMovie) ⇒
-    * [.clear](#module_list.clear) ⇒
-    * [.create](#module_list.create) ⇒
-    * [.details](#module_list.details) ⇒
-    * [.itemStatus](#module_list.itemStatus) ⇒
-    * [.remove](#module_list.remove) ⇒
-    * [.removeMovie](#module_list.removeMovie) ⇒
+    * [.addMovie](#module_list.addMovie) ⇒ <code>Promise</code>
+    * [.clear](#module_list.clear) ⇒ <code>Promise</code>
+    * [.create](#module_list.create) ⇒ <code>Promise</code>
+    * [.details](#module_list.details) ⇒ <code>Promise</code>
+    * [.itemStatus](#module_list.itemStatus) ⇒ <code>Promise</code>
+    * [.remove](#module_list.remove) ⇒ <code>Promise</code>
+    * [.removeMovie](#module_list.removeMovie) ⇒ <code>Promise</code>
 
 <a name="module_list.addMovie"></a>
 
-### list.addMovie ⇒
+### list.addMovie ⇒ <code>Promise</code>
 Add a movie to a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/add-movie  
 
 | Param | Type | Description |
@@ -826,11 +780,10 @@ Add a movie to a list.
 
 <a name="module_list.clear"></a>
 
-### list.clear ⇒
+### list.clear ⇒ <code>Promise</code>
 Clear all of the items from a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/clear-list  
 
 | Param | Type | Description |
@@ -842,11 +795,10 @@ Clear all of the items from a list.
 
 <a name="module_list.create"></a>
 
-### list.create ⇒
+### list.create ⇒ <code>Promise</code>
 Create a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/create-list  
 
 | Param | Type | Description |
@@ -859,11 +811,10 @@ Create a list.
 
 <a name="module_list.details"></a>
 
-### list.details ⇒
+### list.details ⇒ <code>Promise</code>
 Get the details of a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/get-list-details  
 
 | Param | Type | Description |
@@ -874,11 +825,10 @@ Get the details of a list.
 
 <a name="module_list.itemStatus"></a>
 
-### list.itemStatus ⇒
+### list.itemStatus ⇒ <code>Promise</code>
 You can use this method to check if a movie has already been added to the list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/check-item-status  
 
 | Param | Type | Description |
@@ -889,11 +839,10 @@ You can use this method to check if a movie has already been added to the list.
 
 <a name="module_list.remove"></a>
 
-### list.remove ⇒
+### list.remove ⇒ <code>Promise</code>
 Delete a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/delete-list  
 
 | Param | Type | Description |
@@ -904,11 +853,10 @@ Delete a list.
 
 <a name="module_list.removeMovie"></a>
 
-### list.removeMovie ⇒
+### list.removeMovie ⇒ <code>Promise</code>
 Remove a movie from a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/lists/remove-movie  
 
 | Param | Type | Description |
@@ -923,39 +871,38 @@ Remove a movie from a list.
 ## movies
 
 * [movies](#module_movies)
-    * [.accountStates](#module_movies.accountStates) ⇒
-    * [.alternativeTitles](#module_movies.alternativeTitles) ⇒
-    * [.changes](#module_movies.changes) ⇒
-    * [.credits](#module_movies.credits) ⇒
-    * [.deleteRating](#module_movies.deleteRating) ⇒
-    * [.details](#module_movies.details) ⇒
-    * [.externalIds](#module_movies.externalIds) ⇒
-    * [.images](#module_movies.images) ⇒
-    * [.keywords](#module_movies.keywords) ⇒
-    * [.latest](#module_movies.latest) ⇒
-    * [.lists](#module_movies.lists) ⇒
+    * [.accountStates](#module_movies.accountStates) ⇒ <code>Promise</code>
+    * [.alternativeTitles](#module_movies.alternativeTitles) ⇒ <code>Promise</code>
+    * [.changes](#module_movies.changes) ⇒ <code>Promise</code>
+    * [.credits](#module_movies.credits) ⇒ <code>Promise</code>
+    * [.deleteRating](#module_movies.deleteRating) ⇒ <code>Promise</code>
+    * [.details](#module_movies.details) ⇒ <code>Promise</code>
+    * [.externalIds](#module_movies.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_movies.images) ⇒ <code>Promise</code>
+    * [.keywords](#module_movies.keywords) ⇒ <code>Promise</code>
+    * [.latest](#module_movies.latest) ⇒ <code>Promise</code>
+    * [.lists](#module_movies.lists) ⇒ <code>Promise</code>
     * [.nowPlaying](#module_movies.nowPlaying)
-    * [.popular](#module_movies.popular) ⇒
-    * [.rate](#module_movies.rate) ⇒
-    * [.recommendations](#module_movies.recommendations) ⇒
-    * [.releaseDates](#module_movies.releaseDates) ⇒
-    * [.reviews](#module_movies.reviews) ⇒
-    * [.similar](#module_movies.similar) ⇒
-    * [.topRated](#module_movies.topRated) ⇒
-    * [.translations](#module_movies.translations) ⇒
-    * [.upcoming](#module_movies.upcoming) ⇒
-    * [.videos](#module_movies.videos) ⇒
+    * [.popular](#module_movies.popular) ⇒ <code>Promise</code>
+    * [.rate](#module_movies.rate) ⇒ <code>Promise</code>
+    * [.recommendations](#module_movies.recommendations) ⇒ <code>Promise</code>
+    * [.releaseDates](#module_movies.releaseDates) ⇒ <code>Promise</code>
+    * [.reviews](#module_movies.reviews) ⇒ <code>Promise</code>
+    * [.similar](#module_movies.similar) ⇒ <code>Promise</code>
+    * [.topRated](#module_movies.topRated) ⇒ <code>Promise</code>
+    * [.translations](#module_movies.translations) ⇒ <code>Promise</code>
+    * [.upcoming](#module_movies.upcoming) ⇒ <code>Promise</code>
+    * [.videos](#module_movies.videos) ⇒ <code>Promise</code>
 
 <a name="module_movies.accountStates"></a>
 
-### movies.accountStates ⇒
+### movies.accountStates ⇒ <code>Promise</code>
 Grab the following account states for a session:
 - Movie rating
 - If it belongs to your watchlist
 - If it belongs to your favourite list
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-account-states  
 
 | Param | Type | Description |
@@ -967,11 +914,10 @@ Grab the following account states for a session:
 
 <a name="module_movies.alternativeTitles"></a>
 
-### movies.alternativeTitles ⇒
+### movies.alternativeTitles ⇒ <code>Promise</code>
 Get all of the alternative titles for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-alternative-titles  
 
 | Param | Type |
@@ -982,12 +928,11 @@ Get all of the alternative titles for a movie.
 
 <a name="module_movies.changes"></a>
 
-### movies.changes ⇒
+### movies.changes ⇒ <code>Promise</code>
 Get the changes for a movie. By default only the last 24 hours are returned.
 You can query up to 14 days in a single query by using the start_date and end_date query parameters.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-changes  
 
 | Param | Type |
@@ -1000,11 +945,10 @@ You can query up to 14 days in a single query by using the start_date and end_da
 
 <a name="module_movies.credits"></a>
 
-### movies.credits ⇒
+### movies.credits ⇒ <code>Promise</code>
 Get the cast and crew for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-credits  
 
 | Param | Type |
@@ -1013,11 +957,10 @@ Get the cast and crew for a movie.
 
 <a name="module_movies.deleteRating"></a>
 
-### movies.deleteRating ⇒
+### movies.deleteRating ⇒ <code>Promise</code>
 Remove your rating for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/delete-movie-rating  
 
 | Param | Type |
@@ -1029,11 +972,10 @@ Remove your rating for a movie.
 
 <a name="module_movies.details"></a>
 
-### movies.details ⇒
+### movies.details ⇒ <code>Promise</code>
 Get the primary information about a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-details  
 
 | Param | Type |
@@ -1045,12 +987,11 @@ Get the primary information about a movie.
 
 <a name="module_movies.externalIds"></a>
 
-### movies.externalIds ⇒
+### movies.externalIds ⇒ <code>Promise</code>
 Get the external ids for a movie.
 We currently support the following external sources: IMDB ID, Facebook, Instagram, Twitter.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-external-ids  
 
 | Param | Type |
@@ -1059,14 +1000,13 @@ We currently support the following external sources: IMDB ID, Facebook, Instagra
 
 <a name="module_movies.images"></a>
 
-### movies.images ⇒
+### movies.images ⇒ <code>Promise</code>
 Get the images that belong to a movie.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops) you can use the include_image_language parameter.
-This should be a comma separated value like so: { include_image_language: 'en,null' }.
+This should be a comma separated value like so: { include_image_language: "en,null" }.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-images  
 
 | Param | Type |
@@ -1078,11 +1018,10 @@ This should be a comma separated value like so: { include_image_language: 'en,nu
 
 <a name="module_movies.keywords"></a>
 
-### movies.keywords ⇒
+### movies.keywords ⇒ <code>Promise</code>
 Get the keywords that have been added to a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-keywords  
 
 | Param | Type |
@@ -1091,11 +1030,10 @@ Get the keywords that have been added to a movie.
 
 <a name="module_movies.latest"></a>
 
-### movies.latest ⇒
+### movies.latest ⇒ <code>Promise</code>
 Get the most newly created movie. This is a live response and will continuously change.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-latest-movie  
 
 | Param | Type |
@@ -1105,9 +1043,8 @@ Get the most newly created movie. This is a live response and will continuously 
 
 <a name="module_movies.lists"></a>
 
-### movies.lists ⇒
+### movies.lists ⇒ <code>Promise</code>
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-lists  
 
 | Param | Type |
@@ -1138,12 +1075,11 @@ to only look for theatrical release dates within the specified country.
 
 <a name="module_movies.popular"></a>
 
-### movies.popular ⇒
+### movies.popular ⇒ <code>Promise</code>
 Get a list of the current popular movies on TMDb.
 This list updates daily.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-popular-movies  
 
 | Param | Type |
@@ -1155,11 +1091,10 @@ This list updates daily.
 
 <a name="module_movies.rate"></a>
 
-### movies.rate ⇒
+### movies.rate ⇒ <code>Promise</code>
 Rate a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/rate-movie  
 
 | Param | Type | Description |
@@ -1172,11 +1107,10 @@ Rate a movie.
 
 <a name="module_movies.recommendations"></a>
 
-### movies.recommendations ⇒
+### movies.recommendations ⇒ <code>Promise</code>
 Get a list of recommended movies for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-recommendations  
 
 | Param | Type |
@@ -1188,7 +1122,7 @@ Get a list of recommended movies for a movie.
 
 <a name="module_movies.releaseDates"></a>
 
-### movies.releaseDates ⇒
+### movies.releaseDates ⇒ <code>Promise</code>
 Get the release date along with the certification for a movie.
 Release dates support different types:
 - Premiere
@@ -1199,7 +1133,6 @@ Release dates support different types:
 - TV
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-release-dates  
 
 | Param | Type |
@@ -1208,11 +1141,10 @@ Release dates support different types:
 
 <a name="module_movies.reviews"></a>
 
-### movies.reviews ⇒
+### movies.reviews ⇒ <code>Promise</code>
 Get the user reviews for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-reviews  
 
 | Param | Type |
@@ -1224,12 +1156,11 @@ Get the user reviews for a movie.
 
 <a name="module_movies.similar"></a>
 
-### movies.similar ⇒
+### movies.similar ⇒ <code>Promise</code>
 Get a list of similar movies. This is not the same as the "Recommendation" system you see on the website.
 These items are assembled by looking at keywords and genres.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-similar-movies  
 
 | Param | Type |
@@ -1241,11 +1172,10 @@ These items are assembled by looking at keywords and genres.
 
 <a name="module_movies.topRated"></a>
 
-### movies.topRated ⇒
+### movies.topRated ⇒ <code>Promise</code>
 Get the top rated movies on TMDb.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-top-rated-movies  
 
 | Param | Type |
@@ -1257,11 +1187,10 @@ Get the top rated movies on TMDb.
 
 <a name="module_movies.translations"></a>
 
-### movies.translations ⇒
+### movies.translations ⇒ <code>Promise</code>
 Get a list of translations that have been created for a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-translations  
 
 | Param | Type |
@@ -1270,7 +1199,7 @@ Get a list of translations that have been created for a movie.
 
 <a name="module_movies.upcoming"></a>
 
-### movies.upcoming ⇒
+### movies.upcoming ⇒ <code>Promise</code>
 Get a list of upcoming movies in theatres.
 This is a release type query that looks for all movies that
 have a release type of 2 or 3 within the specified date range.
@@ -1278,7 +1207,6 @@ You can optionally specify a region parameter which will narrow the search to on
 for theatrical release dates within the specified country.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-upcoming  
 
 | Param | Type |
@@ -1290,11 +1218,10 @@ for theatrical release dates within the specified country.
 
 <a name="module_movies.videos"></a>
 
-### movies.videos ⇒
+### movies.videos ⇒ <code>Promise</code>
 Get the videos that have been added to a movie.
 
 **Kind**: static constant of [<code>movies</code>](#module_movies)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-videos  
 
 | Param | Type |
@@ -1306,17 +1233,16 @@ Get the videos that have been added to a movie.
 ## network
 
 * [network](#module_network)
-    * [.details](#module_network.details) ⇒
-    * [.alternativeNames](#module_network.alternativeNames) ⇒
-    * [.images](#module_network.images) ⇒
+    * [.details](#module_network.details) ⇒ <code>Promise</code>
+    * [.alternativeNames](#module_network.alternativeNames) ⇒ <code>Promise</code>
+    * [.images](#module_network.images) ⇒ <code>Promise</code>
 
 <a name="module_network.details"></a>
 
-### network.details ⇒
+### network.details ⇒ <code>Promise</code>
 Get the details of a network.
 
 **Kind**: static constant of [<code>network</code>](#module_network)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/networks/get-network-details  
 
 | Param | Type |
@@ -1325,11 +1251,10 @@ Get the details of a network.
 
 <a name="module_network.alternativeNames"></a>
 
-### network.alternativeNames ⇒
+### network.alternativeNames ⇒ <code>Promise</code>
 Get the alternative names of a network.
 
 **Kind**: static constant of [<code>network</code>](#module_network)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/networks/get-network-alternative-names  
 
 | Param | Type |
@@ -1338,16 +1263,15 @@ Get the alternative names of a network.
 
 <a name="module_network.images"></a>
 
-### network.images ⇒
+### network.images ⇒ <code>Promise</code>
 Get the TV network logos by id.
-There are two image formats that are supported for networks, PNG's and SVG's.
+There are two image formats that are supported for networks, PNG"s and SVG"s.
 You can see which type the original file is by looking at the fileType field.
-We prefer SVG's as they are resolution independent and as such, the width and height are only
+We prefer SVG"s as they are resolution independent and as such, the width and height are only
 there to reflect the original asset that was uploaded.
 An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 
 **Kind**: static constant of [<code>network</code>](#module_network)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/networks/get-network-images  
 
 | Param | Type |
@@ -1359,26 +1283,25 @@ An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
 ## people
 
 * [people](#module_people)
-    * [.changes](#module_people.changes) ⇒
-    * [.combinedCredits](#module_people.combinedCredits) ⇒
-    * [.details](#module_people.details) ⇒
-    * [.externalIds](#module_people.externalIds) ⇒
-    * [.images](#module_people.images) ⇒
-    * [.latest](#module_people.latest) ⇒
-    * [.movieCredits](#module_people.movieCredits) ⇒
-    * [.popular](#module_people.popular) ⇒
-    * [.taggedImages](#module_people.taggedImages) ⇒
-    * [.translations](#module_people.translations) ⇒
-    * [.tvCredits](#module_people.tvCredits) ⇒
+    * [.changes](#module_people.changes) ⇒ <code>Promise</code>
+    * [.combinedCredits](#module_people.combinedCredits) ⇒ <code>Promise</code>
+    * [.details](#module_people.details) ⇒ <code>Promise</code>
+    * [.externalIds](#module_people.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_people.images) ⇒ <code>Promise</code>
+    * [.latest](#module_people.latest) ⇒ <code>Promise</code>
+    * [.movieCredits](#module_people.movieCredits) ⇒ <code>Promise</code>
+    * [.popular](#module_people.popular) ⇒ <code>Promise</code>
+    * [.taggedImages](#module_people.taggedImages) ⇒ <code>Promise</code>
+    * [.translations](#module_people.translations) ⇒ <code>Promise</code>
+    * [.tvCredits](#module_people.tvCredits) ⇒ <code>Promise</code>
 
 <a name="module_people.changes"></a>
 
-### people.changes ⇒
+### people.changes ⇒ <code>Promise</code>
 Get the changes for a person. By default only the last 24 hours are returned.
 You can query up to 14 days in a single query by using the start_date and end_date options.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-changes  
 
 | Param | Type | Description |
@@ -1391,11 +1314,10 @@ You can query up to 14 days in a single query by using the start_date and end_da
 
 <a name="module_people.combinedCredits"></a>
 
-### people.combinedCredits ⇒
+### people.combinedCredits ⇒ <code>Promise</code>
 Get the movie and TV credits together in a single response.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-combined-credits  
 
 | Param | Type | Description |
@@ -1406,11 +1328,10 @@ Get the movie and TV credits together in a single response.
 
 <a name="module_people.details"></a>
 
-### people.details ⇒
+### people.details ⇒ <code>Promise</code>
 Get the primary person details by id.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-details  
 
 | Param | Type | Description |
@@ -1422,12 +1343,11 @@ Get the primary person details by id.
 
 <a name="module_people.externalIds"></a>
 
-### people.externalIds ⇒
+### people.externalIds ⇒ <code>Promise</code>
 Get the external ids for a person. We currently support the following external sources.
 IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID, Instagram, Facebook, Twitter
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-external-ids  
 
 | Param | Type | Description |
@@ -1438,11 +1358,10 @@ IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID, Instagram, Facebook, Twi
 
 <a name="module_people.images"></a>
 
-### people.images ⇒
+### people.images ⇒ <code>Promise</code>
 Get the images for a person.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-images  
 
 | Param | Type | Description |
@@ -1451,11 +1370,10 @@ Get the images for a person.
 
 <a name="module_people.latest"></a>
 
-### people.latest ⇒
+### people.latest ⇒ <code>Promise</code>
 Get the most newly created person. This is a live response and will continuously change.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-latest-person  
 
 | Param | Type |
@@ -1465,11 +1383,10 @@ Get the most newly created person. This is a live response and will continuously
 
 <a name="module_people.movieCredits"></a>
 
-### people.movieCredits ⇒
+### people.movieCredits ⇒ <code>Promise</code>
 Get the movie credits for a person.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-movie-credits  
 
 | Param | Type | Description |
@@ -1480,12 +1397,11 @@ Get the movie credits for a person.
 
 <a name="module_people.popular"></a>
 
-### people.popular ⇒
+### people.popular ⇒ <code>Promise</code>
 Get the list of popular people on TMDb.
 This list updates daily.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-popular-people  
 
 | Param | Type |
@@ -1496,11 +1412,10 @@ This list updates daily.
 
 <a name="module_people.taggedImages"></a>
 
-### people.taggedImages ⇒
+### people.taggedImages ⇒ <code>Promise</code>
 Get the images that this person has been tagged in.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-tagged-images  
 
 | Param | Type | Description |
@@ -1512,11 +1427,10 @@ Get the images that this person has been tagged in.
 
 <a name="module_people.translations"></a>
 
-### people.translations ⇒
+### people.translations ⇒ <code>Promise</code>
 Get a list of the translations that exist for a person.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-translations  
 
 | Param | Type | Description |
@@ -1527,12 +1441,11 @@ Get a list of the translations that exist for a person.
 
 <a name="module_people.tvCredits"></a>
 
-### people.tvCredits ⇒
+### people.tvCredits ⇒ <code>Promise</code>
 Get the TV show credits for a person.
 You can query for some extra details about the credit with the credit.details method.
 
 **Kind**: static constant of [<code>people</code>](#module_people)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/people/get-person-tv-credits  
 
 | Param | Type | Description |
@@ -1546,11 +1459,10 @@ You can query for some extra details about the credit with the credit.details me
 ## review
 <a name="module_review.details"></a>
 
-### review.details ⇒
+### review.details ⇒ <code>Promise</code>
 Get details of a review.
 
 **Kind**: static constant of [<code>review</code>](#module_review)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/reviews/get-review-details  
 
 | Param | Type |
@@ -1562,21 +1474,20 @@ Get details of a review.
 ## search
 
 * [search](#module_search)
-    * [.collections](#module_search.collections) ⇒
-    * [.companies](#module_search.companies) ⇒
-    * [.keywords](#module_search.keywords) ⇒
-    * [.movies](#module_search.movies) ⇒
-    * [.multi](#module_search.multi) ⇒
-    * [.people](#module_search.people) ⇒
-    * [.tv](#module_search.tv) ⇒
+    * [.collections](#module_search.collections) ⇒ <code>Promise</code>
+    * [.companies](#module_search.companies) ⇒ <code>Promise</code>
+    * [.keywords](#module_search.keywords) ⇒ <code>Promise</code>
+    * [.movies](#module_search.movies) ⇒ <code>Promise</code>
+    * [.multi](#module_search.multi) ⇒ <code>Promise</code>
+    * [.people](#module_search.people) ⇒ <code>Promise</code>
+    * [.tv](#module_search.tv) ⇒ <code>Promise</code>
 
 <a name="module_search.collections"></a>
 
-### search.collections ⇒
+### search.collections ⇒ <code>Promise</code>
 Search for collections.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-collections  
 
 | Param | Type |
@@ -1588,11 +1499,10 @@ Search for collections.
 
 <a name="module_search.companies"></a>
 
-### search.companies ⇒
+### search.companies ⇒ <code>Promise</code>
 Search for companies.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-companies  
 
 | Param | Type |
@@ -1603,11 +1513,10 @@ Search for companies.
 
 <a name="module_search.keywords"></a>
 
-### search.keywords ⇒
+### search.keywords ⇒ <code>Promise</code>
 Search for keywords.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-keywords  
 
 | Param | Type |
@@ -1618,11 +1527,10 @@ Search for keywords.
 
 <a name="module_search.movies"></a>
 
-### search.movies ⇒
+### search.movies ⇒ <code>Promise</code>
 Search for movies.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-movies  
 
 | Param | Type |
@@ -1638,11 +1546,10 @@ Search for movies.
 
 <a name="module_search.multi"></a>
 
-### search.multi ⇒
+### search.multi ⇒ <code>Promise</code>
 Search multiple models in a single request. Multi search currently supports searching for movies, tv shows and people in a single request.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/multi-search  
 
 | Param | Type |
@@ -1656,11 +1563,10 @@ Search multiple models in a single request. Multi search currently supports sear
 
 <a name="module_search.people"></a>
 
-### search.people ⇒
+### search.people ⇒ <code>Promise</code>
 Search for people.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-people  
 
 | Param | Type |
@@ -1674,11 +1580,10 @@ Search for people.
 
 <a name="module_search.tv"></a>
 
-### search.tv ⇒
+### search.tv ⇒ <code>Promise</code>
 Search for a TV show.
 
 **Kind**: static constant of [<code>search</code>](#module_search)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/search/search-tv-shows  
 
 | Param | Type |
@@ -1694,11 +1599,10 @@ Search for a TV show.
 ## trending
 <a name="module_trending.items"></a>
 
-### trending.items ⇒
+### trending.items ⇒ <code>Promise</code>
 Get the daily or weekly trending items. The daily trending list tracks items over the period of a day while items have a 24 hour half life. The weekly list tracks items over a 7 day period, with a 7 day half life.
 
 **Kind**: static constant of [<code>trending</code>](#module_trending)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/trending/get-trending  
 
 | Param | Type | Description |
@@ -1712,13 +1616,12 @@ Get the daily or weekly trending items. The daily trending list tracks items ove
 ## tvEpisodeGroup
 <a name="module_tvEpisodeGroup.details"></a>
 
-### tvEpisodeGroup.details ⇒
+### tvEpisodeGroup.details ⇒ <code>Promise</code>
 Get the details of a TV episode group.
 Groups support 7 different types which are enumerated as the following:
 1 - Original air date, 2- Absolute, 3 - DVD, 4 - Digital, 5 - Story arc, 6 - Production, 7 - TV
 
 **Kind**: static constant of [<code>tvEpisodeGroup</code>](#module_tvEpisodeGroup)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episode-groups/get-tv-episode-group-details  
 
 | Param | Type |
@@ -1732,24 +1635,23 @@ Groups support 7 different types which are enumerated as the following:
 ## tvEpisode
 
 * [tvEpisode](#module_tvEpisode)
-    * [.accountStates](#module_tvEpisode.accountStates) ⇒
-    * [.changes](#module_tvEpisode.changes) ⇒
-    * [.credits](#module_tvEpisode.credits) ⇒
-    * [.deleteRating](#module_tvEpisode.deleteRating) ⇒
-    * [.details](#module_tvEpisode.details) ⇒
-    * [.externalIds](#module_tvEpisode.externalIds) ⇒
-    * [.images](#module_tvEpisode.images) ⇒
-    * [.rate](#module_tvEpisode.rate) ⇒
-    * [.translations](#module_tvEpisode.translations) ⇒
-    * [.videos](#module_tvEpisode.videos) ⇒
+    * [.accountStates](#module_tvEpisode.accountStates) ⇒ <code>Promise</code>
+    * [.changes](#module_tvEpisode.changes) ⇒ <code>Promise</code>
+    * [.credits](#module_tvEpisode.credits) ⇒ <code>Promise</code>
+    * [.deleteRating](#module_tvEpisode.deleteRating) ⇒ <code>Promise</code>
+    * [.details](#module_tvEpisode.details) ⇒ <code>Promise</code>
+    * [.externalIds](#module_tvEpisode.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_tvEpisode.images) ⇒ <code>Promise</code>
+    * [.rate](#module_tvEpisode.rate) ⇒ <code>Promise</code>
+    * [.translations](#module_tvEpisode.translations) ⇒ <code>Promise</code>
+    * [.videos](#module_tvEpisode.videos) ⇒ <code>Promise</code>
 
 <a name="module_tvEpisode.accountStates"></a>
 
-### tvEpisode.accountStates ⇒
+### tvEpisode.accountStates ⇒ <code>Promise</code>
 Get your rating for a episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-account-states  
 
 | Param | Type | Description |
@@ -1763,11 +1665,10 @@ Get your rating for a episode.
 
 <a name="module_tvEpisode.changes"></a>
 
-### tvEpisode.changes ⇒
+### tvEpisode.changes ⇒ <code>Promise</code>
 Get the changes for a TV episode. By default only the last 24 hours are returned.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-changes  
 
 | Param | Type | Description |
@@ -1780,11 +1681,10 @@ Get the changes for a TV episode. By default only the last 24 hours are returned
 
 <a name="module_tvEpisode.credits"></a>
 
-### tvEpisode.credits ⇒
+### tvEpisode.credits ⇒ <code>Promise</code>
 Get the credits (cast, crew and guest stars) for a TV episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-credits  
 
 | Param | Type | Description |
@@ -1795,11 +1695,10 @@ Get the credits (cast, crew and guest stars) for a TV episode.
 
 <a name="module_tvEpisode.deleteRating"></a>
 
-### tvEpisode.deleteRating ⇒
+### tvEpisode.deleteRating ⇒ <code>Promise</code>
 Remove your rating for a TV episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/delete-tv-episode-rating  
 
 | Param | Type | Description |
@@ -1813,11 +1712,10 @@ Remove your rating for a TV episode.
 
 <a name="module_tvEpisode.details"></a>
 
-### tvEpisode.details ⇒
+### tvEpisode.details ⇒ <code>Promise</code>
 Get the TV episode details by id.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-details  
 
 | Param | Type | Description |
@@ -1831,12 +1729,11 @@ Get the TV episode details by id.
 
 <a name="module_tvEpisode.externalIds"></a>
 
-### tvEpisode.externalIds ⇒
+### tvEpisode.externalIds ⇒ <code>Promise</code>
 Get the external ids for a TV episode. We currently support the following external sources:
 IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-external-ids  
 
 | Param | Type | Description |
@@ -1847,7 +1744,7 @@ IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 <a name="module_tvEpisode.images"></a>
 
-### tvEpisode.images ⇒
+### tvEpisode.images ⇒ <code>Promise</code>
 Get the images that belong to a TV episode.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops)
@@ -1855,7 +1752,6 @@ you can use the include_image_language option.
 This should be a comma separated value like so: include_image_language=en,null.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-images  
 
 | Param | Type | Description |
@@ -1869,11 +1765,10 @@ This should be a comma separated value like so: include_image_language=en,null.
 
 <a name="module_tvEpisode.rate"></a>
 
-### tvEpisode.rate ⇒
+### tvEpisode.rate ⇒ <code>Promise</code>
 Rate a TV episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/rate-tv-episode  
 
 | Param | Type | Description |
@@ -1888,11 +1783,10 @@ Rate a TV episode.
 
 <a name="module_tvEpisode.translations"></a>
 
-### tvEpisode.translations ⇒
+### tvEpisode.translations ⇒ <code>Promise</code>
 Get the translation data for an episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-translations  
 
 | Param | Type | Description |
@@ -1903,11 +1797,10 @@ Get the translation data for an episode.
 
 <a name="module_tvEpisode.videos"></a>
 
-### tvEpisode.videos ⇒
+### tvEpisode.videos ⇒ <code>Promise</code>
 Get the videos that have been added to a TV episode.
 
 **Kind**: static constant of [<code>tvEpisode</code>](#module_tvEpisode)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-videos  
 
 | Param | Type | Description |
@@ -1923,21 +1816,20 @@ Get the videos that have been added to a TV episode.
 ## tvSeason
 
 * [tvSeason](#module_tvSeason)
-    * [.accountStates](#module_tvSeason.accountStates) ⇒
-    * [.changes](#module_tvSeason.changes) ⇒
-    * [.credits](#module_tvSeason.credits) ⇒
-    * [.details](#module_tvSeason.details) ⇒
-    * [.externalIds](#module_tvSeason.externalIds) ⇒
-    * [.images](#module_tvSeason.images) ⇒
-    * [.videos](#module_tvSeason.videos) ⇒
+    * [.accountStates](#module_tvSeason.accountStates) ⇒ <code>Promise</code>
+    * [.changes](#module_tvSeason.changes) ⇒ <code>Promise</code>
+    * [.credits](#module_tvSeason.credits) ⇒ <code>Promise</code>
+    * [.details](#module_tvSeason.details) ⇒ <code>Promise</code>
+    * [.externalIds](#module_tvSeason.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_tvSeason.images) ⇒ <code>Promise</code>
+    * [.videos](#module_tvSeason.videos) ⇒ <code>Promise</code>
 
 <a name="module_tvSeason.accountStates"></a>
 
-### tvSeason.accountStates ⇒
+### tvSeason.accountStates ⇒ <code>Promise</code>
 Returns all of the user ratings for the season's episodes.
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-account-states  
 
 | Param | Type | Description |
@@ -1951,12 +1843,11 @@ Returns all of the user ratings for the season's episodes.
 
 <a name="module_tvSeason.changes"></a>
 
-### tvSeason.changes ⇒
+### tvSeason.changes ⇒ <code>Promise</code>
 Get the changes for a TV season. By default only the last 24 hours are returned.
 You can query up to 14 days in a single query by using the start_date and end_date query options.
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-changes  
 
 | Param | Type | Description |
@@ -1969,11 +1860,10 @@ You can query up to 14 days in a single query by using the start_date and end_da
 
 <a name="module_tvSeason.credits"></a>
 
-### tvSeason.credits ⇒
+### tvSeason.credits ⇒ <code>Promise</code>
 Get the credits for TV season.
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-credits  
 
 | Param | Type | Description |
@@ -1985,11 +1875,10 @@ Get the credits for TV season.
 
 <a name="module_tvSeason.details"></a>
 
-### tvSeason.details ⇒
+### tvSeason.details ⇒ <code>Promise</code>
 Get the TV season details by id.
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-details  
 
 | Param | Type | Description |
@@ -2002,12 +1891,11 @@ Get the TV season details by id.
 
 <a name="module_tvSeason.externalIds"></a>
 
-### tvSeason.externalIds ⇒
+### tvSeason.externalIds ⇒ <code>Promise</code>
 Get the external ids for a TV season. We currently support the following external sources.
 TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-external-ids  
 
 | Param | Type | Description |
@@ -2019,15 +1907,14 @@ TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 <a name="module_tvSeason.images"></a>
 
-### tvSeason.images ⇒
+### tvSeason.images ⇒ <code>Promise</code>
 Get the images that belong to a TV season.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops)
 you can use the include_image_language option.
-This should be a: include_image_language comma separated value like so: include_image_language: 'en,null'.
+This should be a: include_image_language comma separated value like so: include_image_language: "en,null".
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-images  
 
 | Param | Type | Description |
@@ -2040,11 +1927,10 @@ This should be a: include_image_language comma separated value like so: include_
 
 <a name="module_tvSeason.videos"></a>
 
-### tvSeason.videos ⇒
+### tvSeason.videos ⇒ <code>Promise</code>
 Get the videos that have been added to a TV season.
 
 **Kind**: static constant of [<code>tvSeason</code>](#module_tvSeason)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-videos  
 
 | Param | Type | Description |
@@ -2059,38 +1945,37 @@ Get the videos that have been added to a TV season.
 ## tv
 
 * [tv](#module_tv)
-    * [.accountStates](#module_tv.accountStates) ⇒
-    * [.airingToday](#module_tv.airingToday) ⇒
-    * [.alternativeTitles](#module_tv.alternativeTitles) ⇒
-    * [.changes](#module_tv.changes) ⇒
-    * [.contentRatings](#module_tv.contentRatings) ⇒
-    * [.credits](#module_tv.credits) ⇒
-    * [.deleteRating](#module_tv.deleteRating) ⇒
-    * [.details](#module_tv.details) ⇒
-    * [.episodeGroups](#module_tv.episodeGroups) ⇒
-    * [.externalIds](#module_tv.externalIds) ⇒
-    * [.images](#module_tv.images) ⇒
-    * [.keywords](#module_tv.keywords) ⇒
-    * [.latest](#module_tv.latest) ⇒
-    * [.onTheAir](#module_tv.onTheAir) ⇒
-    * [.popular](#module_tv.popular) ⇒
-    * [.rate](#module_tv.rate) ⇒
-    * [.recommendations](#module_tv.recommendations) ⇒
-    * [.reviews](#module_tv.reviews) ⇒
-    * [.screenedTheatrically](#module_tv.screenedTheatrically) ⇒
-    * [.similar](#module_tv.similar) ⇒
-    * [.topRated](#module_tv.topRated) ⇒
-    * [.translations](#module_tv.translations) ⇒
-    * [.videos](#module_tv.videos) ⇒
+    * [.accountStates](#module_tv.accountStates) ⇒ <code>Promise</code>
+    * [.airingToday](#module_tv.airingToday) ⇒ <code>Promise</code>
+    * [.alternativeTitles](#module_tv.alternativeTitles) ⇒ <code>Promise</code>
+    * [.changes](#module_tv.changes) ⇒ <code>Promise</code>
+    * [.contentRatings](#module_tv.contentRatings) ⇒ <code>Promise</code>
+    * [.credits](#module_tv.credits) ⇒ <code>Promise</code>
+    * [.deleteRating](#module_tv.deleteRating) ⇒ <code>Promise</code>
+    * [.details](#module_tv.details) ⇒ <code>Promise</code>
+    * [.episodeGroups](#module_tv.episodeGroups) ⇒ <code>Promise</code>
+    * [.externalIds](#module_tv.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_tv.images) ⇒ <code>Promise</code>
+    * [.keywords](#module_tv.keywords) ⇒ <code>Promise</code>
+    * [.latest](#module_tv.latest) ⇒ <code>Promise</code>
+    * [.onTheAir](#module_tv.onTheAir) ⇒ <code>Promise</code>
+    * [.popular](#module_tv.popular) ⇒ <code>Promise</code>
+    * [.rate](#module_tv.rate) ⇒ <code>Promise</code>
+    * [.recommendations](#module_tv.recommendations) ⇒ <code>Promise</code>
+    * [.reviews](#module_tv.reviews) ⇒ <code>Promise</code>
+    * [.screenedTheatrically](#module_tv.screenedTheatrically) ⇒ <code>Promise</code>
+    * [.similar](#module_tv.similar) ⇒ <code>Promise</code>
+    * [.topRated](#module_tv.topRated) ⇒ <code>Promise</code>
+    * [.translations](#module_tv.translations) ⇒ <code>Promise</code>
+    * [.videos](#module_tv.videos) ⇒ <code>Promise</code>
 
 <a name="module_tv.accountStates"></a>
 
-### tv.accountStates ⇒
+### tv.accountStates ⇒ <code>Promise</code>
 Grab the following account states for a session:
 TV show rating, If it belongs to your watchlist and If it belongs to your favourite list
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-account-states  
 
 | Param | Type | Description |
@@ -2103,12 +1988,11 @@ TV show rating, If it belongs to your watchlist and If it belongs to your favour
 
 <a name="module_tv.airingToday"></a>
 
-### tv.airingToday ⇒
+### tv.airingToday ⇒ <code>Promise</code>
 Get a list of TV shows that are airing today. This query is purely day based as we do not currently support airing times.
 You can specify a timezone to offset the day calculation. Without a specified timezone, this query defaults to EST (Eastern Time UTC-05:00).
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-airing-today  
 
 | Param | Type |
@@ -2119,11 +2003,10 @@ You can specify a timezone to offset the day calculation. Without a specified ti
 
 <a name="module_tv.alternativeTitles"></a>
 
-### tv.alternativeTitles ⇒
+### tv.alternativeTitles ⇒ <code>Promise</code>
 Returns all of the alternative titles for a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-alternative-titles  
 
 | Param | Type | Description |
@@ -2134,12 +2017,11 @@ Returns all of the alternative titles for a TV show.
 
 <a name="module_tv.changes"></a>
 
-### tv.changes ⇒
+### tv.changes ⇒ <code>Promise</code>
 Get the changes for a TV show. By default only the last 24 hours are returned.
 You can query up to 14 days in a single query by using the start_date and end_date options.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-changes  
 
 | Param | Type | Description |
@@ -2152,11 +2034,10 @@ You can query up to 14 days in a single query by using the start_date and end_da
 
 <a name="module_tv.contentRatings"></a>
 
-### tv.contentRatings ⇒
+### tv.contentRatings ⇒ <code>Promise</code>
 Get the list of content ratings (certifications) that have been added to a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-content-ratings  
 
 | Param | Type | Description |
@@ -2167,11 +2048,10 @@ Get the list of content ratings (certifications) that have been added to a TV sh
 
 <a name="module_tv.credits"></a>
 
-### tv.credits ⇒
+### tv.credits ⇒ <code>Promise</code>
 Get the credits (cast and crew) that have been added to a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-credits  
 
 | Param | Type | Description |
@@ -2182,11 +2062,10 @@ Get the credits (cast and crew) that have been added to a TV show.
 
 <a name="module_tv.deleteRating"></a>
 
-### tv.deleteRating ⇒
+### tv.deleteRating ⇒ <code>Promise</code>
 Remove your rating for a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/delete-tv-show-rating  
 
 | Param | Type |
@@ -2198,11 +2077,10 @@ Remove your rating for a TV show.
 
 <a name="module_tv.details"></a>
 
-### tv.details ⇒
+### tv.details ⇒ <code>Promise</code>
 Get the primary TV show details by id.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-details  
 
 | Param | Type | Description |
@@ -2214,12 +2092,11 @@ Get the primary TV show details by id.
 
 <a name="module_tv.episodeGroups"></a>
 
-### tv.episodeGroups ⇒
+### tv.episodeGroups ⇒ <code>Promise</code>
 Get all of the episode groups that have been created for a TV show.
 With a group ID you can call the tvEpisodeGroups.details method.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-credits  
 
 | Param | Type | Description |
@@ -2230,12 +2107,11 @@ With a group ID you can call the tvEpisodeGroups.details method.
 
 <a name="module_tv.externalIds"></a>
 
-### tv.externalIds ⇒
+### tv.externalIds ⇒ <code>Promise</code>
 Get the external ids for a TV show. We currently support the following external sources.
 IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-external-ids  
 
 | Param | Type | Description |
@@ -2246,7 +2122,7 @@ IMDB ID, TVDB ID, Freebase MID, Freebase ID, TVRage ID
 
 <a name="module_tv.images"></a>
 
-### tv.images ⇒
+### tv.images ⇒ <code>Promise</code>
 Get the images that belong to a TV show.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops)
@@ -2254,7 +2130,6 @@ you can use the include_image_language option.
 This should be a comma separated value like so: include_image_language=en,null.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-images  
 
 | Param | Type | Description |
@@ -2266,11 +2141,10 @@ This should be a comma separated value like so: include_image_language=en,null.
 
 <a name="module_tv.keywords"></a>
 
-### tv.keywords ⇒
+### tv.keywords ⇒ <code>Promise</code>
 Get the keywords that have been added to a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-keywords  
 
 | Param | Type | Description |
@@ -2279,11 +2153,10 @@ Get the keywords that have been added to a TV show.
 
 <a name="module_tv.latest"></a>
 
-### tv.latest ⇒
+### tv.latest ⇒ <code>Promise</code>
 Get the most newly created TV show. This is a live response and will continuously change.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-latest-tv  
 
 | Param | Type |
@@ -2293,12 +2166,11 @@ Get the most newly created TV show. This is a live response and will continuousl
 
 <a name="module_tv.onTheAir"></a>
 
-### tv.onTheAir ⇒
+### tv.onTheAir ⇒ <code>Promise</code>
 Get a list of shows that are currently on the air.
 This query looks for any TV show that has an episode with an air date in the next 7 days.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-on-the-air  
 
 | Param | Type |
@@ -2309,12 +2181,11 @@ This query looks for any TV show that has an episode with an air date in the nex
 
 <a name="module_tv.popular"></a>
 
-### tv.popular ⇒
+### tv.popular ⇒ <code>Promise</code>
 Get a list of the current popular TV shows on TMDb.
 This list updates daily.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-popular-tv-shows  
 
 | Param | Type |
@@ -2325,11 +2196,10 @@ This list updates daily.
 
 <a name="module_tv.rate"></a>
 
-### tv.rate ⇒
+### tv.rate ⇒ <code>Promise</code>
 Rate a TV episode.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/rate-tv-show  
 
 | Param | Type | Description |
@@ -2342,11 +2212,10 @@ Rate a TV episode.
 
 <a name="module_tv.recommendations"></a>
 
-### tv.recommendations ⇒
+### tv.recommendations ⇒ <code>Promise</code>
 Get the list of TV show recommendations for this item.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-recommendations  
 
 | Param | Type | Description |
@@ -2358,11 +2227,10 @@ Get the list of TV show recommendations for this item.
 
 <a name="module_tv.reviews"></a>
 
-### tv.reviews ⇒
+### tv.reviews ⇒ <code>Promise</code>
 Get the reviews for a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-reviews  
 
 | Param | Type | Description |
@@ -2374,11 +2242,10 @@ Get the reviews for a TV show.
 
 <a name="module_tv.screenedTheatrically"></a>
 
-### tv.screenedTheatrically ⇒
+### tv.screenedTheatrically ⇒ <code>Promise</code>
 Get a list of seasons or episodes that have been screened in a film festival or theatre.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-screened-theatrically  
 
 | Param | Type | Description |
@@ -2387,11 +2254,10 @@ Get a list of seasons or episodes that have been screened in a film festival or 
 
 <a name="module_tv.similar"></a>
 
-### tv.similar ⇒
+### tv.similar ⇒ <code>Promise</code>
 Get a list of similar TV shows. These items are assembled by looking at keywords and genres.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-similar-tv-shows  
 
 | Param | Type | Description |
@@ -2403,11 +2269,10 @@ Get a list of similar TV shows. These items are assembled by looking at keywords
 
 <a name="module_tv.topRated"></a>
 
-### tv.topRated ⇒
+### tv.topRated ⇒ <code>Promise</code>
 Get a list of the top rated TV shows on TMDb.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-top-rated-tv  
 
 | Param | Type |
@@ -2418,11 +2283,10 @@ Get a list of the top rated TV shows on TMDb.
 
 <a name="module_tv.translations"></a>
 
-### tv.translations ⇒
+### tv.translations ⇒ <code>Promise</code>
 Get a list of the translations that exist for a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-translations  
 
 | Param | Type | Description |
@@ -2433,11 +2297,10 @@ Get a list of the translations that exist for a TV show.
 
 <a name="module_tv.videos"></a>
 
-### tv.videos ⇒
+### tv.videos ⇒ <code>Promise</code>
 Get the videos that have been added to a TV show.
 
 **Kind**: static constant of [<code>tv</code>](#module_tv)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/3/tv/get-tv-videos  
 
 | Param | Type | Description |

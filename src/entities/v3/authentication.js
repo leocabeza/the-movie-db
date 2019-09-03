@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module authentication
@@ -8,7 +8,7 @@ import urls from '../../urls';
 /**
  * If you would like to delete (or "logout") from a session, call this method with a valid session ID.
  * @param {string} sessionId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/delete-session
  */
 export const logout = async sessionId => {
@@ -25,7 +25,7 @@ export const logout = async sessionId => {
 
 /**
  * This method will let you create a new guest session. Guest sessions are a type of session that will let a user rate movies and TV shows but not require them to have a TMDb user account.
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/create-guest-session
  */
 export const newGuestSession = async () =>
@@ -34,7 +34,7 @@ export const newGuestSession = async () =>
 /**
  * You can use this method to create a fully valid session ID once a user has validated the request token.
  * @param {string} requestToken
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/create-session
  */
 export const newSession = async requestToken => {
@@ -51,7 +51,7 @@ export const newSession = async requestToken => {
 
 /**
  * Create a temporary request token that can be used to validate a TMDb user login.
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/create-request-token
  */
 export const newToken = async () =>
@@ -61,7 +61,7 @@ export const newToken = async () =>
  * Use this method to create a v3 session ID if you already have a valid v4 access token.
  * The v4 token needs to be authenticated by the user. Your standard "read token" will not validate to create a session ID.
  * @param {string} v4AccessToken
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/create-session-from-v4-access-token
  */
 export const sessionConvert = async v4AccessToken => {
@@ -84,7 +84,7 @@ export const sessionConvert = async v4AccessToken => {
  * @param {string} options.username
  * @param {string} options.password
  * @param {string} options.request_token
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/authentication/validate-request-token
  */
 export const validateWithLogin = async (options = {}) => {

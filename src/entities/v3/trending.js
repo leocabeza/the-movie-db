@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module trending
@@ -10,7 +10,7 @@ import urls from '../../urls';
  * @param {Object} options
  * @param {string} options.media_type - Allowed values: all, movie, tv, person
  * @param {string} options.time_window - Allowed values: day, week
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/trending/get-trending
  */
 export const items = async (options = {}) => {

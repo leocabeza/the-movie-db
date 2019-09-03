@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module tvEpisode
@@ -13,7 +13,7 @@ import urls from '../../urls';
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-account-states
  */
 export const accountStates = async (
@@ -57,7 +57,7 @@ export const accountStates = async (
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-changes
  */
 export const changes = async (episodeId, options = {}) => {
@@ -78,7 +78,7 @@ export const changes = async (episodeId, options = {}) => {
  * @param {number} tvId - Required
  * @param {number} seasonNumber - Required
  * @param {number} episodeNumber - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-credits
  */
 export const credits = async (tvId, seasonNumber, episodeNumber) => {
@@ -109,7 +109,7 @@ export const credits = async (tvId, seasonNumber, episodeNumber) => {
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/delete-tv-episode-rating
  */
 export const deleteRating = async (
@@ -158,7 +158,7 @@ export const deleteRating = async (
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-details
  */
 export const details = async (
@@ -195,7 +195,7 @@ export const details = async (
  * @param {number} tvId - Required
  * @param {number} seasonNumber - Required
  * @param {number} episodeNumber - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-external-ids
  */
 export const externalIds = async (tvId, seasonNumber, episodeNumber) => {
@@ -230,7 +230,7 @@ export const externalIds = async (tvId, seasonNumber, episodeNumber) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.include_image_language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-images
  */
 export const images = async (
@@ -269,7 +269,7 @@ export const images = async (
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/rate-tv-episode
  */
 export const rate = async (
@@ -320,7 +320,7 @@ export const rate = async (
  * @param {number} tvId - Required
  * @param {number} seasonNumber - Required
  * @param {number} episodeNumber - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-translations
  */
 export const translations = async (tvId, seasonNumber, episodeNumber) => {
@@ -350,7 +350,7 @@ export const translations = async (tvId, seasonNumber, episodeNumber) => {
  * @param {number} episodeNumber - Required
  * @param {Object} options
  * @param {string} language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-videos
  */
 export const videos = async (

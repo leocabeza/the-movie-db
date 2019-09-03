@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module tv
@@ -13,7 +13,7 @@ import urls from '../../urls';
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-account-states
  */
 export const accountStates = async (tvId, options = {}) => {
@@ -41,7 +41,7 @@ export const accountStates = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-airing-today
  */
 export const airingToday = async (options = {}) => {
@@ -55,7 +55,7 @@ export const airingToday = async (options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-alternative-titles
  */
 export const alternativeTitles = async (tvId, options = {}) => {
@@ -79,7 +79,7 @@ export const alternativeTitles = async (tvId, options = {}) => {
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-changes
  */
 export const changes = async (tvId, options = {}) => {
@@ -101,7 +101,7 @@ export const changes = async (tvId, options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-content-ratings
  */
 export const contentRatings = async (tvId, options = {}) => {
@@ -122,7 +122,7 @@ export const contentRatings = async (tvId, options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-credits
  */
 export const credits = async (tvId, options = {}) => {
@@ -143,7 +143,7 @@ export const credits = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/delete-tv-show-rating
  */
 export const deleteRating = async (tvId, options = {}) => {
@@ -171,7 +171,7 @@ export const deleteRating = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-details
  */
 export const details = async (tvId, options = {}) => {
@@ -193,7 +193,7 @@ export const details = async (tvId, options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-credits
  */
 export const episodeGroups = async (tvId, options = {}) => {
@@ -214,7 +214,7 @@ export const episodeGroups = async (tvId, options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-external-ids
  */
 export const externalIds = async (tvId, options = {}) => {
@@ -239,7 +239,7 @@ export const externalIds = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.include_image_language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-images
  */
 export const images = async (tvId, options = {}) => {
@@ -258,7 +258,7 @@ export const images = async (tvId, options = {}) => {
 /**
  * Get the keywords that have been added to a TV show.
  * @param {number} tvId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-keywords
  */
 export const keywords = async tvId => {
@@ -273,7 +273,7 @@ export const keywords = async tvId => {
  * Get the most newly created TV show. This is a live response and will continuously change.
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-latest-tv
  */
 export const latest = async (options = {}) => {
@@ -288,7 +288,7 @@ export const latest = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-on-the-air
  */
 export const onTheAir = async (options = {}) => {
@@ -303,7 +303,7 @@ export const onTheAir = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-popular-tv-shows
  */
 export const popular = async (options = {}) => {
@@ -322,7 +322,7 @@ export const popular = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/rate-tv-show
  */
 export const rate = async (tvId, rating, options = {}) => {
@@ -357,7 +357,7 @@ export const rate = async (tvId, rating, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-recommendations
  */
 export const recommendations = async (tvId, options = {}) => {
@@ -379,7 +379,7 @@ export const recommendations = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-reviews
  */
 export const reviews = async (tvId, options = {}) => {
@@ -398,7 +398,7 @@ export const reviews = async (tvId, options = {}) => {
 /**
  * Get a list of seasons or episodes that have been screened in a film festival or theatre.
  * @param {number} tvId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-screened-theatrically
  */
 export const screenedTheatrically = async tvId => {
@@ -417,7 +417,7 @@ export const screenedTheatrically = async tvId => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-similar-tv-shows
  */
 export const similar = async (tvId, options = {}) => {
@@ -438,7 +438,7 @@ export const similar = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-top-rated-tv
  */
 export const topRated = async (options = {}) => {
@@ -452,7 +452,7 @@ export const topRated = async (options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-translations
  */
 export const translations = async (tvId, options = {}) => {
@@ -472,7 +472,7 @@ export const translations = async (tvId, options = {}) => {
  * @param {number} tvId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-videos
  */
 export const videos = async (tvId, options = {}) => {

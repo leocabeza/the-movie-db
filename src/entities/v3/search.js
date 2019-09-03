@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module search
@@ -11,7 +11,7 @@ import urls from '../../urls';
  * @param {string} options.language
  * @param {string} options.query
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-collections
  */
 export const collections = async (options = {}) => {
@@ -33,7 +33,7 @@ export const collections = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.query
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-companies
  */
 export const companies = async (options = {}) => {
@@ -51,7 +51,7 @@ export const companies = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.query
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-keywords
  */
 export const keywords = async (options = {}) => {
@@ -74,7 +74,7 @@ export const keywords = async (options = {}) => {
  * @param {string}  options.region
  * @param {number}  option.year
  * @param {number}  option.primary_release_year
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-movies
  */
 export const movies = async (options = {}) => {
@@ -111,7 +111,7 @@ export const movies = async (options = {}) => {
  * @param {number}  options.page
  * @param {boolean} options.include_adult
  * @param {string}  options.region
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/multi-search
  */
 export const multi = async (options = {}) => {
@@ -138,7 +138,7 @@ export const multi = async (options = {}) => {
  * @param {number}  options.page
  * @param {boolean} options.include_adult
  * @param {string}  options.region
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-people
  */
 export const people = async (options = {}) => {
@@ -164,7 +164,7 @@ export const people = async (options = {}) => {
  * @param {string} options.query
  * @param {number} options.page
  * @param {number} options.first_air_date_year
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/search/search-tv-shows
  */
 export const tv = async (options = {}) => {

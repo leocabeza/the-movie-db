@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module list
@@ -11,7 +11,7 @@ import urls from '../../urls';
  * @param {string}  sessionId - Required
  * @param {Object}  body - Required
  * @param {number}  body.media_id - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/add-movie
  */
 export const addMovie = async (listId, sessionId, body = {}) => {
@@ -43,7 +43,7 @@ export const addMovie = async (listId, sessionId, body = {}) => {
  * @param {Object}  options - Required
  * @param {string}  options.session_id - Required
  * @param {boolean} options.confirm - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/clear-list
  */
 export const clear = async (listId, options = {}) => {
@@ -76,7 +76,7 @@ export const clear = async (listId, options = {}) => {
  * @param {string}  body.name
  * @param {string}  body.description
  * @param {string}  body.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/create-list
  */
 export const create = async (sessionId, body = {}) => {
@@ -103,7 +103,7 @@ export const create = async (sessionId, body = {}) => {
  * @param {(number|string)}  listId - Required
  * @param {Object}  options
  * @param {string}  options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/get-list-details
  */
 export const details = async (listId, options = {}) => {
@@ -122,7 +122,7 @@ export const details = async (listId, options = {}) => {
  * @param {(number|string)}  listId - Required
  * @param {Object}  options
  * @param {string}  options.movieId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/check-item-status
  */
 export const itemStatus = async (listId, options = {}) => {
@@ -146,7 +146,7 @@ export const itemStatus = async (listId, options = {}) => {
  * @param {string}  listId - Required
  * @param {Object}  options - Required
  * @param {string}  options.session_id - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/delete-list
  */
 export const remove = async (listId, options = {}) => {
@@ -174,7 +174,7 @@ export const remove = async (listId, options = {}) => {
  * @param {string}  sessionId - Required
  * @param {Object}  body - Required
  * @param {number}  body.media_id - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/lists/remove-movie
  */
 export const removeMovie = async (listId, sessionId, body = {}) => {

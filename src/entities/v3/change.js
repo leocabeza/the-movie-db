@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module changes
@@ -12,7 +12,7 @@ import urls from '../../urls';
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/changes/get-movie-change-list
  */
 export const movies = async (options = {}) => {
@@ -32,7 +32,7 @@ export const movies = async (options = {}) => {
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/changes/get-person-change-list
  */
 export const people = async (options = {}) => {
@@ -52,7 +52,7 @@ export const people = async (options = {}) => {
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/changes/get-tv-change-list
  */
 export const tvShows = async (options = {}) => {

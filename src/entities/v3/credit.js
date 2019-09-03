@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module credit
@@ -7,7 +7,7 @@ import urls from '../../urls';
 
 /**
  * Get a movie or TV credit details by id.
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/credits/get-credit-details
  */
 export const details = async creditId => {

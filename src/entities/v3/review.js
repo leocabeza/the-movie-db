@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module review
@@ -8,7 +8,7 @@ import urls from '../../urls';
 /**
  * Get details of a review.
  * @param {string} reviewId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/reviews/get-review-details
  */
 export const details = async reviewId => {

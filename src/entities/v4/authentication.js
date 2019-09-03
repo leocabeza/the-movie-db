@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module authentication
@@ -9,7 +9,7 @@ import urls from '../../urls';
  * This method will finish the user authentication flow and issue an official user access token.
  * The requesToken in this request is sent along as part of the POST body.
  * @param {string} requestToken
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/auth/create-access-token
  */
 export const createAccessToken = async requestToken => {
@@ -20,7 +20,8 @@ export const createAccessToken = async requestToken => {
   return await makeHttpRequest(
     urls.v4.AUTH_ACCESS_TOKEN,
     { request_token: requestToken },
-    'post'
+    'post',
+    { usev4: true }
   );
 };
 
@@ -31,21 +32,22 @@ export const createAccessToken = async requestToken => {
  * or callback that will be executed once a request token has been approved on TMDb.
 
  * @param {string} redirectTo
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/auth/create-request-token
  */
 export const createRequestToken = async redirectTo => {
   return await makeHttpRequest(
     urls.v4.AUTH_REQUEST_TOKEN,
     { redirect_to: redirectTo },
-    'post'
+    'post',
+    { usev4: true }
   );
 };
 
 /**
  * This method gives your users the ability to log out of a session.
  * @param {string} accessToken
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/auth/delete-access-token
  */
 export const deleteAccessToken = async accessToken => {
@@ -56,6 +58,7 @@ export const deleteAccessToken = async accessToken => {
   return await makeHttpRequest(
     urls.v4.AUTH_ACCESS_TOKEN,
     { access_token: accessToken },
-    'delete'
+    'delete',
+    { usev4: true }
   );
 };

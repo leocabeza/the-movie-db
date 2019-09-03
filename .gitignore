@@ -68,3 +68,6 @@ dist
 
 # dev file for debugging
 dev.js
+
+# example package-lock
+examples/node/package-lock.json

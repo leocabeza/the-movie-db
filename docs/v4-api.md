@@ -14,27 +14,27 @@
 ## account
 
 * [account](#module_account)
-    * [.favoriteMovies](#module_account.favoriteMovies) ⇒
-    * [.favoriteTvShows](#module_account.favoriteTvShows) ⇒
-    * [.lists](#module_account.lists) ⇒
-    * [.movieRecommendations](#module_account.movieRecommendations) ⇒
-    * [.movieWatchlist](#module_account.movieWatchlist) ⇒
-    * [.ratedMovies](#module_account.ratedMovies) ⇒
-    * [.ratedTvShows](#module_account.ratedTvShows) ⇒
-    * [.tvShowRecommendations](#module_account.tvShowRecommendations) ⇒
-    * [.tvShowWatchlist](#module_account.tvShowWatchlist) ⇒
+    * [.favoriteMovies](#module_account.favoriteMovies) ⇒ <code>Promise</code>
+    * [.favoriteTvShows](#module_account.favoriteTvShows) ⇒ <code>Promise</code>
+    * [.lists](#module_account.lists) ⇒ <code>Promise</code>
+    * [.movieRecommendations](#module_account.movieRecommendations) ⇒ <code>Promise</code>
+    * [.movieWatchlist](#module_account.movieWatchlist) ⇒ <code>Promise</code>
+    * [.ratedMovies](#module_account.ratedMovies) ⇒ <code>Promise</code>
+    * [.ratedTvShows](#module_account.ratedTvShows) ⇒ <code>Promise</code>
+    * [.tvShowRecommendations](#module_account.tvShowRecommendations) ⇒ <code>Promise</code>
+    * [.tvShowWatchlist](#module_account.tvShowWatchlist) ⇒ <code>Promise</code>
 
 <a name="module_account.favoriteMovies"></a>
 
-### account.favoriteMovies ⇒
+### account.favoriteMovies ⇒ <code>Promise</code>
 Get the list of movies you have marked as a favorite.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-favorite-movies  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -42,15 +42,15 @@ Get the list of movies you have marked as a favorite.
 
 <a name="module_account.favoriteTvShows"></a>
 
-### account.favoriteTvShows ⇒
+### account.favoriteTvShows ⇒ <code>Promise</code>
 Get the list of TV shows you have marked as a favorite.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-favorite-tv-shows  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -58,30 +58,30 @@ Get the list of TV shows you have marked as a favorite.
 
 <a name="module_account.lists"></a>
 
-### account.lists ⇒
-Get all of the lists you've created.
+### account.lists ⇒ <code>Promise</code>
+Get all of the lists you have created.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-lists  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
 
 <a name="module_account.movieRecommendations"></a>
 
-### account.movieRecommendations ⇒
+### account.movieRecommendations ⇒ <code>Promise</code>
 Get a list of your personal movie recommendations.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-movie-recommendations  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -89,15 +89,15 @@ Get a list of your personal movie recommendations.
 
 <a name="module_account.movieWatchlist"></a>
 
-### account.movieWatchlist ⇒
+### account.movieWatchlist ⇒ <code>Promise</code>
 Get the list of movies you have added to your watchlist.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-movie-watchlist  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -105,15 +105,15 @@ Get the list of movies you have added to your watchlist.
 
 <a name="module_account.ratedMovies"></a>
 
-### account.ratedMovies ⇒
+### account.ratedMovies ⇒ <code>Promise</code>
 Get the list of movies you have rated.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-rated-movies  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -121,15 +121,15 @@ Get the list of movies you have rated.
 
 <a name="module_account.ratedTvShows"></a>
 
-### account.ratedTvShows ⇒
+### account.ratedTvShows ⇒ <code>Promise</code>
 Get the list of TV shows you have rated.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-rated-tv-shows  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -137,15 +137,15 @@ Get the list of TV shows you have rated.
 
 <a name="module_account.tvShowRecommendations"></a>
 
-### account.tvShowRecommendations ⇒
+### account.tvShowRecommendations ⇒ <code>Promise</code>
 Get a list of your personal TV show recommendations.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-tv-show-recommendations  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -153,15 +153,15 @@ Get a list of your personal TV show recommendations.
 
 <a name="module_account.tvShowWatchlist"></a>
 
-### account.tvShowWatchlist ⇒
+### account.tvShowWatchlist ⇒ <code>Promise</code>
 Get the list of TV shows you have added to your watchlist.
 
 **Kind**: static constant of [<code>account</code>](#module_account)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/account/get-account-tv-show-watchlist  
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
@@ -172,18 +172,17 @@ Get the list of TV shows you have added to your watchlist.
 ## authentication
 
 * [authentication](#module_authentication)
-    * [.createAccessToken](#module_authentication.createAccessToken) ⇒
-    * [.createRequestToken](#module_authentication.createRequestToken) ⇒
-    * [.deleteAccessToken](#module_authentication.deleteAccessToken) ⇒
+    * [.createAccessToken](#module_authentication.createAccessToken) ⇒ <code>Promise</code>
+    * [.createRequestToken](#module_authentication.createRequestToken) ⇒ <code>Promise</code>
+    * [.deleteAccessToken](#module_authentication.deleteAccessToken) ⇒ <code>Promise</code>
 
 <a name="module_authentication.createAccessToken"></a>
 
-### authentication.createAccessToken ⇒
+### authentication.createAccessToken ⇒ <code>Promise</code>
 This method will finish the user authentication flow and issue an official user access token.
 The requesToken in this request is sent along as part of the POST body.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/auth/create-access-token  
 
 | Param | Type |
@@ -192,14 +191,13 @@ The requesToken in this request is sent along as part of the POST body.
 
 <a name="module_authentication.createRequestToken"></a>
 
-### authentication.createRequestToken ⇒
+### authentication.createRequestToken ⇒ <code>Promise</code>
 This method generates a new request token that you can ask a user to approve.
 This is the first step in getting permission from a user to read and write data on their behalf.
 Note that there is an optional body you can post alongside this request to set a redirect URL
 or callback that will be executed once a request token has been approved on TMDb.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/auth/create-request-token  
 
 | Param | Type |
@@ -208,11 +206,10 @@ or callback that will be executed once a request token has been approved on TMDb
 
 <a name="module_authentication.deleteAccessToken"></a>
 
-### authentication.deleteAccessToken ⇒
+### authentication.deleteAccessToken ⇒ <code>Promise</code>
 This method gives your users the ability to log out of a session.
 
 **Kind**: static constant of [<code>authentication</code>](#module_authentication)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/auth/delete-access-token  
 
 | Param | Type |
@@ -224,19 +221,19 @@ This method gives your users the ability to log out of a session.
 ## list
 
 * [list](#module_list)
-    * [.addItems](#module_list.addItems) ⇒
-    * [.clearItems](#module_list.clearItems) ⇒
-    * [.create](#module_list.create) ⇒
-    * [.details](#module_list.details) ⇒
-    * [.deleteItems](#module_list.deleteItems) ⇒
-    * [.itemStatus](#module_list.itemStatus) ⇒
-    * [.remove](#module_list.remove) ⇒
-    * [.update](#module_list.update) ⇒
-    * [.updateItems](#module_list.updateItems) ⇒
+    * [.addItems](#module_list.addItems) ⇒ <code>Promise</code>
+    * [.clearItems](#module_list.clearItems) ⇒ <code>Promise</code>
+    * [.create](#module_list.create) ⇒ <code>Promise</code>
+    * [.details](#module_list.details) ⇒ <code>Promise</code>
+    * [.deleteItems](#module_list.deleteItems) ⇒ <code>Promise</code>
+    * [.itemStatus](#module_list.itemStatus) ⇒ <code>Promise</code>
+    * [.remove](#module_list.remove) ⇒ <code>Promise</code>
+    * [.update](#module_list.update) ⇒ <code>Promise</code>
+    * [.updateItems](#module_list.updateItems) ⇒ <code>Promise</code>
 
 <a name="module_list.addItems"></a>
 
-### list.addItems ⇒
+### list.addItems ⇒ <code>Promise</code>
 This method will let you add items to a list.
 We support essentially an unlimited number of items to be posted at a time.
 Both movie and TV series are supported.
@@ -246,7 +243,6 @@ that the item already exists on the list. It may also indicate that the item cou
 You must be the owner of the list and therefore have a valid user access token in order to add items to a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/add-items  
 
 | Param | Type | Description |
@@ -259,12 +255,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.clearItems"></a>
 
-### list.clearItems ⇒
+### list.clearItems ⇒ <code>Promise</code>
 This method lets you clear all of the items from a list in a single request. This action cannot be reversed so use it with caution.
 You must be the owner of the list and therefore have a valid user access token in order to clear a list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/clear-list  
 
 | Param | Type | Description |
@@ -274,12 +269,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.create"></a>
 
-### list.create ⇒
+### list.create ⇒ <code>Promise</code>
 This method will create a new list.
 You will need to have valid user access token in order to create a new list.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/create-list  
 
 | Param | Type | Description |
@@ -294,12 +288,11 @@ You will need to have valid user access token in order to create a new list.
 
 <a name="module_list.details"></a>
 
-### list.details ⇒
+### list.details ⇒ <code>Promise</code>
 This method will retrieve a list by id.
 Private lists can only be accessed by their owners and therefore require a valid user access token.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/get-list  
 
 | Param | Type | Description |
@@ -312,12 +305,11 @@ Private lists can only be accessed by their owners and therefore require a valid
 
 <a name="module_list.deleteItems"></a>
 
-### list.deleteItems ⇒
+### list.deleteItems ⇒ <code>Promise</code>
 This method will let you remove items from a list. You can remove multiple items at a time.
 You must be the owner of the list and therefore have a valid user access token in order to delete items from it.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/remove-items  
 
 | Param | Type | Description |
@@ -330,12 +322,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.itemStatus"></a>
 
-### list.itemStatus ⇒
+### list.itemStatus ⇒ <code>Promise</code>
 This method lets you quickly check if the item is already added to the list.
 You must be the owner of the list and therefore have a valid user access token in order to check an item status.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/check-item-status  
 
 | Param | Type | Description |
@@ -348,12 +339,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.remove"></a>
 
-### list.remove ⇒
+### list.remove ⇒ <code>Promise</code>
 This method will delete a list by id. This action is not reversible so take care when issuing it.
 You must be the owner of the list and therefore have a valid user access token in order to delete it.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/delete-list  
 
 | Param | Type | Description |
@@ -363,12 +353,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.update"></a>
 
-### list.update ⇒
+### list.update ⇒ <code>Promise</code>
 This method will let you update the details of a list.
 You must be the owner of the list and therefore have a valid user access token in order to edit it.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/update-list  
 
 | Param | Type | Description |
@@ -383,12 +372,11 @@ You must be the owner of the list and therefore have a valid user access token i
 
 <a name="module_list.updateItems"></a>
 
-### list.updateItems ⇒
+### list.updateItems ⇒ <code>Promise</code>
 This method will let you update an individual item on a list. Currently, only adding a comment is suported.
 You must be the owner of the list and therefore have a valid user access token in order to edit items.
 
 **Kind**: static constant of [<code>list</code>](#module_list)  
-**Returns**: Promise  
 **See**: https://developers.themoviedb.org/4/list/update-items  
 
 | Param | Type | Description |

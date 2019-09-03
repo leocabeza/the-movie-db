@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>@leonardocabeza/the-movie-db in the browser</title>
+  <style>
+    ul {
+      display: none;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      flex-wrap: wrap;
+    }
+    li {
+      flex: 1 1 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #v3Key {
+      width: 240px;
+    }
+    blockquote {
+      max-width: 50%;
+      margin: 20px 0 0 20px;
+      font-style: italic;
+    }
+    h3 {
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      width: 300px;
+    }
+  </style>
+  <script src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.browser.js"></script>
+</head>
+<body>
+  <h2>v3</h2>
+  <form id="v3-demo-form">
+    <label for="v3Key">Enter your api v3 key here</label>
+    <input type="text" id="v3Key" autofocus />
+    <button id="getPopularMovies" type="submit">Get popular movies</button>
+  </form>
+  <ul id="popularMovies"></ul>
+  <script src="script.js"></script>
+</body>
+</html>

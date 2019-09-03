@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module list
@@ -18,7 +18,7 @@ import urls from '../../urls';
  * @param {Object[]} items - Required
  * @param {string}   items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/add-items
  */
 export const addItems = async (accessToken, listId, items = []) => {
@@ -35,7 +35,7 @@ export const addItems = async (accessToken, listId, items = []) => {
       urls.v4.ACCOUNT_LIST_ITEMS.replace(':id', listId),
       { items },
       'post',
-      accessToken
+      { usev4: true, userAccessToken: accessToken }
     );
   }
 
@@ -47,7 +47,7 @@ export const addItems = async (accessToken, listId, items = []) => {
  * You must be the owner of the list and therefore have a valid user access token in order to clear a list.
  * @param {string} accessToken - Required
  * @param {number} listId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/clear-list
  */
 export const clearItems = async (accessToken, listId) => {
@@ -63,7 +63,7 @@ export const clearItems = async (accessToken, listId) => {
     urls.v4.ACCOUNT_LIST_CLEAR_ITEMS.replace(':id', listId),
     {},
     'get',
-    accessToken
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
@@ -77,7 +77,7 @@ export const clearItems = async (accessToken, listId) => {
  * @param {string}  options.description
  * @param {boolean} options.public
  * @param {string}  options.iso_3166_1
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/create-list
  */
 export const create = async (accessToken, options = {}) => {
@@ -91,7 +91,7 @@ export const create = async (accessToken, options = {}) => {
       urls.v4.ACCOUNT_LIST_CREATE,
       { name, iso_639_1, ...rest },
       'post',
-      accessToken
+      { usev4: true, userAccessToken: accessToken }
     );
   }
 
@@ -107,7 +107,7 @@ export const create = async (accessToken, options = {}) => {
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/get-list
  */
 export const details = async (listId, options = {}) => {
@@ -118,7 +118,9 @@ export const details = async (listId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_LIST_DETAILS.replace(':id', listId),
-    { language, page, sort_by }
+    { language, page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
@@ -130,7 +132,7 @@ export const details = async (listId, options = {}) => {
  * @param {Object[]} items - Required
  * @param {string}   items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/remove-items
  */
 export const deleteItems = async (accessToken, listId, items = []) => {
@@ -147,7 +149,7 @@ export const deleteItems = async (accessToken, listId, items = []) => {
       urls.v4.ACCOUNT_LIST_ITEMS.replace(':id', listId),
       { items },
       'delete',
-      accessToken
+      { usev4: true, userAccessToken: accessToken }
     );
   }
 
@@ -162,7 +164,7 @@ export const deleteItems = async (accessToken, listId, items = []) => {
  * @param {object} item
  * @param {string} item.media_type - Allowed values: movie, tv
  * @param {number} item.media_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/check-item-status
  */
 export const itemStatus = async (accessToken, listId, item = {}) => {
@@ -183,7 +185,7 @@ export const itemStatus = async (accessToken, listId, item = {}) => {
     urls.v4.ACCOUNT_LIST_ITEMS.replace(':id', listId),
     { media_id, media_type },
     'get',
-    accessToken
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
@@ -192,7 +194,7 @@ export const itemStatus = async (accessToken, listId, item = {}) => {
  * You must be the owner of the list and therefore have a valid user access token in order to delete it.
  * @param {string}   accessToken - Required
  * @param {number}   listId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/delete-list
  */
 export const remove = async (accessToken, listId) => {
@@ -208,7 +210,7 @@ export const remove = async (accessToken, listId) => {
     urls.v4.ACCOUNT_LIST_DETAILS.replace(':id', listId),
     {},
     'delete',
-    accessToken
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
@@ -222,7 +224,7 @@ export const remove = async (accessToken, listId) => {
  * @param {string}  options.description
  * @param {boolean} options.public
  * @param {string}  options.sort_by - Allowed values: original_order.asc, original_order.desc, vote_average.asc, vote_average.desc, primary_release_date.asc, primary_release_date.desc, title.asc, title.desc
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/update-list
  */
 export const update = async (accessToken, listId, body = {}) => {
@@ -244,7 +246,7 @@ export const update = async (accessToken, listId, body = {}) => {
     urls.v4.ACCOUNT_LIST_DETAILS.replace(':id', listId),
     toUpdate,
     'put',
-    accessToken
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
@@ -257,7 +259,7 @@ export const update = async (accessToken, listId, body = {}) => {
  * @param {string}   items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
  * @param {string}   items[].comment
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/update-items
  */
 export const updateItems = async (accessToken, listId, items = []) => {
@@ -274,7 +276,7 @@ export const updateItems = async (accessToken, listId, items = []) => {
       urls.v4.ACCOUNT_LIST_ITEMS.replace(':id', listId),
       { items },
       'put',
-      accessToken
+      { usev4: true, userAccessToken: accessToken }
     );
   }
 

@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module collection
@@ -10,7 +10,7 @@ import urls from '../../urls';
  * @param {number} collectionId
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/collections/get-collection-details
  */
 export const details = async (collectionId, options = {}) => {
@@ -32,7 +32,7 @@ export const details = async (collectionId, options = {}) => {
  * @param {number} collectionId
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/collections/get-collection-images
  */
 export const images = async (collectionId, options = {}) => {
@@ -54,7 +54,7 @@ export const images = async (collectionId, options = {}) => {
  * @param {number} collectionId
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/collections/get-collection-translations
  */
 export const translations = async (collectionId, options = {}) => {

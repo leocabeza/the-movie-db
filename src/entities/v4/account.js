@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module account
@@ -7,16 +7,21 @@ import urls from '../../urls';
 
 /**
  * Get the list of movies you have marked as a favorite.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-favorite-movies
  */
-export const favoriteMovies = async (accountId, options = {}) => {
+export const favoriteMovies = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -24,22 +29,29 @@ export const favoriteMovies = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_FAVORITE_MOVIES.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get the list of TV shows you have marked as a favorite.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-favorite-tv-shows
  */
-export const favoriteTvShows = async (accountId, options = {}) => {
+export const favoriteTvShows = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -47,20 +59,27 @@ export const favoriteTvShows = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_FAVORITE_TV_SHOWS.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
- * Get all of the lists you"ve created.
+ * Get all of the lists you have created.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-lists
  */
-export const lists = async (accountId, options = {}) => {
+export const lists = async (accessToken, accountId, options = {}) => {
   const { page } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -68,22 +87,33 @@ export const lists = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_LISTS.replace(':id', accountId),
-    { page }
+    { page },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get a list of your personal movie recommendations.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-movie-recommendations
  */
-export const movieRecommendations = async (accountId, options = {}) => {
+export const movieRecommendations = async (
+  accessToken,
+  accountId,
+  options = {}
+) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -91,22 +121,29 @@ export const movieRecommendations = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_MOVIE_RECOMMENDATIONS.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get the list of movies you have added to your watchlist.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-movie-watchlist
  */
-export const movieWatchlist = async (accountId, options = {}) => {
+export const movieWatchlist = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -114,22 +151,29 @@ export const movieWatchlist = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_MOVIE_WATCHLIST.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get the list of movies you have rated.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-rated-movies
  */
-export const ratedMovies = async (accountId, options = {}) => {
+export const ratedMovies = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -137,22 +181,29 @@ export const ratedMovies = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_RATED_MOVIES.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get the list of TV shows you have rated.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-rated-tv-shows
  */
-export const ratedTvShows = async (accountId, options = {}) => {
+export const ratedTvShows = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -160,22 +211,33 @@ export const ratedTvShows = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_RATED_TV_SHOWS.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get a list of your personal TV show recommendations.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-tv-show-recommendations
  */
-export const tvShowRecommendations = async (accountId, options = {}) => {
+export const tvShowRecommendations = async (
+  accessToken,
+  accountId,
+  options = {}
+) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -183,22 +245,29 @@ export const tvShowRecommendations = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_TV_SHOW_RECOMMENDATIONS.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };
 
 /**
  * Get the list of TV shows you have added to your watchlist.
+ * @param {string} accessToken - Required
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-tv-show-watchlist
  */
-export const tvShowWatchlist = async (accountId, options = {}) => {
+export const tvShowWatchlist = async (accessToken, accountId, options = {}) => {
   const { page, sort_by } = options;
+
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
 
   if (!accountId) {
     return Promise.reject('An accountId has to be provided');
@@ -206,6 +275,8 @@ export const tvShowWatchlist = async (accountId, options = {}) => {
 
   return await makeHttpRequest(
     urls.v4.ACCOUNT_TV_SHOW_WATCHLIST.replace(':id', accountId),
-    { page, sort_by }
+    { page, sort_by },
+    'get',
+    { usev4: true, userAccessToken: accessToken }
   );
 };

@@ -1,25 +1,15 @@
-const path = require("path");
-const NodemonPlugin = require("nodemon-webpack-plugin");
+const path = require('path');
+const NodemonPlugin = require('nodemon-webpack-plugin');
 
-const webConfig = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "the-movie-db.js",
-    library: "theMovieDb",
-    libraryTarget: "umd",
-    libraryExport: "default",
-    // https://github.com/webpack/webpack/issues/6522
-    globalObject: "typeof self !== 'undefined' ? self : this",
-  },
-  devtool: "source-map",
+const commonConfig = {
+  entry: './src/main.js',
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)|(dist)/,
+        exclude: /(node_modules)|(dist)|(examples)/,
         use: {
-          loader: "babel-loader?cacheDirectory",
+          loader: 'babel-loader?cacheDirectory',
         },
       },
     ],
@@ -27,13 +17,34 @@ const webConfig = {
   plugins: [
     new NodemonPlugin(),
   ],
+  resolve: {
+    modules: ['node_modules', path.resolve(__dirname, 'src')]
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    libraryExport: 'default',
+  },
 };
 
-const nodeConfig = Object.assign(
-  {},
-  webConfig, {
-    target: "node",
-  }
-);
+const nodeConfig = {
+  ...commonConfig,
+  target: 'node',
+  output: {
+    ...commonConfig.output,
+    filename: 'the-movie-db.node.js',
+    libraryTarget: 'commonjs'
+  },
+};
+
+const webConfig = {
+  ...commonConfig,
+  target: 'web',
+  devtool: 'source-map',
+  output: {
+    ...commonConfig.output,
+    library: 'theMovieDb',
+    filename: 'the-movie-db.browser.js'
+  },
+};
 
 module.exports = [nodeConfig, webConfig];

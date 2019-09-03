@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module people
@@ -13,7 +13,7 @@ import urls from '../../urls';
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-changes
  */
 export const changes = async (personId, options = {}) => {
@@ -38,7 +38,7 @@ export const changes = async (personId, options = {}) => {
  * @param {number} personId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-combined-credits
  */
 export const combinedCredits = async (personId, options = {}) => {
@@ -62,7 +62,7 @@ export const combinedCredits = async (personId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-details
  */
 export const details = async (personId, options = {}) => {
@@ -87,7 +87,7 @@ export const details = async (personId, options = {}) => {
  * @param {number} personId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-external-ids
  */
 export const externalIds = async (personId, options = {}) => {
@@ -108,7 +108,7 @@ export const externalIds = async (personId, options = {}) => {
 /**
  * Get the images for a person.
  * @param {number} personId - Required
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-images
  */
 export const images = async personId => {
@@ -123,7 +123,7 @@ export const images = async personId => {
  * Get the most newly created person. This is a live response and will continuously change.
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-latest-person
  */
 export const latest = async (options = {}) => {
@@ -137,7 +137,7 @@ export const latest = async (options = {}) => {
  * @param {number} personId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-movie-credits
  */
 export const movieCredits = async (personId, options = {}) => {
@@ -161,7 +161,7 @@ export const movieCredits = async (personId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-popular-people
  */
 export const popular = async (options = {}) => {
@@ -179,7 +179,7 @@ export const popular = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-tagged-images
  */
 export const taggedImages = async (personId, options = {}) => {
@@ -199,7 +199,7 @@ export const taggedImages = async (personId, options = {}) => {
  * @param {number} personId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-translations
  */
 export const translations = async (personId, options = {}) => {
@@ -223,7 +223,7 @@ export const translations = async (personId, options = {}) => {
  * @param {number} personId - Required
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-tv-credits
  */
 export const tvCredits = async (personId, options = {}) => {

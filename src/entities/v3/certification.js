@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module certification
@@ -7,7 +7,7 @@ import urls from '../../urls';
 
 /**
  * Get an up to date list of the officially supported movie certifications on TMDb.
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/certifications/get-movie-certifications
  */
 export const movies = async () => {
@@ -16,7 +16,7 @@ export const movies = async () => {
 
 /**
  * Get an up to date list of the officially supported TV show certifications on TMDb.
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/certifications/get-tv-certifications
  */
 export const tvShows = async () => {

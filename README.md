@@ -33,7 +33,9 @@ npm install @leonardocabeza/the-movie-db
 ## Usage
 
 First, get an API key here: [https://www.themoviedb.org/faq/api](https://www.themoviedb.org/faq/api)
-Then go [try it out in a REPL](https://repl.it/@leonardocabeza/TheMovieDb-usage)
+
+You can read the [examples folder in this repo](examples)
+You can also [try it out in a REPL](https://repl.it/@leonardocabeza/TheMovieDb-usage)
 
 ## API
 
@@ -43,7 +45,7 @@ For more methods exposed by TheMovieDbClient, you could refer to the api docs fo
 
 ## CDN
 
-`<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.js"></script>`
+`<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.browser.js"></script>`
 
 ## Contributing
 

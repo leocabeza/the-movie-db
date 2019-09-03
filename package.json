@@ -2,9 +2,12 @@
   "name": "@leonardocabeza/the-movie-db",
   "version": "2.1.17",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
-  "main": "./dist/the-movie-db.js",
+  "main": "./dist/the-movie-db.browser.js",
+  "module": "./dist/the-movie-db.node.js",
   "dependencies": {
-    "axios": "^0.19.0"
+    "cross-fetch": "^3.0.4",
+    "lodash": "^4.17.15",
+    "qs": "^6.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -13,13 +16,14 @@
     "@babel/runtime": "^7.5.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
-    "husky": "^3.0.4",
+    "cross-env": "^5.2.1",
+    "husky": "^3.0.5",
     "jest": "^24.9.0",
-    "jsdoc-to-markdown": "^5.0.0",
-    "lint-staged": "^9.2.3",
+    "jsdoc-to-markdown": "^5.0.1",
+    "lint-staged": "^9.2.5",
     "nodemon-webpack-plugin": "^4.0.8",
     "prettier": "1.18.2",
-    "webpack": "^4.39.2",
+    "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
@@ -29,7 +33,7 @@
     "docs:v4": "jsdoc2md src/entities/v4/**/**.js > docs/v4-api.md",
     "lint-staged": "lint-staged",
     "pre-commit": "npm run lint-staged",
-    "test": "jest",
+    "test": "cross-env NODE_PATH=src jest",
     "test:watch": "npm run test -- --watch"
   },
   "unpkg": "dist/the-movie-db.js",

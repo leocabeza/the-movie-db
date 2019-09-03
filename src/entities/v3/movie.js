@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module movies
@@ -14,7 +14,7 @@ import urls from '../../urls';
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-account-states
  */
 export const accountStates = async (movieId, options = {}) => {
@@ -40,7 +40,7 @@ export const accountStates = async (movieId, options = {}) => {
  * @param {number} movieId
  * @param {Object} options
  * @param {string} options.country
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-alternative-titles
  */
 export const alternativeTitles = async (movieId, options = {}) => {
@@ -63,7 +63,7 @@ export const alternativeTitles = async (movieId, options = {}) => {
  * @param {string} options.start_date
  * @param {string} options.end_date
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-changes
  */
 export const changes = async (movieId, options = {}) => {
@@ -81,7 +81,7 @@ export const changes = async (movieId, options = {}) => {
 /**
  * Get the cast and crew for a movie.
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-credits
  */
 export const credits = async movieId => {
@@ -98,7 +98,7 @@ export const credits = async movieId => {
  * @param {Object} options
  * @param {string} options.session_id
  * @param {string} options.guest_session_id
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/delete-movie-rating
  */
 export const deleteRating = async (movieId, options = {}) => {
@@ -126,7 +126,7 @@ export const deleteRating = async (movieId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-details
  */
 export const details = async (movieId, options = {}) => {
@@ -145,7 +145,7 @@ export const details = async (movieId, options = {}) => {
  * Get the external ids for a movie.
  * We currently support the following external sources: IMDB ID, Facebook, Instagram, Twitter.
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-external-ids
  */
 export const externalIds = async movieId => {
@@ -165,7 +165,7 @@ export const externalIds = async movieId => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.include_image_language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-images
  */
 export const images = async (movieId, options = {}) => {
@@ -183,7 +183,7 @@ export const images = async (movieId, options = {}) => {
 /**
  * Get the keywords that have been added to a movie.
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-keywords
  */
 export const keywords = async movieId => {
@@ -198,7 +198,7 @@ export const keywords = async movieId => {
  * Get the most newly created movie. This is a live response and will continuously change.
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-latest-movie
  */
 export const latest = async (options = {}) => {
@@ -212,7 +212,7 @@ export const latest = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-lists
  */
 export const lists = async (movieId, options = {}) => {
@@ -255,7 +255,7 @@ export const nowPlaying = async (options = {}) => {
  * @param {string} options.language
  * @param {number} options.page
  * @param {string} options.region
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-popular-movies
  */
 export const popular = async (options = {}) => {
@@ -275,7 +275,7 @@ export const popular = async (options = {}) => {
  * @param {Object} options
  * @param {string} options.guestSessionId
  * @param {string} options.sessionId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/rate-movie
  */
 export const rate = async (movieId, rating, options = {}) => {
@@ -310,7 +310,7 @@ export const rate = async (movieId, rating, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-recommendations
  */
 export const recommendations = async (movieId, options = {}) => {
@@ -338,7 +338,7 @@ export const recommendations = async (movieId, options = {}) => {
  * - Physical
  * - TV
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-release-dates
  */
 export const releaseDates = async movieId => {
@@ -355,7 +355,7 @@ export const releaseDates = async movieId => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-reviews
  */
 export const reviews = async (movieId, options = {}) => {
@@ -377,7 +377,7 @@ export const reviews = async (movieId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {number} options.page
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-similar-movies
  */
 export const similar = async (movieId, options = {}) => {
@@ -398,7 +398,7 @@ export const similar = async (movieId, options = {}) => {
  * @param {string} options.language
  * @param {number} options.page
  * @param {string} options.region
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-top-rated-movies
  */
 export const topRated = async (options = {}) => {
@@ -410,7 +410,7 @@ export const topRated = async (options = {}) => {
 /**
  * Get a list of translations that have been created for a movie.
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-translations
  */
 export const translations = async movieId => {
@@ -431,7 +431,7 @@ export const translations = async movieId => {
  * @param {string} options.language
  * @param {number} options.page
  * @param {string} options.region
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-upcoming
  */
 export const upcoming = async (options = {}) => {
@@ -443,7 +443,7 @@ export const upcoming = async (options = {}) => {
 /**
  * Get the videos that have been added to a movie.
  * @param {number} movieId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-videos
  */
 export const videos = async movieId => {

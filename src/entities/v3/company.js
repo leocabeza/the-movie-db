@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module company
@@ -8,7 +8,7 @@ import urls from '../../urls';
 /**
  * Get the alternative names of a company.
  * @param {number} companyId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/companies/get-company-alternative-names
  */
 export const alternativeNames = async companyId => {
@@ -24,7 +24,7 @@ export const alternativeNames = async companyId => {
 /**
  * Get a companies details by id.
  * @param {number} companyId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/companies/get-company-details
  */
 export const details = async companyId => {
@@ -45,7 +45,7 @@ export const details = async companyId => {
  * there to reflect the original asset that was uploaded.
  * An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
  * @param {number} companyId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/companies/get-company-images
  */
 export const images = async companyId => {

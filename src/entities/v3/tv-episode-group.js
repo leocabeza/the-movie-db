@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module tvEpisodeGroup
@@ -12,7 +12,7 @@ import urls from '../../urls';
  * @param {string} id
  * @param {Object} options
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episode-groups/get-tv-episode-group-details
  */
 export const details = async (id, options = {}) => {

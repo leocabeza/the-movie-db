@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module find
@@ -12,7 +12,7 @@ import urls from '../../urls';
  * @param {string} options.external_id
  * @param {string} options.external_source - Possible values: imdb_id, freebase_mid, freebase_id, tvdb_id, tvrage_id
  * @param {string} options.language
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/find/find-by-id
  */
 export const byId = async (options = {}) => {

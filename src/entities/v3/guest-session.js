@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module guestSession
@@ -11,7 +11,7 @@ import urls from '../../urls';
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-movies
  */
 export const ratedMovies = async (guestSessionId, options = {}) => {
@@ -32,7 +32,7 @@ export const ratedMovies = async (guestSessionId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-gest-session-rated-tv-episodes
  */
 export const ratedTvEpisodes = async (guestSessionId, options = {}) => {
@@ -53,7 +53,7 @@ export const ratedTvEpisodes = async (guestSessionId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-tv-shows
  */
 export const ratedTvShows = async (guestSessionId, options = {}) => {

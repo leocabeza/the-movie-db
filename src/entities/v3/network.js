@@ -1,5 +1,5 @@
-import { makeHttpRequest } from '../../utils';
-import urls from '../../urls';
+import { makeHttpRequest } from 'utils/utils';
+import urls from 'urls/urls';
 
 /**
  * @module network
@@ -8,7 +8,7 @@ import urls from '../../urls';
 /**
  * Get the details of a network.
  * @param {number} networkId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/networks/get-network-details
  */
 export const details = async networkId => {
@@ -24,7 +24,7 @@ export const details = async networkId => {
 /**
  * Get the alternative names of a network.
  * @param {number} networkId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/networks/get-network-alternative-names
  */
 export const alternativeNames = async networkId => {
@@ -45,7 +45,7 @@ export const alternativeNames = async networkId => {
  * there to reflect the original asset that was uploaded.
  * An SVG can be scaled properly beyond those dimensions if you call them as a PNG.
  * @param {number} networkId
- * @returns Promise
+ * @returns {Promise}
  * @see https://developers.themoviedb.org/3/networks/get-network-images
  */
 export const images = async networkId => {

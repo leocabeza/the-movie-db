@@ -1,4 +1,4 @@
-import parseData, { setDataAccordingToValueType } from './';
+import parseData, { setDataAccordingToValueType } from './parser';
 import popularMoviesMockResponse from './mock.json';
 
 describe('parser', () => {
