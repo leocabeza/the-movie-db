@@ -20,7 +20,7 @@ It works for versions 3 and 4 of TMDB.
 
 ## Compatibility
 
-It works out of the box for modern browsers and node versions greater or equal to v8.6.0 (`lint-staged`'s minimum node version support).
+It works out of the box for modern browsers and node versions greater or equal to v8.6.0.
 
 ## Installation
 
@@ -44,7 +44,7 @@ For more methods exposed by v3 and v4 functions, you could refer to the api docs
 
 ## CDN
 
-`<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.browser.js"></script>`
+`<script crossorigin src="https://unpkg.com/@leonardocabeza/the-movie-db@latest/dist/the-movie-db.umd.js"></script>`
 
 ## Contributing
 

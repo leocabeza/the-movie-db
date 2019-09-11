@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 import omitBy from 'lodash.omitby';
-import qs from 'qs';
+import queryString from 'query-string';
 
 const HOST = 'https://api.themoviedb.org/';
 let v3Key;
@@ -17,9 +17,7 @@ export const removeUndefinedValues = paramsObject => {
   );
 };
 
-const prepareData = data => {
-  return JSON.stringify(removeUndefinedValues(data));
-};
+const prepareData = data => JSON.stringify(removeUndefinedValues(data));
 
 export const setV3Key = key => {
   v3Key = key;
@@ -56,7 +54,7 @@ export const makeHttpRequest = async (
     };
 
     if (['get', 'delete'].includes(method)) {
-      finalUrl = finalUrl.concat(qs.stringify(data));
+      finalUrl = finalUrl.concat(queryString.stringify(data));
     } else {
       fetchOptions.body = prepareData(data);
     }

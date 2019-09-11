@@ -31,7 +31,7 @@ const nodeConfig = {
   target: 'node',
   output: {
     ...commonConfig.output,
-    filename: 'the-movie-db.node.js',
+    filename: 'the-movie-db.js',
     libraryTarget: 'commonjs'
   },
 };
@@ -43,7 +43,7 @@ const webConfig = {
   output: {
     ...commonConfig.output,
     library: 'theMovieDb',
-    filename: 'the-movie-db.browser.js'
+    filename: 'the-movie-db.umd.js'
   },
 };
 

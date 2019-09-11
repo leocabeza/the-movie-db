@@ -2,13 +2,13 @@
   "name": "@leonardocabeza/the-movie-db",
   "version": "3.0.1",
   "description": "Promised based Javascript API wrapper for https://www.themoviedb.org/ that works in the browser and nodejs",
-  "main": "./dist/the-movie-db.browser.js",
-  "unpkg": "./dist/the-movie-db.browser.js",
-  "module": "./dist/the-movie-db.node.js",
+  "main": "dist/the-movie-db.js",
+  "browser": "dist/the-movie-db.umd.js",
+  "unpkg": "dist/the-movie-db.umd.js",
   "dependencies": {
     "cross-fetch": "^3.0.4",
     "lodash.omitby": "^4.6.0",
-    "qs": "^6.8.0"
+    "query-string": "^6.8.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
+    "dev": "webpack --mode development --watch",
     "docs:v3": "jsdoc2md src/entities/v3/**/**.js > docs/v3-api.md",
     "docs:v4": "jsdoc2md src/entities/v4/**/**.js > docs/v4-api.md",
     "lint-staged": "lint-staged",
