@@ -4,7 +4,7 @@ const button = document.getElementById('getPopularMovies');
 const inputText = document.getElementById('v3Key');
 const list = document.getElementById('popularMovies');
 
-const createImageSource = (url, baseUrl) => baseUrl.concat('w185/', url);
+const createImageSource = (url, baseUrl) => `${baseUrl}w185/${url}`;
 
 const handleResults = (results, apiConfiguration) => {
   button.toggleAttribute('disabled');

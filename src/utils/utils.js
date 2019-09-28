@@ -41,7 +41,7 @@ export const makeHttpRequest = async (
     const originalHeaders = {
       'content-type': 'application/json;charset=utf-8',
     };
-    let finalUrl = usev4 ? originalUrl : originalUrl.concat(`api_key=${v3Key}`);
+    let finalUrl = usev4 ? originalUrl : `${originalUrl}api_key=${v3Key}`;
     const method = httpMethod.toLowerCase();
     const v4Token = userAccessToken ? userAccessToken : v4Key;
     const headers = usev4
