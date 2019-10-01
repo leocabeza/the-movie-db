@@ -1,4 +1,5 @@
-
+![npm bundle size](https://img.shields.io/bundlephobia/min/@leonardocabeza/the-movie-db?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@leonardocabeza/the-movie-db?style=flat-square)
 [![GitHub license](https://img.shields.io/github/license/leocabeza/the-movie-db.svg?style=popout)](https://github.com/leocabeza/the-movie-db/blob/master/LICENSE)
 ![Travis (.org)](https://img.shields.io/travis/leocabeza/the-movie-db.svg?style=popout)
 
