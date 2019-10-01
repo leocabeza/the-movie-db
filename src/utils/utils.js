@@ -1,5 +1,4 @@
 import fetch from 'cross-fetch';
-import omitBy from 'lodash.omitby';
 import queryString from 'query-string';
 
 const HOST = 'https://api.themoviedb.org/';
@@ -7,14 +6,15 @@ let v3Key;
 let v4Key;
 
 export const removeUndefinedValues = paramsObject => {
-  return omitBy(
-    Object.keys(paramsObject).reduce((prev, current) => {
-      prev[current] = paramsObject[current];
+  const finalParams = {};
 
-      return prev;
-    }, {}),
-    value => typeof value === 'undefined'
-  );
+  Object.keys(paramsObject).forEach(paramKey => {
+    if (typeof paramsObject[paramKey] !== 'undefined') {
+      finalParams[paramKey] = paramsObject[paramKey];
+    }
+  });
+
+  return finalParams;
 };
 
 const prepareData = data => JSON.stringify(removeUndefinedValues(data));

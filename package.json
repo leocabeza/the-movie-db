@@ -6,7 +6,6 @@
   "browser": "dist/the-movie-db.umd.js",
   "dependencies": {
     "cross-fetch": "^3.0.4",
-    "lodash.omitby": "^4.6.0",
     "query-string": "^6.8.3"
   },
   "devDependencies": {
