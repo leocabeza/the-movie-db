@@ -54,7 +54,7 @@ export const makeHttpRequest = async (
     };
 
     if (['get', 'delete'].includes(method)) {
-      finalUrl = finalUrl.concat(queryString.stringify(data));
+      finalUrl = finalUrl.concat('&', queryString.stringify(data));
     } else {
       fetchOptions.body = prepareData(data);
     }
