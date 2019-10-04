@@ -41,7 +41,7 @@ export const makeHttpRequest = async (
     const originalHeaders = {
       'content-type': 'application/json;charset=utf-8',
     };
-    let finalUrl = usev4 ? originalUrl : `${originalUrl}api_key=${v3Key}`;
+    let finalUrl = usev4 ? originalUrl : `${originalUrl}api_key=${v3Key}&`;
     const method = httpMethod.toLowerCase();
     const v4Token = userAccessToken ? userAccessToken : v4Key;
     const headers = usev4
@@ -54,7 +54,7 @@ export const makeHttpRequest = async (
     };
 
     if (['get', 'delete'].includes(method)) {
-      finalUrl = finalUrl.concat('&', queryString.stringify(data));
+      finalUrl = finalUrl.concat(queryString.stringify(data));
     } else {
       fetchOptions.body = prepareData(data);
     }
