@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
   testURL: "http://localhost",
   coverageDirectory: "./coverage/",
   collectCoverageFrom: [
