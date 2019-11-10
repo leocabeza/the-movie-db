@@ -10,7 +10,7 @@ import urls from 'urls/urls';
  * @param {string} guestSessionId - Required
  * @param {Object} options
  * @param {string} options.language
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-movies
  */
@@ -31,7 +31,7 @@ export const ratedMovies = async (guestSessionId, options = {}) => {
  * @param {string} guestSessionId - Required
  * @param {Object} options
  * @param {string} options.language
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-gest-session-rated-tv-episodes
  */
@@ -52,7 +52,7 @@ export const ratedTvEpisodes = async (guestSessionId, options = {}) => {
  * @param {string} guestSessionId - Required
  * @param {Object} options
  * @param {string} options.language
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/guest-sessions/get-guest-session-rated-tv-shows
  */

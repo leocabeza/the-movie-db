@@ -38,7 +38,7 @@ Get the list of movies you have marked as a favorite.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
 
 <a name="module_account.favoriteTvShows"></a>
 
@@ -54,7 +54,7 @@ Get the list of TV shows you have marked as a favorite.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.lists"></a>
 
@@ -85,7 +85,7 @@ Get a list of your personal movie recommendations.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.movieWatchlist"></a>
 
@@ -101,7 +101,7 @@ Get the list of movies you have added to your watchlist.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.ratedMovies"></a>
 
@@ -117,7 +117,7 @@ Get the list of movies you have rated.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.ratedTvShows"></a>
 
@@ -133,7 +133,7 @@ Get the list of TV shows you have rated.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.tvShowRecommendations"></a>
 
@@ -149,7 +149,7 @@ Get a list of your personal TV show recommendations.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_account.tvShowWatchlist"></a>
 
@@ -165,7 +165,7 @@ Get the list of TV shows you have added to your watchlist.
 | accountId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_authentication"></a>
 
@@ -250,7 +250,7 @@ You must be the owner of the list and therefore have a valid user access token i
 | accessToken | <code>string</code> | Required |
 | listId | <code>number</code> | Required |
 | items | <code>Array.&lt;Object&gt;</code> | Required |
-| items[].media_type | <code>string</code> | Allowed values: movie, tv |
+| items[].media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Allowed values: movie, tv |
 | items[].media_id | <code>number</code> |  |
 
 <a name="module_list.clearItems"></a>
@@ -301,7 +301,7 @@ Private lists can only be accessed by their owners and therefore require a valid
 | options | <code>object</code> |  |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc, |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> \| <code>&#x27;release\_date.asc&#x27;</code> \| <code>&#x27;release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc, release_date.asc, release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc |
 
 <a name="module_list.deleteItems"></a>
 
@@ -317,7 +317,7 @@ You must be the owner of the list and therefore have a valid user access token i
 | accessToken | <code>string</code> | Required |
 | listId | <code>number</code> | Required |
 | items | <code>Array.&lt;Object&gt;</code> | Required |
-| items[].media_type | <code>string</code> | Allowed values: movie, tv |
+| items[].media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Allowed values: movie, tv |
 | items[].media_id | <code>number</code> |  |
 
 <a name="module_list.itemStatus"></a>
@@ -334,7 +334,7 @@ You must be the owner of the list and therefore have a valid user access token i
 | accessToken | <code>string</code> | Required |
 | listId | <code>number</code> | Required |
 | item | <code>object</code> |  |
-| item.media_type | <code>string</code> | Allowed values: movie, tv |
+| item.media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Allowed values: movie, tv |
 | item.media_id | <code>number</code> |  |
 
 <a name="module_list.remove"></a>
@@ -368,7 +368,7 @@ You must be the owner of the list and therefore have a valid user access token i
 | options.name | <code>string</code> | Required |
 | options.description | <code>string</code> |  |
 | options.public | <code>boolean</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: original_order.asc, original_order.desc, vote_average.asc, vote_average.desc, primary_release_date.asc, primary_release_date.desc, title.asc, title.desc |
+| options.sort_by | <code>&#x27;original\_order.asc&#x27;</code> \| <code>&#x27;original\_order.desc&#x27;</code> \| <code>&#x27;primary\_release\_date.asc&#x27;</code> \| <code>&#x27;primary\_release\_date.desc&#x27;</code> \| <code>&#x27;title.asc&#x27;</code> \| <code>&#x27;title.desc&#x27;</code> \| <code>&#x27;vote\_average.asc&#x27;</code> \| <code>&#x27;vote\_average.desc&#x27;</code> | Allowed values: original_order.asc, original_order.desc, vote_average.asc, vote_average.desc, primary_release_date.asc, primary_release_date.desc, title.asc, title.desc |
 
 <a name="module_list.updateItems"></a>
 
@@ -384,7 +384,7 @@ You must be the owner of the list and therefore have a valid user access token i
 | accessToken | <code>string</code> | Required |
 | listId | <code>number</code> | Required |
 | items | <code>Array.&lt;Object&gt;</code> | Required |
-| items[].media_type | <code>string</code> | Allowed values: movie, tv |
+| items[].media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Allowed values: movie, tv |
 | items[].media_id | <code>number</code> |  |
 | items[].comment | <code>string</code> |  |
 

@@ -11,7 +11,7 @@ import urls from 'urls/urls';
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
  * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-favorite-movies
@@ -41,8 +41,8 @@ export const favoriteMovies = async (accessToken, accountId, options = {}) => {
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-favorite-tv-shows
  */
@@ -99,8 +99,8 @@ export const lists = async (accessToken, accountId, options = {}) => {
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-movie-recommendations
  */
@@ -133,8 +133,8 @@ export const movieRecommendations = async (
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-movie-watchlist
  */
@@ -163,8 +163,8 @@ export const movieWatchlist = async (accessToken, accountId, options = {}) => {
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-rated-movies
  */
@@ -193,8 +193,8 @@ export const ratedMovies = async (accessToken, accountId, options = {}) => {
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-rated-tv-shows
  */
@@ -223,8 +223,8 @@ export const ratedTvShows = async (accessToken, accountId, options = {}) => {
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-tv-show-recommendations
  */
@@ -257,8 +257,8 @@ export const tvShowRecommendations = async (
  * @param {string} accountId - Required
  * @param {Object} options
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/account/get-account-tv-show-watchlist
  */

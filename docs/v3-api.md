@@ -81,7 +81,7 @@ Add a movie or TV show to your watchlist.
 | accountId | <code>number</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.media_type | <code>string</code> | Required - Allowed values: movie, tv |
+| body.media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Required - Allowed values: movie, tv |
 | body.media_id | <code>number</code> | Required |
 | body.watchlist | <code>boolean</code> | Required |
 
@@ -112,7 +112,7 @@ Get the list of your favorite movies.
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.favoriteTvShows"></a>
 
@@ -129,7 +129,7 @@ Get the list of your favorite TV shows.
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.lists"></a>
 
@@ -141,7 +141,7 @@ Get all of the lists created by an account. Will invlude private lists if you ar
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
@@ -157,10 +157,10 @@ This method allows you to mark a movie or TV show as a favorite item.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | sessionId | <code>string</code> | Required |
 | body | <code>Object</code> | Required |
-| body.media_type | <code>string</code> | Required |
+| body.media_type | <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> | Required |
 | body.media_id | <code>number</code> | Required |
 | body.favorite | <code>boolean</code> | Required |
 
@@ -174,12 +174,12 @@ Get a list of all the movies you have added to your watchlist.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.ratedMovies"></a>
 
@@ -191,12 +191,12 @@ Get a list of all the movies you have rated.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.ratedTvShows"></a>
 
@@ -208,12 +208,12 @@ Get a list of all the TV shows you have rated.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.ratedTvEpisodes"></a>
 
@@ -225,12 +225,12 @@ Get a list of all the TV episodes you have rated.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_account.tvShowWatchlist"></a>
 
@@ -242,12 +242,12 @@ Get a list of all the TV shows you have added to your watchlist.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| accountId | <code>integer</code> | Required |
+| accountId | <code>number</code> | Required |
 | options | <code>Object</code> |  |
 | options.session_id | <code>string</code> | Required |
 | options.language | <code>string</code> |  |
 | options.page | <code>number</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_authentication"></a>
 
@@ -683,7 +683,7 @@ Get the rated movies for a guest session.
 | guestSessionId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_guestSession.ratedTvEpisodes"></a>
 
@@ -698,7 +698,7 @@ Get the rated TV episodes for a guest session.
 | guestSessionId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_guestSession.ratedTvShows"></a>
 
@@ -713,7 +713,7 @@ Get the rated TV shows for a guest session.
 | guestSessionId | <code>string</code> | Required |
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
-| options.sort_by | <code>string</code> | Allowed values: created_at.asc, created_at.desc |
+| options.sort_by | <code>&#x27;created\_at.asc&#x27;</code> \| <code>&#x27;created\_at.desc&#x27;</code> | Allowed values: created_at.asc, created_at.desc |
 
 <a name="module_keyword"></a>
 
@@ -1608,8 +1608,8 @@ Get the daily or weekly trending items. The daily trending list tracks items ove
 | Param | Type | Description |
 | --- | --- | --- |
 | options | <code>Object</code> |  |
-| options.media_type | <code>string</code> | Allowed values: all, movie, tv, person |
-| options.time_window | <code>string</code> | Allowed values: day, week |
+| options.media_type | <code>&#x27;all&#x27;</code> \| <code>&#x27;movie&#x27;</code> \| <code>&#x27;tv&#x27;</code> \| <code>&#x27;person&#x27;</code> | Allowed values: all, movie, tv, person |
+| options.time_window | <code>&#x27;day&#x27;</code> \| <code>&#x27;week&#x27;</code> | Allowed values: day, week |
 
 <a name="module_tvEpisodeGroup"></a>
 

@@ -8,8 +8,8 @@ import urls from 'urls/urls';
 /**
  * Get the daily or weekly trending items. The daily trending list tracks items over the period of a day while items have a 24 hour half life. The weekly list tracks items over a 7 day period, with a 7 day half life.
  * @param {Object} options
- * @param {string} options.media_type - Allowed values: all, movie, tv, person
- * @param {string} options.time_window - Allowed values: day, week
+ * @param {('all'|'movie'|'tv'|'person')} options.media_type - Allowed values: all, movie, tv, person
+ * @param {('day'|'week')} options.time_window - Allowed values: day, week
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/trending/get-trending
  */

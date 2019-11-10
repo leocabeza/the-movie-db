@@ -10,7 +10,7 @@ import urls from 'urls/urls';
  * @param {number}  accountId - Required
  * @param {string}  sessionId - Required
  * @param {Object}  body - Required
- * @param {string}  body.media_type - Required - Allowed values: movie, tv
+ * @param {('movie'|'tv')}  body.media_type - Required - Allowed values: movie, tv
  * @param {number}  body.media_id - Required
  * @param {boolean} body.watchlist - Required
  * @returns {Promise}
@@ -64,7 +64,7 @@ export const details = async sessionId => {
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-favorite-movies
  */
@@ -91,7 +91,7 @@ export const favoriteMovies = async (accountId, options = {}) => {
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-favorite-tv-shows
  */
@@ -113,7 +113,7 @@ export const favoriteTvShows = async (accountId, options = {}) => {
 
 /**
  * Get all of the lists created by an account. Will invlude private lists if you are the owner.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object} options
  * @param {string} options.session_id - Required
  * @param {string} options.language
@@ -139,10 +139,10 @@ export const lists = async (accountId, options = {}) => {
 
 /**
  * This method allows you to mark a movie or TV show as a favorite item.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {string} sessionId - Required
  * @param {Object} body - Required
- * @param {string} body.media_type - Required
+ * @param {('movie'|'tv')} body.media_type - Required
  * @param {number} body.media_id - Required
  * @param {boolean} body.favorite - Required
  * @returns {Promise}
@@ -175,12 +175,12 @@ export const markAsFavorite = async (accountId, sessionId, body = {}) => {
 
 /**
  * Get a list of all the movies you have added to your watchlist.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object} options
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-movie-watchlist
  */
@@ -202,12 +202,12 @@ export const movieWatchlist = async (accountId, options = {}) => {
 
 /**
  * Get a list of all the movies you have rated.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object} options
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-rated-movies
  */
@@ -229,12 +229,12 @@ export const ratedMovies = async (accountId, options = {}) => {
 
 /**
  * Get a list of all the TV shows you have rated.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object} options
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-rated-tv-shows
  */
@@ -256,12 +256,12 @@ export const ratedTvShows = async (accountId, options = {}) => {
 
 /**
  * Get a list of all the TV episodes you have rated.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object}  options
  * @param {string}  options.session_id - Required
  * @param {string}  options.language
  * @param {number}  options.page
- * @param {string}  options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-rated-tv-episodes
  */
@@ -283,12 +283,12 @@ export const ratedTvEpisodes = async (accountId, options = {}) => {
 
 /**
  * Get a list of all the TV shows you have added to your watchlist.
- * @param {integer} accountId - Required
+ * @param {number} accountId - Required
  * @param {Object} options
  * @param {string} options.session_id - Required
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc
+ * @param {('created_at.asc'|'created_at.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/account/get-tv-show-watchlist
  */

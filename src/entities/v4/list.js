@@ -16,7 +16,7 @@ import urls from 'urls/urls';
  * @param {string}   accessToken - Required
  * @param {number}   listId - Required
  * @param {Object[]} items - Required
- * @param {string}   items[].media_type - Allowed values: movie, tv
+ * @param {('movie'|'tv')} items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/add-items
@@ -105,8 +105,8 @@ export const create = async (accessToken, options = {}) => {
  * @param {object} options
  * @param {string} options.language
  * @param {number} options.page
- * @param {string} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
- * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc,
+ * @param {('created_at.asc'|'created_at.desc'|'release_date.asc'|'release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')} options.sort_by - Allowed values: created_at.asc, created_at.desc, release_date.asc,
+ * release_date.desc, title.asc, title.desc, vote_average.asc, vote_average.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/get-list
  */
@@ -130,7 +130,7 @@ export const details = async (listId, options = {}) => {
  * @param {string}   accessToken - Required
  * @param {number}   listId - Required
  * @param {Object[]} items - Required
- * @param {string}   items[].media_type - Allowed values: movie, tv
+ * @param {('movie'|'tv')}   items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/remove-items
@@ -162,7 +162,7 @@ export const deleteItems = async (accessToken, listId, items = []) => {
  * @param {string} accessToken - Required
  * @param {number} listId - Required
  * @param {object} item
- * @param {string} item.media_type - Allowed values: movie, tv
+ * @param {('movie'|'tv')} item.media_type - Allowed values: movie, tv
  * @param {number} item.media_id
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/check-item-status
@@ -223,7 +223,7 @@ export const remove = async (accessToken, listId) => {
  * @param {string}  options.name - Required
  * @param {string}  options.description
  * @param {boolean} options.public
- * @param {string}  options.sort_by - Allowed values: original_order.asc, original_order.desc, vote_average.asc, vote_average.desc, primary_release_date.asc, primary_release_date.desc, title.asc, title.desc
+ * @param {('original_order.asc'|'original_order.desc'|'primary_release_date.asc'|'primary_release_date.desc'|'title.asc'|'title.desc'|'vote_average.asc'|'vote_average.desc')}  options.sort_by - Allowed values: original_order.asc, original_order.desc, vote_average.asc, vote_average.desc, primary_release_date.asc, primary_release_date.desc, title.asc, title.desc
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/update-list
  */
@@ -256,7 +256,7 @@ export const update = async (accessToken, listId, body = {}) => {
  * @param {string}   accessToken - Required
  * @param {number}   listId - Required
  * @param {Object[]} items - Required
- * @param {string}   items[].media_type - Allowed values: movie, tv
+ * @param {('movie'|'tv')}   items[].media_type - Allowed values: movie, tv
  * @param {number}   items[].media_id
  * @param {string}   items[].comment
  * @returns {Promise}
