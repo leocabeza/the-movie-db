@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   testURL: "http://localhost",
   coverageDirectory: "./coverage/",
