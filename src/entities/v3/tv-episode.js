@@ -158,6 +158,7 @@ export const deleteRating = async (
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
+ * @param {string} options.include_image_language
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-details
  */
@@ -167,7 +168,7 @@ export const details = async (
   episodeNumber,
   options = {}
 ) => {
-  const { language, append_to_response } = options;
+  const { language, append_to_response, include_image_language } = options;
 
   if (!tvId && tvId !== 0) {
     return Promise.reject('A tvId has to be provided');
@@ -185,7 +186,7 @@ export const details = async (
     urls.v3.TV_EPISODE_DETAILS.replace(':tvId', tvId)
       .replace(':seasonNumber', seasonNumber)
       .replace(':episodeNumber', episodeNumber),
-    { language, append_to_response }
+    { language, append_to_response, include_image_language }
   );
 };
 

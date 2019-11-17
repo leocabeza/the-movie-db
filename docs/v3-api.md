@@ -29,7 +29,7 @@
 <dd></dd>
 <dt><a href="#module_list">list</a></dt>
 <dd></dd>
-<dt><a href="#module_movies">movies</a></dt>
+<dt><a href="#module_movie">movie</a></dt>
 <dd></dd>
 <dt><a href="#module_network">network</a></dt>
 <dd></dd>
@@ -866,43 +866,43 @@ Remove a movie from a list.
 | body | <code>Object</code> | Required |
 | body.media_id | <code>number</code> | Required |
 
-<a name="module_movies"></a>
+<a name="module_movie"></a>
 
-## movies
+## movie
 
-* [movies](#module_movies)
-    * [.accountStates](#module_movies.accountStates) ⇒ <code>Promise</code>
-    * [.alternativeTitles](#module_movies.alternativeTitles) ⇒ <code>Promise</code>
-    * [.changes](#module_movies.changes) ⇒ <code>Promise</code>
-    * [.credits](#module_movies.credits) ⇒ <code>Promise</code>
-    * [.deleteRating](#module_movies.deleteRating) ⇒ <code>Promise</code>
-    * [.details](#module_movies.details) ⇒ <code>Promise</code>
-    * [.externalIds](#module_movies.externalIds) ⇒ <code>Promise</code>
-    * [.images](#module_movies.images) ⇒ <code>Promise</code>
-    * [.keywords](#module_movies.keywords) ⇒ <code>Promise</code>
-    * [.latest](#module_movies.latest) ⇒ <code>Promise</code>
-    * [.lists](#module_movies.lists) ⇒ <code>Promise</code>
-    * [.nowPlaying](#module_movies.nowPlaying)
-    * [.popular](#module_movies.popular) ⇒ <code>Promise</code>
-    * [.rate](#module_movies.rate) ⇒ <code>Promise</code>
-    * [.recommendations](#module_movies.recommendations) ⇒ <code>Promise</code>
-    * [.releaseDates](#module_movies.releaseDates) ⇒ <code>Promise</code>
-    * [.reviews](#module_movies.reviews) ⇒ <code>Promise</code>
-    * [.similar](#module_movies.similar) ⇒ <code>Promise</code>
-    * [.topRated](#module_movies.topRated) ⇒ <code>Promise</code>
-    * [.translations](#module_movies.translations) ⇒ <code>Promise</code>
-    * [.upcoming](#module_movies.upcoming) ⇒ <code>Promise</code>
-    * [.videos](#module_movies.videos) ⇒ <code>Promise</code>
+* [movie](#module_movie)
+    * [.accountStates](#module_movie.accountStates) ⇒ <code>Promise</code>
+    * [.alternativeTitles](#module_movie.alternativeTitles) ⇒ <code>Promise</code>
+    * [.changes](#module_movie.changes) ⇒ <code>Promise</code>
+    * [.credits](#module_movie.credits) ⇒ <code>Promise</code>
+    * [.deleteRating](#module_movie.deleteRating) ⇒ <code>Promise</code>
+    * [.details](#module_movie.details) ⇒ <code>Promise</code>
+    * [.externalIds](#module_movie.externalIds) ⇒ <code>Promise</code>
+    * [.images](#module_movie.images) ⇒ <code>Promise</code>
+    * [.keywords](#module_movie.keywords) ⇒ <code>Promise</code>
+    * [.latest](#module_movie.latest) ⇒ <code>Promise</code>
+    * [.lists](#module_movie.lists) ⇒ <code>Promise</code>
+    * [.nowPlaying](#module_movie.nowPlaying)
+    * [.popular](#module_movie.popular) ⇒ <code>Promise</code>
+    * [.rate](#module_movie.rate) ⇒ <code>Promise</code>
+    * [.recommendations](#module_movie.recommendations) ⇒ <code>Promise</code>
+    * [.releaseDates](#module_movie.releaseDates) ⇒ <code>Promise</code>
+    * [.reviews](#module_movie.reviews) ⇒ <code>Promise</code>
+    * [.similar](#module_movie.similar) ⇒ <code>Promise</code>
+    * [.topRated](#module_movie.topRated) ⇒ <code>Promise</code>
+    * [.translations](#module_movie.translations) ⇒ <code>Promise</code>
+    * [.upcoming](#module_movie.upcoming) ⇒ <code>Promise</code>
+    * [.videos](#module_movie.videos) ⇒ <code>Promise</code>
 
-<a name="module_movies.accountStates"></a>
+<a name="module_movie.accountStates"></a>
 
-### movies.accountStates ⇒ <code>Promise</code>
+### movie.accountStates ⇒ <code>Promise</code>
 Grab the following account states for a session:
 - Movie rating
 - If it belongs to your watchlist
 - If it belongs to your favourite list
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-account-states  
 
 | Param | Type | Description |
@@ -912,12 +912,12 @@ Grab the following account states for a session:
 | options.session_id | <code>string</code> |  |
 | options.guest_session_id | <code>string</code> |  |
 
-<a name="module_movies.alternativeTitles"></a>
+<a name="module_movie.alternativeTitles"></a>
 
-### movies.alternativeTitles ⇒ <code>Promise</code>
+### movie.alternativeTitles ⇒ <code>Promise</code>
 Get all of the alternative titles for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-alternative-titles  
 
 | Param | Type |
@@ -926,13 +926,13 @@ Get all of the alternative titles for a movie.
 | options | <code>Object</code> | 
 | options.country | <code>string</code> | 
 
-<a name="module_movies.changes"></a>
+<a name="module_movie.changes"></a>
 
-### movies.changes ⇒ <code>Promise</code>
+### movie.changes ⇒ <code>Promise</code>
 Get the changes for a movie. By default only the last 24 hours are returned.
 You can query up to 14 days in a single query by using the start_date and end_date query parameters.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-changes  
 
 | Param | Type |
@@ -943,24 +943,24 @@ You can query up to 14 days in a single query by using the start_date and end_da
 | options.end_date | <code>string</code> | 
 | options.page | <code>number</code> | 
 
-<a name="module_movies.credits"></a>
+<a name="module_movie.credits"></a>
 
-### movies.credits ⇒ <code>Promise</code>
+### movie.credits ⇒ <code>Promise</code>
 Get the cast and crew for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-credits  
 
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
 
-<a name="module_movies.deleteRating"></a>
+<a name="module_movie.deleteRating"></a>
 
-### movies.deleteRating ⇒ <code>Promise</code>
+### movie.deleteRating ⇒ <code>Promise</code>
 Remove your rating for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/delete-movie-rating  
 
 | Param | Type |
@@ -970,12 +970,12 @@ Remove your rating for a movie.
 | options.session_id | <code>string</code> | 
 | options.guest_session_id | <code>string</code> | 
 
-<a name="module_movies.details"></a>
+<a name="module_movie.details"></a>
 
-### movies.details ⇒ <code>Promise</code>
+### movie.details ⇒ <code>Promise</code>
 Get the primary information about a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-details  
 
 | Param | Type |
@@ -984,29 +984,30 @@ Get the primary information about a movie.
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
 | options.append_to_response | <code>string</code> | 
+| options.include_image_language | <code>string</code> | 
 
-<a name="module_movies.externalIds"></a>
+<a name="module_movie.externalIds"></a>
 
-### movies.externalIds ⇒ <code>Promise</code>
+### movie.externalIds ⇒ <code>Promise</code>
 Get the external ids for a movie.
 We currently support the following external sources: IMDB ID, Facebook, Instagram, Twitter.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-external-ids  
 
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
 
-<a name="module_movies.images"></a>
+<a name="module_movie.images"></a>
 
-### movies.images ⇒ <code>Promise</code>
+### movie.images ⇒ <code>Promise</code>
 Get the images that belong to a movie.
 Querying images with a language parameter will filter the results.
 If you want to include a fallback language (especially useful for backdrops) you can use the include_image_language parameter.
 This should be a comma separated value like so: { include_image_language: "en,null" }.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-images  
 
 | Param | Type |
@@ -1016,24 +1017,24 @@ This should be a comma separated value like so: { include_image_language: "en,nu
 | options.language | <code>string</code> | 
 | options.include_image_language | <code>string</code> | 
 
-<a name="module_movies.keywords"></a>
+<a name="module_movie.keywords"></a>
 
-### movies.keywords ⇒ <code>Promise</code>
+### movie.keywords ⇒ <code>Promise</code>
 Get the keywords that have been added to a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-keywords  
 
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
 
-<a name="module_movies.latest"></a>
+<a name="module_movie.latest"></a>
 
-### movies.latest ⇒ <code>Promise</code>
+### movie.latest ⇒ <code>Promise</code>
 Get the most newly created movie. This is a live response and will continuously change.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-latest-movie  
 
 | Param | Type |
@@ -1041,10 +1042,10 @@ Get the most newly created movie. This is a live response and will continuously 
 | options | <code>Object</code> | 
 | options.language | <code>string</code> | 
 
-<a name="module_movies.lists"></a>
+<a name="module_movie.lists"></a>
 
-### movies.lists ⇒ <code>Promise</code>
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+### movie.lists ⇒ <code>Promise</code>
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-lists  
 
 | Param | Type |
@@ -1054,16 +1055,16 @@ Get the most newly created movie. This is a live response and will continuously 
 | options.language | <code>string</code> | 
 | options.page | <code>number</code> | 
 
-<a name="module_movies.nowPlaying"></a>
+<a name="module_movie.nowPlaying"></a>
 
-### movies.nowPlaying
+### movie.nowPlaying
 Get a list of movies in theatres.
 This is a release type query that looks for all movies that have a release type
 of 2 or 3 within the specified date range.
 You can optionally specify a region prameter which will narrow the search
 to only look for theatrical release dates within the specified country.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-now-playing  
 
 | Param | Type |
@@ -1073,13 +1074,13 @@ to only look for theatrical release dates within the specified country.
 | options.page | <code>number</code> | 
 | options.region | <code>string</code> | 
 
-<a name="module_movies.popular"></a>
+<a name="module_movie.popular"></a>
 
-### movies.popular ⇒ <code>Promise</code>
+### movie.popular ⇒ <code>Promise</code>
 Get a list of the current popular movies on TMDb.
 This list updates daily.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-popular-movies  
 
 | Param | Type |
@@ -1089,12 +1090,12 @@ This list updates daily.
 | options.page | <code>number</code> | 
 | options.region | <code>string</code> | 
 
-<a name="module_movies.rate"></a>
+<a name="module_movie.rate"></a>
 
-### movies.rate ⇒ <code>Promise</code>
+### movie.rate ⇒ <code>Promise</code>
 Rate a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/rate-movie  
 
 | Param | Type | Description |
@@ -1105,12 +1106,12 @@ Rate a movie.
 | options.guestSessionId | <code>string</code> |  |
 | options.sessionId | <code>string</code> |  |
 
-<a name="module_movies.recommendations"></a>
+<a name="module_movie.recommendations"></a>
 
-### movies.recommendations ⇒ <code>Promise</code>
+### movie.recommendations ⇒ <code>Promise</code>
 Get a list of recommended movies for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-recommendations  
 
 | Param | Type |
@@ -1120,9 +1121,9 @@ Get a list of recommended movies for a movie.
 | options.language | <code>string</code> | 
 | options.page | <code>number</code> | 
 
-<a name="module_movies.releaseDates"></a>
+<a name="module_movie.releaseDates"></a>
 
-### movies.releaseDates ⇒ <code>Promise</code>
+### movie.releaseDates ⇒ <code>Promise</code>
 Get the release date along with the certification for a movie.
 Release dates support different types:
 - Premiere
@@ -1132,19 +1133,19 @@ Release dates support different types:
 - Physical
 - TV
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-release-dates  
 
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
 
-<a name="module_movies.reviews"></a>
+<a name="module_movie.reviews"></a>
 
-### movies.reviews ⇒ <code>Promise</code>
+### movie.reviews ⇒ <code>Promise</code>
 Get the user reviews for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-reviews  
 
 | Param | Type |
@@ -1154,13 +1155,13 @@ Get the user reviews for a movie.
 | options.language | <code>string</code> | 
 | options.page | <code>number</code> | 
 
-<a name="module_movies.similar"></a>
+<a name="module_movie.similar"></a>
 
-### movies.similar ⇒ <code>Promise</code>
+### movie.similar ⇒ <code>Promise</code>
 Get a list of similar movies. This is not the same as the "Recommendation" system you see on the website.
 These items are assembled by looking at keywords and genres.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-similar-movies  
 
 | Param | Type |
@@ -1170,12 +1171,12 @@ These items are assembled by looking at keywords and genres.
 | options.language | <code>string</code> | 
 | options.page | <code>number</code> | 
 
-<a name="module_movies.topRated"></a>
+<a name="module_movie.topRated"></a>
 
-### movies.topRated ⇒ <code>Promise</code>
+### movie.topRated ⇒ <code>Promise</code>
 Get the top rated movies on TMDb.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-top-rated-movies  
 
 | Param | Type |
@@ -1185,28 +1186,28 @@ Get the top rated movies on TMDb.
 | options.page | <code>number</code> | 
 | options.region | <code>string</code> | 
 
-<a name="module_movies.translations"></a>
+<a name="module_movie.translations"></a>
 
-### movies.translations ⇒ <code>Promise</code>
+### movie.translations ⇒ <code>Promise</code>
 Get a list of translations that have been created for a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-translations  
 
 | Param | Type |
 | --- | --- |
 | movieId | <code>number</code> | 
 
-<a name="module_movies.upcoming"></a>
+<a name="module_movie.upcoming"></a>
 
-### movies.upcoming ⇒ <code>Promise</code>
+### movie.upcoming ⇒ <code>Promise</code>
 Get a list of upcoming movies in theatres.
 This is a release type query that looks for all movies that
 have a release type of 2 or 3 within the specified date range.
 You can optionally specify a region parameter which will narrow the search to only look
 for theatrical release dates within the specified country.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-upcoming  
 
 | Param | Type |
@@ -1216,12 +1217,12 @@ for theatrical release dates within the specified country.
 | options.page | <code>number</code> | 
 | options.region | <code>string</code> | 
 
-<a name="module_movies.videos"></a>
+<a name="module_movie.videos"></a>
 
-### movies.videos ⇒ <code>Promise</code>
+### movie.videos ⇒ <code>Promise</code>
 Get the videos that have been added to a movie.
 
-**Kind**: static constant of [<code>movies</code>](#module_movies)  
+**Kind**: static constant of [<code>movie</code>](#module_movie)  
 **See**: https://developers.themoviedb.org/3/movies/get-movie-videos  
 
 | Param | Type |
@@ -1340,6 +1341,7 @@ Get the primary person details by id.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.append_to_response | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
 
 <a name="module_people.externalIds"></a>
 
@@ -1726,6 +1728,7 @@ Get the TV episode details by id.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.append_to_response | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
 
 <a name="module_tvEpisode.externalIds"></a>
 
@@ -1888,6 +1891,7 @@ Get the TV season details by id.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.append_to_response | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
 
 <a name="module_tvSeason.externalIds"></a>
 
@@ -2089,6 +2093,7 @@ Get the primary TV show details by id.
 | options | <code>Object</code> |  |
 | options.language | <code>string</code> |  |
 | options.append_to_response | <code>string</code> |  |
+| options.include_image_language | <code>string</code> |  |
 
 <a name="module_tv.episodeGroups"></a>
 

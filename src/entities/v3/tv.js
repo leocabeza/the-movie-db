@@ -171,11 +171,12 @@ export const deleteRating = async (tvId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
+ * @param {string} options.include_image_language
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-details
  */
 export const details = async (tvId, options = {}) => {
-  const { language, append_to_response } = options;
+  const { language, append_to_response, include_image_language } = options;
 
   if (!tvId && tvId !== 0) {
     return Promise.reject('A tvId has to be provided');
@@ -184,6 +185,7 @@ export const details = async (tvId, options = {}) => {
   return await makeHttpRequest(urls.v3.TV_DETAILS.replace(':id', tvId), {
     language,
     append_to_response,
+    include_image_language,
   });
 };
 

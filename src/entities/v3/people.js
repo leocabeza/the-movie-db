@@ -62,11 +62,12 @@ export const combinedCredits = async (personId, options = {}) => {
  * @param {Object} options
  * @param {string} options.language
  * @param {string} options.append_to_response
+ * @param {string} options.include_image_language
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/people/get-person-details
  */
 export const details = async (personId, options = {}) => {
-  const { language, append_to_response } = options;
+  const { language, append_to_response, include_image_language } = options;
 
   if (!personId && personId !== 0) {
     return Promise.reject('A personId has to be provided');
@@ -77,6 +78,7 @@ export const details = async (personId, options = {}) => {
     {
       language,
       append_to_response,
+      include_image_language,
     }
   );
 };
