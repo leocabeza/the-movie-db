@@ -6,23 +6,23 @@
   "browser": "dist/the-movie-db.umd.js",
   "dependencies": {
     "cross-fetch": "^3.0.4",
-    "query-string": "^6.9.0"
+    "query-string": "^6.10.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
     "cross-env": "^6.0.3",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "jsdoc-to-markdown": "^5.0.2",
-    "lint-staged": "^9.4.3",
+    "jsdoc-to-markdown": "^5.0.3",
+    "lint-staged": "^9.5.0",
     "prettier": "1.18.2",
-    "rollup": "^1.27.0",
+    "rollup": "^1.29.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-includepaths": "^0.2.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2"
+    "rollup-plugin-terser": "^5.2.0"
   },
   "scripts": {
     "build": "rollup -c",

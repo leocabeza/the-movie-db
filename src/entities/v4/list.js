@@ -101,6 +101,7 @@ export const create = async (accessToken, options = {}) => {
 /**
  * This method will retrieve a list by id.
  * Private lists can only be accessed by their owners and therefore require a valid user access token.
+ * @param {string} accessToken - Required
  * @param {number} listId - Required
  * @param {object} options
  * @param {string} options.language
@@ -110,9 +111,13 @@ export const create = async (accessToken, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/4/list/get-list
  */
-export const details = async (listId, options = {}) => {
+export const details = async (accessToken, listId, options = {}) => {
   const { language, page, sort_by } = options;
-  if (!listId) {
+  if (!accessToken) {
+    return Promise.reject('An accessToken has to be provided');
+  }
+
+  if (!listId && listId !== 0) {
     return Promise.reject('A listId has to be provided');
   }
 

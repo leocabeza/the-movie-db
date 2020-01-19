@@ -297,6 +297,7 @@ Private lists can only be accessed by their owners and therefore require a valid
 
 | Param | Type | Description |
 | --- | --- | --- |
+| accessToken | <code>string</code> | Required |
 | listId | <code>number</code> | Required |
 | options | <code>object</code> |  |
 | options.language | <code>string</code> |  |
