@@ -1,8 +1,8 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import buble from '@rollup/plugin-buble';
 import includePaths from 'rollup-plugin-includepaths';
 import filesize from 'rollup-plugin-filesize';
-import buble from 'rollup-plugin-buble';
 import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';

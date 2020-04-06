@@ -21,7 +21,7 @@ It works for versions 3 and 4 of TMDB.
 
 ## Compatibility
 
-It works out of the box for modern browsers and node versions greater or equal to v8.6.0.
+It works out of the box for modern browsers and node versions greater or equal to 10.13.0
 
 ## Installation
 
