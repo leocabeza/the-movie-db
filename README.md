@@ -60,4 +60,4 @@ If your environment doesn't support ES6 Promises, you can [polyfill](https://git
 
 This product uses the TMDb API but is not endorsed or certified by TMDb.
 
-![TMDb](https://www.themoviedb.org/assets/1/v4/logos/powered-by-rectangle-blue-61ce76f69ce1e4f68a6031d975df16cc184d5f04fa7f9f58ae6412646f2481c1.svg)
+![TMDb](https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg)
