@@ -2,6 +2,7 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@leonardocabeza/the-movie-db?style=flat-square)
 [![GitHub license](https://img.shields.io/github/license/leocabeza/the-movie-db.svg?style=popout)](https://github.com/leocabeza/the-movie-db/blob/master/LICENSE)
 ![Travis (.org)](https://img.shields.io/travis/leocabeza/the-movie-db.svg?style=popout)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 # @leonardocabeza/the-movie-db
 
