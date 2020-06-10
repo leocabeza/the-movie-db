@@ -9,11 +9,10 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
 script:
   - npm run build
-before_deploy:
-  - npm -g install @semantic-release/git semantic-release@17
 deploy:
   - provider: script
     script:
-      - semantic-release
+      - npx semantic-release@17
+    skip_cleanup: true
     on:
       branch: master
