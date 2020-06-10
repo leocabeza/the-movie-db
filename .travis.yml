@@ -1,7 +1,4 @@
 language: node_js
-cache:
-  directories:
-    - node_modules
 node_js:
   # bumped because of https://github.com/semantic-release/semantic-release/issues/1300
   - "12"
