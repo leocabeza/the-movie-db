@@ -6,7 +6,7 @@ node_js:
   # bumped because of https://github.com/semantic-release/semantic-release/issues/1300
   - "12"
 before_install:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 script:
   - npm run build
 deploy:
