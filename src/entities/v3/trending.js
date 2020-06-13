@@ -25,8 +25,8 @@ export const items = async (options = {}) => {
   }
 
   return await makeHttpRequest(
-    urls.v3.TRENDING_ITEMS.replace(':media_type', media_type).replace(
-      ':time_window',
+    urls.v3.TRENDING_ITEMS.replace(':mediaType', media_type).replace(
+      ':timeWindow',
       time_window
     )
   );
