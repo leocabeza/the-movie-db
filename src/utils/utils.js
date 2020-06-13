@@ -5,10 +5,10 @@ const HOST = 'https://api.themoviedb.org/';
 let v3Key;
 let v4Key;
 
-export const removeUndefinedValues = paramsObject => {
+export const removeUndefinedValues = (paramsObject) => {
   const finalParams = {};
 
-  Object.keys(paramsObject).forEach(paramKey => {
+  Object.keys(paramsObject).forEach((paramKey) => {
     if (typeof paramsObject[paramKey] !== 'undefined') {
       finalParams[paramKey] = paramsObject[paramKey];
     }
@@ -17,13 +17,13 @@ export const removeUndefinedValues = paramsObject => {
   return finalParams;
 };
 
-const prepareData = data => JSON.stringify(removeUndefinedValues(data));
+const prepareData = (data) => JSON.stringify(removeUndefinedValues(data));
 
-export const setV3Key = key => {
+export const setV3Key = (key) => {
   v3Key = key;
 };
 
-export const setV4Key = key => {
+export const setV4Key = (key) => {
   v4Key = key;
 };
 
@@ -65,7 +65,7 @@ export const makeHttpRequest = async (
       return await response.json();
     }
 
-    throw new Error(response.statusText);
+    return Promise.reject(response.statusText);
   } catch (error) {
     return Promise.reject(error);
   }
