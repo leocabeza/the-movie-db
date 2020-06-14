@@ -10,9 +10,9 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
-    "@pollyjs/adapter-node-http": "^2.6.3",
-    "@pollyjs/core": "^2.6.3",
-    "@pollyjs/persister-fs": "^2.6.3",
+    "@pollyjs/adapter-node-http": "^4.3.0",
+    "@pollyjs/core": "^4.3.0",
+    "@pollyjs/persister-fs": "^4.3.0",
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
