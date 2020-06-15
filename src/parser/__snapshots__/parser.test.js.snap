@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parser must parse correctly a mocked response 1`] = `
+Object {
+  "page": 1,
+  "results": Array [
+    Object {
+      "adult": false,
+      "backdrop_path": "/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+      "genre_ids": Array [
+        878,
+      ],
+      "id": 335983,
+      "original_language": "en",
+      "original_title": "Venom",
+      "overview": "When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego \\"Venom\\" to save his life.",
+      "popularity": 240.47,
+      "poster_path": "/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+      "release_date": "2018-10-03",
+      "title": "Venom",
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 2113,
+    },
+  ],
+  "total_pages": 993,
+  "total_results": 19847,
+}
+`;

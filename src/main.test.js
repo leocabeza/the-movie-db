@@ -7,7 +7,7 @@ describe('main api', () => {
   });
 
   it('returns an object with methods', () => {
-    expect(typeof entryPoint.v3('v3 api key')).toEqual('object');
-    expect(typeof entryPoint.v4('v4 api key')).toEqual('object');
+    expect(entryPoint.v3('v3 api key')).toMatchSnapshot();
+    expect(entryPoint.v4('v4 api key')).toMatchSnapshot();
   });
 });

@@ -5,7 +5,7 @@ const HOST = 'https://api.themoviedb.org/';
 let v3Key;
 let v4Key;
 
-export const removeUndefinedValues = (paramsObject) => {
+const removeUndefinedValues = (paramsObject) => {
   const finalParams = {};
 
   Object.keys(paramsObject).forEach((paramKey) => {
