@@ -1,4 +1,8 @@
 {
+  "src/entities/**/**.js": [
+    "npm run docs:v3",
+    "npm run docs:v4"
+  ],
   "src/**/*.js": [
     "prettier --write",
     "git add"
