@@ -1,4 +1,4 @@
-import resolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import buble from '@rollup/plugin-buble';
 import includePaths from 'rollup-plugin-includepaths';
@@ -20,7 +20,7 @@ export default [
       includePaths({
         paths: ['./src']
       }),
-      resolve({ browser: true }),
+      nodeResolve({ browser: true }),
       commonjs(),
       buble({
         transforms: {
@@ -42,7 +42,7 @@ export default [
       includePaths({
         paths: ['./src']
       }),
-      resolve(),
+      nodeResolve(),
       commonjs(),
       filesize(),
     ]
