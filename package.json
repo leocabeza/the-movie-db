@@ -5,25 +5,26 @@
   "main": "dist/the-movie-db.js",
   "browser": "dist/the-movie-db.umd.js",
   "dependencies": {
-    "cross-fetch": "^3.0.5",
-    "query-string": "^6.13.1"
+    "cross-fetch": "^3.1.4",
+    "query-string": "^7.0.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "cross-env": "^7.0.2",
-    "husky": "^4.2.5",
-    "jest": "^26.1.0",
+    "dotenv": "^10.0.0",
+    "husky": "^7.0.0",
+    "jest": "^27.0.6",
     "jsdoc-to-markdown": "^6.0.1",
     "lint-staged": "^10.2.11",
-    "prettier": "2.0.5",
-    "rollup": "^2.22.1",
-    "rollup-plugin-filesize": "^9.0.2",
-    "rollup-plugin-includepaths": "^0.2.3",
-    "rollup-plugin-terser": "^5.3.0",
-    "semantic-release": "^17.1.1"
+    "prettier": "2.3.2",
+    "rollup": "^2.56.0",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-includepaths": "^0.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "semantic-release": "^17.4.4"
   },
   "scripts": {
     "build": "rollup -c",
@@ -33,7 +34,8 @@
     "lint-staged": "lint-staged",
     "pre-commit": "npm run lint-staged",
     "test": "cross-env NODE_PATH=src jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=10.13.0"

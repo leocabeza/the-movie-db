@@ -8,7 +8,7 @@ import { setV3Key, setV4Key } from 'utils/utils';
  * @returns All of v3 methods available
  * @see https://developers.themoviedb.org/3/getting-started/introduction
  */
-const v3 = apiKey => {
+export const v3 = (apiKey) => {
   setV3Key(apiKey);
 
   return v3Import;
@@ -20,13 +20,8 @@ const v3 = apiKey => {
  * @returns All of v4 methods available
  * @see https://developers.themoviedb.org/4/getting-started
  */
-const v4 = apiKey => {
+export const v4 = (apiKey) => {
   setV4Key(apiKey);
 
   return v4Import;
-};
-
-export default {
-  v3,
-  v4,
 };
