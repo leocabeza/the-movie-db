@@ -1,0 +1,20 @@
+name: Deploy
+on:
+  push:
+    banches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v2
+        with:
+          always-auth: true
+          node-version: '12.x'
+          registry-url: https://registry.npmjs.org
+      - run: npm build
+      - run: npx semantic-relase@17
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
