@@ -15,6 +15,6 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
-[{package.json,.travis.yml}]
+[{package.json,.github/workflows/main.yml}]
 indent_style = space
 indent_size = 2
