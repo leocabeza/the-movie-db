@@ -35,7 +35,7 @@
     "pre-commit": "npm run lint-staged",
     "test": "cross-env NODE_PATH=src jest",
     "test:watch": "npm run test -- --watch",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "engines": {
     "node": ">=10.13.0"
