@@ -29,7 +29,7 @@ It works out of the box for modern browsers and node versions greater or equal t
 This package is distributed via npm:
 
 ```
-npm install @leonardocabeza/the-movie-db --save
+npm install @leonardocabeza/the-movie-db
 ```
 
 ## Usage
