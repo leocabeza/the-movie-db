@@ -76,6 +76,7 @@ export const MOVIE_SIMILAR = '/movie/:id/similar';
 export const MOVIE_TOP_RATED = '/movie/top_rated';
 export const MOVIE_TRANSLATIONS = '/movie/:id/translations';
 export const MOVIE_UPCOMING = '/movie/upcoming';
+export const MOVIE_WATCH_PROVIDERS = '/movie/:id/watch/providers';
 export const MOVIE_VIDEOS = '/movie/:id/videos';
 export const NETWORK_DETAILS = '/network/:id';
 export const NETWORK_ALTERNATIVE_NAMES = '/network/:id/alternative_names';
@@ -101,6 +102,7 @@ export const SEARCH_PEOPLE = '/search/person';
 export const SEARCH_TV = '/search/tv';
 export const TRENDING_ITEMS = '/trending/:mediaType/:timeWindow';
 export const TV_ACCOUNT_STATES = '/tv/:id/account_states';
+export const TV_AGGREGATE_CREDITS = '/tv/:id/aggregate_credits';
 export const TV_AIRING_TODAY = '/tv/airing_today';
 export const TV_ALTERNATIVE_TITLES = '/tv/:id/alternative_titles';
 export const TV_CHANGES = '/tv/:id/changes';
@@ -122,6 +124,7 @@ export const TV_SIMILAR = '/tv/:id/similar';
 export const TV_TOP_RATED = '/tv/top_rated';
 export const TV_TRANSLATIONS = '/tv/:id/translations';
 export const TV_VIDEOS = '/tv/:id/videos';
+export const TV_WATCH_PROVIDERS = '/tv/:id/watch/providers';
 export const TV_EPISODE_ACCOUNT_STATES =
   '/tv/:tvId/season/:seasonNumber/episode/:episodeNumber/account_states';
 export const TV_EPISODE_CHANGES = '/tv/episode/:episodeId/changes';
@@ -142,10 +145,17 @@ export const TV_EPISODE_VIDEOS =
 export const TV_EPISODE_GROUP_DETAILS = '/tv/episode_group/:id';
 export const TV_SEASON_ACCOUNT_STATES =
   '/tv/:tvId/season/:seasonNumber/account_states';
+export const TV_SEASON_AGGREGATE_CREDITS =
+  '/tv/:id/season/:seasonNumber/aggregate_credits';
 export const TV_SEASON_CHANGES = '/tv/season/:seasonId/changes';
 export const TV_SEASON_CREDITS = '/tv/:tvId/season/:seasonNumber/credits';
 export const TV_SEASON_DETAILS = '/tv/:tvId/season/:seasonNumber';
 export const TV_SEASON_EXTERNAL_IDS =
   '/tv/:tvId/season/:seasonNumber/external_ids';
 export const TV_SEASON_IMAGES = '/tv/:tvId/season/:seasonNumber/images';
+export const TV_SEASON_TRANSLATIONS =
+  '/tv/:tvId/season/:seasonNumber/translations';
 export const TV_SEASON_VIDEOS = '/tv/:tvId/season/:seasonNumber/videos';
+export const WATCH_PROVIDERS_AVAILABLE_REGIONS = '/watch/providers/regions';
+export const WATCH_PROVIDERS_MOVIE = '/watch/providers/movie';
+export const WATCH_PROVIDERS_TV = '/watch/providers/tv';

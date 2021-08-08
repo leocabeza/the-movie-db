@@ -43,6 +43,40 @@ export const accountStates = async (tvId, seasonNumber, options = {}) => {
 };
 
 /**
+ * Get the aggregate credits for TV season.
+ * This call differs from the main credits call in
+ * that it does not only return the season credits,
+ * but rather is a view of all the cast & crew for all of the episodes belonging to a season.
+ * @param {number} tvId - Required
+ * @param {number} seasonNumber - Required
+ * @param {Object} options
+ * @param {string} options.language
+ * @returns {Promise}
+ * @see https://developers.themoviedb.org/3/tv-seasons/get-tv-season-aggregate-credits
+ */
+export const aggregateCredits = async (tvId, seasonNumber, options = {}) => {
+  const { language } = options;
+
+  if (!tvId && tvId !== 0) {
+    return Promise.reject('A tvId has to be provided');
+  }
+
+  if (!seasonNumber && seasonNumber !== 0) {
+    return Promise.reject('A seasonNumber has to be provided');
+  }
+
+  return await makeHttpRequest(
+    urls.v3.TV_SEASON_AGGREGATE_CREDITS.replace(':id', tvId).replace(
+      ':seasonNumber',
+      seasonNumber
+    ),
+    {
+      language,
+    }
+  );
+};
+
+/**
  * Get the changes for a TV season. By default only the last 24 hours are returned.
  * You can query up to 14 days in a single query by using the start_date and end_date query options.
  * @param {number} seasonId - Required
@@ -187,6 +221,35 @@ export const images = async (tvId, seasonNumber, options = {}) => {
       seasonNumber
     ),
     { language, include_image_language }
+  );
+};
+
+/**
+ * Get the credits for TV season.
+ * @param {number} tvId - Required
+ * @param {number} seasonNumber - Required
+ * @param {Object} options
+ * @param {string} options.language
+ * @returns {Promise}
+ * @see https://developers.themoviedb.org/3/tv-seasons/get-tv-season-translations
+ */
+export const translations = async (tvId, seasonNumber) => {
+  if (!tvId) {
+    return Promise.reject('A tvId has to be provided');
+  }
+
+  if (!seasonNumber) {
+    return Promise.reject('A seasonNumber has to be provided');
+  }
+
+  return makeHttpRequest(
+    urls.v3.TV_SEASON_TRANSLATIONS.replace(':tvId', tvId).replace(
+      ':seasonNumber',
+      seasonNumber
+    ),
+    {
+      language,
+    }
   );
 };
 

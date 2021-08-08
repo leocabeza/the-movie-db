@@ -84,7 +84,7 @@ export const changes = async (movieId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-credits
  */
-export const credits = async movieId => {
+export const credits = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -150,7 +150,7 @@ export const details = async (movieId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-external-ids
  */
-export const externalIds = async movieId => {
+export const externalIds = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -188,7 +188,7 @@ export const images = async (movieId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-keywords
  */
-export const keywords = async movieId => {
+export const keywords = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -343,7 +343,7 @@ export const recommendations = async (movieId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-release-dates
  */
-export const releaseDates = async movieId => {
+export const releaseDates = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -415,7 +415,7 @@ export const topRated = async (options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-translations
  */
-export const translations = async movieId => {
+export const translations = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
@@ -448,10 +448,27 @@ export const upcoming = async (options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/movies/get-movie-videos
  */
-export const videos = async movieId => {
+export const videos = async (movieId) => {
   if (!movieId) {
     return Promise.reject('A movieId has to be provided');
   }
 
   return makeHttpRequest(urls.v3.MOVIE_VIDEOS.replace(':id', movieId));
+};
+
+/**
+ * Powered by our partnership with JustWatch, you can query this method to get a list of the availabilities per country by provider.
+ * This is not going to return full deep links, but rather, it's just enough information to display what's available where.
+ * You can link to the provided TMDB URL to help support TMDB and provide the actual deep links to the content.
+ * Please note: In order to use this data you must attribute the source of the data as JustWatch. If we find any usage not complying with these terms we will revoke access to the API.
+ * @param {number} movieId
+ * @return {Promise} Promise
+ * @see https://developers.themoviedb.org/3/movies/get-movie-watch-providers
+ */
+export const watchProviders = async (movieId) => {
+  if (!movieId) {
+    return Promise.reject('A movieId has to be provided');
+  }
+
+  return makeHttpRequest(urls.v3.MOVIE_WATCH_PROVIDERS.replace(':id', movieId));
 };

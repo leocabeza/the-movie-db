@@ -22,6 +22,7 @@ import * as tv from './tv';
 import * as tvEpisode from './tv-episode';
 import * as tvEpisodeGroup from './tv-episode-group';
 import * as tvSeason from './tv-season';
+import * as watchProvider from './watch-provider';
 
 export default {
   account,
@@ -48,4 +49,5 @@ export default {
   tvEpisode,
   tvEpisodeGroup,
   tvSeason,
+  watchProvider,
 };

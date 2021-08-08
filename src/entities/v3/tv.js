@@ -36,6 +36,31 @@ export const accountStates = async (tvId, options = {}) => {
 };
 
 /**
+ * Get the aggregate credits (cast and crew) that have been added to a TV show.
+ * This call differs from the main credits call in that it does not return the newest season but rather,
+ * is a view of all the entire cast & crew for all episodes belonging to a TV show.
+ * @param {number} tvId - Required
+ * @param {Object} options
+ * @param {string} options.language
+ * @returns {Promise}
+ * @see https://developers.themoviedb.org/3/tv/get-tv-aggregate-credits
+ */
+export const aggregateCredits = async (tvId, options = {}) => {
+  const { language } = options;
+
+  if (!tvId && tvId !== 0) {
+    return Promise.reject('A tvId has to be provided');
+  }
+
+  return await makeHttpRequest(
+    urls.v3.TV_AGGREGATE_CREDITS.replace(':id', tvId),
+    {
+      language,
+    }
+  );
+};
+
+/**
  * Get a list of TV shows that are airing today. This query is purely day based as we do not currently support airing times.
  * You can specify a timezone to offset the day calculation. Without a specified timezone, this query defaults to EST (Eastern Time UTC-05:00).
  * @param {Object} options
@@ -263,7 +288,7 @@ export const images = async (tvId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-tv-keywords
  */
-export const keywords = async tvId => {
+export const keywords = async (tvId) => {
   if (!tvId && tvId !== 0) {
     return Promise.reject('A tvId has to be provided');
   }
@@ -403,7 +428,7 @@ export const reviews = async (tvId, options = {}) => {
  * @returns {Promise}
  * @see https://developers.themoviedb.org/3/tv/get-screened-theatrically
  */
-export const screenedTheatrically = async tvId => {
+export const screenedTheatrically = async (tvId) => {
   if (!tvId && tvId !== 0) {
     return Promise.reject('A tvId has to be provided');
   }
@@ -487,4 +512,21 @@ export const videos = async (tvId, options = {}) => {
   return await makeHttpRequest(urls.v3.TV_VIDEOS.replace(':id', tvId), {
     language,
   });
+};
+
+/**
+ * Powered by our partnership with JustWatch, you can query this method to get a list of the availabilities per country by provider.
+ * This is not going to return full deep links, but rather, it's just enough information to display what's available where.
+ * You can link to the provided TMDB URL to help support TMDB and provide the actual deep links to the content.
+ * Please note: In order to use this data you must attribute the source of the data as JustWatch. If we find any usage not complying with these terms we will revoke access to the API.
+ * @param {number} tvId
+ * @return {Promise} Promise
+ * @see https://developers.themoviedb.org/3/tv/get-tv-watch-providers
+ */
+export const watchProviders = async (tvId) => {
+  if (!tvId) {
+    return Promise.reject('A tvId has to be provided');
+  }
+
+  return makeHttpRequest(urls.v3.TV_WATCH_PROVIDERS.replace(':id', tvId));
 };
