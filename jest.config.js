@@ -12,5 +12,6 @@ module.exports = {
     "!**/dist/**",
     "!**/coverage/**",
     "!**src/dev.js**"
-  ]
+  ],
+  testEnvironment: 'setup-polly-jest/jest-environment-jsdom'
 };

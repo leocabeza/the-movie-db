@@ -28,7 +28,7 @@
     "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "semantic-release": "^17.4.4",
-    "setup-polly-jest": "^0.8.0"
+    "setup-polly-jest": "^0.10.0"
   },
   "scripts": {
     "build": "rollup -c",
