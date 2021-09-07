@@ -19,6 +19,8 @@ jobs:
         run: npm ci
       - name: Build...
         run: npm build
+      - name: Running tests
+        run: npm test
       - name: Release
         run: npx semantic-release@17
         env:
